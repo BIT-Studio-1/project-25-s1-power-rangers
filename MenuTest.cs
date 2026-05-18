@@ -7,7 +7,7 @@ namespace CodeCode
 {
     public class MenuTest
     {
-
+        
         static ConsoleKey key;
 
         static int option = 1;
@@ -16,9 +16,15 @@ namespace CodeCode
         static bool D3 = false;
         static bool D4 = false;
 
+        static int savedLeft;
+        static int savedTop;
+
 
         static void controller()
         {
+            // This is all benjamin's code
+
+            key = ReadKey(true).Key;
             //Controller for scrolling up and down options
             if ((key == DownArrow || key == S) && (option < 4))
             {
@@ -50,7 +56,66 @@ namespace CodeCode
 
         }
 
+        static void menu(string A, string  B, string  C, string  D) {
+            WriteLine("\nMove: Arrows  Select Space/Enter");
+            savedLeft = CursorLeft;
+            savedTop = CursorTop;
 
+            
+            // This is also all benjamin's code
+            while (true)
+            {
+                Console.SetCursorPosition(savedLeft, savedTop);
+
+                if (option == 1)
+                {
+                    BackgroundColor = ConsoleColor.White;
+                    ForegroundColor = ConsoleColor.Black;
+                    WriteLine($" > {A}");
+                    ResetColor();
+                    WriteLine($"   {B}");
+                    WriteLine($"   {C}");
+                    WriteLine($"   {D}");
+                }
+                else if (option == 2)
+                {
+                    WriteLine($"   {A}");
+                    BackgroundColor = ConsoleColor.White;
+                    ForegroundColor = ConsoleColor.Black;
+                    WriteLine($" > {B}");
+                    ResetColor();
+                    WriteLine($"   {C}");
+                    WriteLine($"   {D}");
+                }
+                else if (option == 3)
+                {
+                    WriteLine($"   {A}");
+                    WriteLine($"   {B}");
+                    BackgroundColor = ConsoleColor.White;
+                    ForegroundColor = ConsoleColor.Black;
+                    WriteLine($" > {C}");
+                    ResetColor();
+                    WriteLine($"   {D}");
+                }
+                else if (option == 4)
+                {
+                    WriteLine($"   {A}");
+                    WriteLine($"   {B}");
+                    WriteLine($"   {C}");
+                    BackgroundColor = ConsoleColor.White;
+                    ForegroundColor = ConsoleColor.Black;
+                    WriteLine($" > {D}");
+                    ResetColor();
+                }
+
+                controller();
+
+            }
+            
+
+
+
+        }
 
 
 
@@ -58,12 +123,24 @@ namespace CodeCode
 
         static void Main(string[] args)
         {
-            WriteLine("yo");
+            WriteLine("Welcome to the game yo");
 
-
+            room1();
 
             ReadLine();
+
+        }
+
+        static void room1()
+        {
+            WriteLine("a man has fallen into a river in lego city");
+            WriteLine("Will you make choice 1 for this reason?");
+            WriteLine("Or perhaps choice 2");
+            WriteLine("Blablabla");
             
+            menu("choice 1", "choice 2", "choice 3", "choice 4");
+
+
         }
     }
 }
