@@ -112,15 +112,7 @@ namespace CodeCode
 
             }
             
-
-
-
         }
-
-
-
-
-
         static void Main(string[] args)
         {
             WriteLine("Welcome to the game yo");
@@ -139,7 +131,6 @@ namespace CodeCode
             WriteLine("Blablabla");
             
             menu("choice 1", "choice 2", "choice 3", "choice 4");
-
 
         }
     }
