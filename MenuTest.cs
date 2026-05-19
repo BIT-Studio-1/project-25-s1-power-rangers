@@ -66,7 +66,7 @@ namespace CodeCode
         }
 
         static void menu(string A, string  B, string  C, string  D) {
-            WriteLine("\nMove: Arrows  Select Space/Enter");
+            WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
             savedTop = CursorTop;
 
@@ -192,6 +192,7 @@ namespace CodeCode
 
             if (D1 == true)
             {
+                // local variables should be incremented like this
                 plant += 100;
                 stupidity += 100;
                 selfishness += 0;
@@ -199,6 +200,7 @@ namespace CodeCode
             }
             if (D2 == true)
             {
+                // not like this
                 plant = 10;
                 selfishness = 500;
                 stupidity = 200;
