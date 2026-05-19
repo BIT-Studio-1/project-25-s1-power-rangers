@@ -179,7 +179,9 @@ namespace CodeCode
         {
             Clear();
             WriteLine("I am a sunflower in the valleys of dunedin in Mr. Vaughn Malkin's Garden. I have spent most of my life listening to him about making SQL databases.");
-            WriteLine("");
+            WriteLine("It is now the time to decide your destiny: ");
+            WriteLine("HONEY EXTRACTION");
+            menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "DIE PEACEFULLY", "choice 4");
 
 
 
