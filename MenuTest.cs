@@ -142,7 +142,7 @@ namespace CodeCode
 
             room2();
 
-            plantscene1();
+            plantScene1();
             
         }
 
@@ -177,12 +177,106 @@ namespace CodeCode
 
         static void plantScene1 ()
         {
-            Clear();
+            int selfishness = 0;
+            int stupidity = 0;
+            int plant = 0;
             WriteLine("I am a sunflower in the valleys of dunedin in Mr. Vaughn Malkin's Garden. I have spent most of my life listening to him about making SQL databases.");
             WriteLine("It is now the time to decide your destiny: ");
-            WriteLine("HONEY EXTRACTION");
-            menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "DIE PEACEFULLY", "choice 4");
 
+            WriteLine("LEVEL 1");
+            WriteLine("GAME OF HONEY");
+            menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
+
+            if (D1 == true)
+            {
+                plant += 100;
+                stupidity += 100;
+                selfishness += 0;
+                    
+            }
+            if (D2 == true)
+            {
+                plant = 10;
+                int selfishness = 500;
+                int stupidity = 200;
+            }
+            if (D3 == true)
+            {
+                int plant = 200;
+                int selfishness = 100;
+                int stupidity = 50;
+            }
+            if (D4 == true)
+            {
+                int plant = 0;
+                int selfishness = 100;
+                int stupidity = 200;
+            }
+
+
+
+
+            WriteLine("LEVEL 2");
+            WriteLine("USA VS VENEZUELA OIL EXTRACTION");
+            menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
+            if (D1 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+            if (D2 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+            if (D3 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+            if (D4 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+
+            WriteLine("LEVEL 3");
+            WriteLine("DOG AND HIS POOP");
+            menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
+            if (D1 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+            if (D2 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+
+            }
+            if (D3 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+
+            }
+            if (D4 == true)
+            {
+                int selfishness = 0;
+                int stupidity = 0;
+                int plant = 0;
+            }
+
+            WriteLine("DEATH LEVEL");
+            WriteLine("GAME OF WINDS");
+            menu("FIGHT BACK")
 
             return;
         }
