@@ -8,4 +8,8 @@
     <StartupObject>CodeCode.MenuTest</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Menu System %28Origional prototype%29\Menu System\obj\Debug\net8.0\Menu System.AssemblyInfo.cs" />
+  </ItemGroup>
+
 </Project>
