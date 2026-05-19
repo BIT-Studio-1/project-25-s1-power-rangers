@@ -47,29 +47,33 @@ namespace CodeCode
             if ((key == Spacebar || key == Enter) && (option == 1))
             {
                 D1 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 2))
             {
                 D2 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 3))
             {
                 D3 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 4))
             {
                 D4 = true;
+                goodbeep();
                 return;
             }
 
 
         }
 
-        static void menu(string A, string B, string C, string D, int opt = 4) {
-            WriteLine("param: " + opt);
+        static char menu(string A, string B, string C, string D, int opt = 4) {
+            //WriteLine("param: " + opt);
             WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
             savedTop = CursorTop;
@@ -80,7 +84,7 @@ namespace CodeCode
 
 
             // This is also all benjamin's code
-            while (D1 != true || D2 != true || D3 != true || D4 != true)
+            while (D1 != true && D2 != true && D3 != true && D4 != true)
             {
                 Console.SetCursorPosition(savedLeft, savedTop);
 
@@ -129,22 +133,49 @@ namespace CodeCode
                 }
 
                 controller(opt);
+                
 
-
+                /*
                 if (D1 == true || D2 == true || D3 == true || D4 == true)
                 {
-                    /*
+                */
                     if (D1 == true)
                     {
-                        return "A";
+                        return 'A';
                     }
-                    return;
-                    */
-                    return;
+                    else if (D2 == true)
+                    {
+                        return 'B';
+                    }
+                    else if (D3 == true)
+                    {
+                        return 'C';
+                    }
+                    else if (D4 == true) {
+                    
+                        return 'D';
+                    }
+                    
+                /*
                 }
+                */
 
             }
-            
+
+            return ' ';
+
+        }
+
+
+        public static async Task goodbeep()
+        {
+            await Task.Run(() =>
+            {
+                Beep(698, 50);
+                Beep(880, 50);
+                Beep(1046, 50);
+                Beep(1397, 70);
+            });
         }
         static void Main(string[] args)
         {
@@ -323,6 +354,7 @@ namespace CodeCode
             {
                 selfishness += 10;
             }
+
 
         }
 
