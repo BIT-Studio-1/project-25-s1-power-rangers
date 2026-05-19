@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using static System.Console;
 using static System.ConsoleKey;
@@ -30,6 +31,7 @@ namespace CodeCode
         {
             // This is all benjamin's code
 
+            CursorVisible = false;
             key = ReadKey(true).Key;
             //Controller for scrolling up and down options
             if ((key == DownArrow || key == S) && (option < opt))
@@ -131,6 +133,13 @@ namespace CodeCode
 
                 if (D1 == true || D2 == true || D3 == true || D4 == true)
                 {
+                    /*
+                    if (D1 == true)
+                    {
+                        return "A";
+                    }
+                    return;
+                    */
                     return;
                 }
 
@@ -297,14 +306,23 @@ namespace CodeCode
         static void fishScene1()
         {
             Clear();
-            int selfishness = 0;
+            int selfishness = 20;
             int stupidity = 0;
             int loyalty = 0;
-            WriteLine("You have reincarnated to a fish in a vast ocean of many pools and many schools (of fish)");
+            WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and your younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             menu("Leave the food for your younger sister", "Eat all her food", "Burn all the food", "", 3);
+            if (D1 == true)
+            {
+                selfishness -= 10;
+                loyalty += 3;
+            }
+            else if (D2 == true)
+            {
+                selfishness += 10;
+            }
 
         }
 
