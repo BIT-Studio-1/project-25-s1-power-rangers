@@ -1,0 +1,28 @@
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\bin\Debug\net8.0\Menu System.exe
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\bin\Debug\net8.0\Menu System.deps.json
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\bin\Debug\net8.0\Menu System.runtimeconfig.json
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\bin\Debug\net8.0\Menu System.dll
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\bin\Debug\net8.0\Menu System.pdb
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.AssemblyInfoInputs.cache
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.AssemblyInfo.cs
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.csproj.CoreCompileInputs.cache
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.dll
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\refint\Menu System.dll
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.pdb
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\Menu System.genruntimeconfig.cache
+C:\Users\ROBEBP1\OneDrive - Otago Polytechnic\Menu System\Menu System\obj\Debug\net8.0\ref\Menu System.dll
+C:\Users\OEM\Desktop\Menu System\Menu System\bin\Debug\net8.0\Menu System.exe
+C:\Users\OEM\Desktop\Menu System\Menu System\bin\Debug\net8.0\Menu System.deps.json
+C:\Users\OEM\Desktop\Menu System\Menu System\bin\Debug\net8.0\Menu System.runtimeconfig.json
+C:\Users\OEM\Desktop\Menu System\Menu System\bin\Debug\net8.0\Menu System.dll
+C:\Users\OEM\Desktop\Menu System\Menu System\bin\Debug\net8.0\Menu System.pdb
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.AssemblyInfoInputs.cache
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.AssemblyInfo.cs
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.csproj.CoreCompileInputs.cache
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.dll
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\refint\Menu System.dll
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.pdb
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\Menu System.genruntimeconfig.cache
+C:\Users\OEM\Desktop\Menu System\Menu System\obj\Debug\net8.0\ref\Menu System.dll
