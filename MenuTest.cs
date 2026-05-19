@@ -175,7 +175,7 @@ namespace CodeCode
 
         }
 
-        static void plantscene1 ()
+        static void plantScene1 ()
         {
             Clear();
             WriteLine("I am a sunflower in the valleys of dunedin in Mr. Vaughn Malkin's Garden. I have spent most of my life listening to him about making SQL databases.");
@@ -184,9 +184,18 @@ namespace CodeCode
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "DIE PEACEFULLY", "choice 4");
 
 
-
-
             return;
+        }
+
+        static void fishScene1()
+        {
+            int selfishness = 0;
+            int stupidity = 0;
+            int loyalty = 0;
+            WriteLine("You have reincarnated to a fish in a vast ocean of many pools and many schools (of fish)");
+            WriteLine("You hatch as a fish egg");
+            WriteLine("Your fish siblings are also hatched");
+
         }
 
     }
