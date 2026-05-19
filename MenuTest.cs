@@ -143,6 +143,8 @@ namespace CodeCode
             room2();
 
             plantScene1();
+
+            fishScene1();
             
         }
 
@@ -177,6 +179,7 @@ namespace CodeCode
 
         static void plantScene1 ()
         {
+            // add a console.clear(); here
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
