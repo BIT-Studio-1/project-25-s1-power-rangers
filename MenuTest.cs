@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using static System.Console;
@@ -25,13 +26,13 @@ namespace CodeCode
         static int savedTop;
 
 
-        static void controller()
+        static void controller(int opt)
         {
             // This is all benjamin's code
 
             key = ReadKey(true).Key;
             //Controller for scrolling up and down options
-            if ((key == DownArrow || key == S) && (option < 4))
+            if ((key == DownArrow || key == S) && (option < opt))
             {
                 option++;
             }
@@ -65,11 +66,14 @@ namespace CodeCode
 
         }
 
-        static void menu(string A, string  B, string  C, string  D) {
+        static void menu(string A, string B, string C, string D, int opt = 4) {
+            WriteLine("param: " + opt);
             WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
             savedTop = CursorTop;
 
+            
+            option = 1;
             D1 = false; D2 = false; D3 = false; D4 = false;
 
 
@@ -87,6 +91,7 @@ namespace CodeCode
                     WriteLine($"   {B}");
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 2)
                 {
@@ -97,6 +102,7 @@ namespace CodeCode
                     ResetColor();
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 3)
                 {
@@ -107,6 +113,7 @@ namespace CodeCode
                     WriteLine($" > {C}");
                     ResetColor();
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 4)
                 {
@@ -119,7 +126,7 @@ namespace CodeCode
                     ResetColor();
                 }
 
-                controller();
+                controller(opt);
 
 
                 if (D1 == true || D2 == true || D3 == true || D4 == true)
@@ -220,7 +227,7 @@ namespace CodeCode
 
 
 
-
+            Clear();
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
@@ -249,6 +256,7 @@ namespace CodeCode
                 plant = 0;
             }
 
+            Clear();
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
@@ -278,7 +286,7 @@ namespace CodeCode
                 stupidity = 0;
                 plant = 0;
             }
-
+            Clear();
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
             menu("FIGHT BACK", "", "", "");
@@ -288,12 +296,15 @@ namespace CodeCode
 
         static void fishScene1()
         {
+            Clear();
             int selfishness = 0;
             int stupidity = 0;
             int loyalty = 0;
             WriteLine("You have reincarnated to a fish in a vast ocean of many pools and many schools (of fish)");
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");
+            WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and your younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
+            menu("Leave the food for your younger sister", "Eat all her food", "Burn all the food", "", 3);
 
         }
 
