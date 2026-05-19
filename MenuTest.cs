@@ -197,20 +197,20 @@ namespace CodeCode
             if (D2 == true)
             {
                 plant = 10;
-                int selfishness = 500;
-                int stupidity = 200;
+                selfishness = 500;
+                stupidity = 200;
             }
             if (D3 == true)
             {
-                int plant = 200;
-                int selfishness = 100;
-                int stupidity = 50;
+                plant = 200;
+                selfishness = 100;
+                stupidity = 50;
             }
             if (D4 == true)
             {
-                int plant = 0;
-                int selfishness = 100;
-                int stupidity = 200;
+                plant = 0;
+                selfishness = 100;
+                stupidity = 200;
             }
 
 
@@ -221,27 +221,27 @@ namespace CodeCode
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
             if (D2 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
             if (D3 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
             if (D4 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
 
             WriteLine("LEVEL 3");
@@ -249,34 +249,34 @@ namespace CodeCode
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
             if (D2 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
 
             }
             if (D3 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
 
             }
             if (D4 == true)
             {
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
             }
 
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
-            menu("FIGHT BACK")
+            menu("FIGHT BACK", "", "", "");
 
             return;
         }
