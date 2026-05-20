@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using static System.Console;
 using static System.ConsoleKey;
@@ -25,13 +27,14 @@ namespace CodeCode
         static int savedTop;
 
 
-        static void controller()
+        static void controller(int opt)
         {
             // This is all benjamin's code
 
+            CursorVisible = false;
             key = ReadKey(true).Key;
             //Controller for scrolling up and down options
-            if ((key == DownArrow || key == S) && (option < 4))
+            if ((key == DownArrow || key == S) && (option < opt))
             {
                 option++;
             }
@@ -44,37 +47,44 @@ namespace CodeCode
             if ((key == Spacebar || key == Enter) && (option == 1))
             {
                 D1 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 2))
             {
                 D2 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 3))
             {
                 D3 = true;
+                goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 4))
             {
                 D4 = true;
+                goodbeep();
                 return;
             }
 
 
         }
 
-        static void menu(string A, string  B, string  C, string  D) {
-            WriteLine("\nMove: Arrows  Select Space/Enter");
+        static char menu(string A, string B, string C, string D, int opt = 4) {
+            //WriteLine("param: " + opt);
+            WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
             savedTop = CursorTop;
 
+            
+            option = 1;
             D1 = false; D2 = false; D3 = false; D4 = false;
 
 
             // This is also all benjamin's code
-            while (D1 != true || D2 != true || D3 != true || D4 != true)
+            while (D1 != true && D2 != true && D3 != true && D4 != true)
             {
                 Console.SetCursorPosition(savedLeft, savedTop);
 
@@ -87,6 +97,7 @@ namespace CodeCode
                     WriteLine($"   {B}");
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 2)
                 {
@@ -97,6 +108,7 @@ namespace CodeCode
                     ResetColor();
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 3)
                 {
@@ -107,6 +119,7 @@ namespace CodeCode
                     WriteLine($" > {C}");
                     ResetColor();
                     WriteLine($"   {D}");
+
                 }
                 else if (option == 4)
                 {
@@ -119,16 +132,50 @@ namespace CodeCode
                     ResetColor();
                 }
 
-                controller();
+                controller(opt);
+                
 
-
+                /*
                 if (D1 == true || D2 == true || D3 == true || D4 == true)
                 {
-                    return;
+                */
+                    if (D1 == true)
+                    {
+                        return 'A';
+                    }
+                    else if (D2 == true)
+                    {
+                        return 'B';
+                    }
+                    else if (D3 == true)
+                    {
+                        return 'C';
+                    }
+                    else if (D4 == true) {
+                    
+                        return 'D';
+                    }
+                    
+                /*
                 }
+                */
 
             }
-            
+
+            return ' ';
+
+        }
+
+
+        public static async Task goodbeep()
+        {
+            await Task.Run(() =>
+            {
+                Beep(698, 50);
+                Beep(880, 50);
+                Beep(1046, 50);
+                Beep(1397, 70);
+            });
         }
         static void Main(string[] args)
         {
@@ -143,6 +190,8 @@ namespace CodeCode
             room2();
 
             plantScene1();
+
+            fishScene1();
             
         }
 
@@ -177,6 +226,7 @@ namespace CodeCode
 
         static void plantScene1 ()
         {
+            // add a console.clear(); here
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
@@ -189,6 +239,7 @@ namespace CodeCode
 
             if (D1 == true)
             {
+                // local variables should be incremented like this
                 plant += 100;
                 stupidity += 100;
                 selfishness += 0;
@@ -196,12 +247,18 @@ namespace CodeCode
             }
             if (D2 == true)
             {
+                // not like this
                 plant = 10;
+<<<<<<< HEAD
                 selfishness += 500;
+=======
+                selfishness = 500;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
                 stupidity = 200;
             }
             if (D3 == true)
             {
+<<<<<<< HEAD
                  plant = 200;
                  selfishness = 100;
                  stupidity = 50;
@@ -211,22 +268,38 @@ namespace CodeCode
                  plant = 0;
                  selfishness = 100;
                  stupidity = 200;
+=======
+                plant = 200;
+                selfishness = 100;
+                stupidity = 50;
+            }
+            if (D4 == true)
+            {
+                plant = 0;
+                selfishness = 100;
+                stupidity = 200;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
             }
 
 
 
-
+            Clear();
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
+<<<<<<< HEAD
                  selfishness = 0;
+=======
+                selfishness = 0;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
                 stupidity = 0;
                 plant = 0;
             }
             if (D2 == true)
             {
+<<<<<<< HEAD
                  selfishness = 0;
                  stupidity = 0;
                  plant = 0;
@@ -241,17 +314,39 @@ namespace CodeCode
             {
                  selfishness = 0;
                  stupidity = 0;
+=======
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
+            }
+            if (D3 == true)
+            {
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
+            }
+            if (D4 == true)
+            {
+                selfishness = 0;
+                stupidity = 0;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
                 plant = 0;
             }
 
+            Clear();
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
                 selfishness = 0;
+<<<<<<< HEAD
                  stupidity = 0;
                  plant = 0;
+=======
+                stupidity = 0;
+                plant = 0;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
             }
             if (D2 == true)
             {
@@ -262,33 +357,62 @@ namespace CodeCode
             }
             if (D3 == true)
             {
+<<<<<<< HEAD
                  selfishness = 0;
                 stupidity = 0;
                  plant = 0;
+=======
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
 
             }
             if (D4 == true)
             {
+<<<<<<< HEAD
                  selfishness = 0;
                 stupidity = 0;
                  plant = 0;
+=======
+                selfishness = 0;
+                stupidity = 0;
+                plant = 0;
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
             }
-
+            Clear();
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
+<<<<<<< HEAD
             menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY","");
+=======
+            menu("FIGHT BACK", "", "", "");
+>>>>>>> 73829cc2d477174d52ef91837844928963560af4
 
             return;
         }
 
         static void fishScene1()
         {
-            int selfishness = 0;
+            Clear();
+            int selfishness = 20;
             int stupidity = 0;
             int loyalty = 0;
-            WriteLine("You have reincarnated to a fish in a vast ocean of many pools and many schools (of fish)");
+            WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");
+            WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and your younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
+            menu("Leave the food for your younger sister", "Eat all her food", "Burn all the food", "", 3);
+            if (D1 == true)
+            {
+                selfishness -= 10;
+                loyalty += 3;
+            }
+            else if (D2 == true)
+            {
+                selfishness += 10;
+            }
+
 
         }
 
