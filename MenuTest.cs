@@ -385,7 +385,7 @@ namespace CodeCode
             Clear();
             int selfishness = 20;
             int stupidity = 0;
-            int loyalty = 0;
+            int bravery = 0;
             Play(@"epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
@@ -401,7 +401,34 @@ namespace CodeCode
                 case 'A':
                     goodbeep();
                     selfishness -= 10;
-                    loyalty += 3;
+                    bravery += 1;
+                    Clear();
+                    WriteLine("You break the laws of physics and burn the food underwater");
+                    WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
+                    WriteLine("To the west, You see some glimmers off into the distance");
+                    WriteLine("Towards the east you can smell some blood");
+                    WriteLine("Towards the north you see");
+
+                    switch(menu(
+                        "Go west", 
+                        "Go east", 
+                        "Go north", 
+                        "Hit the whip nae nae"
+                        )
+                        )
+                    {
+                        case 'A':
+                            WriteLine("hgewio");
+                            break;
+                        case 'B':
+                            WriteLine("hgewio");
+                            break;
+                        case 'C':
+                            WriteLine("hgewio");
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 'B':
                     okaybeep();
