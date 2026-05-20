@@ -187,7 +187,8 @@ namespace CodeCode
             plantScene1();
 
             fishScene1();
-            
+
+            Console.ReadLine(); // stops program exiting
         }
 
         static void room1()
@@ -395,7 +396,25 @@ namespace CodeCode
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and your younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
-            menu("Leave the food for your younger sister", "Eat all her food", "Burn all the food", "", 3);
+            switch(menu("Leave the food for your younger sister", 
+                "Eat all her food", 
+                "Burn all the food", 
+                "", 3)
+            )
+            {
+                case 'A':
+                    selfishness -= 10;
+                    loyalty += 3;
+                    break;
+                case 'B':
+                    selfishness += 10;
+                    break;
+                default:
+                    stupidity += 3;
+                    break;
+            }
+
+            /*
             if (D1 == true)
             {
                 selfishness -= 10;
@@ -405,9 +424,16 @@ namespace CodeCode
             {
                 selfishness += 10;
             }
+            */
+
+
+            Clear();
 
 
         }
+
+
+        
 
     }
 }
