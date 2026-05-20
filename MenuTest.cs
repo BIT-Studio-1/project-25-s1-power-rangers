@@ -384,6 +384,8 @@ namespace CodeCode
             int selfishness = 20;
             int stupidity = 0;
             int loyalty = 0;
+
+            Play(@"epicsfx.mp3");
             WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");

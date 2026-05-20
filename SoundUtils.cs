@@ -1,14 +1,30 @@
 ﻿using System;
-using static System.Console;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
+using System.Media;
 
 namespace CodeCode
 {
     public class SoundUtils
     {
+        static SoundPlayer player;
+
+        public static void Play(string filePath)
+        {
+            player = new SoundPlayer(filePath);
+            player.Play(); // non-blocking
+
+        }
+        public static void Stop()
+        {
+            player?.Stop();
+        }
+
+
         public static async Task goodbeep()
         {
             await Task.Run(() =>
