@@ -4,9 +4,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
+using System.Text;
+using static CodeCode.SoundUtils;
 using static System.Console;
 using static System.ConsoleKey;
-using static CodeCode.SoundUtils;
+
 
 namespace CodeCode
 {
@@ -166,7 +168,8 @@ namespace CodeCode
 
         static void Main(string[] args)
         {
-            WriteLine("Welcome to the game yo");
+            Console.OutputEncoding = Encoding.UTF8;
+            WriteLine("Welcome to the game yo! €  wow look its the euro symbol ");
 
             room1();
 
@@ -214,11 +217,11 @@ namespace CodeCode
 
         static void plantScene1 ()
         {
-           
+            Clear();
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
-            WriteLine("I am a sunflower in the valleys of dunedin in Mr. Vaughn Malkin's Garden. I have spent most of my life listening to him about making SQL databases.");
+            WriteLine("I am a sunflower in the valleys of dunedin in Mr. 沃恩·马尔金's Garden. I have spent most of my life listening to him about making SQL databases.");
             WriteLine("It is now the time to decide your destiny: ");
 
             WriteLine("LEVEL 1");
@@ -370,9 +373,8 @@ namespace CodeCode
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
 
-            menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY","");
+            menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
 
-            menu("FIGHT BACK", "", "", "");
 
 
             return;
