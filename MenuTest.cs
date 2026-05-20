@@ -135,10 +135,7 @@ namespace CodeCode
                 controller(opt);
                 
 
-                /*
-                if (D1 == true || D2 == true || D3 == true || D4 == true)
-                {
-                */
+              
                     if (D1 == true)
                     {
                         return 'A';
@@ -156,9 +153,7 @@ namespace CodeCode
                         return 'D';
                     }
                     
-                /*
-                }
-                */
+               
 
             }
 
@@ -184,7 +179,7 @@ namespace CodeCode
             room1();
 
             Write("advance to room 2");
-            // ReadLine();
+           
 
 
             room2();
@@ -197,7 +192,7 @@ namespace CodeCode
 
         static void room1()
         {
-            // D1 = false; D2 = false; D3 = false; D4 = false;
+            
             
             Clear();
             WriteLine("a man has fallen into a river in lego city");
@@ -226,7 +221,7 @@ namespace CodeCode
 
         static void plantScene1 ()
         {
-            // add a console.clear(); here
+           
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
@@ -239,7 +234,7 @@ namespace CodeCode
 
             if (D1 == true)
             {
-                // local variables should be incremented like this
+                
                 plant += 100;
                 stupidity += 100;
                 selfishness += 0;
@@ -247,18 +242,18 @@ namespace CodeCode
             }
             if (D2 == true)
             {
-                // not like this
-                plant = 10;
-<<<<<<< HEAD
+
+                plant = 10; 
+
                 selfishness += 500;
-=======
+
                 selfishness = 500;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
                 stupidity = 200;
             }
             if (D3 == true)
             {
-<<<<<<< HEAD
+
                  plant = 200;
                  selfishness = 100;
                  stupidity = 50;
@@ -268,7 +263,7 @@ namespace CodeCode
                  plant = 0;
                  selfishness = 100;
                  stupidity = 200;
-=======
+
                 plant = 200;
                 selfishness = 100;
                 stupidity = 50;
@@ -278,7 +273,7 @@ namespace CodeCode
                 plant = 0;
                 selfishness = 100;
                 stupidity = 200;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
             }
 
 
@@ -289,18 +284,16 @@ namespace CodeCode
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
-<<<<<<< HEAD
+
                  selfishness = 0;
-=======
-                selfishness = 0;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
                 stupidity = 0;
                 plant = 0;
             }
             if (D2 == true)
             {
-<<<<<<< HEAD
-                 selfishness = 0;
+
+             selfishness = 0;
                  stupidity = 0;
                  plant = 0;
             }
@@ -314,7 +307,7 @@ namespace CodeCode
             {
                  selfishness = 0;
                  stupidity = 0;
-=======
+
                 selfishness = 0;
                 stupidity = 0;
                 plant = 0;
@@ -329,7 +322,7 @@ namespace CodeCode
             {
                 selfishness = 0;
                 stupidity = 0;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
                 plant = 0;
             }
 
@@ -340,13 +333,13 @@ namespace CodeCode
             if (D1 == true)
             {
                 selfishness = 0;
-<<<<<<< HEAD
+
                  stupidity = 0;
                  plant = 0;
-=======
+
                 stupidity = 0;
                 plant = 0;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
             }
             if (D2 == true)
             {
@@ -357,37 +350,37 @@ namespace CodeCode
             }
             if (D3 == true)
             {
-<<<<<<< HEAD
+
                  selfishness = 0;
                 stupidity = 0;
                  plant = 0;
-=======
+
                 selfishness = 0;
                 stupidity = 0;
                 plant = 0;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
 
             }
             if (D4 == true)
             {
-<<<<<<< HEAD
+
                  selfishness = 0;
                 stupidity = 0;
                  plant = 0;
-=======
+
                 selfishness = 0;
                 stupidity = 0;
                 plant = 0;
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
             }
             Clear();
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
-<<<<<<< HEAD
+
             menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY","");
-=======
+
             menu("FIGHT BACK", "", "", "");
->>>>>>> 73829cc2d477174d52ef91837844928963560af4
+
 
             return;
         }
