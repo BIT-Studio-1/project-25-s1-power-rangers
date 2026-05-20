@@ -47,25 +47,25 @@ namespace CodeCode
             if ((key == Spacebar || key == Enter) && (option == 1))
             {
                 D1 = true;
-                goodbeep();
+                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 2))
             {
                 D2 = true;
-                goodbeep();
+                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 3))
             {
                 D3 = true;
-                goodbeep();
+                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 4))
             {
                 D4 = true;
-                goodbeep();
+                //goodbeep();
                 return;
             }
 
@@ -172,6 +172,26 @@ namespace CodeCode
                 Beep(1397, 70);
             });
         }
+        public static async Task badbeep()
+        {
+            await Task.Run(() =>
+            {
+                Beep(1175, 70);
+                Beep(988, 50);
+                Beep(831, 50);
+                Beep(698, 50);
+            });
+        }
+        public static async Task okaybeep()
+        {
+            await Task.Run(() =>
+            {
+                Beep(698, 50);
+                Beep(784, 50);
+                Beep(1046, 50);
+                Beep(784, 70);
+            });
+        }
         static void Main(string[] args)
         {
             WriteLine("Welcome to the game yo");
@@ -187,7 +207,7 @@ namespace CodeCode
             plantScene1();
 
             fishScene1();
-
+            Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
 
@@ -403,13 +423,16 @@ namespace CodeCode
             )
             {
                 case 'A':
+                    goodbeep();
                     selfishness -= 10;
                     loyalty += 3;
                     break;
                 case 'B':
+                    okaybeep();
                     selfishness += 10;
                     break;
                 default:
+                    badbeep();
                     stupidity += 3;
                     break;
             }
