@@ -183,13 +183,10 @@ namespace CodeCode
             plantScene1();
 
             fishScene1();
-<<<<<<< HEAD
             wormlife();
-=======
 
             amebaScene1();
 
->>>>>>> c70e10f30b5259bdbbfccdef42e778f9f3e428c3
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -229,9 +226,6 @@ namespace CodeCode
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
-            WriteLine("I am a sunflower in the valleys of dunedin in Mr. 沃恩·马尔金's Garden. I have spent most of my life listening to him about making SQL databases.");
-            WriteLine("It is now the time to decide your destiny: ");
-
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
             WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
@@ -517,11 +511,6 @@ namespace CodeCode
 
         }
 
-        static void amebaScene1()
-        {
-            int selfishness = 50;
-            int stupidity = 50;
-            int bravery = 0;
 
         static void wormlife()
         {
@@ -537,14 +526,14 @@ namespace CodeCode
             WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
             Clear();
             WriteLine("LEVEL 1");
-<<<<<<< HEAD
             WriteLine("It beguins to rain, what will you do?");
             switch(menu("Swim to the surface", "hold your breath", "drink the water", "wiggle"))
                 {
-=======
-            WriteLine("THE WORM BULLY");
-            WriteLine("It beguins to rain");
->>>>>>> c70e10f30b5259bdbbfccdef42e778f9f3e428c3
+                    default:
+                        WriteLine("THE WORM BULLY");
+                        WriteLine("It beguins to rain");
+                        break;
+
 
                 }
 
@@ -611,7 +600,7 @@ namespace CodeCode
         
         
             
-        }
+        
 
         
 
