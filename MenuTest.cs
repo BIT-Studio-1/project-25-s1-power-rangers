@@ -457,9 +457,20 @@ namespace CodeCode
         static void dolphinlife1() 
         { 
             Clear();
-            
-            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.  ");
+            int AbusePoint = 0;
+            int OkayEnough = 0;
+            int WereAllInThisTogether = 0;
+
+            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.");
             Clear();
+            WriteLine("But hey! At least you’re smart :) ");
+            ReadLine();
+            Clear();
+            WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
+            switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
+            {
+
+            }
 
         }
 
