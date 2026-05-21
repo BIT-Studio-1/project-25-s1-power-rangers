@@ -182,6 +182,9 @@ namespace CodeCode
             plantScene1();
 
             fishScene1();
+
+            amebaScene1();
+
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -457,7 +460,36 @@ namespace CodeCode
 
 
         }
+        static void amebaScene1()
+        {
+            int selfishness = 50;
+            int stupidity = 50;
+            int bravery = 0;
 
+            Clear();
+            WriteLine("You've spawned in as an Ameba");
+            WriteLine("This is the beginning");
+            WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
+            WriteLine("Senses are very minimal");
+            WriteLine("Life as an Ameba is very 'Slide about'");
+
+            switch(menu("Try to see", "try to smell", "Try to taste", "Slide about",4))
+            {
+                case 'A': stupidity += 10; badbeep(); break;
+                case 'B': stupidity += 10; badbeep(); break;
+                case 'C': stupidity += 10; badbeep(); break;
+                case 'D': stupidity -= 10; goodbeep(); break;
+            }
+
+            Clear();
+            WriteLine("Ameba life is slow");
+            WriteLine("Ameba");
+            return;
+        }
+        
+        
+            
+        }
 
         
 
