@@ -181,7 +181,7 @@ namespace CodeCode
             room2();
 
             plantScene1();
-
+            wormlife();
             fishScene1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
@@ -478,9 +478,12 @@ namespace CodeCode
             WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
             Clear();
             WriteLine("LEVEL 1");
-            WriteLine("THE WORM BULLY");
-            WriteLine("It beguins to rain"
+            WriteLine("It beguins to rain, what will you do?");
+            switch(menu("Swim to the surface", "hold your breath", "drink the water", "wiggle")
+                {
 
+                }
+            
 
         }
 
@@ -502,7 +505,7 @@ namespace CodeCode
             {
 
             }
-
+            return;
         }
 
 
