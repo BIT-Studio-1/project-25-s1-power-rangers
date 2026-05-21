@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -180,7 +181,7 @@ namespace CodeCode
             room2();
 
             plantScene1();
-
+            
             fishScene1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
@@ -361,9 +362,10 @@ namespace CodeCode
             if (D4 == true)
             {
 
-                 selfishness += 0;
-                stupidity += 0;
-                 plant += 0;
+                 selfishness = 0;
+                 stupidity = 0;
+                 plant = 0;
+
 
            
 
@@ -421,22 +423,23 @@ namespace CodeCode
                     WriteLine("You break the laws of physics and burn the food underwater");
                     WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
                     WriteLine("To the west, You see some glimmers off into the distance");
-                    WriteLine("Towards the east you can smell some blood");
-                    WriteLine("Towards the north you see");
+                    WriteLine("Towards the east you can smell some blood,  it could mean food \ras you can eat remains of other fish");
+                    WriteLine("Towards the north you can see one a cave");
 
                     switch(menu(
-                        "Go west", 
+                        "Go west",
                         "Go east", 
                         "Go north", 
-                        "Hit the whip nae nae"
+                        "", 3
                         )
                         )
                     {
                         case 'A':
-                            WriteLine("hgewio");
+                            WriteLine("The distant glimmers");
                             break;
                         case 'B':
-                            WriteLine("hgewio");
+
+                            WriteLine("the brave one");
                             break;
                         case 'C':
                             WriteLine("hgewio");
@@ -472,15 +475,44 @@ namespace CodeCode
 
 
         }
+        static void wormlife()
+        {
+            //davids shitty ass code
+            Clear();
+            int length = 0;
+            int dirt_consumed = 0;
+            int wiggles = 0;
 
+            WriteLine("**You are a worm now**");
+            WriteLine("It's time to decide your destiny...");
+            Clear();
+            WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
+            Clear();
+            WriteLine("LEVEL 1");
+            WriteLine("THE WORM BULLY");
+            WriteLine("It beguins to rain"
+
+
+        }
 
 
         static void dolphinlife1() 
         { 
             Clear();
-            
-            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.  ");
+            int AbusePoint = 0;
+            int OkayEnough = 0;
+            int WereAllInThisTogether = 0;
+
+            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.");
             Clear();
+            WriteLine("But hey! At least you’re smart :) ");
+            ReadLine();
+            Clear();
+            WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
+            switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
+            {
+
+            }
 
         }
 
