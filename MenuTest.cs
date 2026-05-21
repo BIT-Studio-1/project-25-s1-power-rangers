@@ -180,7 +180,7 @@ namespace CodeCode
             room2();
 
             plantScene1();
-
+            
             fishScene1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
@@ -359,15 +359,10 @@ namespace CodeCode
             if (D4 == true)
             {
 
-<<<<<<< HEAD
                  selfishness = 0;
                  stupidity = 0;
                  plant = 0;
-=======
-                 selfishness += 0;
-                stupidity += 0;
-                 plant += 0;
->>>>>>> 80261e58ffa5b6ca76a2c5c1f410a4754b508064
+
 
            
 
@@ -427,7 +422,8 @@ namespace CodeCode
                             WriteLine("The distant glimmers");
                             break;
                         case 'B':
-                            WriteLine("hgewio");
+
+                            WriteLine("the brave one");
                             break;
                         case 'C':
                             WriteLine("hgewio");
