@@ -184,9 +184,8 @@ namespace CodeCode
 
             fishScene1();
             wormlife();
-
             amebaScene1();
-
+            dolphinlife1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -550,25 +549,28 @@ namespace CodeCode
             int OkayEnough = 0;
             int WereAllInThisTogether = 0;
 
-            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.");
-            Clear();
-            WriteLine("But hey! At least you’re smart :) ");
-            ReadLine();
-            Clear();
+            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult."); ReadLine();
+            WriteLine("But hey! At least you’re smart :) "); ReadLine();Clear();
             WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
             switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
             {
                 case 'A':
+                    AbusePoint += 5; okaybeep(); Clear();
                     WriteLine("You approach the pufferfish \r\n\r\n" +
                         "The pufferfish looks quite scared, " +
-                        "which does make sense as the next action you take is to chew on the pufferfish.");
-                    AbusePoint += 5;
-                        break;
+                        "which does make sense as the next action you take is to chew on the pufferfish."); Thread.Sleep(100);
+                    WriteLine("You are successfully high");
+                    break;
                 case 'B':
-                    WriteLine("");
+                    OkayEnough += 10; goodbeep(); Clear(); 
+                    WriteLine("No need to bother the little poisonous guy; we shall venture our route without fail, I dare say.");
                     break;
                 case 'C':
-                    WriteLine("");
+                    AbusePoint += 10; badbeep(); Clear();
+                    WereAllInThisTogether += 5;
+                    WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer.");Thread.Sleep(100);
+                    WriteLine("When you get back to the pufferfish, you all take a hit"); Thread.Sleep(100);
+                    WriteLine("You and your dolphin bruvs are successfully high");
                     break;
             }
             return;
