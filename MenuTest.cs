@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -180,7 +181,7 @@ namespace CodeCode
             room2();
 
             plantScene1();
-
+            
             fishScene1();
 
             amebaScene1();
@@ -229,6 +230,12 @@ namespace CodeCode
 
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
+            WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
+            WriteLine(" ");
+            WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
 
             if (D1 == true)
@@ -242,36 +249,34 @@ namespace CodeCode
             if (D2 == true)
             {
 
-                plant = 10; 
+                plant += 10; 
+
+             
 
                 selfishness += 500;
 
-                selfishness = 500;
-
-                stupidity = 200;
+                stupidity += 200;
             }
             if (D3 == true)
             {
 
-                 plant = 200;
-                 selfishness = 100;
-                 stupidity = 50;
+                 plant += 200;
+                 selfishness += 100;
+                 stupidity += 50;
             }
             if (D4 == true)
             {
-                 plant = 0;
-                 selfishness = 100;
-                 stupidity = 200;
+                 plant += 0;
+                 selfishness += 100;
+                 stupidity += 200;
 
-                plant = 200;
-                selfishness = 100;
-                stupidity = 50;
+                
             }
             if (D4 == true)
             {
-                plant = 0;
-                selfishness = 100;
-                stupidity = 200;
+                plant += 0;
+                selfishness += 100;
+                stupidity += 200;
 
             }
 
@@ -280,96 +285,102 @@ namespace CodeCode
             Clear();
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
+            WriteLine(" ");
+            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎‎USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine(" ");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
 
-                 selfishness = 0;
+                 selfishness += 0;
 
-                stupidity = 0;
-                plant = 0;
+                stupidity += 0;
+                plant += 0;
             }
             if (D2 == true)
             {
 
-             selfishness = 0;
-                 stupidity = 0;
-                 plant = 0;
+             selfishness += 0;
+                 stupidity += 0;
+                 plant += 0;
             }
             if (D3 == true)
             {
-                 selfishness = 0;
-                 stupidity = 0;
-                 plant = 0;
+                 selfishness += 0;
+                 stupidity += 0;
+                 plant += 0;
             }
             if (D4 == true)
             {
-                 selfishness = 0;
-                 stupidity = 0;
+                 selfishness += 0;
+                 stupidity += 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+              
+                plant += 0;
             }
             if (D3 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+                selfishness += 0;
+                stupidity += 0;
+                plant += 0;
             }
             if (D4 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
+                selfishness += 0;
+                stupidity += 0;
 
-                plant = 0;
+                plant += 0;
             }
 
             Clear();
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
-                selfishness = 0;
+                selfishness  += 0;
 
-                 stupidity = 0;
-                 plant = 0;
+               
 
-                stupidity = 0;
-                plant = 0;
+                stupidity += 0;
+                plant += 0;
 
             }
             if (D2 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+                selfishness += 0;
+                stupidity += 0;
+                plant += 0;
 
             }
             if (D3 == true)
             {
 
-                 selfishness = 0;
-                stupidity = 0;
-                 plant = 0;
+                 selfishness += 0;
+                stupidity += 0;
+                 plant += 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+             
 
 
             }
             if (D4 == true)
             {
 
+                 selfishness += 0;
+                stupidity += 0;
+                 plant += 0;
                  selfishness = 0;
-                stupidity = 0;
+                 stupidity = 0;
                  plant = 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+
+           
 
             }
             Clear();
@@ -377,8 +388,32 @@ namespace CodeCode
             WriteLine("GAME OF WINDS");
 
             menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
+            WriteLine("so your stupidness being a plant is ", stupidity);
+            WriteLine("so your selfishness being a plant is ", selfishness);
+            WriteLine("so your global score after being a plant is", plant);
 
+            ForegroundColor = ConsoleColor.Red;
+            string Level4 = ("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DEATH LEVEL");
+            
+            WriteLine(" ");
 
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF WINDS");
+            WriteLine(" ");
+            WriteLine(" ");
+
+            menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
+            WriteLine(" ");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ", stupidity);
+            WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS ", selfishness);
+            WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS", plant);
+            WriteLine(" ");
+            WriteLine(" ");
+            WriteLine("PLEASE PRESS ENTER TO CONTINUE");
+            ReadLine();
+           
+            Console.ResetColor();
 
             return;
         }
@@ -424,7 +459,8 @@ namespace CodeCode
                             WriteLine("hgewio");
                             break;
                         case 'B':
-                            WriteLine("hgewio");
+
+                            WriteLine("the brave one");
                             break;
                         case 'C':
                             WriteLine("hgewio");
@@ -460,32 +496,90 @@ namespace CodeCode
 
 
         }
+
         static void amebaScene1()
         {
             int selfishness = 50;
             int stupidity = 50;
             int bravery = 0;
 
+        static void wormlife()
+        {
+            //davids shitty ass code
             Clear();
-            WriteLine("You've spawned in as an Ameba");
-            WriteLine("This is the beginning");
-            WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
-            WriteLine("Senses are very minimal");
-            WriteLine("Life as an Ameba is very 'Slide about'");
+            int length = 0;
+            int dirt_consumed = 0;
+            int wiggles = 0;
 
-            switch(menu("Try to see", "try to smell", "Try to taste", "Slide about",4))
+            WriteLine("**You are a worm now**");
+            WriteLine("It's time to decide your destiny...");
+            Clear();
+            WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
+            Clear();
+            WriteLine("LEVEL 1");
+            WriteLine("THE WORM BULLY");
+            WriteLine("It beguins to rain");
+
+
+        }
+
+
+        static void dolphinlife1() 
+        { 
+            Clear();
+            int AbusePoint = 0;
+            int OkayEnough = 0;
+            int WereAllInThisTogether = 0;
+
+            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.");
+            Clear();
+            WriteLine("But hey! At least you’re smart :) ");
+            ReadLine();
+            Clear();
+            WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
+            switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
             {
-                case 'A': stupidity += 10; badbeep(); break;
-                case 'B': stupidity += 10; badbeep(); break;
-                case 'C': stupidity += 10; badbeep(); break;
-                case 'D': stupidity -= 10; goodbeep(); break;
+                case 'A':
+                    WriteLine("You approach the pufferfish \r\n\r\n" +
+                        "The pufferfish looks quite scared, " +
+                        "which does make sense as the next action you take is to chew on the pufferfish.");
+                    AbusePoint += 5;
+                        break;
+                case 'B':
+                    WriteLine("");
+                    break;
+                case 'C':
+                    WriteLine("");
+                    break;
             }
 
-            Clear();
-            WriteLine("Ameba life is slow");
-            WriteLine("Ameba");
-            return;
         }
+
+        static void amebaScene1()
+            {
+                int selfishness = 50;
+                int stupidity = 50;
+                int bravery = 0;
+                Clear();
+                WriteLine("You've spawned in as an Ameba");
+                WriteLine("This is the beginning");
+                WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
+                WriteLine("Senses are very minimal");
+                WriteLine("Life as an Ameba is very 'Slide about'");
+
+                switch(menu("Try to see", "try to smell", "Try to taste", "Slide about",4))
+                {
+                    case 'A': stupidity += 10; badbeep(); break;
+                    case 'B': stupidity += 10; badbeep(); break;
+                    case 'C': stupidity += 10; badbeep(); break;
+                    case 'D': stupidity -= 10; goodbeep(); break;
+                }
+
+                Clear();
+                WriteLine("Ameba life is slow");
+                WriteLine("Ameba");
+                return;
+            }
         
         
             
