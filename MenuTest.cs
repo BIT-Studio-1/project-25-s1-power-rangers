@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -180,7 +181,7 @@ namespace CodeCode
             room2();
 
             plantScene1();
-
+            
             fishScene1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
@@ -226,6 +227,12 @@ namespace CodeCode
 
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
+            WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
+            WriteLine(" ");
+            WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
 
             if (D1 == true)
@@ -275,6 +282,11 @@ namespace CodeCode
             Clear();
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
+            WriteLine(" ");
+            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎‎USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine(" ");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
@@ -322,6 +334,9 @@ namespace CodeCode
             Clear();
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
@@ -357,6 +372,10 @@ namespace CodeCode
                  selfishness += 0;
                 stupidity += 0;
                  plant += 0;
+                 selfishness = 0;
+                 stupidity = 0;
+                 plant = 0;
+
 
            
 
@@ -370,6 +389,28 @@ namespace CodeCode
             WriteLine("so your selfishness being a plant is ", selfishness);
             WriteLine("so your global score after being a plant is", plant);
 
+            ForegroundColor = ConsoleColor.Red;
+            string Level4 = ("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DEATH LEVEL");
+            
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF WINDS");
+            WriteLine(" ");
+            WriteLine(" ");
+
+            menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
+            WriteLine(" ");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ", stupidity);
+            WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS ", selfishness);
+            WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS", plant);
+            WriteLine(" ");
+            WriteLine(" ");
+            WriteLine("PLEASE PRESS ENTER TO CONTINUE");
+            ReadLine();
+           
+            Console.ResetColor();
 
             return;
         }
@@ -415,7 +456,8 @@ namespace CodeCode
                             WriteLine("hgewio");
                             break;
                         case 'B':
-                            WriteLine("hgewio");
+
+                            WriteLine("the brave one");
                             break;
                         case 'C':
                             WriteLine("hgewio");
@@ -451,7 +493,25 @@ namespace CodeCode
 
 
         }
+        static void wormlife()
+        {
+            //davids shitty ass code
+            Clear();
+            int length = 0;
+            int dirt_consumed = 0;
+            int wiggles = 0;
 
+            WriteLine("**You are a worm now**");
+            WriteLine("It's time to decide your destiny...");
+            Clear();
+            WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
+            Clear();
+            WriteLine("LEVEL 1");
+            WriteLine("THE WORM BULLY");
+            WriteLine("It beguins to rain");
+
+
+        }
 
 
         static void dolphinlife1() 
