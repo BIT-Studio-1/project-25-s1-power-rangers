@@ -234,8 +234,14 @@ namespace CodeCode
             WriteLine(" ");
             WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
             WriteLine(" ");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
+            WriteLine(" ");
+
+            WriteLine(" ");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
 
             if (D1 == true)
@@ -286,9 +292,13 @@ namespace CodeCode
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
             WriteLine(" ");
-            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎‎USA VS VENEZUELA OIL EXTRACTION");
+
+            WriteLine(" ");
+            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine(" ");
+
             WriteLine(" ");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
@@ -338,8 +348,14 @@ namespace CodeCode
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DOG AND HIS POOP");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎ ‎‎‎ ‎‎‎ ‎‎‎ ‎‎‎DOG AND HIS POOP");
+            WriteLine(" ");
+
+            WriteLine(" ");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
