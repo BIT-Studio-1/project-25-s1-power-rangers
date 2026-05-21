@@ -181,8 +181,9 @@ namespace CodeCode
             room2();
 
             plantScene1();
-            wormlife();
+
             fishScene1();
+            wormlife();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -228,8 +229,8 @@ namespace CodeCode
             WriteLine(" ");
             WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
             WriteLine(" ");
-            WriteLine("LEVEL 1");
-            WriteLine("GAME OF HONEY");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
 
             if (D1 == true)
@@ -278,8 +279,10 @@ namespace CodeCode
 
             Clear();
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("LEVEL 2");
-            WriteLine("USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
+            WriteLine(" ");
+            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎‎USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine(" ");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
             {
@@ -326,8 +329,8 @@ namespace CodeCode
 
             Clear();
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("LEVEL 3");
-            WriteLine("DOG AND HIS POOP");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
@@ -360,28 +363,36 @@ namespace CodeCode
             if (D4 == true)
             {
 
-<<<<<<< HEAD
                  selfishness = 0;
                  stupidity = 0;
                  plant = 0;
-=======
-                 selfishness += 0;
-                stupidity += 0;
-                 plant += 0;
->>>>>>> 80261e58ffa5b6ca76a2c5c1f410a4754b508064
+
 
            
 
             }
             Clear();
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("DEATH LEVEL");
-            WriteLine("GAME OF WINDS");
+            string Level4 = ("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DEATH LEVEL");
+            
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF WINDS");
+            WriteLine(" ");
+            WriteLine(" ");
 
             menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
-            WriteLine("so your stupidness being a plant is ", stupidity);
-            WriteLine("so your selfishness being a plant is ", selfishness);
-            WriteLine("so your global score after being a plant is", plant);
+            WriteLine(" ");
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ", stupidity);
+            WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS ", selfishness);
+            WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS", plant);
+            WriteLine(" ");
+            WriteLine(" ");
+            WriteLine("PLEASE PRESS ENTER TO CONTINUE");
+            ReadLine();
+           
             Console.ResetColor();
 
             return;
@@ -428,7 +439,8 @@ namespace CodeCode
                             WriteLine("The distant glimmers");
                             break;
                         case 'B':
-                            WriteLine("hgewio");
+
+                            WriteLine("the brave one");
                             break;
                         case 'C':
                             WriteLine("hgewio");
@@ -479,12 +491,12 @@ namespace CodeCode
             Clear();
             WriteLine("LEVEL 1");
             WriteLine("It beguins to rain, what will you do?");
-            switch(menu("Swim to the surface", "hold your breath", "drink the water", "wiggle")
+            switch(menu("Swim to the surface", "hold your breath", "drink the water", "wiggle"))
                 {
 
                 }
-            
 
+            return;
         }
 
 
