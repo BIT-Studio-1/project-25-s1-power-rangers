@@ -361,7 +361,7 @@ namespace CodeCode
             {
 
                  selfishness = 0;
-                stupidity = 0;
+                 stupidity = 0;
                  plant = 0;
 
                 selfishness = 0;
@@ -406,19 +406,19 @@ namespace CodeCode
                     WriteLine("You break the laws of physics and burn the food underwater");
                     WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
                     WriteLine("To the west, You see some glimmers off into the distance");
-                    WriteLine("Towards the east you can smell some blood");
-                    WriteLine("Towards the north you see");
+                    WriteLine("Towards the east you can smell some blood,  it could mean food \ras you can eat remains of other fish");
+                    WriteLine("Towards the north you can see one a cave");
 
                     switch(menu(
-                        "Go west", 
+                        "Go west",
                         "Go east", 
                         "Go north", 
-                        "Hit the whip nae nae"
+                        "", 3
                         )
                         )
                     {
                         case 'A':
-                            WriteLine("hgewio");
+                            WriteLine("The distant glimmers");
                             break;
                         case 'B':
                             WriteLine("hgewio");
