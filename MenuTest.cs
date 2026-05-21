@@ -183,7 +183,13 @@ namespace CodeCode
             plantScene1();
 
             fishScene1();
+<<<<<<< HEAD
             wormlife();
+=======
+
+            amebaScene1();
+
+>>>>>>> c70e10f30b5259bdbbfccdef42e778f9f3e428c3
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -220,17 +226,26 @@ namespace CodeCode
         static void plantScene1 ()
         {
             Clear();
-            ForegroundColor = ConsoleColor.Red;
-            
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
+            WriteLine("I am a sunflower in the valleys of dunedin in Mr. 沃恩·马尔金's Garden. I have spent most of my life listening to him about making SQL databases.");
+            WriteLine("It is now the time to decide your destiny: ");
+
+            WriteLine("LEVEL 1");
+            WriteLine("GAME OF HONEY");
             WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
             WriteLine(" ");
             WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
             WriteLine(" ");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 1");
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎GAME OF HONEY");
+            WriteLine(" ");
+
+            WriteLine(" ");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
 
             if (D1 == true)
@@ -278,10 +293,16 @@ namespace CodeCode
 
 
             Clear();
+            WriteLine("LEVEL 2");
+            WriteLine("USA VS VENEZUELA OIL EXTRACTION");
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 2");
             WriteLine(" ");
-            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎‎USA VS VENEZUELA OIL EXTRACTION");
+
+            WriteLine(" ");
+            WriteLine("‎‎‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎ ‎‎‎ ‎ ‎ ‎USA VS VENEZUELA OIL EXTRACTION");
+            WriteLine(" ");
+
             WriteLine(" ");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
             if (D1 == true)
@@ -328,9 +349,17 @@ namespace CodeCode
             }
 
             Clear();
+            WriteLine("LEVEL 3");
+            WriteLine("DOG AND HIS POOP");
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
-            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DOG AND HIS POOP");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎LEVEL 3");
+            WriteLine(" ");
+
+            WriteLine(" ");
+            WriteLine("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎ ‎‎‎ ‎‎‎ ‎‎‎ ‎‎‎DOG AND HIS POOP");
+            WriteLine(" ");
+
+            WriteLine(" ");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
@@ -363,6 +392,9 @@ namespace CodeCode
             if (D4 == true)
             {
 
+                 selfishness += 0;
+                stupidity += 0;
+                 plant += 0;
                  selfishness = 0;
                  stupidity = 0;
                  plant = 0;
@@ -372,6 +404,14 @@ namespace CodeCode
 
             }
             Clear();
+            WriteLine("DEATH LEVEL");
+            WriteLine("GAME OF WINDS");
+
+            menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
+            WriteLine("so your stupidness being a plant is ", stupidity);
+            WriteLine("so your selfishness being a plant is ", selfishness);
+            WriteLine("so your global score after being a plant is", plant);
+
             ForegroundColor = ConsoleColor.Red;
             string Level4 = ("‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎‎ ‎ ‎ ‎‎  ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎ ‎‎DEATH LEVEL");
             
@@ -424,19 +464,19 @@ namespace CodeCode
                     WriteLine("You break the laws of physics and burn the food underwater");
                     WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
                     WriteLine("To the west, You see some glimmers off into the distance");
-                    WriteLine("Towards the east you can smell some blood,  it could mean food \ras you can eat remains of other fish");
-                    WriteLine("Towards the north you can see one a cave");
+                    WriteLine("Towards the east you can smell some blood");
+                    WriteLine("Towards the north you see");
 
                     switch(menu(
-                        "Go west",
+                        "Go west", 
                         "Go east", 
                         "Go north", 
-                        "", 3
+                        "Hit the whip nae nae"
                         )
                         )
                     {
                         case 'A':
-                            WriteLine("The distant glimmers");
+                            WriteLine("hgewio");
                             break;
                         case 'B':
 
@@ -476,6 +516,13 @@ namespace CodeCode
 
 
         }
+
+        static void amebaScene1()
+        {
+            int selfishness = 50;
+            int stupidity = 50;
+            int bravery = 0;
+
         static void wormlife()
         {
             //davids shitty ass code
@@ -490,9 +537,14 @@ namespace CodeCode
             WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
             Clear();
             WriteLine("LEVEL 1");
+<<<<<<< HEAD
             WriteLine("It beguins to rain, what will you do?");
             switch(menu("Swim to the surface", "hold your breath", "drink the water", "wiggle"))
                 {
+=======
+            WriteLine("THE WORM BULLY");
+            WriteLine("It beguins to rain");
+>>>>>>> c70e10f30b5259bdbbfccdef42e778f9f3e428c3
 
                 }
 
@@ -515,11 +567,51 @@ namespace CodeCode
             WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
             switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
             {
-
+                case 'A':
+                    WriteLine("You approach the pufferfish \r\n\r\n" +
+                        "The pufferfish looks quite scared, " +
+                        "which does make sense as the next action you take is to chew on the pufferfish.");
+                    AbusePoint += 5;
+                        break;
+                case 'B':
+                    WriteLine("");
+                    break;
+                case 'C':
+                    WriteLine("");
+                    break;
             }
             return;
         }
 
+        static void amebaScene1()
+            {
+                int selfishness = 50;
+                int stupidity = 50;
+                int bravery = 0;
+                Clear();
+                WriteLine("You've spawned in as an Ameba");
+                WriteLine("This is the beginning");
+                WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
+                WriteLine("Senses are very minimal");
+                WriteLine("Life as an Ameba is very 'Slide about'");
+
+                switch(menu("Try to see", "try to smell", "Try to taste", "Slide about",4))
+                {
+                    case 'A': stupidity += 10; badbeep(); break;
+                    case 'B': stupidity += 10; badbeep(); break;
+                    case 'C': stupidity += 10; badbeep(); break;
+                    case 'D': stupidity -= 10; goodbeep(); break;
+                }
+
+                Clear();
+                WriteLine("Ameba life is slow");
+                WriteLine("Ameba");
+                return;
+            }
+        
+        
+            
+        }
 
         
 
