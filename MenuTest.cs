@@ -239,36 +239,34 @@ namespace CodeCode
             if (D2 == true)
             {
 
-                plant = 10; 
+                plant += 10; 
+
+             
 
                 selfishness += 500;
 
-                selfishness = 500;
-
-                stupidity = 200;
+                stupidity += 200;
             }
             if (D3 == true)
             {
 
-                 plant = 200;
-                 selfishness = 100;
-                 stupidity = 50;
+                 plant += 200;
+                 selfishness += 100;
+                 stupidity += 50;
             }
             if (D4 == true)
             {
-                 plant = 0;
-                 selfishness = 100;
-                 stupidity = 200;
+                 plant += 0;
+                 selfishness += 100;
+                 stupidity += 200;
 
-                plant = 200;
-                selfishness = 100;
-                stupidity = 50;
+                
             }
             if (D4 == true)
             {
-                plant = 0;
-                selfishness = 100;
-                stupidity = 200;
+                plant += 0;
+                selfishness += 100;
+                stupidity += 200;
 
             }
 
@@ -281,45 +279,44 @@ namespace CodeCode
             if (D1 == true)
             {
 
-                 selfishness = 0;
+                 selfishness += 0;
 
-                stupidity = 0;
-                plant = 0;
+                stupidity += 0;
+                plant += 0;
             }
             if (D2 == true)
             {
 
-             selfishness = 0;
-                 stupidity = 0;
-                 plant = 0;
+             selfishness += 0;
+                 stupidity += 0;
+                 plant += 0;
             }
             if (D3 == true)
             {
-                 selfishness = 0;
-                 stupidity = 0;
-                 plant = 0;
+                 selfishness += 0;
+                 stupidity += 0;
+                 plant += 0;
             }
             if (D4 == true)
             {
-                 selfishness = 0;
-                 stupidity = 0;
+                 selfishness += 0;
+                 stupidity += 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+              
+                plant += 0;
             }
             if (D3 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+                selfishness += 0;
+                stupidity += 0;
+                plant += 0;
             }
             if (D4 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
+                selfishness += 0;
+                stupidity += 0;
 
-                plant = 0;
+                plant += 0;
             }
 
             Clear();
@@ -328,45 +325,40 @@ namespace CodeCode
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
             if (D1 == true)
             {
-                selfishness = 0;
+                selfishness  += 0;
 
-                 stupidity = 0;
-                 plant = 0;
+               
 
-                stupidity = 0;
-                plant = 0;
+                stupidity += 0;
+                plant += 0;
 
             }
             if (D2 == true)
             {
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+                selfishness += 0;
+                stupidity += 0;
+                plant += 0;
 
             }
             if (D3 == true)
             {
 
-                 selfishness = 0;
-                stupidity = 0;
-                 plant = 0;
+                 selfishness += 0;
+                stupidity += 0;
+                 plant += 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+             
 
 
             }
             if (D4 == true)
             {
 
-                 selfishness = 0;
-                stupidity = 0;
-                 plant = 0;
+                 selfishness += 0;
+                stupidity += 0;
+                 plant += 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+           
 
             }
             Clear();
@@ -374,7 +366,9 @@ namespace CodeCode
             WriteLine("GAME OF WINDS");
 
             menu("FIGHT BACK","HOLD YOUR ROOTS HARDER","DIE PEACEFULLY", "卧槽，这是什么鬼？是中文的？");
-
+            WriteLine("so your stupidness being a plant is ", stupidity);
+            WriteLine("so your selfishness being a plant is ", selfishness);
+            WriteLine("so your global score after being a plant is", plant);
 
 
             return;
