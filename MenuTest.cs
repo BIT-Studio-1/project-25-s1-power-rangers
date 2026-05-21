@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -457,7 +458,25 @@ namespace CodeCode
 
 
         }
+        static void wormlife()
+        {
+            //davids shitty ass code
+            Clear();
+            int length = 0;
+            int dirt_consumed = 0;
+            int wiggles = 0;
 
+            WriteLine("**You are a worm now**");
+            WriteLine("It's time to decide your destiny...");
+            Clear();
+            WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
+            Clear();
+            WriteLine("LEVEL 1");
+            WriteLine("THE WORM BULLY");
+            WriteLine("It beguins to rain"
+
+
+        }
 
         
 
