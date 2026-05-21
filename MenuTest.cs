@@ -218,15 +218,12 @@ namespace CodeCode
         static void plantScene1 ()
         {
             Clear();
-            ForegroundColor = ConsoleColor.Red;
-            
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
-            WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
-            WriteLine(" ");
-            WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
-            WriteLine(" ");
+            WriteLine("I am a sunflower in the valleys of dunedin in Mr. 沃恩·马尔金's Garden. I have spent most of my life listening to him about making SQL databases.");
+            WriteLine("It is now the time to decide your destiny: ");
+
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
             menu("LET BEE EXTRACT HONEY", "KILL  THE BEE INSTEAD", "FIGHT BACK", "NONE OF THESE");
@@ -276,7 +273,6 @@ namespace CodeCode
 
 
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             WriteLine("LEVEL 2");
             WriteLine("USA VS VENEZUELA OIL EXTRACTION");
             menu("KILL THE EXTRACTOR", "LET IT HAPPEN", "SUICIDE", "NONE OF THESE");
@@ -324,7 +320,6 @@ namespace CodeCode
             }
 
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             WriteLine("LEVEL 3");
             WriteLine("DOG AND HIS POOP");
             menu("LET HIM DO IT", "KILL HIM", "DO NOTHING", "SMILE AT HIM");
@@ -359,21 +354,14 @@ namespace CodeCode
             if (D4 == true)
             {
 
-<<<<<<< HEAD
-                 selfishness = 0;
-                 stupidity = 0;
-                 plant = 0;
-=======
                  selfishness += 0;
                 stupidity += 0;
                  plant += 0;
->>>>>>> 80261e58ffa5b6ca76a2c5c1f410a4754b508064
 
            
 
             }
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             WriteLine("DEATH LEVEL");
             WriteLine("GAME OF WINDS");
 
@@ -381,7 +369,7 @@ namespace CodeCode
             WriteLine("so your stupidness being a plant is ", stupidity);
             WriteLine("so your selfishness being a plant is ", selfishness);
             WriteLine("so your global score after being a plant is", plant);
-            Console.ResetColor();
+
 
             return;
         }
@@ -412,19 +400,19 @@ namespace CodeCode
                     WriteLine("You break the laws of physics and burn the food underwater");
                     WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
                     WriteLine("To the west, You see some glimmers off into the distance");
-                    WriteLine("Towards the east you can smell some blood,  it could mean food \ras you can eat remains of other fish");
-                    WriteLine("Towards the north you can see one a cave");
+                    WriteLine("Towards the east you can smell some blood");
+                    WriteLine("Towards the north you see");
 
                     switch(menu(
-                        "Go west",
+                        "Go west", 
                         "Go east", 
                         "Go north", 
-                        "", 3
+                        "Hit the whip nae nae"
                         )
                         )
                     {
                         case 'A':
-                            WriteLine("The distant glimmers");
+                            WriteLine("hgewio");
                             break;
                         case 'B':
                             WriteLine("hgewio");
@@ -481,7 +469,18 @@ namespace CodeCode
             WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
             switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
             {
-
+                case 'A':
+                    WriteLine("You approach the pufferfish \r\n\r\n" +
+                        "The pufferfish looks quite scared, " +
+                        "which does make sense as the next action you take is to chew on the pufferfish.");
+                    AbusePoint += 5;
+                        break;
+                case 'B':
+                    WriteLine("");
+                    break;
+                case 'C':
+                    WriteLine("");
+                    break;
             }
 
         }
