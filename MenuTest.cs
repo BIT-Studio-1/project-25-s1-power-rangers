@@ -226,8 +226,10 @@ namespace CodeCode
             int selfishness = 0;
             int stupidity = 0;
             int plant = 0;
+            /*
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
+            */
             WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
             WriteLine(" ");
             WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
