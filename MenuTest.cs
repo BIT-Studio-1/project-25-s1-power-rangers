@@ -459,6 +459,17 @@ namespace CodeCode
         }
 
 
+
+        static void dolphinlife1() 
+        { 
+            Clear();
+            
+            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult.  ");
+            Clear();
+
+        }
+
+
         
 
     }
