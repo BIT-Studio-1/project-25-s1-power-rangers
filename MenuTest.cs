@@ -241,7 +241,7 @@ namespace CodeCode
 
                 plant = 10; 
 
-                selfishness += 500;
+             
 
                 selfishness = 500;
 
@@ -260,9 +260,7 @@ namespace CodeCode
                  selfishness = 100;
                  stupidity = 200;
 
-                plant = 200;
-                selfishness = 100;
-                stupidity = 50;
+                
             }
             if (D4 == true)
             {
@@ -304,8 +302,7 @@ namespace CodeCode
                  selfishness = 0;
                  stupidity = 0;
 
-                selfishness = 0;
-                stupidity = 0;
+              
                 plant = 0;
             }
             if (D3 == true)
@@ -330,8 +327,7 @@ namespace CodeCode
             {
                 selfishness = 0;
 
-                 stupidity = 0;
-                 plant = 0;
+               
 
                 stupidity = 0;
                 plant = 0;
@@ -351,9 +347,7 @@ namespace CodeCode
                 stupidity = 0;
                  plant = 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+             
 
 
             }
@@ -364,9 +358,7 @@ namespace CodeCode
                 stupidity = 0;
                  plant = 0;
 
-                selfishness = 0;
-                stupidity = 0;
-                plant = 0;
+           
 
             }
             Clear();
