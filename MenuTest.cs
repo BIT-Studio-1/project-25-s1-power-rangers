@@ -439,6 +439,7 @@ namespace CodeCode
             int selfishness = 15;
             int stupidity = 15;
             int bravery = 0;
+            
             Play(@"epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
@@ -472,7 +473,7 @@ namespace CodeCode
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
-            WriteLine("You vernture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m")
+            WriteLine("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
             WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)"); ;
             WriteLine("Towards the west, You see some glimmers off into the distance");
            
@@ -494,9 +495,13 @@ namespace CodeCode
                     break;
                 case 'B':
                     WriteLine("You found your school of fish!");
+                    WriteLine("You swim with your school"); Thread.Sleep(100); Write("."); Thread.Sleep(100); Write(".\n");
                     break;
                 case 'C':
-                    WriteLine("the cave one");
+                    Clear();
+                    Write("You swim into the dark"); Thread.Sleep(100); Write("."); Thread.Sleep(100);Write(".\n");
+                    WriteLine("You see what you believe to be is a large opening");
+                    menu("Go in", "Go in","","", 2);
                     break;
                 default:
                     break;
