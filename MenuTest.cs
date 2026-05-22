@@ -472,26 +472,28 @@ namespace CodeCode
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
-            WriteLine("You vernture out into the open ocean in search of finding \nyour school or some food");
-            WriteLine("To the west, You see some glimmers off into the distance");
-            WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)");
+            WriteLine("You vernture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m")
+            WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)"); ;
+            WriteLine("Towards the west, You see some glimmers off into the distance");
+           
             WriteLine("Towards the north there is a dark area");
             WriteLine("Where do you go?");
             switch (menu(
-                "Go west",
                 "Go east",
+                "Go west",
                 "Go north",
                 "", 3
                 )
                 )
             {
                 case 'A':
-                    WriteLine("the uncle question");
-                    WriteLine();
+                    bravery += 5;
+                    WriteLine("the brave one");
+                    
+                    WriteLine("");
                     break;
                 case 'B':
-
-                    WriteLine("the brave one");
+                    WriteLine("You found your school of fish!");
                     break;
                 case 'C':
                     WriteLine("the cave one");
