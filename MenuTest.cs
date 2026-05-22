@@ -436,15 +436,15 @@ namespace CodeCode
         static void fishScene1()
         {
             Clear();
-            int selfishness = 20;
-            int stupidity = 0;
+            int selfishness = 15;
+            int stupidity = 15;
             int bravery = 0;
             Play(@"epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             WriteLine("You hatch as a fish egg");
             WriteLine("Your fish siblings are also hatched");
-            WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and your younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
+            WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             switch(menu("Leave the food for your younger sister", 
                 "Eat all her food", 
                 "Burn all the food", 
@@ -455,44 +455,51 @@ namespace CodeCode
                     goodbeep();
                     selfishness -= 10;
                     bravery += 1;
-                    Clear();
-                    WriteLine("You break the laws of physics and burn the food underwater");
-                    WriteLine("You vernture out into the open ocean in search of finding \ryour school or some food");
-                    WriteLine("To the west, You see some glimmers off into the distance");
-                    WriteLine("Towards the east you can smell some blood");
-                    WriteLine("Towards the north you see");
-
-                    switch(menu(
-                        "Go west", 
-                        "Go east", 
-                        "Go north", 
-                        "Hit the whip nae nae"
-                        )
-                        )
-                    {
-                        case 'A':
-                            WriteLine("hgewio");
-                            break;
-                        case 'B':
-
-                            WriteLine("the brave one");
-                            break;
-                        case 'C':
-                            WriteLine("hgewio");
-                            break;
-                        default:
-                            break;
-                    }
+                    //Clear();
+                    
+                    
                     break;
                 case 'B':
                     okaybeep();
                     selfishness += 10;
+                    stupidity -= 1;
+                    WriteLine("A gluttonous action, but perhaps a justified one (you didn't like Serelipanilla anyways)");
                     break;
                 default:
                     badbeep();
                     stupidity += 3;
+                    WriteLine("You break the laws of physics and burn the food underwater");
+                    WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
+            WriteLine("You vernture out into the open ocean in search of finding \nyour school or some food");
+            WriteLine("To the west, You see some glimmers off into the distance");
+            WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)");
+            WriteLine("Towards the north there is a dark area");
+            WriteLine("Where do you go?");
+            switch (menu(
+                "Go west",
+                "Go east",
+                "Go north",
+                "", 3
+                )
+                )
+            {
+                case 'A':
+                    WriteLine("the uncle question");
+                    WriteLine();
+                    break;
+                case 'B':
+
+                    WriteLine("the brave one");
+                    break;
+                case 'C':
+                    WriteLine("the cave one");
+                    break;
+                default:
+                    break;
+            }
+
 
             /*
             if (D1 == true)
