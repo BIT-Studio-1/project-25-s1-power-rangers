@@ -7,6 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using static CodeCode.SoundUtils;
+using static CodeCode.fish;
 using static System.Console;
 using static System.ConsoleKey;
 
@@ -76,7 +77,7 @@ namespace CodeCode
 
         }
 
-        static char menu(string A, string B, string C, string D, int opt = 4) {
+        public static char menu(string A, string B, string C, string D, int opt = 4) {
             //WriteLine("param: " + opt);
             WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
@@ -182,7 +183,7 @@ namespace CodeCode
 
             plantScene1();
 
-            fishScene1();
+            fishLife();
             wormlife();
             amebaScene1();
             dolphinlife1();
@@ -433,98 +434,7 @@ namespace CodeCode
             return;
         }
 
-        static void fishScene1()
-        {
-            Clear();
-            int selfishness = 15;
-            int stupidity = 15;
-            int bravery = 0;
-            
-            Play(@"epicsfx.wav");
-            //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
-            WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
-            WriteLine("You hatch as a fish egg");
-            WriteLine("Your fish siblings are also hatched");
-            WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
-            switch(menu("Leave the food for your younger sister", 
-                "Eat all her food", 
-                "Burn all the food", 
-                "", 3)
-            )
-            {
-                case 'A':
-                    goodbeep();
-                    selfishness -= 10;
-                    bravery += 1;
-                    //Clear();
-                    
-                    
-                    break;
-                case 'B':
-                    okaybeep();
-                    selfishness += 10;
-                    stupidity -= 1;
-                    WriteLine("A gluttonous action, but perhaps a justified one (you didn't like Serelipanilla anyways)");
-                    break;
-                default:
-                    badbeep();
-                    stupidity += 3;
-                    WriteLine("You break the laws of physics and burn the food underwater");
-                    WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
-                    break;
-            }
-            WriteLine("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
-            WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)"); ;
-            WriteLine("Towards the west, You see some glimmers off into the distance");
-           
-            WriteLine("Towards the north there is a dark area");
-            WriteLine("Where do you go?");
-            switch (menu(
-                "Go east",
-                "Go west",
-                "Go north",
-                "", 3
-                )
-                )
-            {
-                case 'A':
-                    bravery += 5;
-                    WriteLine("the brave one");
-                    
-                    WriteLine("");
-                    break;
-                case 'B':
-                    WriteLine("You found your school of fish!");
-                    WriteLine("You swim with your school"); Thread.Sleep(100); Write("."); Thread.Sleep(100); Write(".\n");
-                    break;
-                case 'C':
-                    Clear();
-                    Write("You swim into the dark"); Thread.Sleep(100); Write("."); Thread.Sleep(100);Write(".\n");
-                    WriteLine("You see what you believe to be is a large opening");
-                    menu("Go in", "Go in","","", 2);
-                    break;
-                default:
-                    break;
-            }
 
-
-            /*
-            if (D1 == true)
-            {
-                selfishness -= 10;
-                loyalty += 3;
-            }
-            else if (D2 == true)
-            {
-                selfishness += 10;
-            }
-            */
-
-
-            Clear();
-
-
-        }
 
 
         static void wormlife()
