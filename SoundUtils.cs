@@ -24,6 +24,11 @@ namespace CodeCode
             player?.Stop();
         }
 
+        public static void Suspense2SFX()
+        {
+            Play(@"Suspense2SFX.wav");
+
+        }
 
         public static async Task goodbeep()
         {

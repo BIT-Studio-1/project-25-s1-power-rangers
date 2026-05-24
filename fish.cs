@@ -37,10 +37,11 @@ namespace CodeCode
 
             Play(@"epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
-            WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
-            WriteLine("You hatch as a fish, out of your egg");
+            Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
+            fishWait();
+            Write("You hatch as a fish, out of your egg"); fishWait();
             // WriteLine($" selfishness {selfishness}");
-            WriteLine("Your fish siblings are also hatched"); Thread.Sleep(500);
+            Write("Your fish siblings are also hatched"); fishWait();
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             switch (menu("Leave the food for your younger sister",
                 "Eat all her food",
@@ -86,7 +87,15 @@ namespace CodeCode
                     stupidity += 5;
                     selfishness -= 1;
                     Write("You give him a fish"); fishWait();
-                    WriteLine("Aforementioned fish was yourself");
+                    Write("Aforementioned fish was");
+                    
+                    Thread.Sleep(1200); Suspense2SFX();
+                    Write(" YOURSELF");
+                    fishWait(); Thread.Sleep(1200);
+
+
+
+
                     break;
                 case 'B':
                     Clear();
