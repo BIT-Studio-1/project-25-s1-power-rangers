@@ -77,6 +77,21 @@ namespace CodeCode
 
         }
 
+        // Input a chance 1 - 100 and return a bool
+        public static bool deathRoll(int chance)
+        {
+            Random rand = new Random();
+            int roll = rand.Next(1, 101);
+            if (roll <= chance)
+            {
+                return true;
+            }
+
+
+            return false;
+        }
+
+
         public static char menu(string A, string B, string C, string D, int opt = 4) {
             //WriteLine("param: " + opt);
             WriteLine("\nMove: Arrows  Select: Space/Enter");
@@ -171,6 +186,7 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            /*
             WriteLine("Welcome to the game yo! €  wow look its the euro symbol ");
 
             room1();
@@ -181,6 +197,7 @@ namespace CodeCode
 
             room2();
 
+            */
             plantScene1();
 
             fishLife();
@@ -193,31 +210,22 @@ namespace CodeCode
 
         static void room1()
         {
-            
-            
             Clear();
             WriteLine("a man has fallen into a river in lego city");
             WriteLine("Will you make choice 1 for this reason?");
             WriteLine("Or perhaps choice 2");
             WriteLine("Blablabla");
-
             menu("choice 1", "choice 2, do this", "choice 3", "choice 4");
-
-
 
             return;
         }
 
         static void room2() {
-
-            
             Clear();
             WriteLine("this is room 2 heres the words");
             menu("room 2 choice 1", "room 2 choice 2", "room 2 choice 3", "room 2 choice 4");
 
-
             return;
-
         }
 
         static void plantScene1 ()

@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Console;
-using static CodeCode.SoundUtils;
 using static CodeCode.MenuTest;
+using static CodeCode.SoundUtils;
+using static System.Console;
+using static System.Net.Mime.MediaTypeNames;
 namespace CodeCode
 {
     public class fish
     {
-        private static int selfishness = 15;
-        private static int stupidity = 15;
-        private static int bravery = 15;
+        private static int selfishness = 20;
+        private static int stupidity = 20;
+        private static int bravery = 20;
 
         public static void fishWait()
         {
@@ -30,6 +33,8 @@ namespace CodeCode
             return;
 
         }
+        
+
         public static void fishScene1()
         {
             Clear();
@@ -55,6 +60,7 @@ namespace CodeCode
                     goodbeep();
                     selfishness -= 10;
                     bravery += 1;
+                    stupidity -= 2;
                     //Clear();
 
 
@@ -63,12 +69,13 @@ namespace CodeCode
                     okaybeep();
                     Clear();
                     selfishness += 10;
-                    stupidity -= 1;
+                    stupidity -= 2;
                     WriteLine("A gluttonous action, but perhaps a justified one (you didn't like Serelipanilla anyways)");
                     break;
                 default:
                     badbeep();
                     stupidity += 3;
+                    selfishness += 2;
                     Clear();
                     Write("You break the laws of physics and burn the food underwater");
                     fishWait();
@@ -101,6 +108,7 @@ namespace CodeCode
                 case 'B':
                     Clear();
                     bravery += 5;
+                    stupidity -= 5;
                     Write("You teach him to fish"); fishWait();
                     WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
                     WriteLine("And then vibrate in morse code the instructions of how to fish");
@@ -126,6 +134,7 @@ namespace CodeCode
             }
             public static void fishScene2()
             {
+                
                 //WriteLine($" selfishness {selfishness}");
                 WriteLine("");
                 Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
@@ -147,26 +156,46 @@ namespace CodeCode
                         Write("You smell some danger");
 
                         Write("It smells very dangerous"); fishWait();
-                        Write("But danger is your middle name"); fishWait();
+                        WriteLine("But danger is your middle name"); Thread.Sleep(800);
                         Write("You swim towards the smell"); fishWait();
 
-                        WriteLine("You see a damselfish getting chased by an eel");
+                        WriteLine("You see a damselfish getting chased by a dangerous eel");
                         WriteLine("What do you do?");
-                        switch (menu( 
-                            "Mind your own business and hurry away", 
-                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel",
-                            "Attempt to save the damselfish by letting it swim behind you in your slipstream", 
-                            "", 3)
+                        switch (menu(
+                            "Mind your own business and hurry away\n\t(0% chance of death)", 
+                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death)",
+                            "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death)", 
+                            "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death)", 3)
                         )
                         {
                         case 'A':
-                            
+                            Clear();
+                            bravery -= 5;
+                            stupidity -= 4;
+                            selfishness += 3;
+                            Write("You mind your own business and swim away"); fishWait();
                             break;
                         case 'B':
+                            bravery += 10;
+                            selfishness -= 3;
+                            Write("You attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel");
+                            fishWait();
+                            if (deathRoll(50) == true)
+                            {
+                                Write("You died a fishful life"); fishWait();
+                                Write("Press enter to reincarnate to your next life");
+                                ReadLine();
+                                return;
+                            }
+                            Write("You successfully distract the eel away from the damselfish and escape");
+                            fishWait();
 
                             break;
                         default:
-                            WriteLine();
+                            bravery += 7;
+                            stupidity -= 3;
+                            selfishness -= 1;
+                            Write("Attempt to save the damselfish by letting it swim behind you in your slipstream"); fishWait();
                             break;
                         }    
 
@@ -188,8 +217,7 @@ namespace CodeCode
 
 
                 }
-
-            return;
+                return;
 
         }
     }
