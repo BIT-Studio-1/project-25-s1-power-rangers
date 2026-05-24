@@ -70,7 +70,8 @@ namespace CodeCode
                     badbeep();
                     stupidity += 3;
                     Clear();
-                    WriteLine("You break the laws of physics and burn the food underwater");
+                    Write("You break the laws of physics and burn the food underwater");
+                    fishWait();
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
@@ -80,20 +81,20 @@ namespace CodeCode
             fishWait();
             WriteLine("You see the hook of a fisherman trying to fish");
             WriteLine("Do you give him a fish to feed him for a day or teach the man to fish to feed him for a lifetime");
-            switch(menu("Give him a fish (latch on to his hook)", "Teach him to fish", "Give him TO the fishes", "", 3))
+            switch(menu("Give him a fish", "Teach him to fish", "Give him TO the fishes", "", 3))
             {
                 case 'A':
                     Clear();
                     stupidity += 5;
                     selfishness -= 1;
                     Write("You give him a fish"); fishWait();
-                    Write("Aforementioned fish was");
+                    Write("The aforementioned fish was");
                     
                     Thread.Sleep(1200); Suspense2SFX();
                     Write(" YOURSELF");
                     fishWait(); Thread.Sleep(1200);
 
-
+                    Write("After he catches you, he suddenly remembers that he is actually a vegan, so he releases you");
 
 
                     break;
@@ -113,37 +114,62 @@ namespace CodeCode
                     Clear();
                     WriteLine("You give him TO the fishes");
                     Write("You latch onto his hook and pull him into the water"); fishWait();
-                    WriteLine("He falls into the water");
+                    Write("He falls into the water"); fishWait();
                     Write("His body is seen by a fish school, shooting towards him their eyes widen in ravenous hunger"); fishWait();
                     WriteLine("The fish devour him, leaving only the bones");
                     break;
+                
             }
 
-
+            return;
 
             }
             public static void fishScene2()
             {
                 //WriteLine($" selfishness {selfishness}");
                 WriteLine("");
-                WriteLine("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
-                WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)"); ;
+                Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
+                fishWait();
+                WriteLine("Towards the east, you can smell some danger");
                 WriteLine("Towards the west, You see some glimmers off into the distance");
-                WriteLine("Towards the north there is a dark area");
+                WriteLine("Towards the north, there is a dark area");
                 WriteLine("Where do you go?");
                 switch (menu(
                     "Go east",
                     "Go west",
                     "Go north",
-                    "", 3
-                    )
+                    "", 3)
                     )
                 {
                     case 'A':
                         bravery += 5;
-                        WriteLine("");
+                        Clear();
+                        Write("You smell some danger");
 
-                        WriteLine("");
+                        Write("It smells very dangerous"); fishWait();
+                        Write("But danger is your middle name"); fishWait();
+                        Write("You swim towards the smell"); fishWait();
+
+                        WriteLine("You see a damselfish getting chased by an eel");
+                        WriteLine("What do you do?");
+                        switch (menu( 
+                            "Mind your own business and hurry away", 
+                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel",
+                            "Attempt to save the damselfish by letting it swim behind you in your slipstream", 
+                            "", 3)
+                        )
+                        {
+                        case 'A':
+                            
+                            break;
+                        case 'B':
+
+                            break;
+                        default:
+                            WriteLine();
+                            break;
+                        }    
+
                         break;
                     case 'B':
                         WriteLine("You found your school of fish!");
@@ -163,7 +189,7 @@ namespace CodeCode
 
                 }
 
-
+            return;
 
         }
     }
