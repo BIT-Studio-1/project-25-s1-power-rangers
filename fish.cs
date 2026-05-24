@@ -50,6 +50,7 @@ namespace CodeCode
             {
                 case 'A':
                     Clear();
+                    WriteLine("You left the food for Serelipanilla");
                     goodbeep();
                     selfishness -= 10;
                     bravery += 1;
@@ -74,9 +75,32 @@ namespace CodeCode
             }
 
 
-            WriteLine("");
-            WriteLine("You see a fisherman trying to fish");
+            Write("You swim up to the surface");
+            fishWait();
+            WriteLine("You see the hook of a fisherman trying to fish");
             WriteLine("Do you give him a fish to feed him for a day or teach the man to fish to feed him for a lifetime");
+            switch(menu("Give him a fish (latch on to his hook)", "Teach him to fish", "Give him TO the fishes", "", 3))
+            {
+                case 'A':
+                    Clear();
+                    stupidity += 5;
+                    WriteLine("You give him a fish");
+                    break;
+                case 'B':
+                    Clear();
+                    bravery += 5;
+                    Write("You teach him to fish"); fishWait();
+                    WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
+                    WriteLine("And then vibrate in morse code the instructions of how to fish");
+                    Write("He is now armed with the instuctions of how to fish"); fishWait();
+                    
+                    break;
+
+                default:
+                    break;
+            }
+
+
 
             }
             public static void fishScene2()
@@ -104,13 +128,13 @@ namespace CodeCode
                         break;
                     case 'B':
                         WriteLine("You found your school of fish!");
-                        WriteLine("You swim with your school");
+                        Write("You swim with your school");
                         fishWait();
                         break;
                     case 'C':
                         Clear();
                         Write("You swim into the darkness");
-                        
+                        fishWait();
                         WriteLine("You see what you believe to be is a large opening");
                         menu("Go in", "Go in", "", "", 2);
                         break;
