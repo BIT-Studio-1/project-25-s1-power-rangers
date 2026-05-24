@@ -98,10 +98,10 @@ namespace CodeCode
                     Write("The aforementioned fish was");
                     
                     Thread.Sleep(1200); Suspense2SFX();
-                    Write(" YOURSELF");
+                    Write(" \u001b[1mYOURSELF\u001b[0m");
                     fishWait(); Thread.Sleep(1200);
 
-                    Write("After he catches you, he suddenly remembers that he is actually a vegan, so he releases you");
+                    Write("After he catches you, he suddenly remembers that he is actually a vegan, so he releases you"); fishWait();
 
 
                     break;
@@ -111,9 +111,9 @@ namespace CodeCode
                     stupidity -= 5;
                     Write("You teach him to fish"); fishWait();
                     WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
-                    WriteLine("And then vibrate in morse code the instructions of how to fish");
+                    Write("And then vibrate in morse code the instructions of how to fish"); fishWait();
                     Write("He is now armed with the instuctions of how to fish"); fishWait();
-                    
+                    Write("The information won't be useful to him, as he suddenly remembers that he is actually a vegan"); fishWait();
                     break;
 
                 default:
@@ -124,7 +124,7 @@ namespace CodeCode
                     Write("You latch onto his hook and pull him into the water"); fishWait();
                     Write("He falls into the water"); fishWait();
                     Write("His body is seen by a fish school, shooting towards him their eyes widen in ravenous hunger"); fishWait();
-                    WriteLine("The fish devour him, leaving only the bones");
+                    Write("The fish devour him, leaving only the bones"); fishWait();
                     break;
                 
             }
@@ -153,7 +153,7 @@ namespace CodeCode
                     case 'A':
                         bravery += 5;
                         Clear();
-                        Write("You smell some danger");
+                        Write("You smell some danger"); fishWait();
 
                         Write("It smells very dangerous"); fishWait();
                         WriteLine("But danger is your middle name"); Thread.Sleep(800);
@@ -162,10 +162,10 @@ namespace CodeCode
                         WriteLine("You see a damselfish getting chased by a dangerous eel");
                         WriteLine("What do you do?");
                         switch (menu(
-                            "Mind your own business and hurry away\n\t(0% chance of death)", 
-                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death)",
-                            "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death)", 
-                            "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death)", 3)
+                            "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)", 
+                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
+                            "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)", 
+                            "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)", 3)
                         )
                         {
                         case 'A':
@@ -176,12 +176,14 @@ namespace CodeCode
                             Write("You mind your own business and swim away"); fishWait();
                             break;
                         case 'B':
+                            Clear();
                             bravery += 10;
-                            selfishness -= 3;
+                            selfishness -= 5;
                             Write("You attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel");
                             fishWait();
                             if (deathRoll(50) == true)
                             {
+                                Write("The eel devoured up you and the damselfish"); fishWait();
                                 Write("You died a fishful life"); fishWait();
                                 Write("Press enter to reincarnate to your next life");
                                 ReadLine();
@@ -190,12 +192,34 @@ namespace CodeCode
                             Write("You successfully distract the eel away from the damselfish and escape");
                             fishWait();
 
+
+                            break;
+                        case 'C':
+                            Clear();
+                            bravery += 7;
+                            selfishness -= 4;
+                            Write("You attempt to save the damselfish by letting it swim behind you in your slipstream, distracting the eel");
+                            fishWait();
+                            if (deathRoll(50) == true)
+                            {
+                                Write("The eel devoured up you and the damselfish"); fishWait();
+                                Write("You died a fishful life"); fishWait();
+                                Write("Press enter to reincarnate to your next life");
+                                ReadLine();
+                                return;
+                            }
+                            Write("You successfully distract the eel away from the damselfish and escape");
+                            fishWait();
+
+
                             break;
                         default:
-                            bravery += 7;
-                            stupidity -= 3;
-                            selfishness -= 1;
-                            Write("Attempt to save the damselfish by letting it swim behind you in your slipstream"); fishWait();
+                            Clear();
+                            selfishness += 10;
+                            Write("You attempt to save the damselfishby throwing a nearby baby fish between the eel and the damselfish"); fishWait();
+                            Write("You successfully distract the eel away from the damselfish and escape");
+                            fishWait();
+                            
                             break;
                         }    
 
