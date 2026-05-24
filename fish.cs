@@ -11,12 +11,25 @@ using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
 namespace CodeCode
 {
-    public class fish
+    internal class fish
     {
         private static int selfishness = 20;
         private static int stupidity = 20;
         private static int bravery = 20;
+        public static int Selfishness
+        {
+            get { return selfishness; }
+        }
 
+        public static int Stupidity
+        {
+            get { return stupidity; }
+        }
+
+        public static int Bravery
+        {
+            get { return bravery; }
+        }
         public static void fishWait()
         {
             Thread.Sleep(500); Write(".");
@@ -140,7 +153,7 @@ namespace CodeCode
                 Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
                 fishWait();
                 WriteLine("Towards the east, you can smell some danger");
-                WriteLine("Towards the west, You see some glimmers off into the distance");
+                WriteLine("Towards the west, you see some glimmers off into the distance");
                 WriteLine("Towards the north, there is a dark area");
                 WriteLine("Where do you go?");
                 switch (menu(
@@ -225,22 +238,29 @@ namespace CodeCode
 
                         break;
                     case 'B':
-                        WriteLine("You found your school of fish!");
-                        Write("You swim with your school");
-                        fishWait();
+                        Clear();
+                        // This one will just bring you below down to the next question (the uncle Vishnu one)
+
                         break;
                     case 'C':
                         Clear();
                         Write("You swim into the darkness");
                         fishWait();
                         WriteLine("You see what you believe to be is a large opening");
-                        menu("Go in", "Go in", "", "", 2);
+                        menu("Go in", "Go in lol", "", "", 2);
                         break;
                     default:
+                        // This never gets triggered
                         break;
 
 
                 }
+                WriteLine("You found your school of fish! They weren't too far.");
+                Write("You swim with your school for a while");
+                fishWait();
+
+                Write("Your fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
+                fishWait();
                 return;
 
         }

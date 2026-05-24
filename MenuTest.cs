@@ -10,7 +10,7 @@ using static CodeCode.SoundUtils;
 using static CodeCode.fish;
 using static System.Console;
 using static System.ConsoleKey;
-
+using static CodeCode.starfish;
 
 namespace CodeCode
 {
@@ -52,25 +52,21 @@ namespace CodeCode
             if ((key == Spacebar || key == Enter) && (option == 1))
             {
                 D1 = true;
-                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 2))
             {
                 D2 = true;
-                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 3))
             {
                 D3 = true;
-                //goodbeep();
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 4))
             {
                 D4 = true;
-                //goodbeep();
                 return;
             }
 
@@ -176,7 +172,8 @@ namespace CodeCode
                
 
             }
-
+            // the line below never runs, as controller will always make one of the D bools true
+            // it's just to fix an error that happens when the method finishes without returning anything
             return ' ';
 
         }
@@ -186,29 +183,24 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            /*
-            WriteLine("Welcome to the game yo! €  wow look its the euro symbol ");
-
-            room1();
-
-            Write("advance to room 2");
-           
-
-
-            room2();
-
-            */
             plantScene1();
-
+            
             fishLife();
+
+            if (fish.Selfishness >= 25) {
+                dolphinlife1();
+            }
+            else {
+                starfishLife();
+            }
             wormlife();
             amebaScene1();
-            dolphinlife1();
+            //dolphinlife1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
 
-        static void room1()
+        static void room1() // test room
         {
             Clear();
             WriteLine("a man has fallen into a river in lego city");
@@ -220,7 +212,7 @@ namespace CodeCode
             return;
         }
 
-        static void room2() {
+        static void room2() { // also test room
             Clear();
             WriteLine("this is room 2 heres the words");
             menu("room 2 choice 1", "room 2 choice 2", "room 2 choice 3", "room 2 choice 4");
