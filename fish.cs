@@ -12,7 +12,7 @@ namespace CodeCode
     {
         private static int selfishness = 15;
         private static int stupidity = 15;
-        private static int bravery = 0;
+        private static int bravery = 15;
 
         public static void fishWait()
         {
@@ -38,9 +38,9 @@ namespace CodeCode
             Play(@"epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             WriteLine("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
-            WriteLine("You hatch as a fish egg");
-            WriteLine($" selfishness {selfishness}");
-            WriteLine("Your fish siblings are also hatched");
+            WriteLine("You hatch as a fish, out of your egg");
+            // WriteLine($" selfishness {selfishness}");
+            WriteLine("Your fish siblings are also hatched"); Thread.Sleep(500);
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             switch (menu("Leave the food for your younger sister",
                 "Eat all her food",
@@ -84,7 +84,9 @@ namespace CodeCode
                 case 'A':
                     Clear();
                     stupidity += 5;
-                    WriteLine("You give him a fish");
+                    selfishness -= 1;
+                    Write("You give him a fish"); fishWait();
+                    WriteLine("Aforementioned fish was yourself");
                     break;
                 case 'B':
                     Clear();
@@ -97,6 +99,14 @@ namespace CodeCode
                     break;
 
                 default:
+                    selfishness -= 2;
+                    bravery += 2;
+                    Clear();
+                    WriteLine("You give him TO the fishes");
+                    Write("You latch onto his hook and pull him into the water"); fishWait();
+                    WriteLine("He falls into the water");
+                    Write("His body is seen by a fish school, shooting towards him their eyes widen in ravenous hunger"); fishWait();
+                    WriteLine("The fish devour him, leaving only the bones");
                     break;
             }
 
