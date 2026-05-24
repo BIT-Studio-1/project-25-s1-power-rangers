@@ -13,6 +13,14 @@ namespace CodeCode
         private static int selfishness = 15;
         private static int stupidity = 15;
         private static int bravery = 0;
+
+        public static void fishWait()
+        {
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".\n");
+            Thread.Sleep(500);
+        }
         public static void fishLife()
         { 
             
@@ -41,6 +49,7 @@ namespace CodeCode
             )
             {
                 case 'A':
+                    Clear();
                     goodbeep();
                     selfishness -= 10;
                     bravery += 1;
@@ -50,6 +59,7 @@ namespace CodeCode
                     break;
                 case 'B':
                     okaybeep();
+                    Clear();
                     selfishness += 10;
                     stupidity -= 1;
                     WriteLine("A gluttonous action, but perhaps a justified one (you didn't like Serelipanilla anyways)");
@@ -57,11 +67,16 @@ namespace CodeCode
                 default:
                     badbeep();
                     stupidity += 3;
+                    Clear();
                     WriteLine("You break the laws of physics and burn the food underwater");
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
-            Clear();
+
+
+            WriteLine("");
+            WriteLine("You see a fisherman trying to fish");
+            WriteLine("Do you give him a fish to feed him for a day or teach the man to fish to feed him for a lifetime");
 
             }
             public static void fishScene2()
@@ -71,7 +86,6 @@ namespace CodeCode
                 WriteLine("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
                 WriteLine("Towards the east you can smell some blood (there may be some food in the form of remains)"); ;
                 WriteLine("Towards the west, You see some glimmers off into the distance");
-
                 WriteLine("Towards the north there is a dark area");
                 WriteLine("Where do you go?");
                 switch (menu(
@@ -90,15 +104,13 @@ namespace CodeCode
                         break;
                     case 'B':
                         WriteLine("You found your school of fish!");
-                        WriteLine("You swim with your school"); Thread.Sleep(100); Write("."); Thread.Sleep(100); Write(".\n");
+                        WriteLine("You swim with your school");
+                        fishWait();
                         break;
                     case 'C':
                         Clear();
                         Write("You swim into the darkness");
-                        Thread.Sleep(500); Write(".");
-                        Thread.Sleep(500); Write(".");
-                        Thread.Sleep(500); Write(".\n");
-                        Thread.Sleep(500);
+                        
                         WriteLine("You see what you believe to be is a large opening");
                         menu("Go in", "Go in", "", "", 2);
                         break;
