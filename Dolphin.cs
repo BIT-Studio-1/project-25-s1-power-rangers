@@ -41,7 +41,7 @@ namespace CodeCode
         }
 
 
-        static void dolphinlife1()
+        public static void dolphinlife1()
         {
             Clear();
 
