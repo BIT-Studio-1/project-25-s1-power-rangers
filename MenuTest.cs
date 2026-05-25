@@ -12,6 +12,7 @@ using static System.Console;
 using static System.ConsoleKey;
 using static CodeCode.starfish;
 using static CodeCode.dolphin;
+using static CodeCode.GameTitle;
 
 
 namespace CodeCode
@@ -185,10 +186,11 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-          
-
-            plantScene1();
-            
+            TitleScreen();
+            if (GameTitle.start1 == 1)
+            { plantScene1(); }
+            else if (GameTitle.end1 == 1)
+            { return;}
             fishLife();
 
             if (fish.Selfishness >= 25) {
