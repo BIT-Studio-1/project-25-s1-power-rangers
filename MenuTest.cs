@@ -56,21 +56,37 @@ namespace CodeCode
             if ((key == Spacebar || key == Enter) && (option == 1))
             {
                 D1 = true;
+                while (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                }
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 2))
             {
                 D2 = true;
+                while (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                }
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 3))
             {
                 D3 = true;
+                while (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                }
                 return;
             }
             else if ((key == Spacebar || key == Enter) && (option == 4))
             {
                 D4 = true;
+                while (Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                }
                 return;
             }
 
@@ -93,6 +109,10 @@ namespace CodeCode
 
 
         public static char menu(string A, string B, string C, string D, int opt = 4) {
+            while (Console.KeyAvailable)
+            {
+                Console.ReadKey(true);
+            }
             //WriteLine("param: " + opt);
             WriteLine("\nMove: Arrows  Select: Space/Enter");
             savedLeft = CursorLeft;
