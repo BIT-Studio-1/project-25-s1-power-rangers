@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using static CodeCode.MenuTest;
@@ -30,12 +31,12 @@ namespace CodeCode
         {
             get { return bravery; }
         }
-        public static void fishWait()
+        public static void fishWait(int time = 500)
         {
-            Thread.Sleep(500); Write(".");
-            Thread.Sleep(500); Write(".");
-            Thread.Sleep(500); Write(".\n");
-            Thread.Sleep(500);
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".\n");
+            Thread.Sleep(time);
         }
         public static void fishLife()
         { 
@@ -145,42 +146,42 @@ namespace CodeCode
             return;
 
             }
-            public static void fishScene2()
+        public static void fishScene2()
+        {
+
+            //WriteLine($" selfishness {selfishness}");
+            WriteLine("");
+            Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
+            fishWait();
+            WriteLine("Towards the east, you can smell some danger");
+            WriteLine("Towards the west, you see some glimmers off into the distance");
+            WriteLine("Towards the north, there is a dark area");
+            WriteLine("Where do you go?");
+            switch (menu(
+                "Go east",
+                "Go west",
+                "Go north",
+                "", 3)
+                )
             {
-                
-                //WriteLine($" selfishness {selfishness}");
-                WriteLine("");
-                Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
-                fishWait();
-                WriteLine("Towards the east, you can smell some danger");
-                WriteLine("Towards the west, you see some glimmers off into the distance");
-                WriteLine("Towards the north, there is a dark area");
-                WriteLine("Where do you go?");
-                switch (menu(
-                    "Go east",
-                    "Go west",
-                    "Go north",
-                    "", 3)
+                case 'A':
+                    bravery += 5;
+                    Clear();
+                    Write("You smell some danger"); fishWait();
+
+                    Write("It smells very dangerous"); fishWait();
+                    WriteLine("But danger is your middle name"); Thread.Sleep(800);
+                    Write("You swim towards the smell"); fishWait();
+
+                    WriteLine("You see a damselfish getting chased by a dangerous eel");
+                    WriteLine("What do you do?");
+                    switch (menu(
+                        "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)",
+                        "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
+                        "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)",
+                        "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)", 3)
                     )
-                {
-                    case 'A':
-                        bravery += 5;
-                        Clear();
-                        Write("You smell some danger"); fishWait();
-
-                        Write("It smells very dangerous"); fishWait();
-                        WriteLine("But danger is your middle name"); Thread.Sleep(800);
-                        Write("You swim towards the smell"); fishWait();
-
-                        WriteLine("You see a damselfish getting chased by a dangerous eel");
-                        WriteLine("What do you do?");
-                        switch (menu(
-                            "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)", 
-                            "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
-                            "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)", 
-                            "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)", 3)
-                        )
-                        {
+                    {
                         case 'A':
                             Clear();
                             bravery -= 5;
@@ -232,35 +233,66 @@ namespace CodeCode
                             Write("You attempt to save the damselfishby throwing a nearby baby fish between the eel and the damselfish"); fishWait();
                             Write("You successfully distract the eel away from the damselfish and escape");
                             fishWait();
-                            
+
                             break;
-                        }    
+                    }
 
-                        break;
-                    case 'B':
-                        Clear();
-                        // This one will just bring you below down to the next question (the uncle Vishnu one)
+                    break;
+                case 'B':
+                    Clear();
+                    // This one will just bring you below down to the next question (the uncle Vishnu one)
 
-                        break;
-                    case 'C':
-                        Clear();
-                        Write("You swim into the darkness");
-                        fishWait();
-                        WriteLine("You see what you believe to be is a large opening");
-                        menu("Go in", "Go in lol", "", "", 2);
-                        break;
-                    default:
-                        // This never gets triggered
-                        break;
+                    break;
+                case 'C':
+                    Clear();
+                    Write("You swim into the darkness");
+                    fishWait();
+                    WriteLine("You see what you believe to be is a large opening");
+                    menu("Go in", "Go in lol", "", "", 2);
+                    break;
+                default:
+                    // This never gets triggered
+                    break;
 
 
+            }
+            WriteLine("You found your school of fish! They weren't too far.");
+            Write("You swim with your school for a while");
+            fishWait();
+
+            Write("Your fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
+            fishWait();
+            Write("The school you are swimming in is going towards some nutritious food");
+            fishWait();
+            WriteLine("After him being missing from the school for a few days you see him swimming with a dangerous rival school of fish and they haven’t noticed him yet.");
+            Write("It's about to be spawning season, and you need to be nutritionally healthy to carry on a strong bloodline");
+            fishWait();
+
+
+            switch (menu("Keep going with your school to feed",
+                "Swim up to Vishnu and guide him back to your school of fish",
+                "Blend in with the rival school and wait until you and Vishnu are alone to save him (you might not come back to your school and be stranded)",
+                "", 3))
+                {
+                case 'A':
+                    Clear();
+                    Write("You keep going with your school to feed"); fishWait(200);
+                    Write("You never see Vishnu again"); fishWait(200);
+
+                    break;
+                case 'B':
+                    Clear();
+                    Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
+
+                    break;
+
+                default:
+                    Clear();
+                    Write("You blend in with the rival school and wait until you’re alone with Vishnu"); fishWait(200);
+                    break;
                 }
-                WriteLine("You found your school of fish! They weren't too far.");
-                Write("You swim with your school for a while");
-                fishWait();
 
-                Write("Your fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
-                fishWait();
+
                 return;
 
         }
