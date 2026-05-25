@@ -13,6 +13,7 @@ using static System.ConsoleKey;
 using static CodeCode.starfish;
 using static CodeCode.dolphin;
 using static CodeCode.GameTitle;
+using static CodeCode.plant;
 
 
 namespace CodeCode
@@ -24,10 +25,10 @@ namespace CodeCode
 
         static int globalScore = 0;
         static int option = 1;
-        static bool D1 = false;
-        static bool D2 = false;
-        static bool D3 = false;
-        static bool D4 = false;
+        public static bool D1 = false;
+        public static bool D2 = false;
+        public static bool D3 = false;
+        public static bool D4 = false;
 
 
 
