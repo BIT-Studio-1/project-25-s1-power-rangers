@@ -184,12 +184,13 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            debug();
             TitleScreen();
             if (GameTitle.start1 == 1)
             { amebaScene1(); }
             else if (GameTitle.end1 == 1)
             { return;}
-            plantScene1();
+            plantLife();
             fishLife();
 
             if (fish.Selfishness >= 25) {
@@ -283,7 +284,51 @@ namespace CodeCode
                 return;
             }
 
+        public static void debug()
+        {
+            int debug, go = 0;
+            string temp;
 
+            while (go == 0)
+            {
+                WriteLine("Debug menu\n1. Amoeba\n2. Plant\n3. Worm\n4. Fish\n5. Dolphin\n6. To proceed normally");
+                temp = ReadLine();
+                debug = Convert.ToInt32(temp);
+
+                switch (debug)
+                {
+                    case 5:
+                        dolphinlife();
+                        break;
+
+                    case 4:
+                        fishLife();
+                        break;
+
+                    case 3:
+                        wormlife();
+                        break;
+
+                    case 2:
+                        plantLife();
+                        break;
+
+                    case 1:
+                        amebaScene1();
+                        break;
+
+                    default:
+                        go = 1;
+                        break;
+
+                }
+            }
+
+
+
+
+
+        }
 
 
 

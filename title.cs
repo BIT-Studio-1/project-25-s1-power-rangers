@@ -35,6 +35,8 @@ namespace CodeCode
 
         public static void TitleScreen()
         {
+            CursorVisible = false;
+
             Clear();
             while (start == 0 && end == 0)
             {
@@ -50,6 +52,7 @@ namespace CodeCode
                         WriteLine("In this game, you will be reincarnated as a random animal and will have to make choices that will affect your life as that animal."); ReadLine();
                         Write("If there are "); ForegroundColor = ConsoleColor.Yellow; Wait(); ResetColor(); Write(" at the end of a sentence, please "); ForegroundColor = ConsoleColor.Yellow; Write("wait"); ResetColor(); Write(" for the text to end."); ReadLine(); 
                         Write("If not, please press the "); ForegroundColor = ConsoleColor.Yellow; Write("ENTER"); ResetColor(); Write(" key to continue."); ReadLine();
+                        Write("\nHopefully you can remember that"); ReadLine();
                         Write("\nNow"); Wait(); ForegroundColor = ConsoleColor.Red; Write("let's get started!"); ReadLine();
 
                         Clear(); Thread.Sleep(300);
@@ -72,7 +75,7 @@ namespace CodeCode
                         Write("David Knauf\n"); Thread.Sleep(500);
                         Write("Nathalie Chang"); Thread.Sleep(500);
                         ResetColor();
-                        Write("\n\n\nPress "); ForegroundColor = ConsoleColor.DarkYellow; Write("ENTER"); ResetColor(); Write(" to return to the title screen...");
+                        Write("\n\n\nPress "); ForegroundColor = ConsoleColor.Yellow; Write("ENTER"); ResetColor(); Write(" to return to the title screen...");
                         ReadLine();
                         Clear();
                         break;
@@ -86,6 +89,8 @@ namespace CodeCode
 
             return;
         }
+
+
     }
 
 

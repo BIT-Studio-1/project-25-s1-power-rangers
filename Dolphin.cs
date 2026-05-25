@@ -45,28 +45,28 @@ namespace CodeCode
         {
             Clear();
 
-            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult."); ReadLine();
+            Write("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin "); ReadLine(); Write("Being a dolphin is pretty difficult"); ReadLine();
             WriteLine("But hey! At least you’re smart :) "); ReadLine(); Clear();
             WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
             switch (menu("Approach it", "Leave it alone", "Tell your dolphin friends", "", 3))
             {
                 case 'A':
                     AbusePoint += 5; okaybeep(); Clear();
-                    WriteLine("You approach the pufferfish \r\n\r\n" +
-                        "The pufferfish looks quite scared, " +
-                        "which does make sense as the next action you take is to chew on the pufferfish."); Thread.Sleep(100);
-                    WriteLine("You are successfully high");
+                    Write("You approach the pufferfish"); ReadLine();
+                    Write("The pufferfish looks quite scared, "); ReadLine();
+                    Write("which does make sense as the next action you take is to chew on the pufferfish"); ReadLine();
+                    WriteLine("You are "); ReadLine(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine(); 
                     break;
                 case 'B':
                     OkayEnough += 10; goodbeep(); Clear();
-                    WriteLine("No need to bother the little poisonous guy; we shall venture our route without fail, I dare say.");
+                    WriteLine("No need to bother the little poisonous guy;"); ReadLine(); Write(" we shall venture our route without fail, I dare say."); ReadLine();
                     break;
                 case 'C':
                     AbusePoint += 10; badbeep(); Clear();
                     WereAllInThisTogether += 5;
-                    WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer."); Thread.Sleep(100);
-                    WriteLine("When you get back to the pufferfish, you all take a hit"); Thread.Sleep(100);
-                    WriteLine("You and your dolphin bruvs are successfully high");
+                    WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer"); ReadLine();
+                    WriteLine("When you get back to the pufferfish, you all take a hit"); ReadLine();
+                    Write("You and your dolphin bruvs are "); Read(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
                     break;
             }
             return;
@@ -75,21 +75,35 @@ namespace CodeCode
         static void dolphinlife2()
         {
             Clear();
-            WriteLine("After a long day of swimming around, you and your dolphin friends are chilling on the surface, enjoying the sun. \r\n\r\n" +
-                "You see a boat coming towards you, and it looks like it’s going to pass by you. What do you do?"); ReadLine();
-            switch (menu("Swim away", "Wave at the boat", "Jump out of the water and do a flip", "", 3))
+            WriteLine("After a long day’s work, you’re ready to go to sleep"); ReadLine();
+            WriteLine("You closed one eye, leaving the other one to watch out for danger"); ReadLine();
+            WriteLine("The ocean is full of surprises!"); ReadLine();
+            Write("Just like....\n"); ReadLine();
+            Read(); Write("Oh,"); Read(); ;  Write("my bad,"); Read(); Write(" It’s just a really old looking fish\n"); ReadLine();
+            Read(); Write("Wait, I’m not that sleepy,"); ReadLine(); Write(" maybe I should play with it\n"); ReadLine();
+            switch (menu("Man, I’m WAYY too sleepy for this", "A little play session doesn’t hurt", "Bob needs to see this", "Hit it with my fin", 4))
             {
                 case 'A':
                     OkayEnough += 10; goodbeep(); Clear();
-                    WriteLine("You swim away from the boat, not wanting to cause any trouble. The boat passes by without incident.");
+                    WriteLine("You go to sleep"); ReadLine();
+                    Write("Honk shoo,"); ReadLine(); Write(" honk shoo\n"); ReadLine();
+                    Write("You dream of a fun day of getting high on pufferfish while you eat fish to your dolphin hearts content\n"); ReadLine();
+                    Write("ark ark ark ark\n"); ReadLine();
+                    Write("(This is supposed to be Dolphin noises, idk what they sound like)"); ReadLine();
                     break;
                 case 'B':
                     AbusePoint += 5; okaybeep(); Clear();
-                    WriteLine("You wave at the boat, hoping to get some attention. The people on the boat wave back, but they don’t seem to notice you.");
+                    WriteLine("You ate it "); ReadLine();
+                    WriteLine("Nom nom nom nom "); ReadLine();
+                    WriteLine("Time to go back to sleep "); ReadLine();    
                     break;
                 case 'C':
                     AbusePoint += 10; badbeep(); Clear();
-                    WriteLine("You jump out of the water and do a flip, trying to impress the people on the boat. They cheer and take pictures of you.");
+                    WriteLine("");
+                    break;
+                case 'D':
+                    AbusePoint += 10; badbeep(); Clear();
+                    WriteLine("");
                     break;
             }
         }
