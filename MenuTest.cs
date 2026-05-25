@@ -11,6 +11,8 @@ using static CodeCode.fish;
 using static System.Console;
 using static System.ConsoleKey;
 using static CodeCode.starfish;
+using static CodeCode.dolphin;
+
 
 namespace CodeCode
 {
@@ -183,17 +185,19 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+          
+
             plantScene1();
             
             fishLife();
 
             if (fish.Selfishness >= 25) {
-                dolphinlife1();
+                dolphinlife();
             }
             else {
                 starfishLife();
             }
-            wormlife();
+            wormlife();  
             amebaScene1();
             //dolphinlife1();
             Console.Write("Press enter to close program");
@@ -466,40 +470,6 @@ namespace CodeCode
         }
 
 
-        static void dolphinlife1() 
-        { 
-            Clear();
-            int AbusePoint = 0;
-            int OkayEnough = 0;
-            int WereAllInThisTogether = 0;
-
-            WriteLine("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin \r\n\r\nBeing a dolphin is pretty difficult."); ReadLine();
-            WriteLine("But hey! At least you’re smart :) "); ReadLine();Clear();
-            WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
-            switch (menu("Approach it", "Leave it alone","Tell your dolphin friends","",3)) 
-            {
-                case 'A':
-                    AbusePoint += 5; okaybeep(); Clear();
-                    WriteLine("You approach the pufferfish \r\n\r\n" +
-                        "The pufferfish looks quite scared, " +
-                        "which does make sense as the next action you take is to chew on the pufferfish."); Thread.Sleep(100);
-                    WriteLine("You are successfully high");
-                    break;
-                case 'B':
-                    OkayEnough += 10; goodbeep(); Clear(); 
-                    WriteLine("No need to bother the little poisonous guy; we shall venture our route without fail, I dare say.");
-                    break;
-                case 'C':
-                    AbusePoint += 10; badbeep(); Clear();
-                    WereAllInThisTogether += 5;
-                    WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer.");Thread.Sleep(100);
-                    WriteLine("When you get back to the pufferfish, you all take a hit"); Thread.Sleep(100);
-                    WriteLine("You and your dolphin bruvs are successfully high");
-                    break;
-            }
-            return;
-        }
-
         static void amebaScene1()
             {
                 int selfishness = 50;
@@ -525,12 +495,12 @@ namespace CodeCode
                 WriteLine("Ameba");
                 return;
             }
-        
-        
-            
-        
 
-        
+
+
+
+
+
 
     }
 }
