@@ -192,7 +192,7 @@ namespace CodeCode
             { amebaScene1(); }
             else if (GameTitle.end1 == 1)
             { return;}
-            plantScene1();
+            plantLife();
             fishLife();
 
             if (fish.Selfishness >= 25) {
