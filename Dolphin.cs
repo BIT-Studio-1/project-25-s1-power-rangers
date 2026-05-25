@@ -66,7 +66,7 @@ namespace CodeCode
                     WereAllInThisTogether += 5;
                     WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer"); ReadLine();
                     WriteLine("When you get back to the pufferfish, you all take a hit"); ReadLine();
-                    Write("You and your dolphin bruvs are "); ReadLine(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
+                    Write("You and your dolphin bruvs are "); Read(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
                     break;
             }
             return;
@@ -75,12 +75,12 @@ namespace CodeCode
         static void dolphinlife2()
         {
             Clear();
-            Write("After a long day’s work, you’re ready to go to sleep\r\n"); ReadLine();
-            Write("You closed one eye, leaving the other one to watch out for danger\n"); ReadLine();
-            Write("The ocean is full of surprises!\n"); ReadLine();
+            WriteLine("After a long day’s work, you’re ready to go to sleep"); ReadLine();
+            WriteLine("You closed one eye, leaving the other one to watch out for danger"); ReadLine();
+            WriteLine("The ocean is full of surprises!"); ReadLine();
             Write("Just like....\n"); ReadLine();
-            Write("Oh,"); ReadLine();  Write("my bad,"); ReadLine(); Write(" It’s just a really old looking fish\n"); ReadLine();
-            Write("Wait,"); ReadLine();  Write(" I’m not that sleepy,"); ReadLine(); Write(" maybe I should play with it\n"); ReadLine();
+            Read(); Write("Oh,"); Read(); ;  Write("my bad,"); Read(); Write(" It’s just a really old looking fish\n"); ReadLine();
+            Read(); Write("Wait, I’m not that sleepy,"); ReadLine(); Write(" maybe I should play with it\n"); ReadLine();
             switch (menu("Man, I’m WAYY too sleepy for this", "A little play session doesn’t hurt", "Bob needs to see this", "Hit it with my fin", 4))
             {
                 case 'A':
