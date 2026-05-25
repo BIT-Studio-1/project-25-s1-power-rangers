@@ -261,6 +261,14 @@ namespace CodeCode
 
                 Write("Your fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
                 fishWait();
+                Write("The school you are swimming in is going towards some nutritious food");
+                fishWait();
+                WriteLine("After him being missing from the school for a few days you see him swimming with a dangerous rival school of fish and they haven’t noticed him yet.");
+                
+
+
+
+                
                 return;
 
         }
