@@ -35,62 +35,54 @@ namespace CodeCode
         static int savedLeft;
         static int savedTop;
 
+        static void WaitForKeyRelease()
+        {
+            // Clear ALL repeated enter/space inputs
+            while (Console.KeyAvailable)
+            {
+                ConsoleKey k = Console.ReadKey(true).Key;
+
+                if (k != ConsoleKey.Enter && k != ConsoleKey.Spacebar)
+                    break;
+            }
+        }
+        static bool acceptInput = true;
 
         static void controller(int opt)
         {
-            // This is all benjamin's code
-
             CursorVisible = false;
-            key = ReadKey(true).Key;
-            //Controller for scrolling up and down options
-            if ((key == DownArrow || key == S) && (option < opt))
+
+            key = Console.ReadKey(true).Key;
+
+            // ENTER / SPACE
+            if (key == Enter || key == Spacebar)
+            {
+                // Ignore held confirm key
+                if (!acceptInput)
+                    return;
+
+                acceptInput = false;
+
+                if (option == 1) D1 = true;
+                else if (option == 2) D2 = true;
+                else if (option == 3) D3 = true;
+                else if (option == 4) D4 = true;
+
+                return;
+            }
+
+            // ANY OTHER KEY reenables input
+            acceptInput = true;
+
+            // Movement
+            if ((key == DownArrow || key == S) && option < opt)
             {
                 option++;
             }
-            else if ((key == UpArrow || key == W) && (option > 1))
+            else if ((key == UpArrow || key == W) && option > 1)
             {
                 option--;
             }
-
-            //Controller for making a decision by selecting an option
-            if ((key == Spacebar || key == Enter) && (option == 1))
-            {
-                D1 = true;
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(true);
-                }
-                return;
-            }
-            else if ((key == Spacebar || key == Enter) && (option == 2))
-            {
-                D2 = true;
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(true);
-                }
-                return;
-            }
-            else if ((key == Spacebar || key == Enter) && (option == 3))
-            {
-                D3 = true;
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(true);
-                }
-                return;
-            }
-            else if ((key == Spacebar || key == Enter) && (option == 4))
-            {
-                D4 = true;
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(true);
-                }
-                return;
-            }
-
-
         }
 
         // Input a chance 1 - 100 and return a bool
@@ -108,25 +100,28 @@ namespace CodeCode
         }
 
 
-        public static char menu(string A, string B, string C, string D, int opt = 4) {
+        public static char menu(string A, string B, string C, string D, int opt = 4)
+        {
+            // Flush old buffered keys before menu starts
             while (Console.KeyAvailable)
             {
                 Console.ReadKey(true);
             }
-            //WriteLine("param: " + opt);
+
+            option = 1;
+            D1 = D2 = D3 = D4 = false;
+            //acceptInput = true;
+
             WriteLine("\nMove: Arrows  Select: Space/Enter");
+
             savedLeft = CursorLeft;
             savedTop = CursorTop;
 
-            
-            option = 1;
-            D1 = false; D2 = false; D3 = false; D4 = false;
-
-
-            // This is also all benjamin's code
-            while (D1 != true && D2 != true && D3 != true && D4 != true)
+            while (true)
             {
                 Console.SetCursorPosition(savedLeft, savedTop);
+
+                ResetColor();
 
                 if (option == 1)
                 {
@@ -134,38 +129,41 @@ namespace CodeCode
                     ForegroundColor = ConsoleColor.Black;
                     WriteLine($" > {A}");
                     ResetColor();
+
                     WriteLine($"   {B}");
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
-
                 }
                 else if (option == 2)
                 {
                     WriteLine($"   {A}");
+
                     BackgroundColor = ConsoleColor.White;
                     ForegroundColor = ConsoleColor.Black;
                     WriteLine($" > {B}");
                     ResetColor();
+
                     WriteLine($"   {C}");
                     WriteLine($"   {D}");
-
                 }
                 else if (option == 3)
                 {
                     WriteLine($"   {A}");
                     WriteLine($"   {B}");
+
                     BackgroundColor = ConsoleColor.White;
                     ForegroundColor = ConsoleColor.Black;
                     WriteLine($" > {C}");
                     ResetColor();
-                    WriteLine($"   {D}");
 
+                    WriteLine($"   {D}");
                 }
                 else if (option == 4)
                 {
                     WriteLine($"   {A}");
                     WriteLine($"   {B}");
                     WriteLine($"   {C}");
+
                     BackgroundColor = ConsoleColor.White;
                     ForegroundColor = ConsoleColor.Black;
                     WriteLine($" > {D}");
@@ -173,33 +171,12 @@ namespace CodeCode
                 }
 
                 controller(opt);
-                
 
-              
-                    if (D1 == true)
-                    {
-                        return 'A';
-                    }
-                    else if (D2 == true)
-                    {
-                        return 'B';
-                    }
-                    else if (D3 == true)
-                    {
-                        return 'C';
-                    }
-                    else if (D4 == true) {
-                    
-                        return 'D';
-                    }
-                    
-               
-
+                if (D1) return 'A';
+                if (D2) return 'B';
+                if (D3) return 'C';
+                if (D4) return 'D';
             }
-            // the line below never runs, as controller will always make one of the D bools true
-            // it's just to fix an error that happens when the method finishes without returning anything
-            return ' ';
-
         }
 
 

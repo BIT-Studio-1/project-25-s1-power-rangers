@@ -283,6 +283,12 @@ namespace CodeCode
                 case 'B':
                     Clear();
                     Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
+                    Write("The rival school attacks and they kill Vishnu in cold blood"); fishWait();
+                    WriteLine("RIP Vishnu, fly high\n");
+
+                    WriteLine(@"|╲__.-.");
+                    WriteLine(@"|    x <  ");
+                    WriteLine(@"|╱‾‾`'`");
 
                     break;
 
