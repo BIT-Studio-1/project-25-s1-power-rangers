@@ -188,9 +188,10 @@ namespace CodeCode
             Console.OutputEncoding = Encoding.UTF8;
             TitleScreen();
             if (GameTitle.start1 == 1)
-            { plantScene1(); }
+            { amebaScene1(); }
             else if (GameTitle.end1 == 1)
             { return;}
+            plantScene1();
             fishLife();
 
             if (fish.Selfishness >= 25) {
@@ -200,8 +201,6 @@ namespace CodeCode
                 starfishLife();
             }
             wormlife();  
-            amebaScene1();
-            //dolphinlife1();
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
