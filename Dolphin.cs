@@ -5,7 +5,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CodeCode.MenuTest;
+using static CodeCode.Program;
 using static CodeCode.SoundUtils;
 using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
@@ -32,8 +32,7 @@ namespace CodeCode
         }
         public static void dolphinlife()
         {
-
-
+            CursorVisible = false;
             dolphinlife1();
             dolphinlife2();
             return;
@@ -45,7 +44,7 @@ namespace CodeCode
         {
             Clear();
 
-            Write("You are a dolphin. \r\nA Delphinus Delphis to be exact, known as a common dolphin "); ReadLine(); Write("Being a dolphin is pretty difficult"); ReadLine();
+            Write("You are a dolphin. \nA Delphinus Delphis to be exact, known as a common dolphin "); ReadLine(); Write("Being a dolphin is pretty difficult"); ReadLine();
             WriteLine("But hey! At least you’re smart :) "); ReadLine(); Clear();
             WriteLine("Whilst swimming around your normal route, you found a pufferfish close to some corals. What will you do?");
             switch (menu("Approach it", "Leave it alone", "Tell your dolphin friends", "", 3))
@@ -79,7 +78,7 @@ namespace CodeCode
             WriteLine("You closed one eye, leaving the other one to watch out for danger"); ReadLine();
             WriteLine("The ocean is full of surprises!"); ReadLine();
             Write("Just like....\n"); ReadLine();
-            Read(); Write("Oh,"); Read(); ;  Write("my bad,"); Read(); Write(" It’s just a really old looking fish\n"); ReadLine();
+            Read(); Write("Oh, my bad,"); ReadLine(); Write(" It’s just a really old looking fish\n"); ReadLine();
             Read(); Write("Wait, I’m not that sleepy,"); ReadLine(); Write(" maybe I should play with it\n"); ReadLine();
             switch (menu("Man, I’m WAYY too sleepy for this", "A little play session doesn’t hurt", "Bob needs to see this", "Hit it with my fin", 4))
             {

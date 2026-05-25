@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
-using static CodeCode.MenuTest;
+using static CodeCode.Program;
 using static CodeCode.SoundUtils;
 using static System.Console;
 using static System.Net.Mime.MediaTypeNames;

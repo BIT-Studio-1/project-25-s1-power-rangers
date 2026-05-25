@@ -5,7 +5,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CodeCode.MenuTest;
+using static CodeCode.Program;
 using static CodeCode.SoundUtils;
 using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
@@ -41,6 +41,7 @@ namespace CodeCode
             while (start == 0 && end == 0)
             {
                 ForegroundColor = ConsoleColor.Red;
+
                 Write("Reincarnation Game\n\n");
                 ResetColor();
                 switch (menu("Start", "Credits", "Exit", "", 3))
@@ -91,7 +92,7 @@ namespace CodeCode
         }
 
 
-    }
+        }
 
 
     
