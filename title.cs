@@ -15,10 +15,17 @@ namespace CodeCode
     {
         private static int start = 0;
         private static int end = 0;
-        private static int WereAllInThisTogether = 0;
         public static int start1
         {
             get { return start; }
+        }
+
+        public static void Wait()
+        {
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500);
         }
 
         public static int end1
@@ -31,31 +38,41 @@ namespace CodeCode
             Clear();
             while (start == 0 && end == 0)
             {
+                ForegroundColor = ConsoleColor.Red;
                 Write("Reincarnation Game\n\n");
+                ResetColor();
                 switch (menu("Start", "Credits", "Exit", "", 3))
                 {
                     case 'A':
                         Clear();
                         start = 1;
+                        Write("Welcome to the "); ForegroundColor = ConsoleColor.Red; Write("Reincarnation Game"); ResetColor(); Write("!"); ReadLine();
+                        WriteLine("In this game, you will be reincarnated as a random animal and will have to make choices that will affect your life as that animal."); ReadLine();
+                        Write("If there are "); ForegroundColor = ConsoleColor.Yellow; Wait(); ResetColor(); Write(" at the end of a sentence, please "); ForegroundColor = ConsoleColor.Yellow; Write("wait"); ResetColor(); Write(" for the text to end."); ReadLine(); 
+                        Write("If not, please press the "); ForegroundColor = ConsoleColor.Yellow; Write("ENTER"); ResetColor(); Write(" key to continue."); ReadLine();
+                        Write("\nNow"); Wait(); ForegroundColor = ConsoleColor.Red; Write("let's get started!"); ReadLine();
 
+                        Clear(); Thread.Sleep(300);
                         break;
                     case 'B':
                         Clear();
-                        Write("\n  ,ad8888ba,                                    88  88                      \r"); Thread.Sleep(400); 
-                        Write("\n d8\"'    `\"8b                                   88  \"\"    ,d                \r"); Thread.Sleep(400);
-                        Write("\nd8'                                             88        88                \r"); Thread.Sleep(400); 
-                        Write("\n88             8b,dPPYba,   ,adPPYba,   ,adPPYb,88  88  MM88MMM  ,adPPYba,  \r"); Thread.Sleep(400);
-                        Write("\n88             88P'   \"Y8  a8P_____88  a8\"    `Y88  88    88     I8[    \"\"  \r"); Thread.Sleep(400); 
-                        Write("\nY8,            88          8PP\"\"\"\"\"\"\"  8b       88  88    88      `\"Y8ba,   \r"); Thread.Sleep(400);
-                        Write("\n Y8a.    .a8P  88          \"8b,   ,aa  \"8a,   ,d88  88    88,    aa    ]8I  \r"); Thread.Sleep(400); 
-                        Write("\n  `\"Y8888Y\"'   88           `\"Ybbd8\"'   `\"8bbdP\"Y8  88    \"Y888  `\"YbbdP\"'  \r\n\n"); Thread.Sleep(400);
-                        Write("Developed by: The Power Rangers\n\n"); Thread.Sleep(500);
+                        ForegroundColor = ConsoleColor.Red;
+                        Write("\n  ,ad8888ba,                                    88  88                      \r"); Thread.Sleep(300); 
+                        Write("\n d8\"'    `\"8b                                   88  \"\"    ,d                \r"); Thread.Sleep(300);
+                        Write("\nd8'                                             88        88                \r"); Thread.Sleep(300); 
+                        Write("\n88             8b,dPPYba,   ,adPPYba,   ,adPPYb,88  88  MM88MMM  ,adPPYba,  \r"); Thread.Sleep(300);
+                        Write("\n88             88P'   \"Y8  a8P_____88  a8\"    `Y88  88    88     I8[    \"\"  \r"); Thread.Sleep(300); 
+                        Write("\nY8,            88          8PP\"\"\"\"\"\"\"  8b       88  88    88      `\"Y8ba,   \r"); Thread.Sleep(300);
+                        Write("\n Y8a.    .a8P  88          \"8b,   ,aa  \"8a,   ,d88  88    88,    aa    ]8I  \r"); Thread.Sleep(300); 
+                        Write("\n  `\"Y8888Y\"'   88           `\"Ybbd8\"'   `\"8bbdP\"Y8  88    \"Y888  `\"YbbdP\"'  \r\n\n"); Thread.Sleep(300); ForegroundColor = ConsoleColor.Yellow;
+                        Write("Developed by: The Power Rangers\n\n"); Thread.Sleep(500); ForegroundColor = ConsoleColor.White;
                         Write("Benjamin Roberts\n"); Thread.Sleep(500);
                         Write("Nishachyjit Nishachyjit\n"); Thread.Sleep(500);
                         Write("Daniil Piatov\n"); Thread.Sleep(500);
                         Write("David Knauf\n"); Thread.Sleep(500);
                         Write("Nathalie Chang"); Thread.Sleep(500);
-                        Write("\n\n\nPress any key to return to the title screen...");
+                        ResetColor();
+                        Write("\n\n\nPress "); ForegroundColor = ConsoleColor.DarkYellow; Write("ENTER"); ResetColor(); Write(" to return to the title screen...");
                         ReadLine();
                         Clear();
                         break;
