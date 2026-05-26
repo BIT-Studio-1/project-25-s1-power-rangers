@@ -102,6 +102,7 @@ namespace CodeCode
                     break;
                 case 'C':
                     AbusePoint += 10; badbeep(); Clear();
+                    fishHP -= 10;
                     WriteLine("Swimming to the really old fish, you used dolphin slap on it! "); ReadLine();
                     WriteLine("It was quite effective!"); ForegroundColor = ConsoleColor.Red; Write("   - 10 fish HP "); ResetColor(); ReadLine(); Clear();
                     WriteLine("You asked yourself,"); ReadLine();
@@ -112,6 +113,40 @@ namespace CodeCode
                     {
                         case 'A':
                             AbusePoint += 10; badbeep(); Clear();
+                            Random rand = new Random();
+                            int ark = rand.Next(1,6);
+                            int fih = rand.Next(6);
+                            switch (ark)
+                            {
+                                case 5:
+                                    fishHP -= 10;
+                                    break;
+                                case 4:
+                                    fishHP -= 5;
+                                    break;
+                                case 3:
+                                    fishHP -= 2;
+                                    break;
+                                default:
+                                    WriteLine("You missed so badly that I should cry");
+                                    break;
+                            }
+                            
+                            if (fishHP>0)
+                            {
+                                switch (fih)
+                                {
+                                    case 5:
+                                        break;
+                                    case 4:
+                                        break;
+                                    case 3:
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+
                             WriteLine(""); ReadLine();
                             break;
                         case 'B':
