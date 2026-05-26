@@ -33,10 +33,12 @@ namespace CodeCode
         }
         public static void fishWait(int time = 500)
         {
+            CursorVisible = false;
             Thread.Sleep(time); Write(".");
             Thread.Sleep(time); Write(".");
             Thread.Sleep(time); Write(".\n");
             Thread.Sleep(time);
+            CursorVisible = true;
         }
         public static void fishLife()
         { 

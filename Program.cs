@@ -179,19 +179,22 @@ namespace CodeCode
 
                 if (D1 == true)
                 {
+                    CursorVisible = true;
                     return 'A';
                 }
                 else if (D2 == true)
                 {
+                    CursorVisible = true;
                     return 'B';
                 }
                 else if (D3 == true)
                 {
+                    CursorVisible = true;
                     return 'C';
                 }
                 else if (D4 == true)
                 {
-
+                    CursorVisible = true;
                     return 'D';
                 }
 
@@ -200,6 +203,7 @@ namespace CodeCode
             }
             // the line below never runs, as controller will always make one of the D bools true
             // it's just to fix an error that happens when the method finishes without returning anything
+            CursorVisible = true;
             return ' ';
 
         }
@@ -319,7 +323,7 @@ namespace CodeCode
 
             while (go == 0)
             {
-                WriteLine("Debug menu\n1. Amoeba\n2. Plant\n3. Worm\n4. Fish\n5. Dolphin\n6. To proceed normally");
+                Write("Debug menu\n1. Amoeba\n2. Plant\n3. Worm\n4. Fish\n5. Dolphin\n6. To proceed normally\n: ");
                 temp = ReadLine();
                 debug = Convert.ToInt32(temp);
 
@@ -351,9 +355,6 @@ namespace CodeCode
 
                 }
             }
-
-
-
 
 
         }
