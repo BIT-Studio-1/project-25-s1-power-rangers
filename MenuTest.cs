@@ -18,9 +18,8 @@ using static CodeCode.plant;
 
 namespace CodeCode
 {
-    public class MenuTest() 
-    {
-        public static void Main(string[] args) { }
-    }
+    public class MenuTest{
+        static void Main(string[] args) { }
+}
 
 }

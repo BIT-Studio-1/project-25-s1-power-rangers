@@ -22,7 +22,8 @@ namespace CodeCode
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
             */
-                Write("You are recarnated as a  ");
+            ForegroundColor = ConsoleColor.Red;
+            Write("You are recarnated as a  ");
                 WriteLine("PLANT");
                 WriteLine("I AM A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES.");
                 WriteLine(" ");
@@ -80,9 +81,14 @@ namespace CodeCode
                     stupidity += 200;
 
                 }
-            WriteLine($"So your slefishness  ");
-                   WriteLine($"{selfishness},{ stupidity},{plant}");
-                    ReadLine();
+            WriteLine(" ");
+                   Write("So your slefishness is ");
+            WriteLine($"{selfishness}");
+            Write("So your stupidity is ");
+            WriteLine($"{stupidity}");
+            Write("So your globalscore is ");
+            WriteLine($"{plant}");
+            ReadLine();
 
 
             Clear();
@@ -127,9 +133,17 @@ namespace CodeCode
 
                     plant += 10;
                 }
-              
+            WriteLine(" ");
+            Write("So your slefishness is ");
+            WriteLine($"{selfishness}");
+            Write("So your stupidity is ");
+            WriteLine($"{stupidity}");
+            Write("So your globalscore is ");
+            WriteLine($"{plant}");
+            ReadLine();
 
-                Clear();
+
+            Clear();
                
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("LEVEL 3");
@@ -176,8 +190,16 @@ namespace CodeCode
                     
 
                 }
-               WriteLine($"{stupidity},{plant}");
-                Clear();
+            WriteLine(" ");
+            Write("So your slefishness is ");
+            WriteLine($"{selfishness}");
+            Write("So your stupidity is ");
+            WriteLine($"{stupidity}");
+            Write("So your globalscore is ");
+            WriteLine($"{plant}");
+            ReadLine();
+
+            Clear();
                  ForegroundColor = ConsoleColor.Red;
                   WriteLine("DEATH LEVEL");
                 
@@ -229,7 +251,7 @@ namespace CodeCode
 
             }
             ForegroundColor = ConsoleColor.Red;
-                WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ", stupidity);
+                WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ",stupidity);
                 WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS ", selfishness);
                 WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS", plant);
                 WriteLine(" ");
@@ -241,7 +263,8 @@ namespace CodeCode
 
                 return;
             }
-        
+
+
         public static void plantLife()
         {
 
