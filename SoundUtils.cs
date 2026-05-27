@@ -26,7 +26,7 @@ namespace CodeCode
 
         public static void Suspense2SFX()
         {
-            Play(@"Suspense2SFX.wav");
+            Play(@"sfx/Suspense2SFX.wav");
 
         }
 
