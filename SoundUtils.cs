@@ -24,11 +24,6 @@ namespace CodeCode
             player?.Stop();
         }
 
-        public static void Suspense2SFX()
-        {
-            Play(@"sfx/Suspense2SFX.wav");
-
-        }
 
         public static async Task goodbeep()
         {
@@ -60,6 +55,25 @@ namespace CodeCode
                 Beep(784, 70);
             });
         }
-
+        public static void SuspenseSFX()
+        {
+            Play(@"sfx/SuspenseSFX.wav");
+        }
+        public static void Suspense2SFX()
+        {
+            Play(@"sfx/Suspense2SFX.wav");
+        }
+        public static void Unnerving2SFX()
+        {
+            Play(@"sfx/UnnervingSFX.wav");
+        }
+        public static void DramaSFX()
+        {
+            Play(@"sfx/DramaSFX.wav");
+        }
+        public static void EpicSFX()
+        {
+            Play(@"sfx/epicsfx.wav");
+        }
     }
 }
