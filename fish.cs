@@ -56,7 +56,7 @@ namespace CodeCode
             Clear();
 
 
-            Play(@"epicsfx.wav");
+            Play(@"sfx/epicsfx.wav");
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             fishWait();
