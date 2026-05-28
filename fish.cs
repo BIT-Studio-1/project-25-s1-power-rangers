@@ -120,6 +120,7 @@ namespace CodeCode
                     Clear();
                     stupidity += 5;
                     selfishness -= 1;
+                    okaybeep();
                     Write("You give him a fish"); fishWait();
                     Write("The aforementioned fish was");
                     
@@ -135,6 +136,7 @@ namespace CodeCode
                     Clear();
                     bravery += 5;
                     stupidity -= 5;
+                    goodbeep();
                     Write("You teach him to fish"); fishWait();
                     WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
                     Write("And then vibrate in morse code the instructions of how to fish"); fishWait();
@@ -146,6 +148,7 @@ namespace CodeCode
                     selfishness -= 2;
                     bravery += 2;
                     Clear();
+                    okaybeep();
                     WriteLine("You give him TO the fishes");
                     Write("You latch onto his hook and pull him into the water"); fishWait();
                     Write("He falls into the water"); fishWait();
@@ -179,6 +182,7 @@ namespace CodeCode
                 case 'A':
                     bravery += 5;
                     Clear();
+                    okaybeep();
                     Write("You smell some danger"); fishWait();
 
                     Write("It smells very dangerous"); fishWait();
@@ -199,12 +203,14 @@ namespace CodeCode
                             bravery -= 5;
                             stupidity -= 4;
                             selfishness += 3;
+                            okaybeep();
                             Write("You mind your own business and swim away"); fishWait();
                             break;
                         case 'B':
                             Clear();
                             bravery += 10;
                             selfishness -= 5;
+                            okaybeep();
                             Write("You attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel");
                             fishWait();
                             if (deathRoll(50) == true)
@@ -223,6 +229,7 @@ namespace CodeCode
                             Clear();
                             bravery += 7;
                             selfishness -= 4;
+                            okaybeep();
                             Write("You attempt to save the damselfish by letting it swim behind you in your slipstream, distracting the eel");
                             fishWait();
                             if (deathRoll(50) == true)
@@ -239,6 +246,7 @@ namespace CodeCode
                             break;
                         default:
                             Clear();
+                            badbeep();
                             selfishness += 10;
                             Write("You attempt to save the damselfishby throwing a nearby baby fish between the eel and the damselfish"); fishWait();
                             Write("You successfully distract the eel away from the damselfish and escape");
@@ -250,11 +258,15 @@ namespace CodeCode
                     break;
                 case 'B':
                     Clear();
+                    stupidity -= 1;
+                    okaybeep();
                     // This one will just bring you below down to the next question (the uncle Vishnu one)
 
                     break;
                 case 'C':
                     Clear();
+                    okaybeep();
+                    bravery += 2;
                     Write("You swim into the darkness");
                     fishWait();
                     WriteLine("You see what you believe to be is a large opening");
@@ -289,6 +301,7 @@ namespace CodeCode
                     bravery -= 5;
                     stupidity -= 4;
                     selfishness += 2;
+                    okaybeep();
 
                     Write("You keep going with your school to feed"); fishWait(200);
                     Write("You never see Vishnu again"); fishWait(200);
@@ -299,6 +312,7 @@ namespace CodeCode
                     bravery += 6;
                     stupidity += 4;
                     selfishness -= 1;
+                    okaybeep();
                     Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
                     Write("The rival school attacks and they kill Vishnu in cold blood"); fishWait();
                     WriteLine("RIP Vishnu, fly high\n");
@@ -314,7 +328,12 @@ namespace CodeCode
                     Clear();
                     bravery += 7;
                     selfishness -= 6;
+                    goodbeep();
                     Write("You blend in with the rival school and wait until you’re alone with Vishnu"); fishWait(200);
+                    Write("You explain to him that he’s swimming with the wrong school and that we need to come back"); fishWait();
+                    Write("You guide him back to the school, but you swam too far away and can’t find it"); fishWait();
+                    WriteLine("You are now stranded");
+                    Write("Vishnu dies of starvation, but you stay alive"); fishWait();
                     break;
                 }
 
