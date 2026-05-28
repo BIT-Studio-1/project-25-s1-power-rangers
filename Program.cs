@@ -323,37 +323,41 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("Debug menu\n1. Amoeba\n2. Plant\n3. Worm\n4. Fish\n5. Dolphin\n6. To proceed normally\n: ");
+                Write("1. Proceed normally\n 2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n: ");
                 temp = ReadLine();
-                debug = Convert.ToInt32(temp);
-
-                switch (debug)
+                if (int.TryParse(temp, out debug))
                 {
-                    case 5:
-                        dolphinlife();
-                        break;
-
-                    case 4:
-                        fishLife();
-                        break;
-
-                    case 3:
-                        wormlife();
-                        break;
-
-                    case 2:
-                        plantLife();
-                        break;
-
-                    case 1:
-                        amebaScene1();
-                        break;
-
-                    default:
-                        go = 1;
-                        break;
-
+                    switch (debug)
+                    {
+                        case 7:
+                            starfishLife();
+                            break;
+                        case 6:
+                            dolphinlife();
+                            break;
+                        case 5:
+                            fishLife();
+                            break;
+                        case 4:
+                            wormlife();
+                            break;
+                        case 3:
+                            plantLife();
+                            break;
+                        case 2:
+                            amebaScene1();
+                            break;
+                        default:
+                            go = 1;
+                            break;
+                    }
                 }
+                else {
+                    Clear();
+                    WriteLine("Invalid input, please enter a single digit number");
+                }
+
+
             }
 
 

@@ -72,7 +72,7 @@ namespace CodeCode
                         Write("Developed by: The Power Rangers\n\n"); Thread.Sleep(500); ForegroundColor = ConsoleColor.White;
                         Write("Benjamin Roberts\n"); Thread.Sleep(500);
                         Write("Nishachyjit Nishachyjit\n"); Thread.Sleep(500);
-                        Write("Daniil Piatov\n"); Thread.Sleep(500);
+                        Write("Dania Piatov\n"); Thread.Sleep(500);
                         Write("David Knauf\n"); Thread.Sleep(500);
                         Write("Nathalie Chang"); Thread.Sleep(500);
                         ResetColor();

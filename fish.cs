@@ -155,14 +155,14 @@ namespace CodeCode
             WriteLine("");
             Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
             fishWait();
-            WriteLine("Towards the east, you can smell some danger");
-            WriteLine("Towards the west, you see some glimmers off into the distance");
-            WriteLine("Towards the north, there is a dark area");
+            WriteLine("Towards the \u001b[1meast\u001b[0m, you can smell some danger");
+            WriteLine("Towards the \u001b[1mwest\u001b[0m, you see some glimmers off into the distance");
+            WriteLine("Towards the \u001b[1mnorth\u001b[0m, there is a dark area");
             WriteLine("Where do you go?");
             switch (menu(
-                "Go east",
-                "Go west",
-                "Go north",
+                "Go \u001b[1meast\u001b[0m",
+                "Go \u001b[1mwest\u001b[0m",
+                "Go \u001b[1mnorth\u001b[0m",
                 "", 3)
                 )
             {
