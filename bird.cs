@@ -33,8 +33,9 @@ namespace CodeCode
         {
             birdScene1();
         } 
-        public static void birdScene1() { 
-            
+        public static void birdScene1()
+        {
+            WriteLine("You now have been recarnated to a bird");
         
         }
 
