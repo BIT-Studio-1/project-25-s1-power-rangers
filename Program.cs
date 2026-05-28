@@ -119,10 +119,8 @@ namespace CodeCode
             savedLeft = CursorLeft;
             savedTop = CursorTop;
 
-
             option = 1;
             D1 = false; D2 = false; D3 = false; D4 = false;
-
 
             // This is also all benjamin's code
             while (D1 != true && D2 != true && D3 != true && D4 != true)
@@ -172,11 +170,7 @@ namespace CodeCode
                     WriteLine($" > {D}");
                     ResetColor();
                 }
-
                 controller(opt);
-
-
-
                 if (D1 == true)
                 {
                     CursorVisible = true;
@@ -197,9 +191,6 @@ namespace CodeCode
                     CursorVisible = true;
                     return 'D';
                 }
-
-
-
             }
             // the line below never runs, as controller will always make one of the D bools true
             // it's just to fix an error that happens when the method finishes without returning anything
@@ -207,9 +198,6 @@ namespace CodeCode
             return ' ';
 
         }
-
-
-
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -246,7 +234,6 @@ namespace CodeCode
 
             return;
         }
-
         static void room2()
         { // also test room
             Clear();
@@ -255,11 +242,6 @@ namespace CodeCode
 
             return;
         }
-
-
-
-
-
 
         static void wormlife()
         {
@@ -323,8 +305,9 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n 2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n: ");
                 temp = ReadLine();
+                // Handles invalid input
                 if (int.TryParse(temp, out debug))
                 {
                     switch (debug)

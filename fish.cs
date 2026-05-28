@@ -40,6 +40,16 @@ namespace CodeCode
             Thread.Sleep(time);
             CursorVisible = true;
         }
+
+        public static void fishTotal()
+        {
+            ForegroundColor = ConsoleColor.Green; Clear();
+            WriteLine("Fish Life"); Thread.Sleep(300);
+            WriteLine($"How selfish you were: {selfishness}" +
+            $"\nHow stupid you were: {stupidity}" +
+            $"\nHow brave you were: {bravery}"); ResetColor(); Write("Press enter to reincarnate to your next life"); 
+            ReadLine();
+        }
         public static void fishLife()
         { 
             
@@ -181,7 +191,7 @@ namespace CodeCode
                         "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)",
                         "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
                         "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)",
-                        "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)", 3)
+                        "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)")
                     )
                     {
                         case 'A':
@@ -201,8 +211,7 @@ namespace CodeCode
                             {
                                 Write("The eel devoured up you and the damselfish"); fishWait();
                                 Write("You died a fishful life"); fishWait();
-                                Write("Press enter to reincarnate to your next life");
-                                ReadLine();
+                                fishTotal();
                                 return;
                             }
                             Write("You successfully distract the eel away from the damselfish and escape");
@@ -220,8 +229,7 @@ namespace CodeCode
                             {
                                 Write("The eel devoured up you and the damselfish"); fishWait();
                                 Write("You died a fishful life"); fishWait();
-                                Write("Press enter to reincarnate to your next life");
-                                ReadLine();
+                                fishTotal();
                                 return;
                             }
                             Write("You successfully distract the eel away from the damselfish and escape");
@@ -278,12 +286,19 @@ namespace CodeCode
                 {
                 case 'A':
                     Clear();
+                    bravery -= 5;
+                    stupidity -= 4;
+                    selfishness += 2;
+
                     Write("You keep going with your school to feed"); fishWait(200);
                     Write("You never see Vishnu again"); fishWait(200);
 
                     break;
                 case 'B':
                     Clear();
+                    bravery += 6;
+                    stupidity += 4;
+                    selfishness -= 1;
                     Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
                     Write("The rival school attacks and they kill Vishnu in cold blood"); fishWait();
                     WriteLine("RIP Vishnu, fly high\n");
@@ -291,11 +306,14 @@ namespace CodeCode
                     WriteLine(@"|╲__.-.");
                     WriteLine(@"|    x <  ");
                     WriteLine(@"|╱‾‾`'`");
+                    Write("\nYou go back to swimming with your school"); fishWait();
 
                     break;
 
                 default:
                     Clear();
+                    bravery += 7;
+                    selfishness -= 6;
                     Write("You blend in with the rival school and wait until you’re alone with Vishnu"); fishWait(200);
                     break;
                 }
