@@ -14,6 +14,7 @@ using static CodeCode.starfish;
 using static CodeCode.dolphin;
 using static CodeCode.GameTitle;
 using static CodeCode.plant;
+using static CodeCode.bird;
 
 
 namespace CodeCode
@@ -213,6 +214,10 @@ namespace CodeCode
             if (fish.Selfishness >= 25)
             {
                 dolphinlife();
+                if (dolphin.OkayEnough1 >= 15) {
+
+                    Write("go next life\n");
+                }
             }
             else
             {
@@ -305,13 +310,16 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. starfish\n8. bird\n: ");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))
                 {
                     switch (debug)
                     {
+                        case 8:
+                            birdLife();
+                            break;
                         case 7:
                             starfishLife();
                             break;
@@ -330,6 +338,7 @@ namespace CodeCode
                         case 2:
                             amebaScene1();
                             break;
+                        
                         default:
                             go = 1;
                             break;
