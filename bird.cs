@@ -39,74 +39,74 @@ namespace CodeCode
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-                WriteLine("1");
+               
             }
             if (D2 = true)
             {
-                WriteLine("2");
+                
 
             }
             if (D3 = true)
             {
-                WriteLine("3");
+              
             }
             if (D4 = true)
             {
-                WriteLine("4");
+               
             }
             WriteLine("q2");
             menu("1", "2", "3","4");
             if (D1 = true)
             {
-                WriteLine("1");
+                
             }
             if (D2 = true)
             {
-                WriteLine("2");
+                
             }
             if (D3 = true)
             {
-                WriteLine("3");
+               
             }
             if (D4 = true)
             {
-                WriteLine("4");
+                
             }
             WriteLine("q3");
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-                WriteLine("1");
+               
             }
             if (D2 = true)
             {
-                WriteLine("2");
+               
             }
             if (D3 = true)
             {
-                WriteLine("3");
+               
             }
             if (D4 = true)
             {
-                WriteLine("4");
+                
             }
             WriteLine("q4");
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-                WriteLine("1");
+                
             }
             if (D2 = true)
             {
-                WriteLine("2");
+                
             }
             if (D3 = true)
             {
-                WriteLine("3");
+                
             }
             if (D4 = true)
             {
-                WriteLine("4");
+               
             }
 
 
