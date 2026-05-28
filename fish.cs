@@ -166,139 +166,154 @@ namespace CodeCode
         public static void fishScene2()
         {
             bool goneNorth = false;
-            bool loopDecision = false;
+            bool loopDecision = true;
             //WriteLine($" selfishness {selfishness}");
             WriteLine("");
             Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
             fishWait();
-            WriteLine("Towards the \u001b[1meast\u001b[0m, you can smell some danger");
-            WriteLine("Towards the \u001b[1mwest\u001b[0m, you see some glimmers off into the distance");
-            WriteLine("Towards the \u001b[1mnorth\u001b[0m, there is a dark area");
-            WriteLine("Where do you go?");
-            switch (menu(
-                "Go \u001b[1meast\u001b[0m",
-                "Go \u001b[1mwest\u001b[0m",
-                "Go \u001b[1mnorth\u001b[0m",
-                "", 3)
-                )
+            while (loopDecision == true)
             {
-                case 'A':
-                    bravery += 5;
-                    Clear();
-                    okaybeep();
-                    Write("You smell some danger"); fishWait();
 
-                    Write("It smells very dangerous"); fishWait();
-                    WriteLine("But danger is your middle name"); Thread.Sleep(800);
-                    Write("You swim towards the smell"); fishWait();
-
-                    WriteLine("You see a damselfish getting chased by a dangerous eel");
-                    WriteLine("What do you do?");
-                    switch (menu(
-                        "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)",
-                        "Attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
-                        "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)",
-                        "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)")
+                WriteLine("Towards the \u001b[1meast\u001b[0m, you can smell some danger");
+                WriteLine("Towards the \u001b[1mwest\u001b[0m, you see some glimmers off into the distance");
+                WriteLine("Towards the \u001b[1mnorth\u001b[0m, there is a dark area");
+                WriteLine("Where do you go?");
+                switch (menu(
+                    "Go \u001b[1meast\u001b[0m",
+                    "Go \u001b[1mwest\u001b[0m",
+                    "Go \u001b[1mnorth\u001b[0m",
+                    "", 3)
                     )
-                    {
-                        case 'A':
-                            Clear();
-                            bravery -= 5;
-                            stupidity -= 4;
-                            selfishness += 3;
-                            okaybeep();
-                            Write("You mind your own business and swim away"); fishWait();
-                            break;
-                        case 'B':
-                            Clear();
-                            bravery += 10;
-                            selfishness -= 5;
-                            okaybeep();
-                            Write("You attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel");
-                            fishWait();
-                            if (deathRoll(50) == true)
-                            {
-                                Write("The eel devoured up you and the damselfish"); fishWait();
-                                Write("You died a fishful life"); fishWait();
-                                
+                {
+                    case 'A':
+                        bravery += 5;
+                        Clear();
+                        okaybeep();
+                        Write("You smell some danger"); fishWait();
+
+                        Write("It smells very dangerous"); fishWait();
+                        WriteLine("But danger is your middle name"); Thread.Sleep(800);
+                        Write("You swim towards the smell"); fishWait();
+
+                        WriteLine("You see a damselfish getting chased by a dangerous eel");
+                        WriteLine("What do you do?");
+                        switch (menu(
+                            "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)",
+                            "Attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
+                            "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)",
+                            "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)")
+                        )
+                        {
+                            case 'A':
+                                Clear();
+                                bravery -= 5;
+                                stupidity -= 4;
+                                selfishness += 3;
+                                okaybeep();
+                                Write("You mind your own business and swim away"); fishWait();
+                                loopDecision = false;
+                                break;
+                            case 'B':
+                                Clear();
+                                bravery += 10;
+                                selfishness -= 5;
+                                okaybeep();
+                                Write("You attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel");
+                                fishWait();
+                                if (deathRoll(50) == true)
+                                {
+                                    Write("The eel devoured up you and the damselfish"); fishWait();
+                                    Write("You died a fishful life"); fishWait();
+
+                                    return;
+                                }
+                                Write("You successfully distract the eel away from the damselfish and escape");
+                                fishWait();
+                                Write("You and the damselfish live happily ever after"); fishWait();
+
                                 return;
-                            }
-                            Write("You successfully distract the eel away from the damselfish and escape");
-                            fishWait();
-                            Write("You and the damselfish live happily ever after"); fishWait();
+                                break;
+                            case 'C':
+                                Clear();
+                                bravery += 7;
+                                selfishness -= 4;
+                                okaybeep();
+                                Write("You attempt to save the damselfish by letting it swim behind you in your slipstream, distracting the eel");
+                                fishWait();
+                                if (deathRoll(50) == true)
+                                {
+                                    Write("The eel devoured up you and the damselfish"); fishWait();
+                                    Write("You died a fishful life"); fishWait();
 
-                            break;
-                        case 'C':
-                            Clear();
-                            bravery += 7;
-                            selfishness -= 4;
-                            okaybeep();
-                            Write("You attempt to save the damselfish by letting it swim behind you in your slipstream, distracting the eel");
-                            fishWait();
-                            if (deathRoll(50) == true)
-                            {
-                                Write("The eel devoured up you and the damselfish"); fishWait();
-                                Write("You died a fishful life"); fishWait();
-                                
+                                    return;
+                                }
+                                Write("You successfully distract the eel away from the damselfish and escape");
+                                fishWait();
+                                Write("You and the damselfish live happily ever after"); fishWait();
                                 return;
-                            }
-                            Write("You successfully distract the eel away from the damselfish and escape");
-                            fishWait();
-                            Write("You and the damselfish live happily ever after"); fishWait();
+
+                                break;
+                            default:
+                                Clear();
+                                badbeep();
+                                selfishness += 10;
+                                Write("You attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish"); fishWait();
+                                Write("You successfully distract the eel away from the damselfish and escape");
+                                fishWait();
+                                Write("You and the damselfish live happily ever after"); fishWait();
+                                return;
+                                break;
+                        }
+
+                        break;
+                    case 'B':
+                        Clear();
+                        stupidity -= 1;
+                        okaybeep();
+                        loopDecision = false;
+                        // This one will just bring you below down to the next question (the uncle Vishnu one)
+
+                        break;
+                    case 'C':
+                        Clear();
+                        okaybeep();
+                        if (goneNorth == false)
+                        {
+                            bravery += 2;
+                        }
+                        goneNorth = true;
+                        Write("You swim into the darkness");
+                        fishWait();
+                        WriteLine("You see what you believe to be is a large opening");
+                        switch (menu("Go in", "Go back", "", "", 2))
+                        {
+                            case 'A':
+                                Clear();
+                                stupidity += 3;
+                                Write("It was the mouth of a shark"); fishWait();
+                                Write("The shark munches you up"); fishWait();
+                                return;
+                                break;
+                            default:
+                                Clear();
+                                Write("You swim back"); fishWait();
+                                // loopDecisions stays true and the directions decision loops
+                                break;
+                        }
+                        break;
+                    default:
+                        // This should never get triggered
+                        break;
 
 
-                            break;
-                        default:
-                            Clear();
-                            badbeep();
-                            selfishness += 10;
-                            Write("You attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish"); fishWait();
-                            Write("You successfully distract the eel away from the damselfish and escape");
-                            fishWait();
-
-                            break;
-                    }
-
-                    break;
-                case 'B':
-                    Clear();
-                    stupidity -= 1;
-                    okaybeep();
-                    // This one will just bring you below down to the next question (the uncle Vishnu one)
-
-                    break;
-                case 'C':
-                    Clear();
-                    okaybeep();
-                    if (goneNorth == false) {
-                        bravery += 2;
-                    }
-                    goneNorth = true; 
-                    Write("You swim into the darkness");
-                    fishWait();
-                    WriteLine("You see what you believe to be is a large opening");
-                    switch(menu("Go in", "Go back", "", "", 2))
-                    {
-                        case 'A':
-                            Clear();
-                            Write("It was the mouth of a shark"); fishWait();
-                            break;
-                        default:
-                            Clear();
-                            break;
-                    }
-                    break;
-                default:
-                    // This never gets triggered
-                    break;
-
+                }
 
             }
             WriteLine("You found your school of fish! They weren't too far.");
             Write("You swim with your school for a while");
             fishWait();
 
-            Write("Your fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
+            Write("\nYour fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
             fishWait();
             Write("The school you are swimming in is going towards some nutritious food");
             fishWait();
@@ -321,6 +336,7 @@ namespace CodeCode
 
                     Write("You keep going with your school to feed"); fishWait(200);
                     Write("You never see Vishnu again"); fishWait(200);
+                    
 
                     break;
                 case 'B':
@@ -337,6 +353,7 @@ namespace CodeCode
                     WriteLine(@"|    x <  ");
                     WriteLine(@"|╱‾‾`'`");
                     Write("\nYou go back to swimming with your school"); fishWait();
+                    
 
                     break;
 
@@ -350,6 +367,7 @@ namespace CodeCode
                     Write("You guide him back to the school, but you swam too far away and can’t find it"); fishWait();
                     WriteLine("You are now stranded");
                     Write("Vishnu dies of starvation, but you stay alive"); fishWait();
+                    
                     break;
                 }
 
