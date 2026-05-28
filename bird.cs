@@ -35,78 +35,113 @@ namespace CodeCode
         }
         public static void birdScene1()
         {
+            int bird=0;
+            int flyish=0;
+            int berd=0;
             WriteLine("You now have been reincarnated as a bird");
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-               
+                 bird += 0;
+                 flyish += 0;
+                 berd += 0; 
             }
             if (D2 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
 
             }
             if (D3 = true)
             {
-              
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D4 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             WriteLine("q2");
             menu("1", "2", "3","4");
             if (D1 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D2 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D3 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D4 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             WriteLine("q3");
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D2 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D3 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D4 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             WriteLine("q4");
             menu("1", "2", "3", "4");
             if (D1 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D2 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D3 = true)
             {
-                
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
             if (D4 = true)
             {
-               
+                bird += 0;
+                flyish += 0;
+                berd += 0;
             }
 
 
