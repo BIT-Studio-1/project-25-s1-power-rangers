@@ -49,6 +49,7 @@ namespace CodeCode
             $"\nHow stupid you were: {stupidity}" +
             $"\nHow brave you were: {bravery}"); ResetColor(); Write("Press enter to reincarnate to your next life"); 
             ReadLine();
+            return;
         }
         public static void fishLife()
         { 
@@ -56,6 +57,7 @@ namespace CodeCode
             
             fishScene1();
             fishScene2();
+            fishTotal();
             return;
 
         }
@@ -140,7 +142,7 @@ namespace CodeCode
                     Write("You teach him to fish"); fishWait();
                     WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
                     Write("And then vibrate in morse code the instructions of how to fish"); fishWait();
-                    Write("He is now armed with the instuctions of how to fish"); fishWait();
+                    Write("He is now armed with the instructions of how to fish"); fishWait();
                     Write("The information won't be useful to him, as he suddenly remembers that he is actually a vegan"); fishWait();
                     break;
 
@@ -163,7 +165,8 @@ namespace CodeCode
             }
         public static void fishScene2()
         {
-
+            bool goneNorth = false;
+            bool loopDecision = false;
             //WriteLine($" selfishness {selfishness}");
             WriteLine("");
             Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
@@ -193,7 +196,7 @@ namespace CodeCode
                     WriteLine("What do you do?");
                     switch (menu(
                         "Mind your own business and hurry away\n\t(0% chance of death, 0% chance of success)",
-                        "Attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
+                        "Attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel\n\t(50% chance of death, 50% chance of success)",
                         "Attempt to save the damselfish by letting it swim behind you in your slipstream\n\t(50% chance of death, 50% chance of success)",
                         "Attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish\n\t(0% chance of death, 100% chance of success)")
                     )
@@ -211,18 +214,18 @@ namespace CodeCode
                             bravery += 10;
                             selfishness -= 5;
                             okaybeep();
-                            Write("You attempt to save the damselfish by going inbetween the eel and the damselfish, distracting the eel");
+                            Write("You attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel");
                             fishWait();
                             if (deathRoll(50) == true)
                             {
                                 Write("The eel devoured up you and the damselfish"); fishWait();
                                 Write("You died a fishful life"); fishWait();
-                                fishTotal();
+                                
                                 return;
                             }
                             Write("You successfully distract the eel away from the damselfish and escape");
                             fishWait();
-
+                            Write("You and the damselfish live happily ever after"); fishWait();
 
                             break;
                         case 'C':
@@ -236,11 +239,12 @@ namespace CodeCode
                             {
                                 Write("The eel devoured up you and the damselfish"); fishWait();
                                 Write("You died a fishful life"); fishWait();
-                                fishTotal();
+                                
                                 return;
                             }
                             Write("You successfully distract the eel away from the damselfish and escape");
                             fishWait();
+                            Write("You and the damselfish live happily ever after"); fishWait();
 
 
                             break;
@@ -248,7 +252,7 @@ namespace CodeCode
                             Clear();
                             badbeep();
                             selfishness += 10;
-                            Write("You attempt to save the damselfishby throwing a nearby baby fish between the eel and the damselfish"); fishWait();
+                            Write("You attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish"); fishWait();
                             Write("You successfully distract the eel away from the damselfish and escape");
                             fishWait();
 
@@ -266,11 +270,23 @@ namespace CodeCode
                 case 'C':
                     Clear();
                     okaybeep();
-                    bravery += 2;
+                    if (goneNorth == false) {
+                        bravery += 2;
+                    }
+                    goneNorth = true; 
                     Write("You swim into the darkness");
                     fishWait();
                     WriteLine("You see what you believe to be is a large opening");
-                    menu("Go in", "Go in lol", "", "", 2);
+                    switch(menu("Go in", "Go back", "", "", 2))
+                    {
+                        case 'A':
+                            Clear();
+                            Write("It was the mouth of a shark"); fishWait();
+                            break;
+                        default:
+                            Clear();
+                            break;
+                    }
                     break;
                 default:
                     // This never gets triggered
@@ -338,7 +354,9 @@ namespace CodeCode
                 }
 
 
-                return;
+
+
+            return;
 
         }
     }
