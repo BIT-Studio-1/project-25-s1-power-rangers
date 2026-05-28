@@ -11,33 +11,145 @@ namespace CodeCode
 {
     public class bird
     {
-        private static int selfishness = 20;
-        private static int stupidity = 20;
-        private static int bravery = 20;
+        private static int variable = 20;
+        private static int flyish = 20;
+        private static int berd = 20;
 
-        public static int Selfishness
+        public static int Variable
         {
-            get { return selfishness; }
+            get { return variable; }
         }
 
-        public static int Stupidity
+        public static int Flyish
         {
-            get { return stupidity; }
+            get { return flyish; }
         }
 
-        public static int Bravery
+        public static int Berd
         {
-            get { return bravery; }
+            get { return berd; }
         }
         public static void birdLife()
         {
             birdScene1();
-        } 
+        }
         public static void birdScene1()
         {
-            WriteLine("You now have been recarnated to a bird");
-        
-        }
+            WriteLine("You now have been reincarnated as a bird");
+            menu("1", "2", "3", "4");
+            if (D1 == true)
+            {
+                variable += 0;
+                 flyish += 0;
+                 berd += 0; 
+            }
+            if (D2 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+
+            }
+            if (D3 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D4 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            WriteLine("q2");
+            menu("1", "2", "3","4");
+            if (D1 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D2 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D3 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D4 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            WriteLine("q3");
+            menu("1", "2", "3", "4");
+            if (D1 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D2 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D3 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D4 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            WriteLine("q4");
+            menu("1", "2", "3", "4");
+            if (D1 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D2 == true)
+            {   
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D3 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            if (D4 == true)
+            {
+                variable += 0;
+                flyish += 0;
+                berd += 0;
+            }
+            Write("your score now is ");
+            WriteLine($"{variable}");
+            WriteLine("");
+            Write("your selfishness now is ");
+            WriteLine($"{flyish}");
+            WriteLine("");
+            Write("your stupidity now is ");
+            WriteLine($"{berd}");
+            WriteLine("");
+        }   
 
     }
 }
