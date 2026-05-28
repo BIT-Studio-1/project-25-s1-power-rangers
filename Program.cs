@@ -10,13 +10,13 @@ using static CodeCode.SoundUtils;
 using static CodeCode.Fish;
 using static System.Console;
 using static System.ConsoleKey;
-using static CodeCode.starfish;
+using static CodeCode.Starfish;
 using static CodeCode.dolphin;
 using static CodeCode.GameTitle;
 using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
-
+using static CodeCode.Sasquatch;
 
 namespace CodeCode
 {
@@ -311,13 +311,16 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n: ");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))
                 {
                     switch (debug)
                     {
+                        case 10:
+                            sasquatchLife();
+                            break;
                         case 9:
                             HumanLife();
                             break;

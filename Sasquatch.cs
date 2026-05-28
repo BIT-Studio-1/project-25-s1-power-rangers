@@ -10,33 +10,53 @@ namespace CodeCode
 {
     public class Sasquatch
     {
-        private static int variable = 20;
-        private static int flyish = 20;
-        private static int berd = 20;
+        private static int peacefulness = 20;
+        private static int human = 20;
+        private static int gay = 20;
 
-        public static int Variable
+        public static int Peacefulness
         {
-            get { return variable; }
+            get { return peacefulness; }
         }
-
-        public static int Flyish
+        public static int Human
         {
-            get { return flyish; }
+            get { return human; }
         }
-
-        public static int Berd
+        public static int Gay
         {
-            get { return berd; }
+            get { return gay; }
         }
         public static void sasquatchLife()
         {
             sasquatchScene1();
+            sasquatchTotal();
+        }
+        private static void wait(int time = 500) {
+            CursorVisible = false;
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".\n");
+            Thread.Sleep(time);
+            CursorVisible = true;
+
         }
         public static void sasquatchScene1()
         {
+            Write("You have been reincaranated as a sasquatch"); wait();
+            WriteLine("omg");
+            
 
 
-
+        }
+        public static void sasquatchTotal()
+        {
+            ForegroundColor = ConsoleColor.Green; Clear();
+            WriteLine("Fish Life"); Thread.Sleep(300);
+            WriteLine($"How peaceful you were: {peacefulness}" +
+            $"\nHow humanistic you were: {human}" +
+            $"\nHow gay you were: {gay}"); ResetColor(); Write("Press enter to reincarnate to your next life");
+            ReadLine();
+            return;
         }
     }
 }

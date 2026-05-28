@@ -10,7 +10,7 @@ using static CodeCode.SoundUtils;
 using static CodeCode.Fish;
 using static System.Console;
 using static System.ConsoleKey;
-using static CodeCode.starfish;
+using static CodeCode.Starfish;
 using static CodeCode.dolphin;
 using static CodeCode.GameTitle;
 using static CodeCode.plant;

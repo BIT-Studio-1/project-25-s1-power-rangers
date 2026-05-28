@@ -31,7 +31,7 @@ namespace CodeCode
         {
             get { return bravery; }
         }
-        public static void fishWait(int time = 500)
+        private static void fishWait(int time = 500)
         {
             CursorVisible = false;
             Thread.Sleep(time); Write(".");

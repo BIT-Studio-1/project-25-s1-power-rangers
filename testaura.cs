@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeCode
 {
-    internal class testaura
+    internal class testAura
     {
     }
 }
