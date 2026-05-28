@@ -9,7 +9,7 @@ using static CodeCode.SoundUtils;
 
 namespace CodeCode
 {
-    internal class starfish
+    internal class Starfish
     {
         public static void starfishScene1()
         {

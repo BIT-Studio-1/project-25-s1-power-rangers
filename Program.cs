@@ -7,7 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using static CodeCode.SoundUtils;
-using static CodeCode.fish;
+using static CodeCode.Fish;
 using static System.Console;
 using static System.ConsoleKey;
 using static CodeCode.starfish;
@@ -212,7 +212,7 @@ namespace CodeCode
             plantLife();
             fishLife();
 
-            if (fish.Selfishness >= 25)
+            if (Fish.Selfishness >= 25)
             {
                 dolphinlife();
                 if (dolphin.OkayEnough1 >= 15) {

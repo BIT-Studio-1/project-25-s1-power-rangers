@@ -7,7 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using static CodeCode.SoundUtils;
-using static CodeCode.fish;
+using static CodeCode.Fish;
 using static System.Console;
 using static System.ConsoleKey;
 using static CodeCode.starfish;
@@ -18,8 +18,11 @@ using static CodeCode.plant;
 
 namespace CodeCode
 {
-    public class MenuTest{
-        static void Main(string[] args) { }
-}
+    public class MenuTest
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
 
 }

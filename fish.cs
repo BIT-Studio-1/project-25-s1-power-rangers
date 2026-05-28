@@ -12,7 +12,7 @@ using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
 namespace CodeCode
 {
-    internal class fish
+    internal class Fish
     {
         private static int selfishness = 20;
         private static int stupidity = 20;
@@ -232,7 +232,6 @@ namespace CodeCode
                                 Write("You and the damselfish live happily ever after"); fishWait();
 
                                 return;
-                                break;
                             case 'C':
                                 Clear();
                                 bravery += 7;
@@ -252,7 +251,6 @@ namespace CodeCode
                                 Write("You and the damselfish live happily ever after"); fishWait();
                                 return;
 
-                                break;
                             default:
                                 Clear();
                                 badbeep();
@@ -262,7 +260,6 @@ namespace CodeCode
                                 fishWait();
                                 Write("You and the damselfish live happily ever after"); fishWait();
                                 return;
-                                break;
                         }
 
                         break;
@@ -293,7 +290,6 @@ namespace CodeCode
                                 Write("It was the mouth of a shark"); fishWait();
                                 Write("The shark munches you up"); fishWait();
                                 return;
-                                break;
                             default:
                                 Clear();
                                 Write("You swim back"); fishWait();
