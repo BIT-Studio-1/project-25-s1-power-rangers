@@ -15,6 +15,7 @@ using static CodeCode.dolphin;
 using static CodeCode.GameTitle;
 using static CodeCode.plant;
 using static CodeCode.bird;
+using static CodeCode.Human;
 
 
 namespace CodeCode
@@ -310,13 +311,16 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. starfish\n8. bird\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n: ");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))
                 {
                     switch (debug)
                     {
+                        case 9:
+                            HumanLife();
+                            break;
                         case 8:
                             birdLife();
                             break;
