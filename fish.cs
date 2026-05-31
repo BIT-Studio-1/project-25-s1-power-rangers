@@ -47,8 +47,9 @@ namespace CodeCode
             WriteLine("Fish Life"); Thread.Sleep(300);
             WriteLine($"How selfish you were: {selfishness}" +
             $"\nHow stupid you were: {stupidity}" +
-            $"\nHow brave you were: {bravery}"); ResetColor(); Write("Press enter to reincarnate to your next life"); 
+            $"\nHow brave you were: {bravery}"); ResetColor(); WriteLine("Press enter to reincarnate to your next life"); 
             ReadLine();
+            Clear();
             return;
         }
         public static void fishLife()
@@ -72,8 +73,13 @@ namespace CodeCode
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             fishWait();
+
+
             Write("You hatch as a fish, out of your egg"); fishWait();
-            // WriteLine($" selfishness {selfishness}");
+            WriteLine(@"|╲__.-.");
+            WriteLine(@"|    o <           <- you");
+            WriteLine(@"|╱‾‾`'`");
+
             Write("Your fish siblings are also hatched"); fishWait();
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             switch (menu("Leave the food for your younger sister",
@@ -374,11 +380,12 @@ namespace CodeCode
             WriteLine(@"   _..----------...  ");
             WriteLine(@".-~                ~-.");
             WriteLine(@"|.                  .|");
-            WriteLine(@"|\""-..____________..-\""");
-            WriteLine(@"|                   .`");
+            WriteLine(@"|\""-..____________..-|");
+            WriteLine(@"|                    |");
+            WriteLine(@"|  delicious fish    |");
             WriteLine(@" ""-..____________..-"" ");
             WriteLine("Press enter...");
-            Read();
+            ReadLine();
 
 
 
