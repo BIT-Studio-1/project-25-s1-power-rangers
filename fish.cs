@@ -367,6 +367,21 @@ namespace CodeCode
                     break;
                 }
 
+            Write("Your getting old and the end of your days are approaching"); fishWait();
+            Write("You get scooped up in some cast nets from a large fishing boat"); fishWait();
+            Write("They give no mercy and grind you up into a can"); fishWait();
+
+            WriteLine(@"   _..----------...  ");
+            WriteLine(@".-~                ~-.");
+            WriteLine(@"|.                  .|");
+            WriteLine(@"|\""-..____________..-\""");
+            WriteLine(@"|                   .`");
+            WriteLine(@" ""-..____________..-"" ");
+            WriteLine("Press enter...");
+            Read();
+
+
+
 
 
 
