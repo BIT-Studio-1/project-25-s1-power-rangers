@@ -92,8 +92,8 @@ namespace CodeCode
             WriteLine("After a long day’s work, you’re ready to go to sleep"); ReadLine();
             WriteLine("You closed one eye, leaving the other one to watch out for danger"); ReadLine();
             WriteLine("The ocean is full of surprises!"); ReadLine();
-            Write("Just like....");
-            Read(); Write("Oh, my bad,"); ReadLine(); Write(" It’s just a really old looking fish");
+            Write("Just like"); DolphinWait();
+            Write("Oh, my bad,"); ReadLine(); Write(" It’s just a really old looking fish");
             Read(); Write("Wait, I’m not that sleepy,"); ReadLine(); Write(" maybe I should play with it"); ReadLine();
             switch (menu("Man, I’m WAYY too sleepy for this", "Bob needs to see this", "Hit it with my fin", "", 3))
             {
@@ -210,6 +210,7 @@ namespace CodeCode
 
                             if (fishHP <= 0) 
                             {
+                                HellYeah(); 
                                 WriteLine("You have defeated him!!"); ReadLine();
                                 WriteLine("You go back to sleep"); ReadLine();
                             }
