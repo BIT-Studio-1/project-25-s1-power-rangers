@@ -10,6 +10,7 @@ using static CodeCode.Program;
 using static CodeCode.SoundUtils;
 using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
+using static CodeCode.worm;
 namespace CodeCode
 {
     internal class Fish
@@ -73,9 +74,15 @@ namespace CodeCode
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             fishWait();
+            if (worm.fishgateway = true)
+            {
+                Write("You grew gills and became a fish"); fishWait();
+            }
+            else {
+                Write("You hatch as a fish, out of your egg"); fishWait();
+            }
 
-
-            Write("You hatch as a fish, out of your egg"); fishWait();
+            
             WriteLine(@"|╲__.-.");
             WriteLine(@"|    o <           <- you");
             WriteLine(@"|╱‾‾`'`");
@@ -315,7 +322,7 @@ namespace CodeCode
             Write("You swim with your school for a while");
             fishWait();
 
-            Write("\nYour fish uncle named Vishnu, who tended to you when you were a fish egg, is struggling with dementia and forgets which school of fish to belong to");
+            Write("\nYour fish uncle named Vishnu, who tended to you in the past, is struggling with dementia and forgets which school of fish to belong to");
             fishWait();
             Write("The school you are swimming in is going towards some nutritious food");
             fishWait();
