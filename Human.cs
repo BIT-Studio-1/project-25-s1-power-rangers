@@ -13,22 +13,22 @@ namespace CodeCode
 {
     internal class Human
     {
-        private static int AbusePoint = 0;
-        private static int OkayEnough = 0;
-        private static int WereAllInThisTogether = 0;
-        public static int AbusePoint1
+        private static int SitOnCouch = 0;
+        private static int Sure = 0;
+        private static int Worm = 0;
+        public static int SitOnCouch1
         {
-            get { return AbusePoint; }
+            get { return SitOnCouch; }
         }
 
-        public static int OkayEnough1
+        public static int Sure1
         {
-            get { return OkayEnough; }
+            get { return Sure; }
         }
 
-        public static int WereAllInThisTogether1
+        public static int Worm1
         {
-            get { return WereAllInThisTogether; }
+            get { return Worm; }
         }
         public static void HumanLife()
         {
@@ -40,11 +40,22 @@ namespace CodeCode
 
         }
 
+        private static void humanWait(int time = 500)
+        {
+            CursorVisible = false;
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".\n");
+            Thread.Sleep(time);
+        }
 
         public static void HumanLife1()
         {
+            CursorVisible = false;
             Clear();
             WriteLine("You are a human"); ReadLine();
+            WriteLine("A human who loves to sit on a couch"); ReadLine();
+            WriteLine("Would you like to name the human?"); humanWait(); Write("Nahhhh, you don't get a choice, your name is Hugh Mann. Hue for short"); ReadLine();
         }
         public static void HumanLife2()
         {
@@ -56,17 +67,17 @@ namespace CodeCode
 
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Human Life"); Thread.Sleep(300);
-            WriteLine($"How crazy you were: {AbusePoint}" +
-                $"\nHow Okay of a human you were: {OkayEnough}" +
-                $"\nHow good you were at being social: {WereAllInThisTogether}"); ResetColor();
-            AbusePoint = AbusePoint - OkayEnough;
+            WriteLine($"How crazy you were: {SitOnCouch}" +
+                $"\nHow Okay of a human you were: {Sure}" +
+                $"\nHow good you were at being social: {Worm}"); ResetColor();
+            SitOnCouch = SitOnCouch - Sure;
 
-            if (AbusePoint <= 0)
+            if (SitOnCouch <= 0)
             {
             }
-            if (AbusePoint > 0)
+            if (SitOnCouch > 0)
             {
-                if (AbusePoint > 30)
+                if (SitOnCouch > 30)
                 {
                 }
 
