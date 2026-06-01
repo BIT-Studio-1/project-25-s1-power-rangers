@@ -19,6 +19,7 @@ namespace CodeCode
             return;
         }
 
+        public static bool fishgateway;
         private static int length = 0;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
@@ -26,7 +27,7 @@ namespace CodeCode
         public static void wormscene1()
         {
             //davids shitty ass code
-
+            fishgateway = false;
             Clear();
             WriteLine("**You are a worm now**");
             WriteLine("It's time to decide your destiny...");
@@ -46,27 +47,39 @@ namespace CodeCode
                     break;
 
                 case 'B':
-                    WriteLine("");
+                    WriteLine("you drown.");
                     break;
 
                 case 'C':
-                    WriteLine("You've drank so much ocean that you became one with it");
-                    Clear();
-                    WriteLine("you.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("are.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("a.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("fish.");
-                    Thread.Sleep(1000);
+                    WriteLine("You keep drinking and drinking and drinking and drinking until you're more of a balloon then a worm.");
+                    WriteLine("You can't hold in the liquid and rocket towards the surface, propelled by the water, flying all through the air, slamming into a bird");
+                    WriteLine("it seems all the water has stretched you out and increased your length.");
+                    length += 10;
+
                     break;
 
-                case 'D':
-                    WriteLine("");
+                default:
+                    bool wiggle = false;
+                    WriteLine("wiggle.");
+                    while (wiggle = false) 
+                    {
+                        switch (menu("wiggle?", "wiggle more?", "wiggle a little less", "stop wiggling"))
+                        {
+                            default:
+                                wiggle = true;
+                                break;
+
+                            case 'A':
+                            case 'B':
+                            case 'C':
+
+                                wiggles += 3;
+                                wiggle = false;
+                                break;
+
+                        }
+                            
+                    }
                     break;
 
             }
