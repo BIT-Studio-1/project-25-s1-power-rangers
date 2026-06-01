@@ -79,5 +79,9 @@ namespace CodeCode
         {
             Play(@"sfx/HellYeah.wav");
         }
+        public static void Meow()
+        {
+            Play(@"sfx/marioMeowh.wav");
+        }
     }
 }
