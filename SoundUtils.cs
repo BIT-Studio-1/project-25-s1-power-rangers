@@ -75,5 +75,9 @@ namespace CodeCode
         {
             Play(@"sfx/epicsfx.wav");
         }
+        public static void HellYeah()
+        {
+            Play(@"sfx/HellYeah.wav");
+        }
     }
 }
