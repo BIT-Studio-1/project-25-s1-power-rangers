@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Console;
 using static CodeCode.Program;
 using static CodeCode.SoundUtils;
+using static System.Console;
 
 namespace CodeCode
 {
@@ -14,8 +15,8 @@ namespace CodeCode
     {
         public static void wormlife()
         {
-            wormscene1();
-
+            wormscene();
+            wormtotal();
             return;
         }
 
@@ -24,7 +25,7 @@ namespace CodeCode
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
 
-        public static void wormscene1()
+        public static void wormscene()
         {
             //davids shitty ass code
             fishgateway = false;
@@ -47,7 +48,20 @@ namespace CodeCode
                     break;
 
                 case 'B':
-                    WriteLine("you drown.");
+                    WriteLine("You grown gills.");
+                    WriteLine("You.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("Are.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("A.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("Fish...");
+                    Thread.Sleep(500);
+                    Clear();
+                    return;
                     break;
 
                 case 'C':
@@ -59,26 +73,29 @@ namespace CodeCode
                     break;
 
                 default:
+                    Clear();
                     bool wiggle = false;
                     WriteLine("wiggle.");
-                    while (wiggle = false) 
+                    while (wiggle == false && wiggles <= 30)
                     {
                         switch (menu("wiggle?", "wiggle more?", "wiggle a little less", "stop wiggling"))
                         {
                             default:
+                                Clear();
                                 wiggle = true;
                                 break;
 
                             case 'A':
                             case 'B':
                             case 'C':
-
+                                Clear();
                                 wiggles += 3;
-                                wiggle = false;
+                                WriteLine("You have wiggled.");
+                                
                                 break;
 
                         }
-                            
+
                     }
                     break;
 
@@ -87,6 +104,15 @@ namespace CodeCode
 
             return;
         }
-
+        public static void wormtotal()
+        {
+            ForegroundColor = ConsoleColor.Green; Clear();
+            WriteLine("Worm Life"); Thread.Sleep(300);
+            WriteLine($"how much dirt you ate: {dirt_consumed}" +
+            $"\nHow long were you: {length}" +
+            $"\nHow many times did you wiggle: {wiggles}"); ResetColor(); Write("Press enter to reincarnate to your next life");
+            ReadLine();
+            return;
+        }
     }
 }
