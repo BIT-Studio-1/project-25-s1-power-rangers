@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Console;
 using static CodeCode.Program;
 using static CodeCode.SoundUtils;
+using static System.Console;
 
 namespace CodeCode
 {
@@ -14,19 +15,20 @@ namespace CodeCode
     {
         public static void wormlife()
         {
-            wormscene1();
-
+            wormscene();
+            wormtotal();
             return;
         }
 
+        public static bool fishgateway;
         private static int length = 0;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
 
-        public static void wormscene1()
+        public static void wormscene()
         {
             //davids shitty ass code
-
+            fishgateway = false;
             Clear();
             WriteLine("**You are a worm now**");
             WriteLine("It's time to decide your destiny...");
@@ -46,27 +48,55 @@ namespace CodeCode
                     break;
 
                 case 'B':
-                    WriteLine("");
+                    WriteLine("You grown gills.");
+                    WriteLine("You.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("Are.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("A.");
+                    Thread.Sleep(500);
+                    Clear();
+                    WriteLine("Fish...");
+                    Thread.Sleep(500);
+                    Clear();
+                    return;
                     break;
 
                 case 'C':
-                    WriteLine("You've drank so much ocean that you became one with it");
-                    Clear();
-                    WriteLine("you.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("are.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("a.");
-                    Thread.Sleep(500);
-                    Clear();
-                    WriteLine("fish.");
-                    Thread.Sleep(1000);
+                    WriteLine("You keep drinking and drinking and drinking and drinking until you're more of a balloon then a worm.");
+                    WriteLine("You can't hold in the liquid and rocket towards the surface, propelled by the water, flying all through the air, slamming into a bird");
+                    WriteLine("it seems all the water has stretched you out and increased your length.");
+                    length += 10;
+
                     break;
 
-                case 'D':
-                    WriteLine("");
+                default:
+                    Clear();
+                    bool wiggle = false;
+                    WriteLine("wiggle.");
+                    while (wiggle == false && wiggles <= 30)
+                    {
+                        switch (menu("wiggle?", "wiggle more?", "wiggle a little less", "stop wiggling"))
+                        {
+                            default:
+                                Clear();
+                                wiggle = true;
+                                break;
+
+                            case 'A':
+                            case 'B':
+                            case 'C':
+                                Clear();
+                                wiggles += 3;
+                                WriteLine("You have wiggled.");
+                                
+                                break;
+
+                        }
+
+                    }
                     break;
 
             }
@@ -74,6 +104,15 @@ namespace CodeCode
 
             return;
         }
-
+        public static void wormtotal()
+        {
+            ForegroundColor = ConsoleColor.Green; Clear();
+            WriteLine("Worm Life"); Thread.Sleep(300);
+            WriteLine($"how much dirt you ate: {dirt_consumed}" +
+            $"\nHow long were you: {length}" +
+            $"\nHow many times did you wiggle: {wiggles}"); ResetColor(); Write("Press enter to reincarnate to your next life");
+            ReadLine();
+            return;
+        }
     }
 }
