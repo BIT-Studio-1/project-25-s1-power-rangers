@@ -207,25 +207,39 @@ namespace CodeCode
             debug();
             TitleScreen();
             if (GameTitle.start1 == 1)
-            { amebaScene1(); }
-            else if (GameTitle.end1 == 1)
-            { return; }
-            plantLife();
-            fishLife();
+            { 
+                amebaScene1();
+                plantLife();
+                // Plant needs an if statement for going to either 
+                wormlife();
+                if(worm.fishgateway == true)
+                {
+                    fishLife();
+                    if (Fish.Selfishness >= 25)
+                    {
+                        dolphinlife();
+                        if (dolphin.OkayEnough1 >= 15)
+                        {
 
-            if (Fish.Selfishness >= 25)
-            {
-                dolphinlife();
-                if (dolphin.OkayEnough1 >= 15) {
-
-                    Write("go next life\n");
+                            Write("go next life\n");
+                        }
+                    }
+                    else
+                    {
+                        starfishLife();
+                    }
+                }
+                else
+                {
+                    //this is where the statements for going to sasquatch and penguin will be
                 }
             }
-            else
-            {
-                starfishLife();
-            }
-            wormlife();
+            else if (GameTitle.end1 == 1)
+            { return; }
+
+
+
+            
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
