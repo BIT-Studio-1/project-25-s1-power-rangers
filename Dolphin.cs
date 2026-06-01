@@ -40,6 +40,13 @@ namespace CodeCode
 
         }
 
+        public static void DolphinWait()
+        {
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500);
+        }
 
         public static void dolphinlife1()
         {
@@ -57,7 +64,7 @@ namespace CodeCode
                     Write("You approach the pufferfish"); ReadLine();
                     Write("The pufferfish looks quite scared, "); ReadLine();
                     Write("which does make sense as the next action you take is to chew on the pufferfish"); ReadLine();
-                    Write("\nYou are "); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
+                    Write("\nYou are "); DolphinWait(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
                     break;
                 case 'B':
                     CursorVisible = false;
@@ -70,7 +77,7 @@ namespace CodeCode
                     WereAllInThisTogether += 5;
                     WriteLine("You swim back to your buddies to tell them about your discovery, and they cheer"); ReadLine();
                     WriteLine("When you get back to the pufferfish, you all take a hit"); ReadLine();
-                    Write("You and your dolphin bruvs are "); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
+                    Write("You and your dolphin bruvs are "); DolphinWait(); ForegroundColor = ConsoleColor.Green; Write("successfully high"); ResetColor(); ReadLine();
                     break;
             }
             return;
@@ -113,7 +120,7 @@ namespace CodeCode
                     AbusePoint += 10; badbeep(); Clear();
                     fishHP -= 10;
                     WriteLine("Swimming to the really old fish, you used dolphin slap on it! "); ReadLine();
-                    WriteLine("It was quite effective!"); ForegroundColor = ConsoleColor.Red; Write("   - 10 fish HP "); ResetColor(); ReadLine(); Clear();
+                    WriteLine("It was quite effective!"); DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 10 fish HP "); ResetColor(); ReadLine(); Clear();
                     WriteLine("You asked yourself,"); ReadLine();
                     WriteLine(" “How much fish HP does a really old fish have?!” "); ReadLine();
                     WriteLine("It’s 20. The really old fish has 20, but because you hit em’, it’s down by 10 fish HP "); ReadLine();
@@ -141,33 +148,31 @@ namespace CodeCode
                                 int fih = rand.Next(6);
                                 if (leave==0) 
                                 {
-                                    WriteLine(fishHP);
-                                    WriteLine(DolphinHP);
                                     switch (ark)
                                     {
                                         case 5:
                                             CursorVisible = false;
                                             fishHP -= 10; AbusePoint += 10;
                                             WriteLine("You smack him again with your fin, your elegance and swiftness leaves him unable to move");
-                                            ForegroundColor = ConsoleColor.Red; Write("   - 10 fish HP "); ResetColor(); ReadLine();
+                                            DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 10 fish HP "); ResetColor(); ReadLine();
                                             break;
                                         case 4:
                                             CursorVisible = false;
                                             fishHP -= 5; AbusePoint += 5;
                                             WriteLine("You nudged the old fish, which hurt him mentally");
-                                            ForegroundColor = ConsoleColor.Red; Write("   - 5 fish HP (emotional hurt) "); ResetColor(); ReadLine();
+                                            DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 5 fish HP (emotional hurt) "); ResetColor(); ReadLine();
                                             break;
                                         case 3:
                                             CursorVisible = false;
                                             fishHP -= 2; AbusePoint += 2;
                                             WriteLine("You flailed your fins which made the old fish disorientated.. A bit");
-                                            ForegroundColor = ConsoleColor.Red; Write("   - 2 fish HP (emotional hurt) "); ResetColor(); ReadLine();
+                                            DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 2 fish HP (emotional hurt) "); ResetColor(); ReadLine();
                                             break;
                                         default:
                                             CursorVisible = false;
                                             AbusePoint += 1;
                                             WriteLine("You missed so badly that I should cry");
-                                            ForegroundColor = ConsoleColor.Red; Write("   - 0 fish HP (He feels bad for you) "); ResetColor(); ReadLine();
+                                            DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 0 fish HP (He feels bad for you) "); ResetColor(); ReadLine();
                                             break;
                                     }
 
@@ -179,24 +184,24 @@ namespace CodeCode
                                                 CursorVisible = false;
                                                 DolphinHP -= 10;
                                                 WriteLine("The old fish bit you");
-                                                ForegroundColor = ConsoleColor.Red; Write("   - 10 dolphin HP (ouch) "); ResetColor(); ReadLine();
+                                                DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 10 dolphin HP (ouch) "); ResetColor(); ReadLine();
                                                 break;
                                             case 4:
                                                 CursorVisible = false;
                                                 DolphinHP -= 5;
                                                 WriteLine("The old fish berated you for hitting it");
-                                                ForegroundColor = ConsoleColor.Red; Write("   - 5 dolphin HP (emotional hurt) "); ResetColor(); ReadLine();
+                                                DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 5 dolphin HP (emotional hurt) "); ResetColor(); ReadLine();
                                                 break;
                                             case 3:
                                                 CursorVisible = false;
                                                 DolphinHP -= 2;
                                                 WriteLine("The old fish licked your favourite coral..");
-                                                ForegroundColor = ConsoleColor.Red; Write("   - 2 dolphin HP (emotional hurt) "); ResetColor(); ReadLine();
+                                                DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 2 dolphin HP (emotional hurt) "); ResetColor(); ReadLine();
                                                 break;
                                             default:
                                                 CursorVisible = false;
                                                 WriteLine("The old fish does the cha cha");
-                                                ForegroundColor = ConsoleColor.Red; Write("   - 0 dolphin HP (you're confused) "); ResetColor(); ReadLine();
+                                                DolphinWait(); ForegroundColor = ConsoleColor.Red; Write("   - 0 dolphin HP (you're confused) "); ResetColor(); ReadLine();
                                                 break;
                                         }
                                     }
@@ -210,8 +215,8 @@ namespace CodeCode
                             }
 
                             else if (DolphinHP <=0)
-                            { 
-                                WriteLine($"You lost.... with the old fish still having {fishHP} HP"); ReadLine();
+                            {
+                                Write($"You lost"); DolphinWait(); Write("with the old fish still having {fishHP} HP"); ReadLine();
                                 WriteLine("You ran away from the embarrassment of your uncoolness"); ReadLine();
                             }
 
