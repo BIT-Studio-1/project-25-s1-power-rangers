@@ -42,11 +42,24 @@ namespace CodeCode
             {
                 ForegroundColor = ConsoleColor.Red;
 
-                Write("Reincarnation Game\n\n");
+                Write(":::::::..  .,::::::  ::::::.    :::.                                                   "); Thread.Sleep(50);
+                Write("\r\n;;;;``;;;; ;;;;''''  ;;;`;;;;,  `;;;                                                   "); Thread.Sleep(50);
+                Write("\r\n [[[,/[[['  [[cccc   [[[  [[[[[. '[[                                                   "); Thread.Sleep(50);
+                Write("\r\n $$$$$$c    $$\"\"\"\"   $$$  $$$ \"Y$c$$                                                   "); Thread.Sleep(50);
+                Write("\r\n 888b \"88bo,888oo,__ 888  888    Y88                                                   "); Thread.Sleep(50);
+                Write("\r\n MMMM   \"W\" \"\"\"\"YUMMMMMM  MMM     YM                                                   "); Thread.Sleep(50);
+                Write("\r\n  .,-:::::   :::.    :::::::.. :::.    :::.  :::. :::::::::::::::    ...   :::.    :::."); Thread.Sleep(50);
+                Write("\r\n,;;;'````'   ;;`;;   ;;;;``;;;;`;;;;,  `;;;  ;;`;;;;;;;;;;'''';;; .;;;;;;;.`;;;;,  `;;;"); Thread.Sleep(50);
+                Write("\r\n[[[         ,[[ '[[,  [[[,/[[['  [[[[[. '[[ ,[[ '[[,   [[     [[[,[[     \\[[,[[[[[. '[["); Thread.Sleep(50);
+                Write("\r\n$$$        c$$$cc$$$c $$$$$$c    $$$ \"Y$c$$c$$$cc$$$c  $$     $$$$$$,     $$$$$$ \"Y$c$$"); Thread.Sleep(50);
+                Write("\r\n`88bo,__,o, 888   888,888b \"88bo,888    Y88 888   888, 88,    888\"888,_ _,88P888    Y88"); Thread.Sleep(50);
+                Write("\r\n  \"YUMMMMMP\"YMM   \"\"` MMMM   \"W\" MMM     YM YMM   \"\"`  MMM    MMM  \"YMMMMMP\" MMM     YM"); Thread.Sleep(100);
+                Write("\r\nｇａｍｅ\n\n");
                 ResetColor();
                 switch (menu("Start", "Credits", "Exit", "", 3))
                 {
                     case 'A':
+                        CursorVisible = false;
                         Clear();
                         start = 1;
                         Write("Welcome to the "); ForegroundColor = ConsoleColor.Red; Write("Reincarnation Game"); ResetColor(); Write("!"); ReadLine();
@@ -59,16 +72,17 @@ namespace CodeCode
                         Clear(); Thread.Sleep(300);
                         break;
                     case 'B':
+                        CursorVisible = false;
                         Clear();
                         ForegroundColor = ConsoleColor.Red;
-                        Write("\n  ,ad8888ba,                                    88  88                      \r"); Thread.Sleep(300); 
-                        Write("\n d8\"'    `\"8b                                   88  \"\"    ,d                \r"); Thread.Sleep(300);
-                        Write("\nd8'                                             88        88                \r"); Thread.Sleep(300); 
-                        Write("\n88             8b,dPPYba,   ,adPPYba,   ,adPPYb,88  88  MM88MMM  ,adPPYba,  \r"); Thread.Sleep(300);
-                        Write("\n88             88P'   \"Y8  a8P_____88  a8\"    `Y88  88    88     I8[    \"\"  \r"); Thread.Sleep(300); 
-                        Write("\nY8,            88          8PP\"\"\"\"\"\"\"  8b       88  88    88      `\"Y8ba,   \r"); Thread.Sleep(300);
-                        Write("\n Y8a.    .a8P  88          \"8b,   ,aa  \"8a,   ,d88  88    88,    aa    ]8I  \r"); Thread.Sleep(300); 
-                        Write("\n  `\"Y8888Y\"'   88           `\"Ybbd8\"'   `\"8bbdP\"Y8  88    \"Y888  `\"YbbdP\"'  \r\n\n"); Thread.Sleep(300); ForegroundColor = ConsoleColor.Yellow;
+                        Write("\n  ,ad8888ba,                                    88  88                      \r"); Thread.Sleep(50); 
+                        Write("\n d8\"'    `\"8b                                   88  \"\"    ,d                \r"); Thread.Sleep(50);
+                        Write("\nd8'                                             88        88                \r"); Thread.Sleep(50); 
+                        Write("\n88             8b,dPPYba,   ,adPPYba,   ,adPPYb,88  88  MM88MMM  ,adPPYba,  \r"); Thread.Sleep(50);
+                        Write("\n88             88P'   \"Y8  a8P_____88  a8\"    `Y88  88    88     I8[    \"\"  \r"); Thread.Sleep(50); 
+                        Write("\nY8,            88          8PP\"\"\"\"\"\"\"  8b       88  88    88      `\"Y8ba,   \r"); Thread.Sleep(50);
+                        Write("\n Y8a.    .a8P  88          \"8b,   ,aa  \"8a,   ,d88  88    88,    aa    ]8I  \r"); Thread.Sleep(50); 
+                        Write("\n  `\"Y8888Y\"'   88           `\"Ybbd8\"'   `\"8bbdP\"Y8  88    \"Y888  `\"YbbdP\"'  \r\n\n"); Thread.Sleep(50); ForegroundColor = ConsoleColor.Yellow;
                         Write("Developed by: The Power Rangers\n\n"); Thread.Sleep(500); ForegroundColor = ConsoleColor.White;
                         Write("Benjamin Roberts\n"); Thread.Sleep(500);
                         Write("Nishachyjit Nishachyjit\n"); Thread.Sleep(500);
@@ -81,6 +95,7 @@ namespace CodeCode
                         Clear();
                         break;
                     case 'C':
+                        CursorVisible = false;
                         Clear();
                         end = 1;
                         WriteLine("Please come back soon! :'(");
