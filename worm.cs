@@ -32,11 +32,15 @@ namespace CodeCode
             Clear();
             WriteLine("**You are a worm now**");
             WriteLine("It's time to decide your destiny...");
+            Read();
             Clear();
             WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
+            Read();
             Clear();
             WriteLine("LEVEL 1");
-            WriteLine("It beguins to rain, what will you do?");
+            Write("It beguins to rain, what will you do?");
+            Read();
+            Clear();
             switch (menu("Swim to the surface", "hold your breath", "drink the water", "wiggle"))
 
 
@@ -68,6 +72,7 @@ namespace CodeCode
                     WriteLine("You keep drinking and drinking and drinking and drinking until you're more of a balloon then a worm.");
                     WriteLine("You can't hold in the liquid and rocket towards the surface, propelled by the water, flying all through the air, slamming into a bird");
                     WriteLine("it seems all the water has stretched you out and increased your length.");
+
                     length += 10;
 
                     break;
@@ -88,8 +93,41 @@ namespace CodeCode
                             case 'A':
                             case 'B':
                             case 'C':
+                                CursorVisible = false;
                                 Clear();
                                 wiggles += 3;
+                                WriteLine("\n\n\t\t");
+                                Write(@"      \");
+                                WriteLine("\t\t");
+                                Write("      /");
+                                Thread.Sleep(400);
+                                Clear();
+                                WriteLine("\n\n\t\t");
+                                Write(@"      /");
+                                WriteLine("\t\t");
+                                Write(@"      \");
+                                Thread.Sleep(400);
+                                Clear();
+                                WriteLine("\n\n\t\t");
+                                Write(@"      \");
+                                WriteLine("\t\t");
+                                WriteLine("      /");
+                                Thread.Sleep(400);
+                                Clear();
+                                WriteLine("\n\n\t\t");
+                                Write("      /");
+                                WriteLine("\t\t");
+                                Write(@"      \");
+                                Thread.Sleep(400);
+                                Clear();
+                                WriteLine("\n\n\t\t");
+                                Write(@"      \");
+                                WriteLine("\t\t");
+                                WriteLine("      /");
+                                Thread.Sleep(400);
+                                Clear();
+                                CursorVisible = true;
+
                                 WriteLine("You have wiggled.");
                                 
                                 break;
@@ -101,7 +139,7 @@ namespace CodeCode
 
             }
 
-
+           
             return;
         }
         public static void wormtotal()
