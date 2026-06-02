@@ -29,6 +29,7 @@ namespace CodeCode
         }
         public static void sasquatchLife()
         {
+            Clear();
             sasquatchScene1();
             sasquatchTotal();
         }
@@ -48,7 +49,8 @@ namespace CodeCode
             Write("You have big dreams of climbing the ranks of corporate America, but you're a Sasquatch so it may be a little difficult"); wait();
             Write("As you can't speak English you may have to read the dictionary, though you don't have one on you"); wait();
 
-
+            bool dictionaryRead = false;
+            bool leaveBus = false;
             bool keepGoing = false;
 
             while (keepGoing == false) {
@@ -65,8 +67,21 @@ namespace CodeCode
                     case 'A':
                         Clear();
                         Write("You go towards the flowing sounds of the river"); wait();
-                        Write("There was"); wait(700); WriteLine(" a river"); wait();
-                        
+                        Write("There was"); wait(700); Write("a river"); wait();
+                        WriteLine("Follow the river?");
+                        switch(menu("Follow the river", "Go back", "", "", 2))
+                        {
+                            case 'A':
+                                Write("You very far from you, you see the vast land of Corporate America City");
+                                if (dictionaryRead == true)
+                                {
+
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+
                         // To go to the corporate america city, you need to have read the dictionary
                         break;
                     case 'B':
@@ -75,36 +90,39 @@ namespace CodeCode
                         switch (menu("Go inside", "Go back", "", "", 2))
                         {
                             case 'A':
-                                WriteLine("There's a homeless guy in the battle bus");
-                                WriteLine("");
-                                WriteLine("");
-
-                                switch(menu("Challenge him to a game paper scissors rock",
-                                    "Give him a hug", 
-                                    "Insult him", 
-                                    ""))
+                                leaveBus = false;
+                                do
                                 {
-                                    case 'A':
-                                        Clear();
-                                        Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically"); wait();
-                                        Write("He starts frowning when he realises that you mean you want to play paper scissors rock"); wait();
-                                        Write("Homeless guy: 'Well okay then'");
-                                        PSRgame();
-                                        break;
-                                    case 'B':
-                                        Clear();
-                                        break;
-                                    case 'C':
-                                        Clear();
-                                        Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1000);
-                                        Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
-                                        break;
-                                    default:
-                                        Clear();
-                                        Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
-                                        break;
-                                }
-                                WriteLine();
+                                    WriteLine("There's a homeless guy in the battle bus");
+                                    Write("He is homeless and he is also a guy"); wait();
+
+                                    switch (menu("Challenge him to a game of paper scissors rock",
+                                        "Give him a hug",
+                                        "Insult him",
+                                        "Leave the bus"))
+                                    {
+                                        case 'A':
+                                            Clear();
+                                            Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically"); wait();
+                                            Write("He starts frowning when he realises that you mean you want to play paper scissors rock"); wait();
+                                            Write("Homeless guy: 'Well okay then'"); Thread.Sleep(1000); WriteLine();
+                                            PSRgame();
+                                            break;
+                                        case 'B':
+                                            Clear();
+                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1200);
+                                            break;
+                                        case 'C':
+                                            Clear();
+                                            Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1300);
+                                            WriteLine("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1400);
+                                            break;
+                                        default:
+                                            Clear();
+                                            leaveBus = true;
+                                            break;
+                                    }
+                                } while (leaveBus == false);
                                 break;
 
                             default:
@@ -125,8 +143,8 @@ namespace CodeCode
         public static void sasquatchScene2()
         {
             Write("You make it to Corporate America City"); wait();
-            WriteLine("While walking on the street people ask to take photos with you as they");
-            Write("think that you are dressed up as some sort of character"); wait();
+            WriteLine("While walking on the street people ask to take photos with you as they think that you are ");
+            Write("dressed up as some sort of character"); wait();
         }
         public static void sasquatchTotal()
         {

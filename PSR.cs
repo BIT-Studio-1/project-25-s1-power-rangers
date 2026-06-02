@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 using static CodeCode.Program;
-using static CodeCode.SoundUtils;
 using static CodeCode.Sasquatch;
 namespace CodeCode
 {
@@ -15,7 +14,7 @@ namespace CodeCode
         private static void compute()
         {
             Console.Write("rocks....."); Thread.Sleep(500);
-            Write("paper....."); Thread.Sleep(500);
+            Write("pooper....."); Thread.Sleep(500);
             Write("scissors....."); Thread.Sleep(500);
 
 
@@ -34,21 +33,37 @@ namespace CodeCode
         }
         public static void PSRgame()
         {
+            Clear();
             WriteLine("You challenged the homeless guy to rock paper scissors");
-            Write("The format is first to 3");
+            WriteLine("The format is first to 3");
 
             int playerScore = 0;
             int computerScore = 0;
 
-
+            
             do
             {
-                WriteLine($"Your current score: {playerScore} Homeless guy's current score: {computerScore}");
+                WriteLine($"Your current score: {playerScore}        Homeless guy's current score: {computerScore}");
                 Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
                 string usertemp = ReadLine().ToUpper();
-                char player = char.Parse(usertemp);
 
-                Random rand = new Random();
+                char player = ' ';
+                bool keepGoingBruh = false;
+                do {
+                    if (usertemp == "R" ||
+                        usertemp == "S" ||
+                        usertemp == "P"
+                        )
+                    {
+                        player = char.Parse(usertemp);
+                    }
+                    else
+                    {
+                        WriteLine("Invalid input.");
+                    }
+                } while (!keepGoingBruh);
+
+                    Random rand = new Random();
                 int computertemp = rand.Next(3);
                 char computer;
 

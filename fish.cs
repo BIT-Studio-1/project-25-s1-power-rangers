@@ -74,7 +74,7 @@ namespace CodeCode
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
             fishWait();
-            if (worm.fishGateway = true)
+            if (worm.fishGateway == true)
             {
                 Write("You grew gills and became a fish"); fishWait();
             }
