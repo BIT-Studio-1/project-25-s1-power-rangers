@@ -81,15 +81,8 @@ namespace CodeCode
                     stupidity += 200;
 
                 }
-            WriteLine(" ");
-                   Write("So your slefishness is ");
-            WriteLine($"{selfishness}");
-            Write("So your stupidity is ");
-            WriteLine($"{stupidity}");
-            Write("So your globalscore is ");
-            WriteLine($"{plant}");
-            ReadLine();
-
+          
+        
 
             Clear();
                
@@ -133,14 +126,7 @@ namespace CodeCode
 
                     plant += 10;
                 }
-            WriteLine(" ");
-            Write("So your slefishness is ");
-            WriteLine($"{selfishness}");
-            Write("So your stupidity is ");
-            WriteLine($"{stupidity}");
-            Write("So your globalscore is ");
-            WriteLine($"{plant}");
-            ReadLine();
+         
 
 
             Clear();
@@ -190,14 +176,7 @@ namespace CodeCode
                     
 
                 }
-            WriteLine(" ");
-            Write("So your slefishness is ");
-            WriteLine($"{selfishness}");
-            Write("So your stupidity is ");
-            WriteLine($"{stupidity}");
-            Write("So your globalscore is ");
-            WriteLine($"{plant}");
-            ReadLine();
+          
 
             Clear();
                  ForegroundColor = ConsoleColor.Red;
@@ -251,9 +230,9 @@ namespace CodeCode
 
             }
             ForegroundColor = ConsoleColor.Red;
-                WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS ",stupidity);
-                WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS ", selfishness);
-                WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS", plant);
+                WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity);
+                WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness);
+                WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS"+ plant);
                 WriteLine(" ");
                 WriteLine(" ");
                 WriteLine("PLEASE PRESS ENTER TO CONTINUE");
