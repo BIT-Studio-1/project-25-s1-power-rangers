@@ -83,5 +83,9 @@ namespace CodeCode
         {
             Play(@"sfx/marioMeow.wav");
         }
+        public static void HumanMeow()
+        {
+            Play(@"sfx/demonicMeow.wav");
+        }
     }
 }
