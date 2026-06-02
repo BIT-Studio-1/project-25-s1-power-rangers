@@ -43,19 +43,23 @@ namespace CodeCode
             
             do
             {
-                WriteLine($"Your current score: {playerScore}        Homeless guy's current score: {computerScore}");
-                Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
-                string usertemp = ReadLine().ToUpper();
+                Clear();
+                WriteLine($"Your current score: \u001b[1m{playerScore}\u001b[0m        Homeless guy's current score: \u001b[1m{computerScore}\u001b[0m");
+                //Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
+                
 
                 char player = ' ';
                 bool keepGoingBruh = false;
                 do {
+                    Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
+                    string usertemp = ReadLine().ToUpper();
                     if (usertemp == "R" ||
                         usertemp == "S" ||
                         usertemp == "P"
                         )
                     {
                         player = char.Parse(usertemp);
+                        keepGoingBruh = true;
                     }
                     else
                     {
@@ -113,12 +117,12 @@ namespace CodeCode
 
                     }
                 }
-
+                
                 ReadLine();
             } while (playerScore < 3 && computerScore < 3);
 
             Clear();
-
+            WriteLine($"Your final score: \u001b[1m{playerScore}\u001b[0m      Homeless guy's final score: \u001b[1m{computerScore}\u001b[0m");
             if (playerScore == 3)
             {
                 Write("You won the game of paper scissors rock"); 
