@@ -21,7 +21,7 @@ namespace CodeCode
         }
 
         public static bool fishgateway;
-        private static int length = 0;
+        private static int length = 8;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
 
@@ -37,7 +37,6 @@ namespace CodeCode
             WriteLine("You wake up, confused in the dark, feeling your long slender body wiggling through the dirt ");
             Read();
             Clear();
-            WriteLine("LEVEL 1");
             Write("It beguins to rain, what will you do?");
             Read();
             Clear();
@@ -129,7 +128,7 @@ namespace CodeCode
                                 CursorVisible = true;
 
                                 WriteLine("You have wiggled.");
-                                
+
                                 break;
 
                         }
@@ -139,9 +138,18 @@ namespace CodeCode
 
             }
 
-           
+            WriteLine("After escaping that perilous situation, you are face to face with...");
+            Thread.Sleep(500);
+            Clear();
+            WriteLine("Another worm!!!!");
+            WriteLine("FIGHT ME. he declares");
+            WriteLine("of course you know, in worm on worm combat, the winner will eat the loser and gain their length!");
+            WriteLine($"Your current length is {length}, your opponent is ");
             return;
+
+
         }
+        
         public static void wormtotal()
         {
             ForegroundColor = ConsoleColor.Green; Clear();
