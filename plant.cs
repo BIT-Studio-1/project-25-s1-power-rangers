@@ -11,13 +11,27 @@ namespace CodeCode
 {
     internal class plant
     {
-        
-            public static void plantScene1()
+
+        private static int selfishness = 20;
+        private static int stupidity  = 20;
+        private static int plint = 20;
+
+        public static int Selfishness
+        {
+            get { return selfishness; }
+        }
+        public static int Stupidity
+        {
+            get { return stupidity; }
+        }
+        public static int Plant
+        {
+            get { return plint; }
+        }
+        public static void plantScene1()
             {
                 Clear();
-                int selfishness = 0;
-                int stupidity = 0;
-                int plant = 0;
+               
             /*
             WriteLine("LEVEL 1");
             WriteLine("GAME OF HONEY");
@@ -43,44 +57,38 @@ namespace CodeCode
                 if (D1 == true)
                 {
 
-                    plant += 100;
-                    stupidity += 100;
-                    selfishness += 0;
+                    plint += 0;
+                    stupidity += 8;
+                    selfishness += 3;
 
                 }
                 if (D2 == true)
                 {
 
-                    plant += 10;
+                    plint += 10;
 
 
 
-                    selfishness += 500;
+                    selfishness += 8;
 
-                    stupidity += 200;
+                    stupidity += 6;
                 }
                 if (D3 == true)
                 {
 
-                    plant += 200;
-                    selfishness += 100;
-                    stupidity += 50;
+                    plint += 3;
+                    selfishness += 9;
+                    stupidity += 3;
                 }
                 if (D4 == true)
                 {
-                    plant += 0;
-                    selfishness += 100;
-                    stupidity += 200;
+                    plint += 0;
+                    selfishness += 8;
+                    stupidity += 4;
 
 
                 }
-                if (D4 == true)
-                {
-                    plant += 0;
-                    selfishness += 100;
-                    stupidity += 200;
-
-                }
+               
           
         
 
@@ -88,8 +96,9 @@ namespace CodeCode
                
 
                 ForegroundColor = ConsoleColor.Red;
-                WriteLine("LEVEL 2");
+                WriteLine("oh myyyyyyyyyyy Gawdddddddddddd what you just did..........?");
                 WriteLine(" ");
+                WriteLine("IDKKKKKK you shouldnt have done that (i dont really care what u did bro -_-");
 
                 WriteLine(" ");
                 WriteLine("USA VS VENEZUELA OIL EXTRACTION");
@@ -103,20 +112,20 @@ namespace CodeCode
                     selfishness += 9;
 
                     stupidity += 10;
-                    plant += 4;
+                    plint += 4;
                 }
                 if (D2 == true)
                 {
 
                     selfishness += 2;
                     stupidity += 10;
-                    plant += 8;
+                    plint += 8;
                 }
                 if (D3 == true)
                 {
                     selfishness += 0;
                     stupidity += 10;
-                    plant += 0;
+                    plint += 0;
                 }
                 if (D4 == true)
                 {
@@ -124,7 +133,7 @@ namespace CodeCode
                     stupidity += 5;
 
 
-                    plant += 10;
+                    plint += 10;
                 }
          
 
@@ -146,14 +155,14 @@ namespace CodeCode
                     selfishness += 1;
 
                     stupidity += 12;
-                    plant += 2;
+                    plint += 2;
 
                 }
                 if (D2 == true)
                 {
                     selfishness += 5;
                     stupidity += 4;
-                    plant += 8;
+                    plint += 8;
 
                 }
                 if (D3 == true)
@@ -161,7 +170,7 @@ namespace CodeCode
 
                     selfishness += 3;
                     stupidity += 12;
-                    plant += 4;
+                    plint += 4;
 
 
 
@@ -172,7 +181,7 @@ namespace CodeCode
 
                     selfishness += 2;
                     stupidity += 12;
-                    plant += 3;
+                    plint += 3;
                     
 
                 }
@@ -180,6 +189,7 @@ namespace CodeCode
 
             Clear();
                  ForegroundColor = ConsoleColor.Red;
+
                   WriteLine("DEATH LEVEL");
                 
 
@@ -196,14 +206,14 @@ namespace CodeCode
                 selfishness += 1;
 
                 stupidity += 12;
-                plant += 2;
+                plint += 2;
 
             }
             if (D2 == true)
             {
                 selfishness += 5;
                 stupidity += 4;
-                plant += 8;
+                plint += 8;
 
             }
             if (D3 == true)
@@ -211,7 +221,7 @@ namespace CodeCode
 
                 selfishness += 3;
                 stupidity += 12;
-                plant += 4;
+                plint += 4;
 
 
 
@@ -222,7 +232,7 @@ namespace CodeCode
 
                 selfishness += 2;
                 stupidity += 12;
-                plant += 3;
+                plint += 3;
 
 
 
@@ -232,7 +242,7 @@ namespace CodeCode
             ForegroundColor = ConsoleColor.Red;
                 WriteLine("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity);
                 WriteLine("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness);
-                WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS"+ plant);
+                WriteLine("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS" + plint);
                 WriteLine(" ");
                 WriteLine(" ");
                 WriteLine("PLEASE PRESS ENTER TO CONTINUE");

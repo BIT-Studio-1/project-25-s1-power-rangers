@@ -210,29 +210,33 @@ namespace CodeCode
             { 
                 amebaScene1();
                 plantLife();
-                // Plant needs an if statement for going to either fish or 
-                wormlife();
-                if(worm.fishGateway == true)
+                if (plant.Stupidity >= 40) 
                 {
-                    fishLife();
-                    if (Fish.Selfishness >= 25)
+                    wormlife();
+                    if (worm.fishGateway == true)
                     {
-                        dolphinlife();
-                        if (dolphin.OkayEnough1 >= 15)
+                        fishLife();
+                        if (Fish.Selfishness >= 25)
                         {
+                            dolphinlife();
+                            if (dolphin.OkayEnough1 >= 15)
+                            {
 
-                            Write("go next life\n");
+                                Write("go next life\n");
+                            }
+                        }
+                        else
+                        {
+                            starfishLife();
                         }
                     }
                     else
                     {
-                        starfishLife();
+                        //this is where the statements for going to sasquatch and penguin will be
                     }
                 }
-                else
-                {
-                    //this is where the statements for going to sasquatch and penguin will be
-                }
+               
+
             }
             else if (GameTitle.end1 == 1)
             { return; }
