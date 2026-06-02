@@ -72,9 +72,30 @@ namespace CodeCode
                         {
                             case 'A':
                                 WriteLine("Theres a homeless guy in the battle bus");
-                                WriteLine("Give him a hug");
+                                WriteLine("");
+                                WriteLine("");
 
-                                menu("", "", "", "");
+                                switch(menu("Play paper scissors rock with him",
+                                    "Give him a hug", 
+                                    "Insult him", 
+                                    ""))
+                                {
+                                    case 'A':
+                                        Clear();
+                                        Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically");
+                                        break;
+                                    case 'B':
+                                        Clear();
+                                        break;
+                                    case 'C':
+                                        Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1000);
+                                        Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
+
+                                        break;
+                                    default:
+                                        Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
+                                        break;
+                                }
                                 WriteLine();
                                 break;
 

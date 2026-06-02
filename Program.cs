@@ -210,7 +210,7 @@ namespace CodeCode
             { 
                 amebaScene1();
                 plantLife();
-                // Plant needs an if statement for going to either 
+                // Plant needs an if statement for going to either fish or 
                 wormlife();
                 if(worm.fishgateway == true)
                 {
