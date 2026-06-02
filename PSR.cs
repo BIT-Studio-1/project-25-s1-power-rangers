@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using static System.Console;
 using static CodeCode.Program;
 using static CodeCode.SoundUtils;
+using static CodeCode.Sasquatch;
 namespace CodeCode
 {
     internal class PSR
@@ -88,10 +89,13 @@ namespace CodeCode
                         (player == 'S' && computer == 'P'))
                     {
                         WriteLine("You won this round");
+                        playerScore++;
                     }
                     else
                     {
                         WriteLine("You lost this round");
+                        computerScore++;
+
                     }
                 }
 

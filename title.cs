@@ -22,10 +22,13 @@ namespace CodeCode
 
         public static void Wait()
         {
+            CursorVisible = false;
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500);
+            CursorVisible = true;
+
         }
 
         public static int end1
@@ -59,7 +62,7 @@ namespace CodeCode
                 switch (menu("Start", "Credits", "Exit", "", 3))
                 {
                     case 'A':
-                        CursorVisible = false;
+                        CursorVisible = true;
                         Clear();
                         start = 1;
                         Write("Welcome to the "); ForegroundColor = ConsoleColor.Red; Write("Reincarnation Game"); ResetColor(); Write("!"); ReadLine();

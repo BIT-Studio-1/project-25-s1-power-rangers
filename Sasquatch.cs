@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using static System.Console;
 using static CodeCode.Program;
 using static CodeCode.SoundUtils;
+using static CodeCode.PSR;
 namespace CodeCode
 {
     public class Sasquatch
@@ -50,7 +51,7 @@ namespace CodeCode
 
             bool keepGoing = false;
 
-            while (keepGoing = false) {
+            while (keepGoing == false) {
                 WriteLine("You're in the mountains");
                 WriteLine("To the \u001b[1meast\u001b[0m, you hear a river");
                 WriteLine("To the \u001b[1mwest\u001b[0m, you see the fortnite battle bus");
@@ -88,6 +89,7 @@ namespace CodeCode
                                         Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically"); wait();
                                         Write("He starts frowning when he realises that you mean you want to play paper scissors rock"); wait();
                                         Write("Homeless guy: 'Well okay then'");
+                                        PSRgame();
                                         break;
                                     case 'B':
                                         Clear();
