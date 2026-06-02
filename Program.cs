@@ -235,7 +235,22 @@ namespace CodeCode
                         //this is where the statements for going to sasquatch and penguin will be
                     }
                 }
-               
+                else
+                {
+                    fishLife();
+                    if (Fish.Selfishness >= 25)
+                    {
+                        dolphinlife();
+                    }
+                    else if (Fish.Stupidity >= 25 && Fish.Bravery <= 10)
+                    {
+                        starfishLife();
+                    }
+                    else
+                    {
+                        HumanLife();
+                    }
+                }
 
             }
             else if (GameTitle.end1 == 1)
