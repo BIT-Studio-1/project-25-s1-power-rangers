@@ -75,11 +75,18 @@ namespace CodeCode
                         {
                             case 'A':
                                 Write("Not far away from you, you see the vast land of Corporate America City"); wait();
+                                Write("In Corporate America City, people only speak english so you need to have read the dictionary"); wait();
+
                                 if (dictionaryRead == true)
                                 {
 
+                                    keepGoing = true;
                                 }
-                                break;
+                                else
+                                {
+                                    Write();
+                                }
+                                    break;
                             default:
                                 break;
                         }
@@ -111,6 +118,18 @@ namespace CodeCode
                                             if (PSRgame() == true)
                                             {
                                                 won = true;
+                                                Write("Your reward for winning is my fine english dictionary"); wait();
+
+                                                Write("You read the entire dictionary in one sitting");
+                                                Console.WriteLine("      __...--~~~~~-._   _.-~~~~~--...__");
+                                                Console.WriteLine("    //               `V'               \\\\");
+                                                Console.WriteLine("   //                 |                 \\\\");
+                                                Console.WriteLine("  //__...--~~~~~~-._  |  _.-~~~~~~--...__\\\\");
+                                                Console.WriteLine(" //__.....----~~~~._\\ | /_.~~~~----.....__\\\\");
+                                                Console.WriteLine("====================\\\\|//====================");
+                                                Console.WriteLine("                    `---`"   );
+                                                Console.WriteLine("                             ^   the dictionary");
+
                                             }
                                             break;
                                         case 'B':
@@ -150,6 +169,53 @@ namespace CodeCode
             Write("You make it to Corporate America City"); wait();
             WriteLine("While walking on the street people ask to take photos with you as they think that you are ");
             Write("dressed up as some sort of character"); wait();
+            switch(menu("Do the worm", "Hit the whip nae nae", "Scream at them", "", 3)){
+                case 'A':
+                    CursorVisible = false;
+                    Clear();
+                    WriteLine("You hit the worm");
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    Write("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      /");
+                    WriteLine("\t\t");
+                    Write(@"      \");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    WriteLine("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write("      /");
+                    WriteLine("\t\t");
+                    Write(@"      \");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    WriteLine("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    CursorVisible = true;
+                    break;
+                case 'B':
+                    break;
+
+                default:
+                    HumanMeow();
+                    break;
+                
+            }
+
+
         }
         public static void sasquatchTotal()
         {

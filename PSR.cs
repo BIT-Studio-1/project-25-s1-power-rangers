@@ -22,8 +22,8 @@ namespace CodeCode
         }
         private static void compute()
         {
-            Console.Write("rocks....."); Thread.Sleep(500);
-            Write("pooper....."); Thread.Sleep(500);
+            Console.Write("rock....."); Thread.Sleep(500);
+            Write("paper....."); Thread.Sleep(500);
             Write("scissors....."); Thread.Sleep(500);
 
 

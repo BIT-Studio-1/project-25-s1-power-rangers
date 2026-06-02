@@ -210,7 +210,7 @@ namespace CodeCode
             { 
                 amebaScene1();
                 plantLife();
-                if (plant.Stupidity >= 40) 
+                if (plant.Stupidity >= 25) 
                 {
                     wormlife();
                     if (worm.fishGateway == true)
@@ -238,11 +238,11 @@ namespace CodeCode
                 else
                 {
                     fishLife();
-                    if (Fish.Selfishness >= 25)
+                    if (Fish.Selfishness >= 23)
                     {
                         dolphinlife();
                     }
-                    else if (Fish.Stupidity >= 25 && Fish.Bravery <= 10)
+                    else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
                     {
                         starfishLife();
                     }
