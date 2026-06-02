@@ -10,7 +10,16 @@ namespace CodeCode
 {
     internal class PSR
     {
+        private static void wait(int time = 500)
+        {
+            CursorVisible = false;
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".\n");
+            Thread.Sleep(time);
+            CursorVisible = true;
 
+        }
         private static void compute()
         {
             Console.Write("rocks....."); Thread.Sleep(500);
@@ -31,7 +40,7 @@ namespace CodeCode
 
             }
         }
-        public static void PSRgame()
+        public static bool PSRgame()
         {
             Clear();
             WriteLine("You challenged the homeless guy to rock paper scissors");
@@ -125,10 +134,14 @@ namespace CodeCode
             WriteLine($"Your final score: \u001b[1m{playerScore}\u001b[0m      Homeless guy's final score: \u001b[1m{computerScore}\u001b[0m");
             if (playerScore == 3)
             {
-                Write("You won the game of paper scissors rock"); 
+                Write("You won the game of paper scissors rock"); wait();
+                return true;
             }
             else { 
-                Write("You lost the game of paper scissors rock");
+                Write("You lost the game of paper scissors rock"); wait();
+                Write("Homeless guy: 'If you win, I'll give you my english dictionary'"); wait();
+
+                return false;
 
             }
         }
