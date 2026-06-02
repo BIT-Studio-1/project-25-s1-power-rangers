@@ -104,13 +104,36 @@ namespace CodeCode
             Write("Now where was I?"); ReadLine();
             Write("Oh! Yes, that was enough participation for one day"); ReadLine();
             Write("I'm quite the tired Hue, I dare say to my internal monoloque."); ReadLine(); 
-            Write("I teleported to the bedroom couch and took"); ForegroundColor = ConsoleColor.Yellow; Write("BIG. MASSIVE."); ResetColor(); Write(" steps to my bed"); ReadLine();
+            Write("I teleported to the bedroom couch and took "); ForegroundColor = ConsoleColor.Yellow; Write("BIG. MASSIVE."); ResetColor(); Write(" steps to my bed"); ReadLine();
             Write("I tucked myself into bed and honk shooed, mimimi"); ReadLine();
 
         }
         public static void HumanLife2()
         {
             Clear();
+            Write("Man Man, your bfffff in the world has come to visit you"); ReadLine();
+            Write("In Man Man's hands, he has a caramel cheesecake and a cooler full of tropical juice"); ReadLine();
+            Write("Do you like the food?"); ReadLine();
+            switch (menu("No :[", "Yes :D", "Maybe", "", 3))
+            {
+                case 'A':
+                    CursorVisible = false;
+                    Write("'Man Man, I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
+                    Write("Man Man produced a single tear"); ReadLine();
+
+                    break;
+                case 'B':
+                    CursorVisible= false;
+                    Write(""); ReadLine();
+
+                    break;
+                case 'C':
+                    CursorVisible= false;
+                    Write(""); ReadLine();
+
+                    break;
+            }
+            Write(""); ReadLine();
         }
         public static void HumanTotal()
         {
