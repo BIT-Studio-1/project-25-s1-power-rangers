@@ -74,7 +74,7 @@ namespace CodeCode
                         switch (menu("Go inside", "Go back", "", "", 2))
                         {
                             case 'A':
-                                WriteLine("Theres a homeless guy in the battle bus");
+                                WriteLine("There's a homeless guy in the battle bus");
                                 WriteLine("");
                                 WriteLine("");
 
