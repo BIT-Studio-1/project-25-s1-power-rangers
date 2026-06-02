@@ -45,24 +45,27 @@ namespace CodeCode
             {
                 ForegroundColor = ConsoleColor.Red;
 
-                Write(":::::::..  .,::::::  ::::::.    :::.                                                   "); Thread.Sleep(50);
-                Write("\r\n;;;;``;;;; ;;;;''''  ;;;`;;;;,  `;;;                                                   "); Thread.Sleep(50);
-                Write("\r\n [[[,/[[['  [[cccc   [[[  [[[[[. '[[                                                   "); Thread.Sleep(50);
-                Write("\r\n $$$$$$c    $$\"\"\"\"   $$$  $$$ \"Y$c$$                                                   "); Thread.Sleep(50);
-                Write("\r\n 888b \"88bo,888oo,__ 888  888    Y88                                                   "); Thread.Sleep(50);
-                Write("\r\n MMMM   \"W\" \"\"\"\"YUMMMMMM  MMM     YM                                                   "); Thread.Sleep(50);
-                Write("\r\n  .,-:::::   :::.    :::::::.. :::.    :::.  :::. :::::::::::::::    ...   :::.    :::."); Thread.Sleep(50);
-                Write("\r\n,;;;'````'   ;;`;;   ;;;;``;;;;`;;;;,  `;;;  ;;`;;;;;;;;;;'''';;; .;;;;;;;.`;;;;,  `;;;"); Thread.Sleep(50);
-                Write("\r\n[[[         ,[[ '[[,  [[[,/[[['  [[[[[. '[[ ,[[ '[[,   [[     [[[,[[     \\[[,[[[[[. '[["); Thread.Sleep(50);
-                Write("\r\n$$$        c$$$cc$$$c $$$$$$c    $$$ \"Y$c$$c$$$cc$$$c  $$     $$$$$$,     $$$$$$ \"Y$c$$"); Thread.Sleep(50);
-                Write("\r\n`88bo,__,o, 888   888,888b \"88bo,888    Y88 888   888, 88,    888\"888,_ _,88P888    Y88"); Thread.Sleep(50);
-                Write("\r\n  \"YUMMMMMP\"YMM   \"\"` MMMM   \"W\" MMM     YM YMM   \"\"`  MMM    MMM  \"YMMMMMP\" MMM     YM"); Thread.Sleep(100);
-                Write("\r\nｇａｍｅ\n\n");
+                Write(":::::::..  .,::::::  ::::::.    :::.  .,-:::::   :::.    :::::::..   "); Thread.Sleep(50);
+                Write("\r\n;;;;``;;;; ;;;;''''  ;;;`;;;;,  `;;;,;;;'````'   ;;`;;   ;;;;``;;;;  "); Thread.Sleep(50);
+                Write("\r\n [[[,/[[['  [[cccc   [[[  [[[[[. '[[[[[         ,[[ '[[,  [[[,/[[['  " ); Thread.Sleep(50);
+                Write("\r\n $$$$$$c    $$\"\"\"\"   $$$  $$$ \"Y$c$$$$$        c$$$cc$$$c $$$$$$c    "); Thread.Sleep(50);
+                Write("\r\n 888b \"88bo,888oo,__ 888  888    Y88`88bo,__,o, 888   888,888b \"88bo,"); Thread.Sleep(50);
+                Write("\r\n MMMM   \"W\" \"\"\"\"YUMMMMMM  MMM     YM  \"YUMMMMMP\"YMM   \"\"` MMMM   \"W\" "); Thread.Sleep(50);
+                Write("\r\n\r\n:::.    :::.  :::. :::::::::::::::    ...   :::.    :::."); Thread.Sleep(50);
+                Write("\r\n`;;;;,  `;;;  ;;`;;;;;;;;;;'''';;; .;;;;;;;.`;;;;,  `;;;"); Thread.Sleep(50);
+                Write("\r\n  [[[[[. '[[ ,[[ '[[,   [[     [[[,[[     \\[[,[[[[[. '[["); Thread.Sleep(50);
+                Write("\r\n  $$$ \"Y$c$$c$$$cc$$$c  $$     $$$$$$,     $$$$$$ \"Y$c$$"); Thread.Sleep(50);
+                Write("\r\n  888    Y88 888   888, 88,    888\"888,_ _,88P888    Y88"); Thread.Sleep(50);
+                Write("\r\n  MMM     YM YMM   \"\"`  MMM    MMM  \"YMMMMMP\" MMM     YM"); Thread.Sleep(50);
+                ForegroundColor = ConsoleColor.Yellow;
+                Write("\r\n\r\n ▄████   ▄▄▄  ▄▄   ▄▄ ▄▄▄▄▄ "); Thread.Sleep(20);
+                Write("\r\n██  ▄▄▄ ██▀██ ██▀▄▀██ ██▄▄  "); Thread.Sleep(20);
+                Write("\r\n ▀███▀  ██▀██ ██   ██ ██▄▄▄\r\n\n"); Thread.Sleep(20);
                 ResetColor();
                 switch (menu("Start", "Credits", "Exit", "", 3))
                 {
                     case 'A':
-                        CursorVisible = true;
+                        CursorVisible = false;
                         Clear();
                         start = 1;
                         Write("Welcome to the "); ForegroundColor = ConsoleColor.Red; Write("Reincarnation Game"); ResetColor(); Write("!"); ReadLine();
