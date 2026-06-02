@@ -53,6 +53,7 @@ namespace CodeCode
             bool dictionaryRead = false;
             bool leaveBus = false;
             bool keepGoing = false;
+            bool won = false;
 
             while (keepGoing == false) {
                 WriteLine("You're in the mountains");
@@ -73,7 +74,7 @@ namespace CodeCode
                         switch(menu("Follow the river", "Go back", "", "", 2))
                         {
                             case 'A':
-                                Write("You very far from you, you see the vast land of Corporate America City");
+                                Write("Not far away from you, you see the vast land of Corporate America City"); wait();
                                 if (dictionaryRead == true)
                                 {
 
@@ -106,16 +107,19 @@ namespace CodeCode
                                             Clear();
                                             Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically"); wait();
                                             Write("He starts frowning when he realises that you mean you want to play paper scissors rock"); wait();
-                                            Write("Homeless guy: 'Well okay then'"); Thread.Sleep(1000); WriteLine();
-                                            PSRgame();
+                                            Write("Homeless guy: 'Well okay then'  (press enter)"); Thread.Sleep(1000); ReadLine();  WriteLine();
+                                            if (PSRgame() == true)
+                                            {
+                                                won = true;
+                                            }
                                             break;
                                         case 'B':
                                             Clear();
-                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1200);
+                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1200); WriteLine();
                                             break;
                                         case 'C':
                                             Clear();
-                                            Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1300);
+                                            Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1300); WriteLine();
                                             WriteLine("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1400);
                                             break;
                                         default:

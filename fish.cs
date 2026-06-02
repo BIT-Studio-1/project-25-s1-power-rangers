@@ -103,8 +103,6 @@ namespace CodeCode
                     bravery += 1;
                     stupidity -= 2;
                     //Clear();
-
-
                     break;
                 case 'B':
                     okaybeep();
