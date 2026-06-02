@@ -44,6 +44,7 @@ namespace CodeCode
         }
         public static void sasquatchScene1()
         {
+            //PSRgame();
             Write("You have been reincaranated as a Sasquatch in the dense forests of the Appalachian mountains"); wait();
             Write("These mountains haven't changed in years, and you're a bit bored of them"); wait();
             Write("You have big dreams of climbing the ranks of corporate America, but you're a Sasquatch so it may be a little difficult"); wait();

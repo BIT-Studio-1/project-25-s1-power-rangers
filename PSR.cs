@@ -78,17 +78,17 @@ namespace CodeCode
                 {
                     case 0:
                         computer = 'R';
-                        WriteLine("Homeless guy used Rock");
+                        WriteLine(" Homeless guy used Rock"); Thread.Sleep(700);
                         break;
 
                     case 1:
                         computer = 'P';
-                        WriteLine("Homeless guy used Paper");
+                        WriteLine(" Homeless guy used Paper"); Thread.Sleep(700);
                         break;
 
                     default:
                         computer = 'S';
-                        WriteLine("Homeless guy used Scissors");
+                        WriteLine(" Homeless guy used Scissors"); Thread.Sleep(700);
                         break;
 
 
@@ -97,7 +97,7 @@ namespace CodeCode
 
                 if (player == computer)
                 {
-                    WriteLine("It is a draw");
+                    Write("This round is a draw");
                 }
 
                 else
@@ -107,17 +107,17 @@ namespace CodeCode
                         (player == 'P' && computer == 'R') ||
                         (player == 'S' && computer == 'P'))
                     {
-                        WriteLine("You won this round");
+                        Write("You won this round");
                         playerScore++;
                     }
                     else
                     {
-                        WriteLine("You lost this round");
+                        Write("You lost this round");
                         computerScore++;
 
                     }
                 }
-                
+                Write(" (press enter)");
                 ReadLine();
             } while (playerScore < 3 && computerScore < 3);
 
