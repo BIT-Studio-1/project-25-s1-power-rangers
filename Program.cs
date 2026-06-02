@@ -212,7 +212,7 @@ namespace CodeCode
                 plantLife();
                 // Plant needs an if statement for going to either fish or 
                 wormlife();
-                if(worm.fishgateway == true)
+                if(worm.fishGateway == true)
                 {
                     fishLife();
                     if (Fish.Selfishness >= 25)

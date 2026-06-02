@@ -1,11 +1,23 @@
-﻿namespace lab_7
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+using static CodeCode.Program;
+using static CodeCode.SoundUtils;
+namespace CodeCode
 {
-    internal class Program
+    internal class PSR
     {
 
         private static void compute()
         {
-            Console.WriteLine("rocks.....  papler.... skcisors....");
+            Console.Write("rocks....."); Thread.Sleep(500);
+            Write("paper....."); Thread.Sleep(500);
+            Write("scissors....."); Thread.Sleep(500);
+
+
 
             //Console.WriteLine(computer);
             Random rand = new Random();
@@ -13,71 +25,89 @@
             while (count <= 18)
             {
                 //Console.Beep();
-                Console.Beep((int)rand.Next(500, 1000), 100);
+                Console.Beep((int)rand.Next(500, 1000), 80);
 
                 count += 1;
 
             }
         }
-        public static void PSR(string[] args)
+        public static void PSRgame()
         {
-            Console.WriteLine("Welcome to rock paper scissors 4000 all rights reserved");
+            WriteLine("You challenged the homeless guy to rock paper scissors");
+            Write("The format is first to 3");
 
-            
-
-            Console.Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
-            string usertemp = Console.ReadLine().ToUpper();
-            char player = char.Parse(usertemp);
-
-            Random rand = new Random();
-            int computertemp = rand.Next(3);
-            char computer;
-
-            compute();
+            int playerScore = 0;
+            int computerScore = 0;
 
 
-            switch (computertemp)
+            do
             {
-                case 0:
-                    computer = 'R';
-                    Console.WriteLine("Computer used Rock");
-                    break;
+                WriteLine($"Your current score: {playerScore} Homeless guy's current score: {computerScore}");
+                Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
+                string usertemp = ReadLine().ToUpper();
+                char player = char.Parse(usertemp);
 
-                case 1:
-                    computer = 'P';
-                    Console.WriteLine("Computer used Paper");
-                    break;
+                Random rand = new Random();
+                int computertemp = rand.Next(3);
+                char computer;
 
-                default:
-                    computer = 'S';
-                    Console.WriteLine("Computer used Scissors");
-                    break;
+                compute();
 
 
-
-            }
-
-            if (player == computer) {
-                Console.WriteLine("It is a draw");
-            }
-
-            else
-            {
-                if (
-                    (player == 'R' && computer == 'S') ||
-                    (player == 'P' && computer == 'R') ||
-                    (player == 'S' && computer == 'P'))
+                switch (computertemp)
                 {
-                    Console.WriteLine("You won lets go");
+                    case 0:
+                        computer = 'R';
+                        WriteLine("Homeless guy used Rock");
+                        break;
+
+                    case 1:
+                        computer = 'P';
+                        WriteLine("Homeless guy used Paper");
+                        break;
+
+                    default:
+                        computer = 'S';
+                        WriteLine("Homeless guy used Scissors");
+                        break;
+
+
+
                 }
+
+                if (player == computer)
+                {
+                    WriteLine("It is a draw");
+                }
+
                 else
                 {
-                    Console.WriteLine("You lost!");
+                    if (
+                        (player == 'R' && computer == 'S') ||
+                        (player == 'P' && computer == 'R') ||
+                        (player == 'S' && computer == 'P'))
+                    {
+                        WriteLine("You won this round");
+                    }
+                    else
+                    {
+                        WriteLine("You lost this round");
+                    }
                 }
+
+                ReadLine();
+            } while (playerScore < 3 && computerScore < 3);
+
+            Clear();
+
+            if (playerScore == 3)
+            {
+                Write("You won the game of paper scissors rock"); 
             }
+            else { 
+                Write("You lost the game of paper scissors rock");
 
-            Console.ReadLine();
-
+            }
         }
     }
 }

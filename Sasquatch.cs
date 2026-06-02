@@ -45,6 +45,8 @@ namespace CodeCode
             Write("You have been reincaranated as a Sasquatch in the dense forests of the Appalachian mountains"); wait();
             Write("These mountains haven't changed in years, and you're a bit bored of them"); wait();
             Write("You have big dreams of climbing the ranks of corporate America, but you're a Sasquatch so it may be a little difficult"); wait();
+            Write("As you can't speak English you may have to read the dictionary, though you don't have one on you"); wait();
+
 
             bool keepGoing = false;
 
@@ -62,8 +64,9 @@ namespace CodeCode
                     case 'A':
                         Clear();
                         Write("You go towards the flowing sounds of the river"); wait();
-                        Write("There was"); wait(700); WriteLine(" a river");
-
+                        Write("There was"); wait(700); WriteLine(" a river"); wait();
+                        
+                        // To go to the corporate america city, you need to have read the dictionary
                         break;
                     case 'B':
                         Clear();
@@ -75,24 +78,27 @@ namespace CodeCode
                                 WriteLine("");
                                 WriteLine("");
 
-                                switch(menu("Play paper scissors rock with him",
+                                switch(menu("Challenge him to a game paper scissors rock",
                                     "Give him a hug", 
                                     "Insult him", 
                                     ""))
                                 {
                                     case 'A':
                                         Clear();
-                                        Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically");
+                                        Write("You make a paper-scissors-rock gesture and he nods very very enthusiastically"); wait();
+                                        Write("He starts frowning when he realises that you mean you want to play paper scissors rock"); wait();
+                                        Write("Homeless guy: 'Well okay then'");
                                         break;
                                     case 'B':
                                         Clear();
                                         break;
                                     case 'C':
+                                        Clear();
                                         Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1000);
                                         Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
-
                                         break;
                                     default:
+                                        Clear();
                                         Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1000);
                                         break;
                                 }
@@ -113,6 +119,12 @@ namespace CodeCode
 
 
 
+        }
+        public static void sasquatchScene2()
+        {
+            Write("You make it to Corporate America City"); wait();
+            WriteLine("While walking on the street people ask to take photos with you as they");
+            Write("think that you are dressed up as some sort of character"); wait();
         }
         public static void sasquatchTotal()
         {

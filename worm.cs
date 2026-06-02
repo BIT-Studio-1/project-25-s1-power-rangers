@@ -20,7 +20,7 @@ namespace CodeCode
             return;
         }
 
-        public static bool fishgateway;
+        public static bool fishGateway;
         private static int length = 8;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
@@ -28,7 +28,7 @@ namespace CodeCode
         public static void wormscene()
         {
             //davids shitty ass code
-            fishgateway = false;
+            fishGateway = false;
             Clear();
             WriteLine("**You are a worm now**");
             WriteLine("It's time to decide your destiny...");
