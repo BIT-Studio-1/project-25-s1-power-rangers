@@ -53,8 +53,8 @@ namespace CodeCode
         {
             CursorVisible = false;
             Clear();
-            WriteLine("You are a homo sapien sapien"); ReadLine();
-            WriteLine("A human who loves to sit on a couch"); ReadLine();
+            Write("You are a homo sapien sapien"); ReadLine();
+            Write("A human who loves to sit on a couch"); ReadLine();
             Write("Would you like to name the human?"); humanWait(); Write("Nahhhh, you don't get a choice, your name is Hugh Mann. Hue for short"); ReadLine();
             Clear();
             WriteLine("your pet cat, Alfredo Chicken is looking at you"); ReadLine();
@@ -64,29 +64,49 @@ namespace CodeCode
             switch (menu("Feed my son", "Don't feed em'", "meow back", "", 3))
             {
                 case 'A':
+                    CursorVisible = true;
                     Meow();
                     Meow += 5;
                     SitOnCouch += 2;
+                    Sure += 3;
                     Write("Alfredo Chicken is calling for you"); humanWait(); Write("You must feed him"); ReadLine();
                     Write("You teleported to the kitchen couch and got Alfredo Chicken's favourite food, deluxe tuna from the pacific ocean that was caught yesterday");  humanWait();
-                    Write("specifically for Alfredo Chicken, as your cat lives in luxury");
+                    Write("specifically for Alfredo Chicken, as your cat lives in luxury"); ReadLine();
+                    Write("Alfredo Chicken meows happily as he eats like a cat"); Meow(); ReadLine();
+                    Write("Which he is a cat, "); ForegroundColor = ConsoleColor.Green; Write("hopefully"); ReadLine(); ResetColor();
                     break;
                     Meow();
                 case 'B':
+                    CursorVisible = false;
                     Meow();
                     SitOnCouch += 3;
                     Meow -= 2;
                     Write("You think to yourself, your cat needs to learn how to survive the wilderness"); humanWait();
-                    Write("so you teleport your cat to the porch couch");
+                    Write("So you teleport your cat to the porch couch"); ReadLine();
+                    Write("Alfredo Chicken is in distraught from the sudden change of environment"); Meow(); ReadLine();
+                    Write("Don't you hear his meow of sorrow? Of fear?? Of betrayal???"); Meow(); ReadLine();
                     break;
                 case 'C':
+                    CursorVisible = false;
+                    Meow += 7;
+                    SitOnCouch += 1;
+                    Sure += 1;
                     HumanMeow();
-                    Write("so you teleport your cat to the porch couch");
-
-
+                    Write("Your meow was so powerful, your cat is agape with fear"); ReadLine();
+                    Write("Alfredo Chicken sees you as the big gato now and meows back (gato is spanish for cat)"); Meow(); ReadLine(); 
+                    Write("So, you meow back again"); HumanMeow(); ReadLine();
+                    Write("What an eventful conversation with Alfredo Chicken"); ReadLine();
                     break;
-
             }
+            Clear();
+            Write("Alright, that was enough coding for human scene 1 -- I mean ehem."); ReadLine();
+            Write("Lemme just clean that up ehem."); ReadLine(); Clear();
+            Write("Now where was I?"); ReadLine();
+            Write("Oh! Yes, that was enough participation for one day"); ReadLine();
+            Write("I'm quite the tired Hue, I dare say to my internal monoloque."); ReadLine(); 
+            Write("I teleported to the bedroom couch and took"); ForegroundColor = ConsoleColor.Yellow; Write("BIG. MASSIVE."); ResetColor(); Write(" steps to my bed"); ReadLine();
+            Write("I tucked myself into bed and honk shooed, mimimi"); ReadLine();
+
         }
         public static void HumanLife2()
         {
