@@ -450,7 +450,7 @@ namespace CodeCode
             Write("Mostly because he's fallen asleep"); wait();
 
             goodbeep();
-            Write("You got the job"); Thread.Sleep(1300);
+            Write("You got the job"); Thread.Sleep(600); Write("     (Press enter)"); ReadLine();
             for (int i = 0; i <=4; i++)
             {
                 Write("*working*     "); Thread.Sleep(1000);
