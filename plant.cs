@@ -48,16 +48,10 @@ namespace CodeCode
             WriteLine("GAME OF HONEY");
             */
             ForegroundColor = ConsoleColor.Red;
-            Write("You are recarnated as a  "); Thread.Sleep(4000);
-                WriteLine("PLANT");
-                WriteLine("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); Thread.Sleep(2000);
-                WriteLine(" ");
-                WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: ");
-                WriteLine("Your over all global score will be declared on the basis of the options you choose in each question ");
-                WriteLine(" ");
-                WriteLine(" ");
-
-                Write(" ");wait();
+            Write("You are reincarnated as a"); Write("."); Thread.Sleep(800); Write("."); Thread.Sleep(700); Write("."); Thread.Sleep(700); Write(".");
+            WriteLine("     PLANT");
+                Write("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); wait();
+                WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: "); Thread.Sleep(1000);
                 WriteLine("GAME OF HONEY"); Thread.Sleep(2000);
                 WriteLine("In this level, you will be asked a few questions when a bee tries to extract honey from which is a bad  thing for you"); Thread.Sleep(3000);
 
@@ -129,9 +123,9 @@ namespace CodeCode
                 WriteLine("IDKKKKKK you shouldn't have done that (i don't really care what u did bro -_-)");
 
                 WriteLine(" ");
-            WriteLine("Hang tight dude"); Thread.Sleep(3000);
+            WriteLine("Hang tight dude"); wait(700);
             WriteLine(" ");
-            WriteLine("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); Thread.Sleep(2000);
+            WriteLine("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait();
             WriteLine(" ");
             WriteLine("we never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000);
             WriteLine("In this , a human will try to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000);
@@ -309,7 +303,7 @@ namespace CodeCode
                 WriteLine("you are strong bro but the wind is wind"); Thread.Sleep(2000);
                 Write(" ");
                 Clear();
-                Play(@"sfx/marioMeowsfx.wav");
+                goodbeep();
                 Write("WIND: ts wasnt me bro ");
                 selfishness += 5;
                 stupidity += 4;
@@ -350,10 +344,13 @@ namespace CodeCode
 
             }
             ForegroundColor = ConsoleColor.Red;
+            goodbeep();
                 Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
             WriteLine(" ");
+            badbeep();
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
             WriteLine(" ");
+            goodbeep();
             Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
                 WriteLine(" ");
                 WriteLine(" ");
