@@ -13,7 +13,7 @@ namespace CodeCode
 {
     public class Sasquatch
     {
-        private static int peacefulness = 20;
+        private static int peacefulness = 25;
         private static int human = 20;
         private static int charisma = 20;
 
@@ -33,6 +33,8 @@ namespace CodeCode
         {
             Clear();
             sasquatchScene1();
+            sasquatchScene2();
+
             sasquatchTotal();
         }
         private static void wait(int time = 500) {
@@ -191,7 +193,8 @@ namespace CodeCode
                                 case 'A':
                                     peacefulness += 4;
                                     charisma += 2;
-
+                                    human += 2;
+                                    Clear();
                                     Write("He waves back enthusiastically"); wait();
                                     Write("Mountain climber: 'Corporate America City is down by the river if you're looking for civilisation'"); wait();
 
@@ -199,12 +202,14 @@ namespace CodeCode
                                     {
                                         case 'A':
                                             human += 2;
+                                            peacefulness += 7;
                                             goodbeep();
                                             Write("Mountain climber: 'If you wanna get a job, might wanna learn English first'"); wait();
                                             Write("You nod wisely despite not knowing what he said"); wait();
                                             break;
 
                                         default:
+                                            charisma -= 1;
                                             goodbeep();
                                             Write("He gives you half an apricot meusli  bar"); wait();
                                             Write("It tastes like stubbing your toe"); wait();
@@ -215,6 +220,7 @@ namespace CodeCode
 
                                 default:
                                     Clear();
+                                    human -= 2;
                                     peacefulness -= 5;
                                     okaybeep();
                                     Write("You steal his burger and begin running"); wait();
@@ -299,8 +305,8 @@ namespace CodeCode
                     Clear();
                     peacefulness -= 4;
                     charisma += 7;
-                    Write("The people: 'wow so impressive'"); Thread.Sleep(1000); WriteLine();
                     HumanMeow();
+                    Write("The people: 'wow so impressive'"); Thread.Sleep(1000); WriteLine();
                     break;
                 
             }
@@ -332,16 +338,21 @@ namespace CodeCode
                     Write("They sentence you to the death penalty and are set to be executed tommorow"); wait();
                     switch (menu("Say sorry", "Doubly freak the hell out", "Freak the absolute hell out", "", 3)) {
                         case 'A':
+                            goodbeep();
+                            charisma += 5;
+                            human += 3;
                             Write("You: 'sorry broskis"); Thread.Sleep(1000); WriteLine();
                             Write("Police: 'You're free to go sir'     (press enter)"); ReadLine();
                             
                             break;
                         case 'B':
+                            human -= 3;
                             Write("You freak out so hard that you escape them"); wait();
                             WriteLine("You're now free     (press enter)"); ReadLine();
 
                             break;
                         default:
+                            human -= 5;
                             Write("You freak out so hard that you escape them"); wait();
                             WriteLine("You're now free      (press enter)"); ReadLine();
 
@@ -355,6 +366,95 @@ namespace CodeCode
             }
 
 
+            Write("You go to the interview");
+
+            Write("The interviewer looks up from his paperwork"); wait();
+            Write("He looks at you"); wait();
+            Write("Then he looks back down at his paperwork"); wait();
+            Write("Then he looks back at you"); wait();
+
+            WriteLine("\nInterviewer: 'So what exactly happened to you?'");
+
+            switch (menu("I have werewolf syndrome", "I'm like hairy mclairy from donaldson's dairy", "Freak the hell out and eat the office cat", "", 3))
+            {
+                case 'A':
+                    goodbeep();
+                    Clear();
+                    charisma += 6;
+                    human += 4;
+                    WriteLine("You tell the interviewer you have werewolf syndrome");
+                    Write("Interviewer: 'Ah. That explains it.'"); wait();
+                    Write("He writes something down on his clipboard"); wait();
+                    Write("You look at the clipboard and its a drawing of you"); wait();
+                    break;
+
+                case 'B':
+                    Clear();
+
+                    okaybeep();
+                    charisma += 3;
+                    WriteLine("You tell the interviewer you're like hairy mclairy from donaldson's dairy");
+
+                    Write("Interviewer: 'That doesn't explain that foul stench coming from you'"); wait();
+                    Write("You stare seductively into the interviewers eyes"); wait();
+                    break;
+
+                default:
+                    Clear();
+                    badbeep();
+                    charisma -= 4;
+                    human -= 3;
+                    peacefulness -= 1;
+
+                    Write("The office cat puts up a brave fight"); wait();
+                    Write("The interviewer seems concerned for some reason"); wait();
+                    break;
+            }
+
+            WriteLine("\nInterviewer: 'Where do you see yourself in five years?'");
+
+            switch (menu("Assistant manager", "Your boss", "", "", 2))
+            {
+                case 'A':
+                    goodbeep();
+                    Clear();
+                    charisma += 4;
+                    WriteLine("You: 'Assistant manager'"); Thread.Sleep(500);
+                    Write("Interviewer: 'A sensible answer. Rare around here.'"); wait();
+                    break;
+
+                case 'B':
+                    Clear();
+                    goodbeep();
+                    charisma += 8;
+                    WriteLine("You: 'Your boss'"); Thread.Sleep(500);
+
+                    Write("Interviewer: 'I like your ambition'"); wait();
+                    break;
+
+                default:
+                    Clear();
+                    okaybeep();
+                    peacefulness += 4;
+
+                    Write("You freak the hell out and eat the office cat"); wait();
+                    Write("The interviewer nods thoughtfully"); wait();
+                    break;
+            }
+
+            Write("The interviewer folds his hands"); wait();
+            Write("He seems deep in thought"); wait();
+            Write("Mostly because he's fallen asleep"); wait();
+
+            goodbeep();
+            Write("You got the job"); Thread.Sleep(1300);
+            for (int i = 0; i <=4; i++)
+            {
+                Write("*working*     "); Thread.Sleep(1000);
+            }
+            Write("The working conditions at FUM are very dangerous"); wait();
+            Write("The office water fountain explodes and you die a horrible death"); ReadLine();
+
 
         }
         public static void sasquatchTotal()
@@ -363,7 +463,7 @@ namespace CodeCode
             WriteLine("Sasquatch Life"); Thread.Sleep(300);
             WriteLine($"How peaceful you were: {peacefulness}" +
             $"\nHow humanistic you were: {human}" +
-            $"\nHow charismatic you were: {charisma}"); ResetColor(); Write("Press enter to reincarnate to your next life");
+            $"\nHow charismatic you were: {charisma}"); ResetColor(); Write("Press enter to finish game");
             ReadLine();
             return;
         }

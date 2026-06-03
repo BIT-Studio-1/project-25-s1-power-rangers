@@ -210,7 +210,7 @@ namespace CodeCode
             { 
                 amebaScene1();
                 plantLife();
-                if (plant.Stupidity >= 25) 
+                if (plant.Stupidity >= 48) 
                 {
                     wormlife();
                     if (worm.fishGateway == true)
@@ -221,8 +221,8 @@ namespace CodeCode
                             dolphinlife();
                             if (dolphin.OkayEnough1 >= 15)
                             {
-
-                                Write("go next life\n");
+                                WriteLine();
+                                //Write("go next life\n");
                             }
                         }
                         else
@@ -232,7 +232,8 @@ namespace CodeCode
                     }
                     else
                     {
-                        //this is where the statements for going to sasquatch and penguin will be
+                        sasquatchLife();
+                        //this is where the statements for going to penguin would be
                     }
                 }
                 else
@@ -258,7 +259,8 @@ namespace CodeCode
 
 
 
-            
+            WriteLine("You've completed one of the pathways down the tree of reincarnation");
+            WriteLine("To keep playing the other lives, Restart the program");
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
         }
@@ -290,11 +292,11 @@ namespace CodeCode
             int stupidity = 50;
             int bravery = 0;
             Clear();
-            WriteLine("You've spawned in as an Ameba");
+            WriteLine("You've spawned in as an Amoeba");
             WriteLine("This is the beginning");
             WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
             WriteLine("Senses are very minimal");
-            WriteLine("Life as an Ameba is very 'Slide about'");
+            WriteLine("Life as an Amoeba is very 'Slide about'");
 
             switch (menu("Try to see", "try to smell", "Try to taste", "Slide about", 4))
             {
@@ -305,8 +307,9 @@ namespace CodeCode
             }
 
             Clear();
-            WriteLine("Ameba life is slow");
-            WriteLine("Ameba");
+            WriteLine("Amoeba life is slow");
+            WriteLine("Amoeba");
+            Write("Ameba life is so slow that life turns into death and Ameoba dies     (press enter)"); ReadLine();
             return;
         }
 
