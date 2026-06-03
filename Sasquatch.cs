@@ -54,12 +54,13 @@ namespace CodeCode
             bool leaveBus = false;
             bool keepGoing = false;
             bool won = false;
+            bool goneMountains = false;
 
             while (keepGoing == false) {
                 WriteLine("You're in the mountains");
                 WriteLine("To the \u001b[1meast\u001b[0m, you hear a river");
                 WriteLine("To the \u001b[1mwest\u001b[0m, you see the fortnite battle bus");
-                WriteLine("To the \u001b[1mnorth\u001b[0m, you see some snowy mountains");
+                WriteLine("To the \u001b[1mnorth\u001b[0m, towards some snowy mountains and the smell of food");
                 WriteLine("Which direction do you wish to go in?");
                 switch (menu("Go \u001b[1meast\u001b[0m",
                     "Go \u001b[1mwest\u001b[0m",
@@ -166,13 +167,65 @@ namespace CodeCode
                                 break;
 
                             default:
+
                                 WriteLine("");
                                 break;
                         }
 
                         break;
+
                     default:
-                        break;
+                        Clear();
+
+                        Write("You trudge towards the snowy mountains"); wait();
+                        Write("It is very cold"); wait();
+                        Write("Your nips could cut diamonds"); wait();
+                        if (goneMountains = false) { 
+                            Write("At the top of a ridge you find a lonely mountain climber"); wait();
+
+                            switch (menu("Wave at him", "Steal his burger", "", "", 2))
+                            {
+                                case 'A':
+                                    peacefulness += 4;
+                                    charisma += 2;
+
+                                    Write("He waves back enthusiastically"); wait();
+                                    Write("Mountain climber: 'Corporate America City is down by the river if you're looking for civilisation'"); wait();
+
+                                    switch (menu("Ask for advice", "Ask for food", "", "", 2))
+                                    {
+                                        case 'A':
+                                            human += 2;
+                                            goodbeep();
+                                            Write("Mountain climber: 'If you wanna get a job, might wanna learn English first'"); wait();
+                                            Write("You nod wisely despite not knowing what he said"); wait();
+                                            break;
+
+                                        default:
+                                            goodbeep();
+                                            Write("He gives you half an apricot meusli  bar"); wait();
+                                            Write("It tastes like stubbing your toe"); wait();
+                                            Write(""); wait();
+                                            break;
+                                    }
+                                    break;
+
+                                default:
+                                    Clear();
+                                    peacefulness -= 5;
+                                    okaybeep();
+                                    Write("You steal his burger and begin running"); wait();
+                                    Write("The mountain climber turns out to be surprisingly athletic"); wait();
+                                    Write("You barely escape"); wait();
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            Clear();
+                            Write("The climber is no longer here    (press enter to go back)"); ReadLine(); 
+                        }
+                            break;
                 }
 
             }
@@ -274,9 +327,12 @@ namespace CodeCode
                             WriteLine("Police: 'You're free to go sir'");
                             break;
                         case 'B':
+                            Write("You freak out so hard that you escape them"); wait();
+                            WriteLine("You're now free");
                             break;
                         default:
-
+                            Write("You freak out so hard that you escape them"); wait();
+                            WriteLine("You're now free");
                             break;
                     }
                     break;
