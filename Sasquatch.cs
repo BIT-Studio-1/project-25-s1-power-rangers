@@ -13,7 +13,7 @@ namespace CodeCode
     {
         private static int peacefulness = 20;
         private static int human = 20;
-        private static int nature = 20;
+        private static int charisma = 20;
 
         public static int Peacefulness
         {
@@ -23,9 +23,9 @@ namespace CodeCode
         {
             get { return human; }
         }
-        public static int Nature
+        public static int Charisma
         {
-            get { return nature; }
+            get { return charisma; }
         }
         public static void sasquatchLife()
         {
@@ -84,7 +84,7 @@ namespace CodeCode
                                 }
                                 else
                                 {
-                                    Write();
+                                    Write("Try exploring around more to find it"); wait();
                                 }
                                     break;
                             default:
@@ -120,7 +120,7 @@ namespace CodeCode
                                                 won = true;
                                                 Write("Your reward for winning is my fine english dictionary"); wait();
 
-                                                Write("You read the entire dictionary in one sitting");
+                                                Write("You read the entire dictionary in one sitting"); wait(); WriteLine();
                                                 Console.WriteLine("      __...--~~~~~-._   _.-~~~~~--...__");
                                                 Console.WriteLine("    //               `V'               \\\\");
                                                 Console.WriteLine("   //                 |                 \\\\");
@@ -128,16 +128,32 @@ namespace CodeCode
                                                 Console.WriteLine(" //__.....----~~~~._\\ | /_.~~~~----.....__\\\\");
                                                 Console.WriteLine("====================\\\\|//====================");
                                                 Console.WriteLine("                    `---`"   );
-                                                Console.WriteLine("                             ^   the dictionary");
+                                                Console.Write("                             ^   the dictionary     (press enter)");
+                                                ReadLine();
+;                                                
 
+                                                Clear();
+                                                for (int i = 0; i < 200; i++)
+                                                {
+                                                    Write("the whole dictionary"); Thread.Sleep(1);
+                                                }
+                                                Clear();
+
+
+                                            }
+                                            else
+                                            {
+                                                Write("Homeless Guy: 'You're the hairiest person I've every met'"); Thread.Sleep(1000); WriteLine();
                                             }
                                             break;
                                         case 'B':
                                             Clear();
+                                            SuspenseSFX();
                                             Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1200); WriteLine();
                                             break;
                                         case 'C':
                                             Clear();
+                                            SuspenseSFX();
                                             Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1300); WriteLine();
                                             WriteLine("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1400);
                                             break;
@@ -171,6 +187,9 @@ namespace CodeCode
             Write("dressed up as some sort of character"); wait();
             switch(menu("Do the worm", "Hit the whip nae nae", "Scream at them", "", 3)){
                 case 'A':
+                    peacefulness += 4;
+                    charisma += 6;
+                    DramaSFX();
                     CursorVisible = false;
                     Clear();
                     WriteLine("You hit the worm");
@@ -207,9 +226,21 @@ namespace CodeCode
                     CursorVisible = true;
                     break;
                 case 'B':
+                    peacefulness += 4;
+                    charisma += 7;
+
+                    DramaSFX();
+                    Write("You hit the whip nae nae"); wait();
+                    Write("*whip nae nae*"); Thread.Sleep(1000); WriteLine();
+
+
+
                     break;
 
                 default:
+                    peacefulness -= 4;
+                    charisma += 7;
+                    Write("The people: 'wow so impressive'"); Thread.Sleep(1000); WriteLine();
                     HumanMeow();
                     break;
                 
@@ -223,7 +254,7 @@ namespace CodeCode
             WriteLine("Sasquatch Life"); Thread.Sleep(300);
             WriteLine($"How peaceful you were: {peacefulness}" +
             $"\nHow humanistic you were: {human}" +
-            $"\nHow one with nature you were: {nature}"); ResetColor(); Write("Press enter to reincarnate to your next life");
+            $"\nHow charismatic you were: {charisma}"); ResetColor(); Write("Press enter to reincarnate to your next life");
             ReadLine();
             return;
         }

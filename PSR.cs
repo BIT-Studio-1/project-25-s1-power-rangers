@@ -43,8 +43,8 @@ namespace CodeCode
         public static bool PSRgame()
         {
             Clear();
-            WriteLine("You challenged the homeless guy to rock paper scissors");
-            WriteLine("The format is first to 3");
+            Write("You challenged the homeless guy to rock paper scissors"); wait();
+            Write("The format is first to 3"); wait(600);
 
             int playerScore = 0;
             int computerScore = 0;
