@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Console;
 using static CodeCode.Program;
-using static CodeCode.SoundUtils;
 using static CodeCode.PSR;
+using static CodeCode.SoundUtils;
+using static System.Console;
 namespace CodeCode
 {
     public class Sasquatch
@@ -180,7 +182,8 @@ namespace CodeCode
                         Write("You trudge towards the snowy mountains"); wait();
                         Write("It is very cold"); wait();
                         Write("Your nips could cut diamonds"); wait();
-                        if (goneMountains = false) { 
+                        if (goneMountains == false) { 
+                            goneMountains = true;
                             Write("At the top of a ridge you find a lonely mountain climber"); wait();
 
                             switch (menu("Wave at him", "Steal his burger", "", "", 2))
@@ -308,33 +311,46 @@ namespace CodeCode
             switch (menu("Give it a sniff", "Read it", "Freak the hell out", "", 3))
             {
                 case 'A':
+                    goodbeep();
+                    Clear();
                     Write("You give the job listing a sniff"); wait();
                     WriteLine("Your sense of smell is very good so you smell the ink to such a detail that");
                     Write("you can read it through smelling it"); wait();
                     WriteLine("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
                     break;
                 case 'B':
+                    goodbeep();
+                    Clear();
                     Write("You read the job listing"); wait();
                     WriteLine("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
                     break;
                 case 'C':
+                    okaybeep();
+                    Clear();
                     Write("You freak the hell out"); wait();
                     WriteLine("You start rioting all over Corporate America City and you get arrested");
                     Write("They sentence you to the death penalty and are set to be executed tommorow"); wait();
                     switch (menu("Say sorry", "Doubly freak the hell out", "Freak the absolute hell out", "", 3)) {
                         case 'A':
                             Write("You: 'sorry broskis"); Thread.Sleep(1000); WriteLine();
-                            WriteLine("Police: 'You're free to go sir'");
+                            Write("Police: 'You're free to go sir'     (press enter)"); ReadLine();
+                            
                             break;
                         case 'B':
                             Write("You freak out so hard that you escape them"); wait();
-                            WriteLine("You're now free");
+                            WriteLine("You're now free     (press enter)"); ReadLine();
+
                             break;
                         default:
                             Write("You freak out so hard that you escape them"); wait();
-                            WriteLine("You're now free");
+                            WriteLine("You're now free      (press enter)"); ReadLine();
+
                             break;
                     }
+                    Clear();
+                    Write("Out in the street, one of the guys from before thinks that you would be nice for a job"); Thread.Sleep(800); WriteLine();
+                    Write("The job is an assistant manager at FUM Incorporated"); wait();
+
                     break;
             }
 
