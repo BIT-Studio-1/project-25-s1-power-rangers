@@ -224,20 +224,23 @@ namespace CodeCode
                     Thread.Sleep(400);
                     Clear();
                     CursorVisible = true;
+                    Write("The people: 'wow so impressive'"); wait();
                     break;
                 case 'B':
+                    Clear();
                     peacefulness += 4;
                     charisma += 7;
 
                     DramaSFX();
                     Write("You hit the whip nae nae"); wait();
                     Write("*whip nae nae*"); Thread.Sleep(1000); WriteLine();
-
+                    Write("The people: 'wow so impressive'"); wait();
 
 
                     break;
 
                 default:
+                    Clear();
                     peacefulness -= 4;
                     charisma += 7;
                     Write("The people: 'wow so impressive'"); Thread.Sleep(1000); WriteLine();
@@ -245,6 +248,40 @@ namespace CodeCode
                     break;
                 
             }
+
+
+            Write("You see a job listing on a lampost"); wait();
+            WriteLine("What do you do?");
+            switch (menu("Give it a sniff", "Read it", "Freak the hell out", "", 3))
+            {
+                case 'A':
+                    Write("You give the job listing a sniff"); wait();
+                    WriteLine("Your sense of smell is very good so you smell the ink to such a detail that");
+                    Write("you can read it through smelling it"); wait();
+                    WriteLine("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
+                    break;
+                case 'B':
+                    Write("You read the job listing"); wait();
+                    WriteLine("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
+                    break;
+                case 'C':
+                    Write("You freak the hell out"); wait();
+                    WriteLine("You start rioting all over Corporate America City and you get arrested");
+                    Write("They sentence you to the death penalty and are set to be executed tommorow"); wait();
+                    switch (menu("Say sorry", "Doubly freak the hell out", "Freak the absolute hell out", "", 3)) {
+                        case 'A':
+                            Write("You: 'sorry broskis"); Thread.Sleep(1000); WriteLine();
+                            WriteLine("Police: 'You're free to go sir'");
+                            break;
+                        case 'B':
+                            break;
+                        default:
+
+                            break;
+                    }
+                    break;
+            }
+
 
 
         }
