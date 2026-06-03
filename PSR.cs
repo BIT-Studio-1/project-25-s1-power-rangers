@@ -22,9 +22,9 @@ namespace CodeCode
         }
         private static void compute()
         {
-            Console.Write("rock....."); Thread.Sleep(500);
-            Write("paper....."); Thread.Sleep(500);
-            Write("scissors....."); Thread.Sleep(500);
+            Console.Write("rock....."); Thread.Sleep(100);
+            Write("paper....."); Thread.Sleep(100);
+            Write("scissors....."); Thread.Sleep(100);
 
 
 

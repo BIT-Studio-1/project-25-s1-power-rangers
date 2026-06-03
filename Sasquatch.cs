@@ -123,6 +123,7 @@ namespace CodeCode
                                             if (PSRgame() == true)
                                             {
                                                 won = true;
+                                                dictionaryRead = true;
                                                 Write("Your reward for winning is my fine english dictionary"); wait();
 
                                                 Write("You read the entire dictionary in one sitting"); wait(); WriteLine();
@@ -213,7 +214,7 @@ namespace CodeCode
                                             goodbeep();
                                             Write("He gives you half an apricot meusli  bar"); wait();
                                             Write("It tastes like stubbing your toe"); wait();
-                                            Write(""); wait();
+                                            Write(""); //wait();
                                             break;
                                     }
                                     break;
@@ -322,7 +323,7 @@ namespace CodeCode
                     Write("You give the job listing a sniff"); wait();
                     WriteLine("Your sense of smell is very good so you smell the ink to such a detail that");
                     Write("you can read it through smelling it"); wait();
-                    WriteLine("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
+                    Write("It reads 'FUM Incorporated: Assistant Manager wanted'"); wait();
                     break;
                 case 'B':
                     goodbeep();
@@ -341,7 +342,7 @@ namespace CodeCode
                             goodbeep();
                             charisma += 5;
                             human += 3;
-                            Write("You: 'sorry broskis"); Thread.Sleep(1000); WriteLine();
+                            Write("You: 'sorry broskis'"); Thread.Sleep(1000); WriteLine();
                             Write("Police: 'You're free to go sir'     (press enter)"); ReadLine();
                             
                             break;
@@ -366,7 +367,7 @@ namespace CodeCode
             }
 
 
-            Write("You go to the interview");
+            Write("You go to the interview"); wait();
 
             Write("The interviewer looks up from his paperwork"); wait();
             Write("He looks at you"); wait();
@@ -413,12 +414,13 @@ namespace CodeCode
 
             WriteLine("\nInterviewer: 'Where do you see yourself in five years?'");
 
-            switch (menu("Assistant manager", "Your boss", "", "", 2))
+            switch (menu("Assistant manager", "Your boss", "Freak the hell out and eat the office rat", "", 3))
             {
                 case 'A':
                     goodbeep();
                     Clear();
                     charisma += 4;
+                    human += 2;
                     WriteLine("You: 'Assistant manager'"); Thread.Sleep(500);
                     Write("Interviewer: 'A sensible answer. Rare around here.'"); wait();
                     break;
@@ -435,13 +437,14 @@ namespace CodeCode
                 default:
                     Clear();
                     okaybeep();
-                    peacefulness += 4;
+                    peacefulness -= 4;
+                    human -= 2;
 
-                    Write("You freak the hell out and eat the office cat"); wait();
-                    Write("The interviewer nods thoughtfully"); wait();
+                    Write("You freak the hell out and eat the office rat"); wait();
+                    Write("The interviewer nods very thoughtfully"); wait();
                     break;
             }
-
+            Clear();
             Write("The interviewer folds his hands"); wait();
             Write("He seems deep in thought"); wait();
             Write("Mostly because he's fallen asleep"); wait();
@@ -452,8 +455,8 @@ namespace CodeCode
             {
                 Write("*working*     "); Thread.Sleep(1000);
             }
-            Write("The working conditions at FUM are very dangerous"); wait();
-            Write("The office water fountain explodes and you die a horrible death"); ReadLine();
+            Write("\nThe working conditions at FUM are very dangerous"); wait();
+            Write("The office water fountain explodes and you die a horrible death     (press enter)"); ReadLine();
 
 
         }
