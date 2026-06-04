@@ -111,21 +111,23 @@ namespace CodeCode
         public static void HumanLife2()
         {
             Clear();
-            Write("Man Man, your bfffff in the world has come to visit you"); ReadLine();
-            Write("In Man Man's hands, he has a caramel cheesecake and a cooler full of tropical juice"); ReadLine();
+            ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", your bfffff in the world has come to visit you"); ReadLine();
+            Write("In "); ForegroundColor = ConsoleColor.Blue; Write("Man Man's"); ResetColor(); Write(" hands, he has a caramel cheesecake and a cooler full of tropical juice"); ReadLine();
             Write("Do you like the food?"); ReadLine();
             switch (menu("No :[", "Yes :D", "Maybe", "", 3))
             {
                 case 'A':
                     CursorVisible = false;
                     SitOnCouch -= 5; Sure -= 1;
-                    Write("'Man Man, I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
-                    Write("Man Man produced a single tear"); ReadLine();
+                    Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" produced a single tear"); ReadLine();
 
                     break;
                 case 'B':
                     CursorVisible = false;
-                    Write(""); ReadLine();
+                    SitOnCouch -= 5; Sure += 10;
+                    Write("I love them Man Man, I am so happy you are my friend Man Man"); ReadLine();
+                    Write("I love them Man Man, I am so happy you are my friend Man Man"); ReadLine();
 
                     break;
                 case 'C':
