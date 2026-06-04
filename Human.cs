@@ -16,6 +16,9 @@ namespace CodeCode
         private static int SitOnCouch = 0;
         private static int Sure = 0;
         private static int Meow = 0;
+        private static int money = 67;
+        private static string name;
+
         public static int SitOnCouch1
         {
             get { return SitOnCouch; }
@@ -30,11 +33,13 @@ namespace CodeCode
         {
             get { return Meow; }
         }
+
+
         public static void HumanLife()
         {
             CursorVisible = false;
+            HumanLife1();
 
-            HumanLife2();
             HumanTotal();
             return;
 
@@ -69,7 +74,7 @@ namespace CodeCode
             Write("A human who loves to sit on a couch\n"); ReadLine();
             Write("Would you like to name the human?\n"); 
             CursorVisible = true;
-            string temp = Console.ReadLine();
+            name = ReadLine();
             CursorVisible = false;
             Write("\nOh"); humanWait1(); Write("Sorry, I think you forgot that your name is already Hugh Mann"); humanWait1(); Write(" Hue for short"); ReadLine();
             Clear();
@@ -136,15 +141,41 @@ namespace CodeCode
                 case 'A':
                     Clear();
                     CursorVisible = false;
-
-                    Random rand = new Random(); int gamba = rand.Next(5); int money = 67;
+                    SitOnCouch += 5; Sure -= 1;
+                    Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'\n"); ReadLine();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" produced a single tear"); ReadLine();
+                    Write("'It's okay, "); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor();  
+                    Write(" was just thinking of how much we bonded together while we shared a whole caramel cheesecake with some tropical juice for years now"); humanWait1(); Write("'"); ReadLine();
+                    Write("'I just wanted to make you happy'"); humanWait1(); ForegroundColor = ConsoleColor.Blue; Write(" Man Man"); ResetColor(); Write(" looked at you with teary eyes\n"); ReadLine();
+                    Write("As you think back to all the memories you somehow forgot, you realised how much you cared for "); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write("."); ReadLine();
+                    Write("\nBut"); humanWait1(); Write(" you realised to late."); ReadLine();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" was so heartbroken that he teleported away and never came back"); ReadLine(); Clear();
+                    Write("You sat there, wishing he'd come back"); ReadLine(); Write("Wishing that you hadn't hurt him so bad"); ReadLine(); 
+                    Write("Wishing that you could take back what you said"); ReadLine(); Write("Wishing that you could just have one more caramel cheesecake and tropical juice with him"); ReadLine();
+                    Write("But it was too late."); ReadLine();
+                    Clear();
+                    Write("You blacked out somehow and found yourself in a casino"); ReadLine();
+                    Write("Bright lights filled your vision as you sway left and right to a "); humanWait1();
+                    Random rand = new Random(); int gamba = rand.Next(5); string quit = "no";
                     switch (gamba)
                     {
                         case 5:
                             int balls = 0;
                             Write("pachinko machine."); ReadLine(); Clear();
-                            Write("1"); ReadLine();
-                            Write("1"); ReadLine();
+                            do
+                            {
+                                Write($"you have ${money} to your name"); ReadLine(); Clear(); 
+                                Write("you bought pack of "); ReadLine(); Clear();
+                                Write("_+===Pachinko Machine===+_"); ReadLine();
+                                Write("1"); ReadLine();
+                                Write("1"); ReadLine();
+                                Write("1"); ReadLine();
+                                Write("Do you wanna quit?\n(yes or no)"); 
+                                CursorVisible = true;
+                                quit = ReadLine();
+                                CursorVisible = false;
+                            } while (money > 0 && quit != "yes");
+
 
                             break;
                         case 4:
@@ -168,15 +199,14 @@ namespace CodeCode
                             break;
                     }
 
-                        Write("You laid in the meadows, taking in the smell of the flowers and freshly cut grass");
-                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor();
 
                     break;
                 case 'B':
                     Clear();
                     CursorVisible = false;
                     SitOnCouch -= 5; Sure += 10;
-                    Write("I love them"); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", I am so happy you are my friend Man Man"); ReadLine();
+                    Write("I love them"); ReadLine();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", I am so happy you are my friend Man Man"); ReadLine();
 
                     break;
                 case 'C':
@@ -194,7 +224,7 @@ namespace CodeCode
             CursorVisible = false;
 
             ForegroundColor = ConsoleColor.Green; Clear();
-            WriteLine("Human Life"); Thread.Sleep(300);
+            WriteLine($"{name}'s Life"); Thread.Sleep(300);  Clear(); WriteLine($"Hughs's Life"); Thread.Sleep(300);
             WriteLine($"How couch you were: {SitOnCouch}" +
                 $"\nHow Okay of a human you were: {Sure}" +
                 $"\nHow happy your cat was: {Meow}"); ResetColor(); Write("\npress enter");
