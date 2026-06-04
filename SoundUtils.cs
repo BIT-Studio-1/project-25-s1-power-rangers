@@ -87,5 +87,9 @@ namespace CodeCode
         {
             Play(@"sfx/demonicMeow.wav");
         }
+        public static void eagleSFX()
+        {
+            Play(@"sfx/eagleSFX.wav");
+        }
     }
 }
