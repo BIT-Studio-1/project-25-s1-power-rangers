@@ -18,6 +18,7 @@ using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
 using static CodeCode.worm;
+using System.ComponentModel.Design;
 
 namespace CodeCode
 {
@@ -232,8 +233,9 @@ namespace CodeCode
                     }
                     else
                     {
+                        
                         sasquatchLife();
-                        //this is where the statements for going to penguin would be
+                        //this is where the statements for going to bird or sasquatch should be
                     }
                 }
                 else
@@ -309,6 +311,9 @@ namespace CodeCode
             Clear();
             WriteLine("Amoeba life is slow");
             WriteLine("Amoeba");
+
+
+            // add more questions
             Write("Ameba life is so slow that life turns into death and Ameoba dies     (press enter)"); ReadLine();
             return;
         }
