@@ -52,11 +52,10 @@ namespace CodeCode
             WriteLine("     PLANT");
                 Write("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); wait();
                 WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: "); Thread.Sleep(1000);
-                WriteLine("GAME OF HONEY"); Thread.Sleep(2000);
-                WriteLine("In this level, you will be asked a few questions when a bee tries to extract honey from which is a bad  thing for you"); Thread.Sleep(3000);
+                Write("You're just chilling in the garden"); wait(700);
+            Write("when a bee tries to extract pollen from you (which is a bad thing for you)"); wait(700);
 
 
-                WriteLine(" ");
                 menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. i don't think its very wise to let it happen", "KILL THE BEE INSTEAD, are you a killer? psychopath? hell nah bro", "FIGHT BACK, be a hero here the dragons are coming after bees ", "NONE OF THESE, sybau i know you wont click it");
 
                 if (D1 == true)
@@ -64,11 +63,11 @@ namespace CodeCode
                 badbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
-                WriteLine("why you so so stupid bro, you gave up for nothing :( "); Thread.Sleep(2000);
+                WriteLine("why you so stupid bro, you gave up for nothing :( "); Thread.Sleep(2000);
 
                     plint += 0;
                     stupidity += 8;
-                    selfishness += 3;
+                    selfishness -= 3;
 
                 }
                 if (D2 == true)
@@ -123,14 +122,11 @@ namespace CodeCode
                 WriteLine("IDKKKKKK you shouldn't have done that (i don't really care what u did bro -_-)");
 
                 WriteLine(" ");
-            WriteLine("Hang tight dude"); wait(700);
-            WriteLine(" ");
-            WriteLine("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait();
-            WriteLine(" ");
-            WriteLine("we never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000);
-            WriteLine("In this , a human will try to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000);
+            Write("Hang tight dude"); wait(700);
+            Write("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait(700);
+            Write("we never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000); WriteLine();
+            Write("A human is trying to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000); WriteLine();
 
-                WriteLine(" ");
                 menu("KILL THE EXTRACTOR, what i mean by that is literal killing. Isn't it bad enough? haha ", "LET IT HAPPEN, shut up what you gonna do? huh what?", "SUICIDE, ummm yeah nah maybe but killing yourself is not gonna be a really good option bro", "NONE OF THESE, choose nothing and feel shamefull i know you wont choose this, will you? cmon now ");
                 if (D1 == true)
                 {
@@ -186,16 +182,14 @@ namespace CodeCode
                
                 ForegroundColor = ConsoleColor.Red;
              
-                WriteLine("sybau bro, you aint the player here, lets see what you got in here. does this feel good? really? choose those options was an act of immense shame btw -_- "); Thread.Sleep(2000);
+                // Write("sybau bro, you aint the player here, lets see what you got in here. Does this feel good? really? choosing those options was an immense act of shame btw -_- "); Thread.Sleep(2000); WriteLine();
 
-                WriteLine(" ");
-                WriteLine("DOG AND HIS POOP, even i dont know why this is part of game. try harder and dont be stupid now"); Thread.Sleep(2000);
-            WriteLine(" ");
+                WriteLine("DOG AND HIS POOP, even i don't know why this is part of the game. Try harder and don't be stupid now"); Thread.Sleep(2000);
             Write("okay calm down now, i know what you are thinking. its not that tuff bro but here we are"); wait();
-            WriteLine("In this a dog will try to poop on you, so try your best bro ikr this is an absurd idea :( ");
-            WriteLine(" ");
-            Write("yeah yeah ik but it is a real thing, dogs do poop on plants. its my bad if you havent seen one doing thus  "); wait();
-            Write(" just choose a gawddamn option now "); wait();
+            Write("A dog is attempting to poop on you, so try your best bro                      ikr this is an absurd idea :( "); Thread.Sleep(700); WriteLine();
+           
+            Write("Yeah yeah, IK but it is a real thing, dogs do poop on plants. It's my bad if you haven't seen one doing this"); wait();
+            Write("What do you do?"); wait();
             menu("LET HIM DO IT, i know you let it happen i know ", "KILL HIM, you killer? please dont do it bro", "DO NOTHING, this doesnt mean doing nothing it does mean actually doing nothing ", "SMILE AT HIM, smiles can change the world, keep smiling bro you are in the presence of great MR.沃恩·马尔金");
                 if (D1 == true)
                 {
@@ -203,7 +197,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor= ConsoleColor.Red;
                 WriteLine("did you let it happen are you crazy? i think so okay whatever now GO CLEAAANNNNNNN YOURRRSELFFFFFF........"); Thread.Sleep(3000);
-                    selfishness += 1;
+                    selfishness -= 5;
 
                     stupidity += 12;
                     plint += 2;
@@ -215,7 +209,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("You attempted to kill him, but you are just a mere fool plant, so it didn't amount to anything."); Thread.Sleep(2000);
-                    selfishness += 5;
+                    selfishness += 1;
                     stupidity += 4;
                     plint += 8;
 
@@ -225,10 +219,9 @@ namespace CodeCode
                  goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
-                WriteLine(" you did nothing means you let that happen, GOOOO AND CLEANNNN YOURSELFFFFFF");
-                Thread.Sleep(2000);
-                selfishness += 3;
-                    stupidity += 12;
+                Write("you did nothing means you let that happen, GOOOO AND CLEANNNN YOURSELFFFFFF"); wait(900);
+                selfishness -= 5;
+                    stupidity += 10;
                     plint += 4;
 
 
@@ -246,7 +239,7 @@ namespace CodeCode
 
 
 
-                selfishness += 2;
+                selfishness -= 3;
                     stupidity += 12;
                     plint += 3;
                     
@@ -257,7 +250,7 @@ namespace CodeCode
             Clear();
                  ForegroundColor = ConsoleColor.Red;
 
-                  Write("sybau bro"); wait(); 
+                  Write("man that dog sure has no manners"); wait(); 
                 
 
                 WriteLine(" ");
@@ -299,12 +292,10 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
                 Write("You held your roots harder"); wait();
-                Write(" ");
-                WriteLine("you are strong bro but the wind is wind"); Thread.Sleep(2000);
-                Write(" ");
+                WriteLine("you are strong bro but the wind is wind"); wait(700);
                 Clear();
                 goodbeep();
-                Write("WIND: ts wasnt me bro ");
+                Write("WIND: ts wasnt me bro "); wait();
                 selfishness += 5;
                 stupidity += 4;
                 plint += 8;
@@ -316,7 +307,7 @@ namespace CodeCode
                 ForegroundColor = ConsoleColor.Red;
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
-                WriteLine("i knew you little plant would do that"); Thread.Sleep(2000);
+                WriteLine("I knew you little plant would do that"); Thread.Sleep(2000);
 
 
                 selfishness += 3;
@@ -351,9 +342,7 @@ namespace CodeCode
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
             WriteLine(" ");
             goodbeep();
-            Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
-                WriteLine(" ");
-                WriteLine(" ");
+            //Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
                 WriteLine("PLEASE PRESS ENTER TO CONTINUE");
                 ReadLine();
 
