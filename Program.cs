@@ -231,12 +231,22 @@ namespace CodeCode
                             starfishLife();
                         }
                     }
-                    else
-                    {
+                   
                         
-                        sasquatchLife();
-                        //this is where the statements for going to bird or sasquatch should be
-                    }
+                        
+                        else
+                        {
+                            if (worm.DirtConsumed >= 20)
+                            {
+                                sasquatchLife();
+                            }
+                            else
+                            {
+                                birdlife();
+                            }
+                        }
+
+                    
                 }
                 else
                 {

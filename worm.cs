@@ -68,16 +68,16 @@ namespace CodeCode
                 case 'B':
                     WriteLine("You grown gills.");
                     WriteLine("You.");
-                    Thread.Sleep(500);
+                    Thread.Sleep(700);
                     Clear();
                     WriteLine("Are.");
-                    Thread.Sleep(500);
+                    Thread.Sleep(700);
                     Clear();
                     WriteLine("A.");
-                    Thread.Sleep(500);
+                    Thread.Sleep(700);
                     Clear();
                     WriteLine("Fish...");
-                    Thread.Sleep(500);
+                    Thread.Sleep(700);
                     Clear();
                     return;
                     break;
@@ -287,7 +287,7 @@ namespace CodeCode
 
             }
 
-            if (dirt_consumed > 20)
+            if (dirt_consumed >= 20)
             {
                 Write("While sleeping off your dirt eating, you find a nice spot in the grass.\n just as you're starting to fall asleep, you see a large shape over you...");
                 Thread.Sleep(2000);
