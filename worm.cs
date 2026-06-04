@@ -223,8 +223,48 @@ namespace CodeCode
 
 
             }
-                    return;
+            Clear();
+            Write("after all that, you're inredibly hungry!");
+            Thread.Sleep(1000);
+            Clear();
+            Write("dirtttttt");
+            Write("How much dirt do you want to eat?");
+            switch (menu("just a little bit of dirt", "a medium amount of dirt", "okay... thats alot of dirt-", "HOLY HOW DID YOU EAT THAT MUCH"))
+            {
+                case 'A':
+                    dirt_consumed = dirt_consumed +1;
+                    Write("that wasnt much, you sure you dont want more?");
+                    switch (menu("a little more couldnt hurt...", "no, im okay", "", ""))
+                    {
+                        case 'A':
+                            Write
+                    }
+                    break;
 
+                case 'B':
+                    
+                    break;
+
+                case 'C':
+                    
+                    break;
+
+                default:
+                    
+                    break;
+
+
+
+
+
+            }
+                
+                
+                
+                
+                
+                
+                return;
 
         }
         
