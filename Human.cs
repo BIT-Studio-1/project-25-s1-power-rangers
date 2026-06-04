@@ -33,7 +33,7 @@ namespace CodeCode
         public static void HumanLife()
         {
             CursorVisible = false;
-            HumanLife1();
+
             HumanLife2();
             HumanTotal();
             return;
@@ -47,20 +47,35 @@ namespace CodeCode
             Thread.Sleep(time); Write(".");
             Thread.Sleep(time); Write(".\n");
             Thread.Sleep(time);
+
         }
+        private static void humanWait1(int time = 500)
+        {
+            CursorVisible = false;
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time); Write(".");
+            Thread.Sleep(time);
+
+        }
+
+
 
         public static void HumanLife1()
         {
             CursorVisible = false;
             Clear();
             Write("You are a homo sapien sapien"); ReadLine();
-            Write("A human who loves to sit on a couch"); ReadLine();
-            Write("Would you like to name the human?"); humanWait(); Write("Nahhhh, you don't get a choice, your name is Hugh Mann. Hue for short"); ReadLine();
+            Write("A human who loves to sit on a couch\n"); ReadLine();
+            Write("Would you like to name the human?\n"); 
+            CursorVisible = true;
+            string temp = Console.ReadLine();
+            CursorVisible = false;
+            Write("\nOh"); humanWait1(); Write("Sorry, I think you forgot that your name is already Hugh Mann"); humanWait1(); Write(" Hue for short"); ReadLine();
             Clear();
-            WriteLine("your pet cat, Alfredo Chicken is looking at you"); ReadLine();
-            Write("I think he's hungry"); ReadLine();
+            Write("your pet cat, Alfredo Chicken is looking at you");  humanWait1(); Meow(); humanWait();
+            Write("I think he's hungry\n"); ReadLine(); 
             WriteLine("Feed him?");
-            Meow();
             switch (menu("Feed my son", "Don't feed em'", "meow back", "", 3))
             {
                 case 'A':
@@ -102,29 +117,59 @@ namespace CodeCode
                     break;
             }
             Clear();
-            Write("Alright, that was enough coding for human scene 1 -- I mean ehem."); ReadLine();
-            Write("Lemme just clean that up ehem."); ReadLine(); Clear();
-            Write("Now where was I?"); ReadLine();
-            Write("Oh! Yes, that was enough participation for one day"); ReadLine();
-            Write("I'm quite the tired Hue, I dare say to my internal monoloque."); ReadLine(); 
-            Write("I teleported to the bedroom couch and took "); ForegroundColor = ConsoleColor.Yellow; Write("BIG. MASSIVE."); ResetColor(); Write(" steps to my bed"); ReadLine();
-            Write("I tucked myself into bed and honk shooed, mimimi"); ReadLine();
-
+            Write("Yawn, yawn, yawn. It seems you have grown tired"); ReadLine(); 
+            Write("Teleporting to the bedroom couch, you took "); ForegroundColor = ConsoleColor.Yellow; Write("BIG. MASSIVE."); ResetColor(); Write(" steps to your bed"); ReadLine();
+            Write("You tucked yourself into bed and honk shooed, mimimi"); ReadLine();
         }
         public static void HumanLife2()
         {
             Clear();
+            Write("Next Day"); humanWait();
+            Clear();
+            Write("Just waking up, you feel groggy and certainly want something to eat"); ReadLine();
+            Write("You teleported to the kitchen couch and just like clockwork, you hear a knock at the front door"); ReadLine();
             ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", your bfffff in the world has come to visit you"); ReadLine();
             Write("In "); ForegroundColor = ConsoleColor.Blue; Write("Man Man's"); ResetColor(); Write(" hands, he has a caramel cheesecake and a cooler full of tropical juice"); ReadLine();
-            Write("Do you like the food?"); ReadLine();
+            Write("Do you like the food?"); 
             switch (menu("No :[", "Yes :D", "Maybe", "", 3))
             {
                 case 'A':
                     Clear();
                     CursorVisible = false;
-                    SitOnCouch -= 5; Sure -= 1;
-                    Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
-                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" produced a single tear"); ReadLine();
+
+                    Random rand = new Random(); int gamba = rand.Next(5); int money = 67;
+                    switch (gamba)
+                    {
+                        case 5:
+                            int balls = 0;
+                            Write("pachinko machine."); ReadLine(); Clear();
+                            Write("1"); ReadLine();
+                            Write("1"); ReadLine();
+
+                            break;
+                        case 4:
+                            Write("slot machine."); ReadLine();
+                            Write("1"); ReadLine();
+                            Write("1"); ReadLine();
+
+                            break;
+                        case 3:
+                            Write("roulette table."); ReadLine();
+                            Write("1"); ReadLine();
+                            Write("1"); ReadLine();
+                            Write("1"); ReadLine();
+
+                            break;
+                        default:
+                            Write("mario kart 8 deluxe game"); ReadLine();
+                            Write("1"); ReadLine();
+                            Write("1"); ReadLine();
+
+                            break;
+                    }
+
+                        Write("You laid in the meadows, taking in the smell of the flowers and freshly cut grass");
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor();
 
                     break;
                 case 'B':
@@ -150,9 +195,9 @@ namespace CodeCode
 
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Human Life"); Thread.Sleep(300);
-            WriteLine($"How crazy you were: {SitOnCouch}" +
+            WriteLine($"How couch you were: {SitOnCouch}" +
                 $"\nHow Okay of a human you were: {Sure}" +
-                $"\nHow good you were at being social: {Meow}"); ResetColor(); Write("\npress enter");
+                $"\nHow happy your cat was: {Meow}"); ResetColor(); Write("\npress enter");
             SitOnCouch = SitOnCouch - Sure;
 
             /*
