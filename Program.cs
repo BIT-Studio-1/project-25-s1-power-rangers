@@ -220,7 +220,7 @@ namespace CodeCode
                         if (Fish.Selfishness >= 25)
                         {
                             dolphinlife();
-                            if (dolphin.OkayEnough1 >= 15)
+                            if (dolphin.AbusePoint1 >= 15)
                             {
                                 WriteLine();
                                 //Write("go next life\n");
