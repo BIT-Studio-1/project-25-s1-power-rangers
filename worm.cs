@@ -11,20 +11,36 @@ using static System.Console;
 
 namespace CodeCode
 {
-    internal class worm
+    public class worm
     {
+        
+
+        public static bool fishGateway;
+        private static int length = 8;
+        private static int dirt_consumed = 0;
+        private static int wiggles = 0;
+        public static int Length
+        {
+            get { return length; }
+        }
+
+        public static int Dirt_consumed
+        {
+            get { return dirt_consumed; }
+        }
+
+        public static int Wiggles
+        {
+            get { return wiggles; }
+        }
+
+
         public static void wormlife()
         {
             wormscene();
             wormtotal();
             return;
         }
-
-        public static bool fishGateway;
-        private static int length = 8;
-        private static int dirt_consumed = 0;
-        private static int wiggles = 0;
-
         public static void wormscene()
         {
             //davids shitty ass code
@@ -46,7 +62,7 @@ namespace CodeCode
                     WriteLine("You swim your way to the surface, you feel the rain drops falling against your long wormy body. your hear the sound of wings flapping overhead. ");
                     ReadLine();
                     wiggles += 10;
-                    dirt_consumed += 10;
+                    dirt_consumed += 5;
                     break;
 
                 case 'B':
@@ -139,7 +155,7 @@ namespace CodeCode
                     break;
 
             }
-
+            Clear();
             WriteLine("After escaping that perilous situation, you are face to face with...");
             Thread.Sleep(2000);
             Clear();
@@ -156,7 +172,7 @@ namespace CodeCode
                 case 'A':
                     Write("You manage to wiggle away into the ground without any conflict and live to wiggle another day");
                     wiggles = wiggles + 5;
-                    dirt_consumed = dirt_consumed + 10;
+                    dirt_consumed = dirt_consumed + 5;
                     ReadLine();
                     break;
 
@@ -165,15 +181,15 @@ namespace CodeCode
                     if (length > op_len)
                     {
                         Write("you manage to wrap your body around your opponent and squeeze with all your might until... POP your opponent explodes.");
-                        Thread.Sleep(1000);
-                        Clear();
-                        Write("You consume your opponent");
+                        Thread.Sleep(1500);
+                        
+                        WriteLine("You consume your opponent");
                         length = length + op_len;
                         ReadLine();
                     }
                     else 
                     {
-                        Write("You attempt to wrap around your opponent but they're longer and faster then you! they snake their way around you and POP... you rip in half, your lenth reduced to 1.");
+                        Write("You attempt to wrap around your opponent but they're longer and faster then you! they snake their way around you and POP... \nyou rip in half, your lenth reduced to 1.");
                         length = 1;
                         ReadLine();
                     }
@@ -223,48 +239,71 @@ namespace CodeCode
 
 
             }
-            Clear();
+            Read();
             Write("after all that, you're inredibly hungry!");
-            Thread.Sleep(1000);
+            Thread.Sleep(1500);
             Clear();
             Write("dirtttttt");
             Write("How much dirt do you want to eat?");
             switch (menu("just a little bit of dirt", "a medium amount of dirt", "okay... thats alot of dirt-", "HOLY HOW DID YOU EAT THAT MUCH"))
             {
                 case 'A':
-                    dirt_consumed = dirt_consumed +1;
+                    dirt_consumed = +1;
                     Write("that wasnt much, you sure you dont want more?");
                     switch (menu("a little more couldnt hurt...", "no, im okay", "", ""))
                     {
                         case 'A':
-                            Write
+                            Write("you eat a little more dirt");
+                            goodbeep();
+                            dirt_consumed += 1;
+                            break;
+
+                        default:
+                            Write("you refuse to eat any more dirt.");
+                            Read();
+                            break;
                     }
                     break;
 
                 case 'B':
-                    
+                    dirt_consumed = +5;
+                    Write("You eat a reasonable amount of dirt");
+                    Read();
                     break;
 
                 case 'C':
-                    
+                    dirt_consumed = +10;
+                    length = +10;
+                    Write("you eat a questionable amount of dirt, it converts into length");
+                    Read();
                     break;
 
                 default:
-                    
+                    dirt_consumed = +20;
+                    Write("HOLYYYY... THATS ALOT OF DIRT");
+                    Write("You start to resemble a fleshy coloured ping pong ball.");
+                    Read();
                     break;
 
-
-
-
-
             }
-                
-                
-                
-                
-                
-                
-                return;
+
+            if (dirt_consumed > 20)
+            {
+                Write("While sleeping off your dirt eating, you find a nice spot in the grass.\n just as you're starting to fall asleep, you see a large shape over you...");
+                Thread.Sleep(2000);
+                Write("then it starts to come closer...");
+                Thread.Sleep(2000);
+                Write("It's a foot!!");
+                Thread.Sleep(2000);
+                Clear();
+                Write("The very hairy foot, comes down hard on you like a hammer and theres nothing you can do as theres too much dirt in you to be able to move.\n it crushes you");
+            }
+            else
+            {
+                Write("You think to yourself: wow, i wish i ate more dirt, im really hungry and barely have the strenth to move.\nJust then, a bird swoops down and plucks you off of the ground and in one foul bite, you're gone...");
+            }
+
+            return;
 
         }
         
