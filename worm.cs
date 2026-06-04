@@ -144,8 +144,66 @@ namespace CodeCode
             WriteLine("Another worm!!!!");
             WriteLine("FIGHT ME. he declares");
             WriteLine("of course you know, in worm on worm combat, the winner will eat the loser and gain their length!");
-            WriteLine($"Your current length is {length}, your opponent is ");
-            return;
+            Random rand = new Random();
+            int op_len = rand.Next(1,20);
+            WriteLine($"Your current length is {length}, your opponent is {op_len}");
+            switch (menu("wiggle away", "strangle your opponent", "talk it out", "wiggle"))
+
+
+            {
+                case 'A':
+                    Write("You manage to wiggle away without any conflict and live to wiggle another day");
+                    break;
+
+                case 'B':
+                    if (length > op_len)
+                    {
+                        Write("you manage to wrap your body around your opponent and squeeze with all your might until... POP your opponent explodes.");
+                        Thread.Sleep(500);
+                        Clear();
+                        Write("You consume your opponent");
+                        length = length + op_len;
+                    }
+                    else 
+                    {
+                        Write("You attempt to wrap around your opponent but they're longer and faster then you! they snake their way around you and POP... you rip in half, your lenth reduced to 1.");
+                        length = 1;
+                    }
+
+                    
+                    break;
+
+                case 'C':
+                    Write("Hey Hey Hey we can talk about this! you say to your opponent.");
+                    Thread.Sleep(500);
+                    Write("I HUNGER FOR WORM BLOOD!!!! replies your opponent.");
+                    Write("What will you say?");
+                    switch (menu("A sob story", "Insult him", "Sneak attack", ""))
+                    {
+                        case 'A':
+                            Write("You give the worm a sob story about how when you were younger, a bird swooped down and ate your worm parents\n and that youve been alone ever since...");
+                            Thread.Sleep(500);
+                            Write("your opponent feels bad for you and lets you move on.");
+                            break;
+
+                        case 'B':
+                            
+                            break;
+
+                        default:
+
+                            break;
+                    }
+                    break;
+
+                default:
+                    Write("");
+                    break;
+
+
+
+            }
+                    return;
 
 
         }
