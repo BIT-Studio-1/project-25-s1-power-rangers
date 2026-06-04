@@ -79,6 +79,7 @@ namespace CodeCode
                     WriteLine("Fish...");
                     Thread.Sleep(700);
                     Clear();
+                    fishGateway = true;
                     return;
                     break;
 
@@ -157,7 +158,7 @@ namespace CodeCode
             }
             Clear();
             WriteLine("After escaping that perilous situation, you are face to face with...");
-            Thread.Sleep(2000);
+            Thread.Sleep(2500);
             Clear();
             WriteLine("Another worm!!!!");
             WriteLine("FIGHT ME. he declares");
@@ -171,8 +172,8 @@ namespace CodeCode
             {
                 case 'A':
                     Write("You manage to wiggle away into the ground without any conflict and live to wiggle another day");
-                    wiggles = wiggles + 5;
-                    dirt_consumed = dirt_consumed + 5;
+                    wiggles += 5;
+                    dirt_consumed +=5;
                     ReadLine();
                     break;
 
@@ -231,9 +232,42 @@ namespace CodeCode
                     break;
 
                 default:
+                    CursorVisible = false;
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    Write("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      /");
+                    WriteLine("\t\t");
+                    Write(@"      \");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    WriteLine("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write("      /");
+                    WriteLine("\t\t");
+                    Write(@"      \");
+                    Thread.Sleep(400);
+                    Clear();
+                    WriteLine("\n\n\t\t");
+                    Write(@"      \");
+                    WriteLine("\t\t");
+                    WriteLine("      /");
+                    Thread.Sleep(400);
+                    Clear();
+                    CursorVisible = true;
                     Write("You wiggle, hypnotyzing your opponent with the rythmic wiggles. he leaves you alone.\n wiggles + 5");
                     ReadLine();
-                    wiggles = wiggles + 5;
+                    wiggles += 5;
                     break;
 
 
@@ -241,21 +275,21 @@ namespace CodeCode
             }
             Read();
             Write("after all that, you're inredibly hungry!");
-            Thread.Sleep(1500);
+            Thread.Sleep(2000);
             Clear();
             Write("dirtttttt");
             Write("How much dirt do you want to eat?");
             switch (menu("just a little bit of dirt", "a medium amount of dirt", "okay... thats alot of dirt-", "HOLY HOW DID YOU EAT THAT MUCH"))
             {
                 case 'A':
-                    dirt_consumed = +1;
+                    dirt_consumed+=1;
                     Write("that wasnt much, you sure you dont want more?");
                     switch (menu("a little more couldnt hurt...", "no, im okay", "", ""))
                     {
                         case 'A':
                             Write("you eat a little more dirt");
                             goodbeep();
-                            dirt_consumed += 1;
+                            dirt_consumed+=1;
                             break;
 
                         default:
@@ -266,20 +300,20 @@ namespace CodeCode
                     break;
 
                 case 'B':
-                    dirt_consumed = +5;
+                    dirt_consumed+=5;
                     Write("You eat a reasonable amount of dirt");
                     Read();
                     break;
 
                 case 'C':
-                    dirt_consumed = +10;
-                    length = +10;
+                    dirt_consumed+=10;
+                    length+=10;
                     Write("you eat a questionable amount of dirt, it converts into length");
                     Read();
                     break;
 
                 default:
-                    dirt_consumed = +20;
+                    dirt_consumed+=20;
                     Write("HOLYYYY... THATS ALOT OF DIRT");
                     Write("You start to resemble a fleshy coloured ping pong ball.");
                     Read();
@@ -291,16 +325,23 @@ namespace CodeCode
             {
                 Write("While sleeping off your dirt eating, you find a nice spot in the grass.\n just as you're starting to fall asleep, you see a large shape over you...");
                 Thread.Sleep(2000);
-                Write("then it starts to come closer...");
-                Thread.Sleep(2000);
-                Write("It's a foot!!");
+                Clear();
+                Write("\nthen it starts to come closer...");
                 Thread.Sleep(2000);
                 Clear();
-                Write("The very hairy foot, comes down hard on you like a hammer and theres nothing you can do as theres too much dirt in you to be able to move.\n it crushes you");
+                Write("\nIt's a foot!!");
+                Thread.Sleep(2000);
+                Clear();
+                Write("\nThe very hairy foot, comes down hard on you like a hammer and theres nothing you can do as theres too much dirt in you to be able to move.\n it crushes you");
+                Thread.Sleep(2000);
+                Clear();
             }
             else
             {
-                Write("You think to yourself: wow, i wish i ate more dirt, im really hungry and barely have the strenth to move.\nJust then, a bird swoops down and plucks you off of the ground and in one foul bite, you're gone...");
+                Write("You think to yourself: wow, i wish i ate more dirt, im really hungry and barely have the strenth to move.");
+                Thread.Sleep(2000);
+                Write("Just then, a bird swoops down and plucks you off of the ground and in one foul bite, you're gone...");
+                Thread.Sleep(2000);
             }
 
             return;
