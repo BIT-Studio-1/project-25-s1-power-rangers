@@ -64,6 +64,7 @@ namespace CodeCode
             switch (menu("Feed my son", "Don't feed em'", "meow back", "", 3))
             {
                 case 'A':
+                    Clear();
                     CursorVisible = true;
                     Meow();
                     Meow += 5;
@@ -77,6 +78,7 @@ namespace CodeCode
                     break;
                     Meow();
                 case 'B':
+                    Clear();
                     CursorVisible = false;
                     Meow();
                     SitOnCouch += 3;
@@ -87,6 +89,7 @@ namespace CodeCode
                     Write("Don't you hear his meow of sorrow? Of fear?? Of betrayal???"); Meow(); ReadLine();
                     break;
                 case 'C':
+                    Clear();
                     CursorVisible = false;
                     Meow += 7;
                     SitOnCouch += 1;
@@ -117,6 +120,7 @@ namespace CodeCode
             switch (menu("No :[", "Yes :D", "Maybe", "", 3))
             {
                 case 'A':
+                    Clear();
                     CursorVisible = false;
                     SitOnCouch -= 5; Sure -= 1;
                     Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
@@ -124,15 +128,17 @@ namespace CodeCode
 
                     break;
                 case 'B':
+                    Clear();
                     CursorVisible = false;
                     SitOnCouch -= 5; Sure += 10;
-                    Write("I love them Man Man, I am so happy you are my friend Man Man"); ReadLine();
-                    Write("I love them Man Man, I am so happy you are my friend Man Man"); ReadLine();
+                    Write("I love them"); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", I am so happy you are my friend Man Man"); ReadLine();
 
                     break;
                 case 'C':
+                    Clear();
                     CursorVisible = false;
-                    Write(""); ReadLine();
+                    HumanMeow();
+                    Write("meow"); ReadLine();
 
                     break;
             }
