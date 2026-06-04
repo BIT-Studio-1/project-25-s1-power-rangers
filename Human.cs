@@ -118,17 +118,18 @@ namespace CodeCode
             {
                 case 'A':
                     CursorVisible = false;
+                    SitOnCouch -= 5; Sure -= 1;
                     Write("'Man Man, I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'"); ReadLine();
                     Write("Man Man produced a single tear"); ReadLine();
 
                     break;
                 case 'B':
-                    CursorVisible= false;
+                    CursorVisible = false;
                     Write(""); ReadLine();
 
                     break;
                 case 'C':
-                    CursorVisible= false;
+                    CursorVisible = false;
                     Write(""); ReadLine();
 
                     break;
