@@ -195,6 +195,7 @@ namespace CodeCode
                 {
                 badbeep();
                 Clear();
+                EpicSFX();
                 ForegroundColor= ConsoleColor.Red;
                 WriteLine("did you let it happen are you crazy? i think so okay whatever now GO CLEAAANNNNNNN YOURRRSELFFFFFF........"); Thread.Sleep(3000);
                     selfishness -= 5;
@@ -205,8 +206,10 @@ namespace CodeCode
                 }
                 if (D2 == true)
                 {
+
                 badbeep();
                 Clear();
+                Suspense2SFX();
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("You attempted to kill him, but you are just a mere fool plant, so it didn't amount to anything."); Thread.Sleep(2000);
                     selfishness += 1;
@@ -218,6 +221,7 @@ namespace CodeCode
                 {
                  goodbeep();
                 Clear();
+                SuspenseSFX();
                 ForegroundColor = ConsoleColor.Red;
                 Write("you did nothing means you let that happen, GOOOO AND CLEANNNN YOURSELFFFFFF"); wait(900);
                 selfishness -= 5;
@@ -234,6 +238,7 @@ namespace CodeCode
                 Clear();
 
                 ForegroundColor = ConsoleColor.Red;
+                DramaSFX();
                 WriteLine(" yeah that was smart move but he still pooped on you"); Thread.Sleep(2000);
                 Write("LMAOOOOOOOOOO"); wait(1000);
 
@@ -249,7 +254,7 @@ namespace CodeCode
 
             Clear();
                  ForegroundColor = ConsoleColor.Red;
-
+            HellYeah();
                   Write("man that dog sure has no manners"); wait(); 
                 
 
@@ -273,6 +278,7 @@ namespace CodeCode
             {
                 badbeep();
                 Clear();
+                HellYeah();
                 ForegroundColor = ConsoleColor.Red;
                 Write("What????????????"); wait();
                 Write(" ");
@@ -287,7 +293,7 @@ namespace CodeCode
             
             if (D2 == true)
             {
-                Play(@"sfx/Unnervingsfx.wav");
+               Unnerving2SFX();
                 ForegroundColor = ConsoleColor.Red;
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
@@ -306,6 +312,7 @@ namespace CodeCode
                 badbeep();
                 ForegroundColor = ConsoleColor.Red;
                 Clear();
+                eagleSFX();
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("I knew you little plant would do that"); Thread.Sleep(2000);
 
@@ -335,13 +342,13 @@ namespace CodeCode
 
             }
             ForegroundColor = ConsoleColor.Red;
-            goodbeep();
+           Suspense2SFX();
                 Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
             WriteLine(" ");
-            badbeep();
+            Suspense2SFX();
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
             WriteLine(" ");
-            goodbeep();
+            Suspense2SFX();
             //Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
                 WriteLine("PLEASE PRESS ENTER TO CONTINUE");
                 ReadLine();
