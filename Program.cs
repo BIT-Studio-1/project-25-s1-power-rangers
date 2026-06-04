@@ -236,13 +236,13 @@ namespace CodeCode
                         
                         else
                         {
-                            if (worm.DirtConsumed >= 20)
+                            if (worm.Dirt_consumed >= 20)
                             {
                                 sasquatchLife();
                             }
                             else
                             {
-                                birdlife();
+                                birdLife();
                             }
                         }
 
