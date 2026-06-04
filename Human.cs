@@ -143,9 +143,10 @@ namespace CodeCode
             WriteLine("Human Life"); Thread.Sleep(300);
             WriteLine($"How crazy you were: {SitOnCouch}" +
                 $"\nHow Okay of a human you were: {Sure}" +
-                $"\nHow good you were at being social: {Meow}"); ResetColor();
+                $"\nHow good you were at being social: {Meow}"); ResetColor(); Write("\npress enter");
             SitOnCouch = SitOnCouch - Sure;
 
+            /*
             if (SitOnCouch <= 0)
             {
             }
@@ -158,7 +159,10 @@ namespace CodeCode
                 else
                 {
                 }
-            } ReadLine();
+            } 
+            
+            */
+            ReadLine();
             Clear();
         }
     }
