@@ -52,11 +52,10 @@ namespace CodeCode
             WriteLine("     PLANT");
                 Write("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); wait();
                 WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: "); Thread.Sleep(1000);
-                WriteLine("GAME OF HONEY"); Thread.Sleep(2000);
-                WriteLine("In this level, you will be asked a few questions when a bee tries to extract honey from which is a bad  thing for you"); Thread.Sleep(3000);
+                WriteLine("You're just chilling in the garden"); Thread.Sleep(2000);
+                Write("when a bee tries to extract pollen from you which is a bad thing for you"); Thread.Sleep(3000);
 
 
-                WriteLine(" ");
                 menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. i don't think its very wise to let it happen", "KILL THE BEE INSTEAD, are you a killer? psychopath? hell nah bro", "FIGHT BACK, be a hero here the dragons are coming after bees ", "NONE OF THESE, sybau i know you wont click it");
 
                 if (D1 == true)
@@ -125,12 +124,10 @@ namespace CodeCode
                 WriteLine(" ");
             WriteLine("Hang tight dude"); wait(700);
             WriteLine(" ");
-            WriteLine("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait();
-            WriteLine(" ");
-            WriteLine("we never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000);
-            WriteLine("In this , a human will try to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000);
+            Write("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait();
+            Write("we never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000); WriteLine();
+            Write("A human is trying to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000); WriteLine();
 
-                WriteLine(" ");
                 menu("KILL THE EXTRACTOR, what i mean by that is literal killing. Isn't it bad enough? haha ", "LET IT HAPPEN, shut up what you gonna do? huh what?", "SUICIDE, ummm yeah nah maybe but killing yourself is not gonna be a really good option bro", "NONE OF THESE, choose nothing and feel shamefull i know you wont choose this, will you? cmon now ");
                 if (D1 == true)
                 {
@@ -299,12 +296,10 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
                 Write("You held your roots harder"); wait();
-                Write(" ");
-                WriteLine("you are strong bro but the wind is wind"); Thread.Sleep(2000);
-                Write(" ");
+                WriteLine("you are strong bro but the wind is wind"); wait(700);
                 Clear();
                 goodbeep();
-                Write("WIND: ts wasnt me bro ");
+                Write("WIND: ts wasnt me bro "); wait();
                 selfishness += 5;
                 stupidity += 4;
                 plint += 8;
@@ -316,7 +311,7 @@ namespace CodeCode
                 ForegroundColor = ConsoleColor.Red;
                 Clear();
                 ForegroundColor = ConsoleColor.Red;
-                WriteLine("i knew you little plant would do that"); Thread.Sleep(2000);
+                WriteLine("I knew you little plant would do that"); Thread.Sleep(2000);
 
 
                 selfishness += 3;
@@ -351,9 +346,7 @@ namespace CodeCode
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
             WriteLine(" ");
             goodbeep();
-            Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
-                WriteLine(" ");
-                WriteLine(" ");
+            //Write("SO YOUR GLOBAL SCORE AFTER BEING A PLANT IS " + plint); wait();
                 WriteLine("PLEASE PRESS ENTER TO CONTINUE");
                 ReadLine();
 
