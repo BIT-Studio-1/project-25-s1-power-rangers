@@ -16,7 +16,6 @@ namespace CodeCode
         private static int SitOnCouch = 0;
         private static int Sure = 0;
         private static int Meow = 0;
-        private static int money = 67;
         private static string name;
 
         public static int SitOnCouch1
@@ -39,7 +38,7 @@ namespace CodeCode
         {
             CursorVisible = false;
             HumanLife1();
-
+            HumanLife2();
             HumanTotal();
             return;
 
@@ -73,12 +72,13 @@ namespace CodeCode
             Write("You are a homo sapien sapien"); ReadLine();
             Write("A human who loves to sit on a couch\n"); ReadLine();
             Write("Would you like to name the human?\n"); 
-            CursorVisible = true;
-            name = ReadLine();
+            CursorVisible = true; ForegroundColor = ConsoleColor.Green;
+            name = ReadLine(); ResetColor();
             CursorVisible = false;
-            Write("\nOh"); humanWait1(); Write("Sorry, I think you forgot that your name is already Hugh Mann"); humanWait1(); Write(" Hue for short"); ReadLine();
+            Write("\nOh"); humanWait1(); Write("Sorry, I think you forgot that your name is already"); ForegroundColor = ConsoleColor.DarkGreen; Write(" Hugh Mann"); ResetColor(); 
+            humanWait1(); ForegroundColor = ConsoleColor.DarkGreen; Write(" Hue"); ResetColor(); Write(" for short"); ReadLine();
             Clear();
-            Write("your pet cat, Alfredo Chicken is looking at you");  humanWait1(); Meow(); humanWait();
+            Write("your pet cat,"); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" is looking at you");  humanWait1(); Meow(); humanWait();
             Write("I think he's hungry\n"); ReadLine(); 
             WriteLine("Feed him?");
             switch (menu("Feed my son", "Don't feed em'", "meow back", "", 3))
@@ -90,10 +90,10 @@ namespace CodeCode
                     Meow += 5;
                     SitOnCouch += 2;
                     Sure += 3;
-                    Write("Alfredo Chicken is calling for you"); humanWait(); Write("You must feed him"); ReadLine();
-                    Write("You teleported to the kitchen couch and got Alfredo Chicken's favourite food, deluxe tuna from the pacific ocean that was caught yesterday");  humanWait();
-                    Write("specifically for Alfredo Chicken, as your cat lives in luxury"); ReadLine();
-                    Write("Alfredo Chicken meows happily as he eats like a cat"); Meow(); ReadLine();
+                    ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" is calling for you"); humanWait(); Write("You must feed him"); ReadLine();
+                    Write("You teleported to the kitchen couch and got "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write("'s favourite food, deluxe tuna from the pacific ocean that was caught yesterday");  humanWait();
+                    Write("specifically for "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(", as your cat lives in luxury"); ReadLine();
+                    ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" meows happily as he eats like a cat"); Meow(); ReadLine();
                     Write("Which he is a cat, "); ForegroundColor = ConsoleColor.Green; Write("hopefully"); ReadLine(); ResetColor();
                     break;
                     Meow();
@@ -105,7 +105,7 @@ namespace CodeCode
                     Meow -= 2;
                     Write("You think to yourself, your cat needs to learn how to survive the wilderness"); humanWait();
                     Write("So you teleport your cat to the porch couch"); ReadLine();
-                    Write("Alfredo Chicken is in distraught from the sudden change of environment"); Meow(); ReadLine();
+                    ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" is in distraught from the sudden change of environment"); Meow(); ReadLine();
                     Write("Don't you hear his meow of sorrow? Of fear?? Of betrayal???"); Meow(); ReadLine();
                     break;
                 case 'C':
@@ -116,9 +116,9 @@ namespace CodeCode
                     Sure += 1;
                     HumanMeow();
                     Write("Your meow was so powerful, your cat is agape with fear"); ReadLine();
-                    Write("Alfredo Chicken sees you as the big gato now and meows back (gato is spanish for cat)"); Meow(); ReadLine(); 
+                    ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" sees you as the big gato now and meows back (gato is spanish for cat)"); Meow(); ReadLine(); 
                     Write("So, you meow back again"); HumanMeow(); ReadLine();
-                    Write("What an eventful conversation with Alfredo Chicken"); ReadLine();
+                    Write("What an eventful conversation with "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); ReadLine();
                     break;
             }
             Clear();
@@ -134,7 +134,9 @@ namespace CodeCode
             Write("Just waking up, you feel groggy and certainly want something to eat"); ReadLine();
             Write("You teleported to the kitchen couch and just like clockwork, you hear a knock at the front door"); ReadLine();
             ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", your bfffff in the world has come to visit you"); ReadLine();
-            Write("In "); ForegroundColor = ConsoleColor.Blue; Write("Man Man's"); ResetColor(); Write(" hands, he has a caramel cheesecake and a cooler full of tropical juice"); ReadLine();
+            Write("In "); ForegroundColor = ConsoleColor.Blue; Write("Man Man's"); ResetColor(); Write(" hands, he has a "); 
+            ForegroundColor = ConsoleColor.Magenta; Write("caramel cheesecake"); ResetColor(); Write(" and a cooler full of"); 
+            ForegroundColor = ConsoleColor.Magenta; Write(" tropical juice"); ReadLine(); ResetColor();
             Write("Do you like the food?"); 
             switch (menu("No :[", "Yes :D", "Maybe", "", 3))
             {
@@ -142,16 +144,20 @@ namespace CodeCode
                     Clear();
                     CursorVisible = false;
                     SitOnCouch += 5; Sure -= 1;
-                    Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like caramel chezcakez no moer nd alzo t3peecall joos'\n"); ReadLine();
+                    Write("'"); ForegroundColor = ConsoleColor.Blue;Write("Man Man"); ResetColor(); Write(", I'm sorry..I don't like"); 
+                    ForegroundColor = ConsoleColor.Magenta; Write(" caramel chezcakez"); ResetColor(); Write(" no moer nd alzo"); ForegroundColor = ConsoleColor.Magenta; Write(" t3peecall joos"); ResetColor(); Write("'\n"); ReadLine();
                     ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" produced a single tear"); ReadLine();
                     Write("'It's okay, "); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor();  
-                    Write(" was just thinking of how much we bonded together while we shared a whole caramel cheesecake with some tropical juice for years now"); humanWait1(); Write("'"); ReadLine();
+                    Write(" was just thinking of how much we bonded together while we shared a whole "); 
+                    ForegroundColor = ConsoleColor.Magenta; Write("caramel cheesecake"); ResetColor(); 
+                    Write(" with some "); ForegroundColor = ConsoleColor.Magenta; Write("tropical juice "); ResetColor(); Write("for years now"); humanWait1(); Write("'"); ReadLine();
                     Write("'I just wanted to make you happy'"); humanWait1(); ForegroundColor = ConsoleColor.Blue; Write(" Man Man"); ResetColor(); Write(" looked at you with teary eyes\n"); ReadLine();
                     Write("As you think back to all the memories you somehow forgot, you realised how much you cared for "); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write("."); ReadLine();
                     Write("\nBut"); humanWait1(); Write(" you realised to late."); ReadLine();
                     ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" was so heartbroken that he teleported away and never came back"); ReadLine(); Clear();
                     Write("You sat there, wishing he'd come back"); ReadLine(); Write("Wishing that you hadn't hurt him so bad"); ReadLine(); 
-                    Write("Wishing that you could take back what you said"); ReadLine(); Write("Wishing that you could just have one more caramel cheesecake and tropical juice with him"); ReadLine();
+                    Write("Wishing that you could take back what you said"); ReadLine(); Write("Wishing that you could just have one more ");
+                    ForegroundColor = ConsoleColor.Magenta; Write("caramel cheesecake"); ResetColor(); Write(" and"); ForegroundColor = ConsoleColor.Magenta; Write(" tropical juice"); ResetColor(); Write(" with him"); ReadLine();
                     Write("But it was too late."); ReadLine();
                     Clear();
                     Write("You blacked out somehow and found yourself in a casino"); ReadLine();
@@ -161,59 +167,48 @@ namespace CodeCode
                     {
                         case 5:
                             int balls = 0;
-                            Write("pachinko machine."); ReadLine(); Clear();
-                            do
-                            {
-                                Write($"you have ${money} to your name"); ReadLine(); Clear(); 
-                                Write("you bought pack of "); ReadLine(); Clear();
-                                Write("_+===Pachinko Machine===+_"); ReadLine();
-                                Write("1"); ReadLine();
-                                Write("1"); ReadLine();
-                                Write("1"); ReadLine();
-                                Write("Do you wanna quit?\n(yes or no)"); 
-                                CursorVisible = true;
-                                quit = ReadLine();
-                                CursorVisible = false;
-                            } while (money > 0 && quit != "yes");
-
-
+                            Write("online horse racing section."); ReadLine(); Clear();
+                            Write($"you have no money and no patients to your name, so you left neighing and neighing"); ReadLine(); Clear(); 
                             break;
                         case 4:
                             Write("slot machine."); ReadLine();
-                            Write("1"); ReadLine();
-                            Write("1"); ReadLine();
-
+                            Write($"you have no money and luck to your name, so you left while making slot machine hand gestures, kaching, kaching, kaching"); ReadLine(); Clear();
                             break;
                         case 3:
-                            Write("roulette table."); ReadLine();
-                            Write("1"); ReadLine();
-                            Write("1"); ReadLine();
-                            Write("1"); ReadLine();
-
+                            Write("a rhythm game."); ReadLine();
+                            Write($"you have no money and skillz to your name, so you left wwaving your hands to the beat of the casino lobby music"); ReadLine(); Clear();
                             break;
                         default:
                             Write("mario kart 8 deluxe game"); ReadLine();
-                            Write("1"); ReadLine();
-                            Write("1"); ReadLine();
-
+                            Write($"you have no money to your name and also no friend to play with, so you left"); humanWait1(); Write(" mama mia"); ReadLine(); Clear();
                             break;
                     }
-
-
+                    Write($"while on the streets of New hampshire, you saw "); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" with a familiar face"); humanWait(); 
+                    ForegroundColor = ConsoleColor.Green; Write(name); ResetColor(); ReadLine();
+                    Write("The scene blinded you, jumping into the road"); ReadLine();
+                    Write("When you finally regained your sight, you felt like a deer in the headlights"); ReadLine();
+                    Write("You were hit by a car and died"); ReadLine();
                     break;
                 case 'B':
                     Clear();
                     CursorVisible = false;
                     SitOnCouch -= 5; Sure += 10;
-                    Write("I love them"); ReadLine();
-                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", I am so happy you are my friend Man Man"); ReadLine();
+                    Write("'I love them'"); ReadLine();
+                    Write("'"); ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(", I am so happy you are my friend"); ForegroundColor = ConsoleColor.Blue; Write(" Man Man"); ResetColor(); Write("'"); ReadLine();
+                    Write("You guys watched all the Cars movies"); ReadLine(); Clear();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" became your best man for your wedding, he took the first photo of you and your kid together"); ReadLine();
+                    ForegroundColor = ConsoleColor.Blue; Write("Man Man"); ResetColor(); Write(" was there for you when "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write("combusted"); ReadLine();
+                    Write("Truly"); humanWait1(); Write("  your best friend"); ReadLine();
+                    Write("You died of old age"); ReadLine();
 
                     break;
                 case 'C':
                     Clear();
+                    SitOnCouch = 100000000; Sure = 2; 
                     CursorVisible = false;
                     HumanMeow();
                     Write("meow"); ReadLine();
+                    Write("You combusted into a ball of flames"); ReadLine(); humanWait(); Write("You died"); ReadLine();
 
                     break;
             }
