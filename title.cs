@@ -22,12 +22,9 @@ namespace CodeCode
 
         public static void Wait()
         {
-            CursorVisible = false;
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500); Write(".");
-            Thread.Sleep(500);
-            CursorVisible = true;
 
         }
 
