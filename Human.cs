@@ -118,7 +118,7 @@ namespace CodeCode
                     Write("Your meow was so powerful, your cat is agape with fear"); ReadLine();
                     ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); Write(" sees you as the big gato now and meows back (gato is spanish for cat)"); Meow(); ReadLine(); 
                     Write("So, you meow back again"); HumanMeow(); ReadLine();
-                    Write("What an eventful conversation with "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); ResetColor(); ReadLine();
+                    Write("What an eventful conversation with "); ForegroundColor = ConsoleColor.Yellow; Write("Alfredo Chicken"); HellYeah(); ResetColor(); ReadLine();
                     break;
             }
             Clear();
