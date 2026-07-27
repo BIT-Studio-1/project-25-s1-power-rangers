@@ -51,9 +51,9 @@ namespace CodeCode
             Write("You now have been reincarnated as a "); Thread.Sleep(1000); wait();
             WriteLine("bird"); Thread.Sleep(1000);
             WriteLine(" ");
-            WriteLine("so now that youre bird, what do you think you can do?");wait();
+            WriteLine("so now that youre bird, what do you think you can do?"); wait();
             WriteLine(" ");
-            Write("Fly bro, what else?"); Thread.Sleep(500); wait();   
+            Write("Fly bro, what else?"); Thread.Sleep(500); wait();
             WriteLine("\n");
             WriteLine("CHIR CHIR CHIR");
             WriteLine(" ");
@@ -61,19 +61,19 @@ namespace CodeCode
             WriteLine("oh a pot is there, go fly and try drinking from it"); wait();
             WriteLine("yeah i know the water level is to low, thus here are some options what about what you can do");
 
-            menu("fill it with rocks so the water level rises, smart hah?", "find a straw nearby, generational aura thing :( ", "dont attempt drinking it, but youre thirsty bro", "start yapping, yapping birdyyy");
-            if (D1 == true)
+            switch (menu("fill it with rocks so the water level rises, smart hah?", "find a straw nearby, generational aura thing :( ", "dont attempt drinking it, but youre thirsty bro", "start yapping, yapping birdyyy"))
             {
+                case 'A':
                 badbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 WriteLine("That's a cool thing do to bud"); Thread.Sleep(2000);
                 variable += 3;
-                 flyish -= 2;
-                 berd += 5; 
-            }
-            if (D2 == true)
-            {
+                flyish -= 2;
+                berd += 5;
+                break;
+
+                case 'B':
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -81,10 +81,8 @@ namespace CodeCode
                 variable += 3;
                 flyish += 3;
                 berd += 2;
-
-            }
-            if (D3 == true)
-            {
+                    break;
+                case 'C':
                 goodbeep();
                 Clear();
                 HellYeah();
@@ -93,9 +91,8 @@ namespace CodeCode
                 variable += 1;
                 flyish += 5;
                 berd -= 2;
-            }
-            if (D4 == true)
-            { 
+                    break;
+                case 'D':
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -103,8 +100,10 @@ namespace CodeCode
                 WriteLine("Yeah yapper, you're more thirsty now. cope with it"); Thread.Sleep(2000);
                 variable += 5;
                 flyish += 5;
-                berd -=2 ;
+                berd -= 2;
+                    break;
             }
+        
             Clear();
             Write("So because of the choices you made before"); wait(1400);
             WriteLine(" ");
@@ -117,52 +116,55 @@ namespace CodeCode
             Write("So what you gonna do now?"); wait();
             Write("Please be a little smart");
 
-            menu("Making a nest for her, could be smart move ", "giving her the water, coz she was thirsty ", "yelling at her, not smart move btw ","do nothing and fly away");
-            if (D1 == true)
+            switch (menu("Making a nest for her, could be smart move ", "giving her the water, coz she was thirsty ", "yelling at her, not smart move btw ","do nothing and fly away"))
             {
-                goodbeep();
-                Clear();
-                ForegroundColor = ConsoleColor.Blue;
-                Suspense2SFX();
-                WriteLine("Oh that was a smart move, she did patchup with you"); Thread.Sleep(2000);
-                variable -= 3;
-                flyish -= 2;
-                berd += 5;
+                case 'A':
+                    goodbeep();
+                    Clear();
+                    ForegroundColor = ConsoleColor.Blue;
+                    Suspense2SFX();
+                    WriteLine("Oh that was a smart move, she did patchup with you"); Thread.Sleep(2000);
+                    variable -= 3;
+                    flyish -= 2;
+                    berd += 5;
+                    break;
+                case 'B':
+                    badbeep();
+                    Clear();
+                    ForegroundColor = ConsoleColor.Blue;
+                    DramaSFX();
+                    WriteLine("That was a smart thinking but you failed to find water, so she flew away from you"); Thread.Sleep(1000);
+                    variable += 0;
+                    flyish += 0;
+                    berd += 5;
+                    break;
+                case 'C':
+                    goodbeep();
+                    Clear();
+                    ForegroundColor = ConsoleColor.Blue;
+                    eagleSFX();
+                    WriteLine("That wasn't smart move, you loved her bro"); Thread.Sleep(2000);
+
+                    variable += 3;
+                    flyish += 4;
+                    berd -= 2;
+                    break;
+                case 'D':
+                    badbeep();
+                    Clear();
+                    ForegroundColor = ConsoleColor.Blue;
+                    Suspense2SFX();
+                    WriteLine("You loved her bro, you broke her heart birdyy"); Thread.Sleep(2000);
+                    variable += 5;
+                    flyish += 5;
+                    berd += 5;
+                    break;
             }
-            if (D2 == true)
-            {
-                badbeep();
-                Clear();
-                ForegroundColor = ConsoleColor.Blue;
-                DramaSFX();
-                WriteLine("That was a smart thinking but you failed to find water, so she flew away from you"); Thread.Sleep(1000);
-                variable += 0;
-                flyish += 0;
-                berd += 5;
-            }
-            if (D3 == true)
-            {
-                goodbeep();
-                Clear();
-                ForegroundColor = ConsoleColor.Blue;
-                eagleSFX();
-                WriteLine("That wasn't smart move, you loved her bro"); Thread.Sleep(2000);
-                
-                variable += 3;
-                flyish += 4;
-                berd -= 2;
-            }
-            if (D4 == true)
-            {
-                badbeep();
-                Clear();
-                ForegroundColor = ConsoleColor.Blue;
-                Suspense2SFX();
-                WriteLine("You loved her bro, you broke her heart birdyy"); Thread.Sleep(2000);
-                variable += 5;
-                flyish += 5;
-                berd += 5;
-            }
+
+                 
+                    
+                 
+
             Clear();
             Write("Look whats up there"); wait();
             WriteLine(" ");
@@ -180,9 +182,11 @@ namespace CodeCode
             WriteLine("lets see what you got in here");
 
 
-            menu("Fight the eagle... not a smart move", "fly away, could save your life", "save your lover bird, thats what a man would do", "do not do anything, sit there and be a coward ");
-            if (D1 == true)
+           switch( menu("Fight the eagle... not a smart move", "fly away, could save your life", "save your lover bird, thats what a man would do", "do not do anything, sit there and be a coward "))
             {
+
+
+                case 'A':
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -192,9 +196,10 @@ namespace CodeCode
                 variable -= 2;
                 flyish -= 2;
                 berd += 5;
-            }
-            if (D2 == true)
-            {
+                    break;
+
+                case 'B':
+            
                 badbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -202,14 +207,11 @@ namespace CodeCode
                 SuspenseSFX();
 
 
-
-
                 variable += 3;
                 flyish += 3;
                 berd -= 1;
-            }
-            if (D3 == true)
-            {
+                    break;
+                case 'C':
                 DramaSFX();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -217,9 +219,8 @@ namespace CodeCode
                 variable += 1;
                 flyish += 1;
                 berd += 3;
-            }
-            if (D4 == true)
-            {
+                    break;
+                case 'D':
                 eagleSFX();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -230,6 +231,7 @@ namespace CodeCode
                 variable += 3;
                 flyish += 3;
                 berd -= 2;
+                    break;
             }
             Clear();
             Write("Wait is that a cute humming bird"); wait();
@@ -243,9 +245,10 @@ namespace CodeCode
             Write("Ohh yeahh she likes you"); wait () ;
             WriteLine("what you gonna do now bro? "); wait ();
             Suspense2SFX ();
-            menu("Try approaching her, shes cute bro", "let her approach you, you are such a sigma bro", "pass her and fly away, not a wise move btw", "pretend to be a pigon, i mean pigeon");
-            if (D1 == true)
+            switch (menu("Try approaching her, shes cute bro", "let her approach you, you are such a sigma bro", "pass her and fly away, not a wise move btw", "pretend to be a pigon, i mean pigeon"))
+          
             {
+                case 'A':
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -254,9 +257,10 @@ namespace CodeCode
                 variable += 3;
                 flyish += 2;
                 berd += 0;
-            }
-            if (D2 == true)
-            {   DramaSFX ();
+                    break;
+
+                case 'B':
+               DramaSFX ();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 eagleSFX();
@@ -265,9 +269,8 @@ namespace CodeCode
                 variable += 2;
                 flyish += 2;
                 berd += 0;
-            }
-            if (D3 == true)
-            {
+                    break;
+                case 'C':
                 DramaSFX();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -276,9 +279,8 @@ namespace CodeCode
                 variable += 3;
                 flyish += 3;
                 berd += 0;
-            }
-            if (D4 == true)
-            {
+                    break;
+                case 'D':
                 Suspense2SFX();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
@@ -287,6 +289,7 @@ namespace CodeCode
                 variable += 3;
                 flyish += 3;
                 berd += 0;
+                    break;
             }
             //Clear();
             ForegroundColor = ConsoleColor.Blue;

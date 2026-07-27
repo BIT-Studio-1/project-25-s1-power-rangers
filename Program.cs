@@ -205,6 +205,7 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            debug();
             TitleScreen();
             if (GameTitle.start1 == 1)
             { 
