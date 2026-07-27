@@ -29,9 +29,7 @@ namespace CodeCode
         }
         static void amoebaScene1()
         {
-            int selfishness = 50;
-            int stupidity = 50;
-            int bravery = 0;
+            
             Clear();
             WriteLine("You've spawned in as an Amoeba");
             WriteLine("This is the beginning");
@@ -41,19 +39,14 @@ namespace CodeCode
 
             switch (menu("Try to see", "try to smell", "Try to taste", "Slide about", 4))
             {
-                case 'A': stupidity += 10; badbeep(); break;
-                case 'B': stupidity += 10; badbeep(); break;
-                case 'C': stupidity += 10; badbeep(); break;
-                case 'D': stupidity -= 10; goodbeep(); break;
+                case 'A': badbeep(); break;
+                case 'B': badbeep(); break;
+                case 'C': badbeep(); break;
+                case 'D': goodbeep(); break;
             }
 
             Clear();
-            WriteLine("Amoeba life is slow");
-            WriteLine("Amoeba");
-
-
-            // add more questions
-            Write("Ameba life is so slow that life turns into death and Ameoba dies     (press enter)"); ReadLine();
+            
             return;
         }
 
