@@ -49,25 +49,25 @@ namespace CodeCode
             Clear();
             ForegroundColor = ConsoleColor.Blue;
             Write("You now have been reincarnated as a "); Thread.Sleep(1000); wait();
-            WriteLine("bird"); Thread.Sleep(1000);
+            WriteLine("BIRD"); Thread.Sleep(1000);
             WriteLine(" ");
-            WriteLine("so now that youre bird, what do you think you can do?");wait();
+            WriteLine("So now that youre bird, what do you think you can do?");wait();
             WriteLine(" ");
             Write("Fly bro, what else?"); Thread.Sleep(500); wait();   
             WriteLine("\n");
-            WriteLine("chir chir chir");
+            WriteLine("CHIR CHIR CHIR");
             WriteLine(" ");
             Write("OKAY YOURE THIRSTY NOW andddddddddddd........ your lover bird is thirsty tooo"); Thread.Sleep(500); wait();
-            WriteLine("oh a pot is there, go fly and try drinking from it"); wait();
-            WriteLine("yeah i know the water level is to low, thus here are some options what about what you can do");
+            WriteLine("Oh a pot is there, go fly and try drinking from it"); wait();
+            WriteLine("Yeah i know the water level is to low, thus here are some options what about what you can do");
 
-            menu("fill it with rocks so the water level rises, smart hah?", "find a straw nearby, generational aura thing :( ", "dont attempt drinking it, but youre thirsty bro", "start yapping, yapping birdyyy");
+            menu("Fill it with rocks so the water level rises, smart hah?", "find a straw nearby, generational aura thing :( ", "dont attempt drinking it, but youre thirsty bro", "start yapping, yapping birdyyy");
             if (D1 == true)
             {
                 badbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
-                WriteLine("ahan thats a cool thing do to bud"); Thread.Sleep(2000);
+                WriteLine("Ahan thats a cool thing do to bud"); Thread.Sleep(2000);
                 variable += 3;
                  flyish -= 2;
                  berd += 5; 
@@ -76,8 +76,8 @@ namespace CodeCode
             {
                 goodbeep();
                 Clear();
-                ForegroundColor = ConsoleColor.Blue;
-                WriteLine("you're smart bird, but nah why do you think you will find a straw nearby huh? "); Thread.Sleep(2000);
+                ForegroundColor = ConsoleColor.White;
+                WriteLine("You're smart bird, but nah why do you think you will find a straw nearby huh? "); Thread.Sleep(2000);
                 variable += 3;
                 flyish += 3;
                 berd += 2;
@@ -89,7 +89,7 @@ namespace CodeCode
                 Clear();
                 HellYeah();
                 ForegroundColor = ConsoleColor.Blue;
-                WriteLine("yeah that wasn't very wise but here we go again"); Thread.Sleep(2000);
+                WriteLine("Yeah that wasn't very wise but here we go again"); Thread.Sleep(2000);
                 variable += 1;
                 flyish += 5;
                 berd -= 2;
