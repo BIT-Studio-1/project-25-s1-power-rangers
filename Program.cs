@@ -383,12 +383,13 @@ namespace CodeCode
 
             }
 
-
         }
-
-
-
-
-
+        public static void ShowTree()
+        {
+            bool showNotDiscovered = false;
+            WriteLine("[Not Discovered]");
+        }
     }
 }
+
+
