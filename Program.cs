@@ -27,7 +27,7 @@ namespace CodeCode
 
         static ConsoleKey key;
 
-        static int globalScore = 0;
+        public static int globalScore = 1;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -207,10 +207,10 @@ namespace CodeCode
             Console.OutputEncoding = Encoding.UTF8;
             TitleScreen();
             if (GameTitle.start1 == 1)
-            { 
+            {
                 amebaScene1();
                 plantLife();
-                if (plant.Stupidity >= 48) 
+                if (plant.Stupidity >= 48)
                 {
                     wormlife();
                     if (worm.fishGateway == true)
@@ -230,22 +230,22 @@ namespace CodeCode
                             starfishLife();
                         }
                     }
-                   
-                        
-                        
+
+
+
+                    else
+                    {
+                        if (worm.Dirt_consumed >= 20)
+                        {
+                            sasquatchLife();
+                        }
                         else
                         {
-                            if (worm.Dirt_consumed >= 20)
-                            {
-                                sasquatchLife();
-                            }
-                            else
-                            {
-                                birdLife();
-                            }
+                            birdLife();
                         }
+                    }
 
-                    
+
                 }
                 else
                 {
@@ -296,7 +296,7 @@ namespace CodeCode
             return;
         }
 
-       
+
         static void amebaScene1()
         {
             int selfishness = 50;
@@ -368,7 +368,7 @@ namespace CodeCode
                         case 2:
                             amebaScene1();
                             break;
-                        
+
                         default:
                             go = 1;
                             break;
@@ -384,7 +384,9 @@ namespace CodeCode
 
 
         }
-
+        
+            
+                
 
 
 
