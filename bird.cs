@@ -49,7 +49,7 @@ namespace CodeCode
             Clear();
             ForegroundColor = ConsoleColor.White;
             Write("You now have been reincarnated as a "); Thread.Sleep(1000); wait();
-            WriteLine("bird"); Thread.Sleep(1000);
+            WriteLine("BIRD"); Thread.Sleep(1000);
             WriteLine(" ");
             WriteLine("so now that youre bird, what do you think you can do?"); wait();
             WriteLine(" ");
@@ -58,8 +58,8 @@ namespace CodeCode
             WriteLine("CHIR CHIR CHIR");
             WriteLine(" ");
             Write("OKAY YOURE THIRSTY NOW andddddddddddd........ your lover bird is thirsty tooo"); Thread.Sleep(500); wait();
-            WriteLine("oh a pot is there, go fly and try drinking from it"); wait();
-            WriteLine("yeah i know the water level is to low, thus here are some options what about what you can do");
+            WriteLine("Oh a pot is there, go fly and try drinking from it"); wait();
+            WriteLine("Yeah i know the water level is to low, thus here are some options what about what you can do");
 
             switch (menu("fill it with rocks so the water level rises, smart hah?", "find a straw nearby, generational aura thing :( ", "dont attempt drinking it, but youre thirsty bro", "start yapping, yapping birdyyy"))
             {
