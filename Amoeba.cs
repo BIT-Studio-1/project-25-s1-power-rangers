@@ -44,9 +44,25 @@ namespace CodeCode
                 case 'C': badbeep(); break;
                 case 'D': goodbeep(); break;
             }
+            
+            Clear();
+            WriteLine("Amoeba life is slow but not completely frozen");
+            WriteLine("As a unicellular eukaryotic organism you don't have many choices");
+            WriteLine("What would you like to try next?");
+
+            switch (menu("Contract Vacuoles","Granulise endoplasm","Binary fission","Just survive", 4))
+            {
+                case 'A': badbeep(); break;
+                case 'B': badbeep(); break;
+                case 'C': goodbeep(); break;
+                case 'D': badbeep(); break;
+            }
 
             Clear();
-            
+            WriteLine("Congratulations! Your time as an Amoeba was short but sweet, it's time to move onto the next life!");
+            WriteLine("Please press enter to continue");
+            ReadLine();
+
             return;
         }
 
