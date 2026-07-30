@@ -208,10 +208,10 @@ namespace CodeCode
             debug();
             TitleScreen();
             if (GameTitle.start1 == 1)
-            { 
+            {
                 amebaScene1();
                 plantLife();
-                if (plant.Stupidity >= 48) 
+                if (plant.Stupidity >= 48)
                 {
                     wormlife();
                     if (worm.fishGateway == true)
@@ -231,22 +231,22 @@ namespace CodeCode
                             starfishLife();
                         }
                     }
-                   
-                        
-                        
+
+
+
+                    else
+                    {
+                        if (worm.Dirt_consumed >= 20)
+                        {
+                            sasquatchLife();
+                        }
                         else
                         {
-                            if (worm.Dirt_consumed >= 20)
-                            {
-                                sasquatchLife();
-                            }
-                            else
-                            {
-                                birdLife();
-                            }
+                            birdLife();
                         }
+                    }
 
-                    
+
                 }
                 else
                 {
@@ -297,7 +297,7 @@ namespace CodeCode
             return;
         }
 
-       
+
         static void amebaScene1()
         {
             int selfishness = 50;
@@ -369,13 +369,14 @@ namespace CodeCode
                         case 2:
                             amebaScene1();
                             break;
-                        
+
                         default:
                             go = 1;
                             break;
                     }
                 }
-                else {
+                else
+                {
                     Clear();
                     WriteLine("Invalid input, please enter a single digit number");
                 }
@@ -383,12 +384,49 @@ namespace CodeCode
 
             }
 
+        }
+        public static void ShowTree()
+        {
+            bool showNotDiscovered = false;
+            string nd = "";
+
+            if (showNotDiscovered == true)
+            {
+                nd = "[Not Discovered]";
+            }
+            WriteLine(nd);
+
+            string thing =
+            $@"
+Amoeba
+    └── Plant
+    ├── Fish
+    |   ├── {LD(starfishDiscovered, "Starfish")}
+    |   ├── Dolphin
+    |   |   ├── Shark
+    |       |   └── [Not Discovered]
+    |       └── [Not Discovered]
+    |           └── [Not Discovered]
+    └── {LD(wormDiscovered, "Worm")}
+        ├── Bird
+        |   ├── [Scrapped]
+        |   └── [Scrapped]
+        └── [Not Discovered]
+            ├── [Not Discovered]
+            └── [Not Discovered]
+            ";
 
         }
-
-
-
+        // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
+        public static string LD(bool b, string name) { 
+            if (b == true) {
+                return new string($"\u001b[32m{name}\u001b[0m");
+            }
+            return "[Not Discovered]";
+        }
 
 
     }
 }
+
+

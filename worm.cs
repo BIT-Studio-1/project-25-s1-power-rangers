@@ -19,6 +19,8 @@ namespace CodeCode
         private static int length = 8;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
+
+        public static bool wormDiscovered = false;
         public static int Length
         {
             get { return length; }
@@ -37,6 +39,7 @@ namespace CodeCode
 
         public static void wormlife()
         {
+            wormDiscovered = true;
             wormscene();
             wormtotal();
             return;
