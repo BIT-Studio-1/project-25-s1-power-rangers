@@ -420,7 +420,7 @@ Amoeba
         // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
         public static string LD(bool b, string name) { 
             if (b == true) {
-                return name;
+                return new string($"\u001b[32m{name}\u001b[0m");
             }
             return "[Not Discovered]";
         }
