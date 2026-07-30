@@ -17,7 +17,7 @@ using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
-using static CodeCode.worm;
+using static CodeCode.Worm;
 using System.ComponentModel.Design;
 
 namespace CodeCode
@@ -27,7 +27,7 @@ namespace CodeCode
 
         static ConsoleKey key;
 
-        static int globalScore = 0;
+        public static int globalScore = 0;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -213,8 +213,8 @@ namespace CodeCode
                 plantLife();
                 if (plant.Stupidity >= 48) 
                 {
-                    wormlife();
-                    if (worm.fishGateway == true)
+                    WormLife();
+                    if (Worm.fishGateway == true)
                     {
                         fishLife();
                         if (Fish.Selfishness >= 25)
@@ -236,7 +236,7 @@ namespace CodeCode
                         
                         else
                         {
-                            if (worm.Dirt_consumed >= 20)
+                            if (Worm.Dirt_consumed >= 20)
                             {
                                 sasquatchLife();
                             }
@@ -324,7 +324,7 @@ namespace CodeCode
 
 
             // add more questions
-            Write("Ameba life is so slow that life turns into death and Ameoba dies     (press enter)"); ReadLine();
+            Write("Ameba life is so slow that life turns into death and Amoeba dies     (press enter)"); ReadLine();
             return;
         }
 
@@ -361,7 +361,7 @@ namespace CodeCode
                             fishLife();
                             break;
                         case 4:
-                            wormlife();
+                            WormLife();
                             break;
                         case 3:
                             plantLife();

@@ -35,6 +35,13 @@ namespace CodeCode
             WormTotal();
             return;
         }
+        private static void Wait()
+        {
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500); Write(".");
+            Thread.Sleep(500);
+        }
         public static void WormScene()
         {
             fishGateway = false;
@@ -138,7 +145,7 @@ namespace CodeCode
             }
             Clear();
             WriteLine("After escaping that perilous situation, you are face to face with...");
-            Thread.Sleep(2500);
+            Thread.Sleep(2000);
             Clear();
             WriteLine("Another worm!!!!");
             WriteLine("FIGHT ME. he declares");
@@ -171,7 +178,7 @@ namespace CodeCode
                     }
                     break;
                 case 'C':
-                    Write("Hey Hey Hey we can talk about this! you say to your opponent.");
+                    Write("Hey, hey, hey! We can talk about this! you say to your opponent.");
                     Thread.Sleep(500);
                     Write("I HUNGER FOR WORM BLOOD!!!! replies your opponent.");
                     Thread.Sleep(1000);
@@ -307,6 +314,7 @@ namespace CodeCode
         }
         public static void WormTotal()
         {
+            globalScore += dirt_consumed+wiggles ;
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Worm Life"); Thread.Sleep(300);
             WriteLine($"how much dirt you ate: {dirt_consumed}" +
