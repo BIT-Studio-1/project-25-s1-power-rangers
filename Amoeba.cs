@@ -23,11 +23,11 @@ namespace CodeCode
 {
     internal class Amoeba
     {
-        public static void amoebaLife()
+        public static void AmoebaLife()
         {
-            amoebaScene1();
+            AmoebaScene1();
         }
-        static void amoebaScene1()
+        static void AmoebaScene1()
         {
             
             Clear();

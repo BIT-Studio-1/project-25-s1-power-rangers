@@ -209,7 +209,7 @@ namespace CodeCode
             TitleScreen();
             if (GameTitle.start1 == 1)
             {
-                amebaScene1();
+                AmoebaLife();
                 plantLife();
                 if (plant.Stupidity >= 48)
                 {
