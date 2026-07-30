@@ -411,7 +411,7 @@ Amoeba
         ├── Bird
         |   ├── [Scrapped]
         |   └── [Scrapped]
-        └── [Not Discovered]
+        └── Snake
             ├── [Not Discovered]
             └── [Not Discovered]
             ";
@@ -422,7 +422,7 @@ Amoeba
             if (b == true) {
                 return new string($"\u001b[32m{name}\u001b[0m");
             }
-            return "[Not Discovered]";
+            return new string($"\u001b[31m{name}\u001b[0m");
         }
 
 
