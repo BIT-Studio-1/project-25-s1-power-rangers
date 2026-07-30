@@ -20,14 +20,16 @@ namespace CodeCode
             CursorVisible = true;
 
         }
+        private static void pressEnter()
+        {
+            ForegroundColor = ConsoleColor.Yellow; Write(" (Press enter)"); ResetColor();
+            CursorVisible = true;
+        }
         private static void compute()
         {
             Console.Write("rock....."); Thread.Sleep(100);
             Write("paper....."); Thread.Sleep(100);
             Write("scissors....."); Thread.Sleep(100);
-
-
-
             //Console.WriteLine(computer);
             Random rand = new Random();
             int count = 0;
@@ -35,9 +37,7 @@ namespace CodeCode
             {
                 //Console.Beep();
                 Console.Beep((int)rand.Next(500, 1000), 80);
-
                 count += 1;
-
             }
         }
         public static bool PSRgame()
@@ -45,18 +45,13 @@ namespace CodeCode
             Clear();
             Write("You challenged the homeless guy to rock paper scissors"); wait();
             Write("The format is first to 3"); wait(600);
-
             int playerScore = 0;
             int computerScore = 0;
-
-            
             do
             {
                 Clear();
                 WriteLine($"Your current score: \u001b[1m{playerScore}\u001b[0m        Homeless guy's current score: \u001b[1m{computerScore}\u001b[0m");
                 //Write("Do you use Rock 'R', Paper 'P', or Scissors 'S'\n: ");
-                
-
                 char player = ' ';
                 bool keepGoingBruh = false;
                 do {
@@ -81,8 +76,6 @@ namespace CodeCode
                 char computer;
 
                 compute();
-
-
                 switch (computertemp)
                 {
                     case 0:
@@ -99,16 +92,11 @@ namespace CodeCode
                         computer = 'S';
                         WriteLine(" Homeless guy used Scissors"); Thread.Sleep(700);
                         break;
-
-
-
                 }
-
                 if (player == computer)
                 {
                     Write("This round is a draw");
                 }
-
                 else
                 {
                     if (
@@ -123,11 +111,9 @@ namespace CodeCode
                     {
                         Write("You lost this round");
                         computerScore++;
-
                     }
                 }
-                Write(" (press enter)");
-                ReadLine();
+                pressEnter(); ReadLine();
             } while (playerScore < 3 && computerScore < 3);
 
             Clear();
@@ -140,9 +126,7 @@ namespace CodeCode
             else { 
                 Write("You lost the game of paper scissors rock"); wait();
                 Write("Homeless guy: 'If you win, I'll give you my english dictionary'"); wait();
-
                 return false;
-
             }
         }
     }
