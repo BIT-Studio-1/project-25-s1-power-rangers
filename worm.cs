@@ -31,7 +31,11 @@ namespace CodeCode
         }
         public static void WormLife()
         {
-            WormScene();
+            length = 8
+            fishGateway = false;
+            dirt_consumed = 0;
+            wiggles = 0;
+            WormScene1();
             WormTotal();
             return;
         }
@@ -42,9 +46,8 @@ namespace CodeCode
             Thread.Sleep(500); Write(".");
             Thread.Sleep(500);
         }
-        public static void WormScene()
+        public static void WormScene1()
         {
-            fishGateway = false;
             Clear();
             WriteLine("**You are a worm now**");
             Write("It's time to decide your destiny... (Press Enter)");
@@ -54,10 +57,10 @@ namespace CodeCode
             ReadLine();
             Clear();
             Write("It begins to rain, what will you do?");
-            switch (menu("Swim to the surface", "hold your breath", "drink the water", "wiggle"))
+            switch (menu("Swim to the surface", "Hold your breath", "Drink the water", "Wiggle"))
             {
                 case 'A':
-                    WriteLine("You swim your way to the surface, you feel the rain drops falling against your long wormy body. your hear the sound of wings flapping overhead. ");
+                    WriteLine("You swim your way to the surface, you feel the rain drops falling against your long wormy body. Your hear the sound of wings flapping overhead. ");
                     ReadLine();
                     wiggles += 10;
                     dirt_consumed += 5;
@@ -83,7 +86,7 @@ namespace CodeCode
                     Thread.Sleep(1000);
                     WriteLine("You can't hold in the liquid and rocket towards the surface, propelled by the water, flying all through the air, slamming into a bird");
                     Thread.Sleep(1000);
-                    WriteLine("it seems all the water has stretched you out and increased your length.");
+                    WriteLine("It seems all the water has stretched you out and increased your length.");
                     Thread.Sleep(1000);
                     ReadLine();
                     length += 10;
@@ -91,10 +94,10 @@ namespace CodeCode
                 default:
                     Clear();
                     bool wiggle = false;
-                    WriteLine("wiggle.");
+                    WriteLine("Wiggle.");
                     while (wiggle == false && wiggles <= 30)
                     {
-                        switch (menu("wiggle?", "wiggle more?", "wiggle a little less", "stop wiggling"))
+                        switch (menu("Wiggle?", "Wiggle more?", "Wiggle a little less", "Stop wiggling"))
                         {
                             default:
                                 Clear();
@@ -153,7 +156,7 @@ namespace CodeCode
             Random rand = new Random();
             int op_len = rand.Next(1,20);
             WriteLine($"Your current length is {length}, your opponent is {op_len}");
-            switch (menu("wiggle away", "strangle your opponent", "talk it out", "wiggle"))
+            switch (menu("Wiggle away", "Strangle your opponent", "Talk it out", "Wiggle"))
             {
                 case 'A':
                     Write("You manage to wiggle away into the ground without any conflict and live to wiggle another day");
@@ -164,7 +167,7 @@ namespace CodeCode
                 case 'B':
                     if (length > op_len)
                     {
-                        Write("you manage to wrap your body around your opponent and squeeze with all your might until... POP your opponent explodes.");
+                        Write("You manage to wrap your body around your opponent and squeeze with all your might until... POP your opponent explodes!");
                         Thread.Sleep(1500);
                         WriteLine("You consume your opponent");
                         length = length + op_len;
@@ -172,7 +175,7 @@ namespace CodeCode
                     }
                     else 
                     {
-                        Write("You attempt to wrap around your opponent but they're longer and faster then you! they snake their way around you and POP... \nyou rip in half, your lenth reduced to 1.");
+                        Write("You attempt to wrap around your opponent but they're longer and faster then you! they snake their way around you and POP... \nyou rip in half, your length reduced to 1.");
                         length = 1;
                         ReadLine();
                     }
@@ -188,7 +191,7 @@ namespace CodeCode
                         case 'A':
                             Write("You give the worm a sob story about how when you were younger, a bird swooped down and ate your worm parents\n and that you've been alone ever since...");
                             Thread.Sleep(1000);
-                            Write("your opponent feels bad for you and lets you move on.");
+                            Write("Your opponent feels bad for you and lets you move on.");
                             ReadLine();
                             break;
                         case 'B':
@@ -247,25 +250,25 @@ namespace CodeCode
                     break;
             }
             Read();
-            Write("after all that, you're incredibly hungry!");
+            Write("After all that, you're incredibly hungry!");
             Thread.Sleep(2000);
             Clear();
-            Write("dirtttttt!!");
+            Write("Dirtttttt!!");
             Write("How much dirt do you want to eat?");
-            switch (menu("just a little bit of dirt", "a medium amount of dirt", "okay... that's a lot of dirt-", "HOLY HOW DID YOU EAT THAT MUCH"))
+            switch (menu("Just a little bit of dirt", "A medium amount of dirt", "Okay... that's a lot of dirt-", "HOLY HOW DID YOU EAT THAT MUCH"))
             {
                 case 'A':
                     dirt_consumed+=1;
-                    Write("that wasn't much, you sure you don't want more?");
-                    switch (menu("a little more couldn't hurt...", "no, I'm okay", "", ""))
+                    Write("That wasn't much, you sure you don't want more?");
+                    switch (menu("A little more couldn't hurt...", "No, I'm okay", "", ""))
                     {
                         case 'A':
-                            Write("you eat a little more dirt");
+                            Write("You eat a little more dirt");
                             goodbeep();
                             dirt_consumed+=1;
                             break;
                         default:
-                            Write("you refuse to eat any more dirt.");
+                            Write("You refuse to eat any more dirt.");
                             Read();
                             break;
                     }
@@ -278,7 +281,7 @@ namespace CodeCode
                 case 'C':
                     dirt_consumed+=10;
                     length+=10;
-                    Write("you eat a questionable amount of dirt, it converts into length");
+                    Write("You eat a questionable amount of dirt, it converts into length");
                     Read();
                     break;
                 default:
@@ -293,7 +296,7 @@ namespace CodeCode
                 Write("While sleeping off your dirt eating, you find a nice spot in the grass.\n just as you're starting to fall asleep, you see a large shape over you...");
                 Thread.Sleep(2000);
                 Clear();
-                Write("\nthen it starts to come closer...");
+                Write("\nThen it starts to come closer...");
                 Thread.Sleep(2000);
                 Clear();
                 Write("\nIt's a foot!!");
@@ -317,7 +320,7 @@ namespace CodeCode
             globalScore += dirt_consumed+wiggles ;
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Worm Life"); Thread.Sleep(300);
-            WriteLine($"how much dirt you ate: {dirt_consumed}" +
+            WriteLine($"How much dirt you ate: {dirt_consumed}" +
             $"\nHow long were you: {length}" +
             $"\nHow many times did you wiggle: {wiggles}"); ResetColor();
             Write("Press enter to reincarnate to your next life");
