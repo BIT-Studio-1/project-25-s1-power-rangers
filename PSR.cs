@@ -43,7 +43,7 @@ namespace CodeCode
         public static bool PSRgame()
         {
             Clear();
-            Write("You challenged the homeless guy to rock paper scissors"); wait();
+            Write("You challenged the homeless guy to rock-paper-scissors"); wait();
             Write("The format is first to 3"); wait(600);
             int playerScore = 0;
             int computerScore = 0;
@@ -120,12 +120,12 @@ namespace CodeCode
             WriteLine($"Your final score: \u001b[1m{playerScore}\u001b[0m      Homeless guy's final score: \u001b[1m{computerScore}\u001b[0m");
             if (playerScore == 3)
             {
-                Write("You won the game of paper scissors rock"); wait();
+                Write("You won the game of rock-paper-scissors"); wait();
                 return true;
             }
             else { 
-                Write("You lost the game of paper scissors rock"); wait();
-                Write("Homeless guy: 'If you win, I'll give you my english dictionary'"); wait();
+                Write("You lost the game of rock-paper-scissors"); wait();
+                Write("Homeless guy: 'If you win, I'll give you my "); ForegroundColor = ConsoleColor.Green; Write("English dictionary"); ResetColor(); Write("'"); wait(); pressEnter(); ReadLine();
                 return false;
             }
         }
