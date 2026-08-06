@@ -17,7 +17,7 @@ using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
-using static CodeCode.worm;
+using static CodeCode.Worm;
 using static CodeCode.Amoeba;
 using System.ComponentModel.Design;
 
@@ -28,6 +28,7 @@ namespace CodeCode
 
         static ConsoleKey key;
 
+        public static int globalScore = 0;
         public static int globalScore = 1;
         static int option = 1;
         public static bool D1 = false;
@@ -214,8 +215,8 @@ namespace CodeCode
                 plantLife();
                 if (plant.Stupidity >= 48)
                 {
-                    wormlife();
-                    if (worm.fishGateway == true)
+                    WormLife();
+                    if (Worm.fishGateway == true)
                     {
                         fishLife();
                         if (Fish.Selfishness >= 25)
@@ -243,6 +244,14 @@ namespace CodeCode
                         }
                         else
                         {
+                            if (Worm.Dirt_consumed >= 20)
+                            {
+                                sasquatchLife();
+                            }
+                            else
+                            {
+                                birdLife();
+                            }
                             birdLife();
                         }
                     }
@@ -299,6 +308,11 @@ namespace CodeCode
         }
 
 
+
+            // add more questions
+            Write("Ameba life is so slow that life turns into death and Amoeba dies     (press enter)"); ReadLine();
+            return;
+        }
         
 
         public static void debug()
@@ -334,7 +348,7 @@ namespace CodeCode
                             fishLife();
                             break;
                         case 4:
-                            wormlife();
+                            WormLife();
                             break;
                         case 3:
                             plantLife();
