@@ -49,7 +49,9 @@ namespace CodeCode
             Clear();
             ForegroundColor = ConsoleColor.White;
             Write("You now have been reincarnated as a ");  wait();
+            ForegroundColor = ConsoleColor.DarkMagenta;
             WriteLine("BIRD"); Thread.Sleep(1000);
+            ResetColor();
             WriteLine(" ");
             WriteLine("So now that you're bird, What do you think you can do?"); wait();
             WriteLine(" ");
@@ -57,7 +59,8 @@ namespace CodeCode
             WriteLine("\n");
             WriteLine("CHIR CHIR CHIR");
             WriteLine(" ");
-            Write("OKAY YOURE THIRSTY NOW andddddddddddd........ your lover bird is thirsty too");  wait();
+            ForegroundColor = ConsoleColor.DarkGreen;
+            Write("OKAY YOURE THIRSTY NOW andddddddddddd........ Your lover bird is thirsty too");  wait();
             WriteLine("Oh a pot is there, go fly and try drinking from it"); wait();
             WriteLine("Yeah i know the water level is to low, Thus here are some options what about what you can do");
 
@@ -67,7 +70,7 @@ namespace CodeCode
                 badbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
-                WriteLine("That's a cool thing do to bud"); Thread.Sleep(2000);
+                Write("That's a cool thing do to bud"); wait();
                 variable += 3;
                 flyish -= 2;
                 berd += 5;
@@ -76,7 +79,7 @@ namespace CodeCode
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
-                WriteLine("You're smart bird, but nah why do you think you will find a straw nearby huh? "); Thread.Sleep(2000);
+                Write("You're smart bird, but nah why do you think you will find a straw nearby huh? "); wait();
                 variable += 3;
                 flyish += 3;
                 berd += 2;
@@ -86,7 +89,7 @@ namespace CodeCode
                 Clear();
                 HellYeah();
                 ForegroundColor = ConsoleColor.Blue;
-                WriteLine("Yeah that wasn't very wise but here we go again"); Thread.Sleep(2000);
+                Write("Yeah that wasn't very wise but here we go again"); wait();
                 variable += 1;
                 flyish += 5;
                 berd -= 2;
@@ -96,7 +99,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 HellYeah();
-                WriteLine("Yeah yapper, You're more thirsty now. cope with it"); Thread.Sleep(2000);
+                Write("Yeah yapper, You're more thirsty now. cope with it"); wait();
                 variable += 5;
                 flyish += 5;
                 berd -= 2;
@@ -122,7 +125,7 @@ namespace CodeCode
                     Clear();
                     ForegroundColor = ConsoleColor.Blue;
                     Suspense2SFX();
-                    WriteLine("Oh that was a smart move, She did patch up with you"); Thread.Sleep(2000);
+                    Write("Oh that was a smart move, She did patch up with you"); wait();
                     variable -= 3;
                     flyish -= 2;
                     berd += 5;
@@ -132,7 +135,7 @@ namespace CodeCode
                     Clear();
                     ForegroundColor = ConsoleColor.Blue;
                     DramaSFX();
-                    WriteLine("That was a smart thinking but you failed to find water, So she flew away from you"); Thread.Sleep(1000);
+                    Write("That was a smart thinking but you failed to find water, So she flew away from you"); wait();
                     variable += 0;
                     flyish += 0;
                     berd += 5;
@@ -142,7 +145,7 @@ namespace CodeCode
                     Clear();
                     ForegroundColor = ConsoleColor.Blue;
                     eagleSFX();
-                    WriteLine("That wasn't smart move, You loved her bro"); Thread.Sleep(2000);
+                    Write("That wasn't smart move, You loved her bro"); wait();
                     variable += 3;
                     flyish += 4;
                     berd -= 2;
@@ -152,7 +155,7 @@ namespace CodeCode
                     Clear();
                     ForegroundColor = ConsoleColor.Blue;
                     Suspense2SFX();
-                    WriteLine("You loved her bro, You broke her heart birdyy"); Thread.Sleep(2000);
+                    Write("You loved her bro, You broke her heart birdyy"); wait();
                     variable += 5;
                     flyish += 5;
                     berd += 5;
@@ -182,7 +185,7 @@ namespace CodeCode
                 goodbeep();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
-                Write("You tried really hard... "); wait();
+                Write("You tried really hard"); wait();
                 eagleSFX();
                 Write("You killed the eagle"); wait();
                 variable -= 2;
@@ -197,8 +200,6 @@ namespace CodeCode
                 ForegroundColor = ConsoleColor.Blue;
                 Write("That was really a coward move, It has killed your lover"); wait();
                 SuspenseSFX();
-
-
                 variable += 3;
                 flyish += 3;
                 berd -= 1;
@@ -207,7 +208,7 @@ namespace CodeCode
                 DramaSFX();
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
-                Write("Glad you saved her bro, You guys have patched up now");
+                Write("Glad you saved her bro, You guys have patched up now"); wait();
                 variable += 1;
                 flyish += 1;
                 berd += 3;
@@ -245,7 +246,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 eagleSFX ();
-                Write("You so fool, it was a eagle and you got killed");
+                Write("You so fool, it was a eagle and you got killed"); wait();
                 variable += 3;
                 flyish += 2;
                 berd += 0;
@@ -256,7 +257,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 eagleSFX();
-                Write("You so fool, it was a eagle and you got killed");
+                Write("You so fool, it was a eagle and you got killed"); wait();
 
                 variable += 2;
                 flyish += 2;
@@ -267,7 +268,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 eagleSFX();
-                Write("You so fool, it was a eagle and you got killed");
+                Write("You so fool, it was a eagle and you got killed"); wait();
                 variable += 3;
                 flyish += 3;
                 berd += 0;
@@ -277,7 +278,7 @@ namespace CodeCode
                 Clear();
                 ForegroundColor = ConsoleColor.Blue;
                 eagleSFX();
-                Write("You so fool, it was a eagle and you got killed");
+                Write("You so fool, it was a eagle and you got killed"); wait();
                 variable += 3;
                 flyish += 3;
                 berd += 0;
@@ -290,13 +291,13 @@ namespace CodeCode
         {
             globalScore = berd + variable - flyish;
             ForegroundColor = ConsoleColor.Blue;
-            Write("Your stupidity is ");
+            Write("Your stupidity is "); wait();
             WriteLine($"{variable}");
             WriteLine(" ");
-            Write("Your selfishness is ");
+            Write("Your selfishness is "); wait();
             WriteLine($"{flyish}");
             WriteLine(" ");
-            Write("Your score is ");
+            Write("Your score is "); wait();
             WriteLine($"{berd}");
             WriteLine("(Press enter to continue)"); ReadLine();
         }
