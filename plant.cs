@@ -48,7 +48,7 @@ namespace CodeCode
             Write("IT IS NOW THE TIME TO DECIDE YOUR DESTINY"); wait();
             Write("You're just chilling in the garden"); wait(700);
             Write("When a bee tries to extract pollen from you (which is a bad thing for you)"); wait(700);
-            switch (menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. i don't think its very wise to let it happen", "KILL THE BEE INSTEAD, are you a killer? psychopath? hell nah bro", "FIGHT BACK, be a hero here the dragons are coming after bees ", "NONE OF THESE, sybau i know you wont click it"))
+            switch (menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. I don't think its very wise to let it happen", "KILL THE BEE INSTEAD, Are you a killer? psychopath? hell nah bro", "FIGHT BACK, Be a hero here the dragons are coming after bees ", "NONE OF THESE, Sybau I know you wont click it"))
             {
                 case 'A':
                     badbeep();
@@ -229,10 +229,10 @@ namespace CodeCode
                     WriteLine("You are strong bro but the wind is wind"); wait(700);
                     Clear();
                     goodbeep();
-                    Write("WIND: ts wasn't me bro "); wait();
+                    Write("WIND: ts wasn't me bro"); wait();
                     selfishness += 5;
                     stupidity -= 4;
-                    plint += 8;
+                    plint += 15;
                     break;
                 case 'C':
                     badbeep();
