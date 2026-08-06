@@ -32,6 +32,9 @@ namespace CodeCode
         }
         public static void birdLife()
         {
+            variable = 20;
+            flyish = 20;
+            berd = 20;
             birdScene1();
         }
         private static void wait(int time = 500)
@@ -116,7 +119,7 @@ namespace CodeCode
             WriteLine(" ");
             Write("So what you gonna do now?"); wait();
             ResetColor();
-            ForegroundColor= ConsoleColor.DarkGray;
+            ForegroundColor = ConsoleColor.DarkGray;
             Write("Please be a little smart");
 
             switch (menu("Making a nest for her, could be smart move ", "Giving her the water, coz she was thirsty ", "Yelling at her, not smart move BTW ", "Do nothing and fly away"))
@@ -227,18 +230,18 @@ namespace CodeCode
             }
             ResetColor();
             Clear();
-            ForegroundColor= ConsoleColor.Blue;
+            ForegroundColor = ConsoleColor.Blue;
             Write("Wait is that a cute humming bird"); wait();
             DramaSFX();
             WriteLine(" ");
-            Write("Wait is that coming towards you??????????"); 
+            Write("Wait is that coming towards you??????????");
             WriteLine(" ");
             EpicSFX();
-            WriteLine("Does she like you?????"); 
+            WriteLine("Does she like you?????");
             eagleSFX();
             ForegroundColor = ConsoleColor.DarkMagenta;
             Write("Ohh yeahh she likes you"); wait();
-            WriteLine("What you gonna do now bro?"); 
+            WriteLine("What you gonna do now bro?");
             Suspense2SFX();
             switch (menu("Try approaching her, shes cute bro", "Let her approach you, you are such a sigma bro", "Pass her and fly away, not a wise move BTW", "Pretend to be a pigeon, I mean pigeon"))
 
@@ -294,9 +297,9 @@ namespace CodeCode
             ForegroundColor = ConsoleColor.Blue;
             Write("Your Stupidity is " + variable); wait();
             WriteLine(" ");
-            Write("Your Selfishness is " + flyish); wait();          
+            Write("Your Selfishness is " + flyish); wait();
             WriteLine(" ");
-            Write("Your Birdness is " + berd ); wait();
+            Write("Your Birdness is " + berd); wait();
             ResetColor();
             WriteLine(" ");
             WriteLine(" ");
