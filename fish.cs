@@ -22,17 +22,15 @@ namespace CodeCode
         {
             get { return selfishness; }
         }
-
         public static int Stupidity
         {
             get { return stupidity; }
         }
-
         public static int Bravery
         {
             get { return bravery; }
         }
-        private static void fishWait(int time = 500)
+        private static void FishWait(int time = 500)
         {
             CursorVisible = false;
             Thread.Sleep(time); Write(".");
@@ -41,53 +39,47 @@ namespace CodeCode
             Thread.Sleep(time);
             CursorVisible = true;
         }
-
-        public static void fishTotal()
+        public static void FishTotal()
         {
+            globalScore += bravery * 2 - stupidity - selfishness
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Fish Life"); Thread.Sleep(300);
             WriteLine($"How selfish you were: {selfishness}" +
             $"\nHow stupid you were: {stupidity}" +
-            $"\nHow brave you were: {bravery}"); ResetColor(); WriteLine("Press enter to reincarnate to your next life"); 
+            $"\nHow brave you were: {bravery}"); ResetColor(); WriteLine("Press enter to reincarnate to your next life");
             ReadLine();
             Clear();
             return;
         }
-        public static void fishLife()
-        { 
-            
-            
-            fishScene1();
-            fishScene2();
-            fishTotal();
+        public static void FishLife()
+        {
+            selfishness = 20;
+            stupidity = 20;
+            bravery = 20;
+            FishScene1();
+            FishScene2();
+            FishTotal();
             return;
-
         }
-
-
-        public static void fishScene1()
+        public static void FishScene1()
         {
             Clear();
-
-
             EpicSFX();
             //Play(Path.Combine(AppContext.BaseDirectory, "epicsfx.wav"));
             Write("You have been reincarnated as a fish in a vast ocean of many pools and many schools (of fish)");
-            fishWait();
+            FishWait();
             if (Worm.fishGateway == true)
             {
-                Write("You grew gills and became a fish"); fishWait();
+                Write("You grew gills and became a fish"); FishWait();
             }
-            else {
-                Write("You hatch as a fish, out of your egg"); fishWait();
+            else
+            {
+                Write("You hatch as a fish, out of your egg"); FishWait();
             }
-
-            
             WriteLine(@"|╲__.-.");
             WriteLine(@"|    o <           <- you");
             WriteLine(@"|╱‾‾`'`");
-
-            Write("Your fish siblings are also hatched"); fishWait();
+            Write("Your fish siblings are also hatched"); FishWait();
             WriteLine("You hatched later than your siblings and there isn't much food left in the hatchery and \nyour younger sister named Serelipanilla is very hungry, but guess what you are also very hungry");
             switch (menu("Leave the food for your younger sister",
                 "Eat all her food",
@@ -121,70 +113,60 @@ namespace CodeCode
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
-
-
             Write("You swim up to the surface");
-            fishWait();
+            FishWait();
             WriteLine("You see the hook of a fisherman trying to fish");
             WriteLine("Do you give him a fish to feed him for a day or teach the man to fish to feed him for a lifetime");
-            switch(menu("Give him a fish", "Teach him to fish", "Give him TO the fishes", "", 3))
+            switch (menu("Give him a fish", "Teach him to fish", "Give him TO the fishes", "", 3))
             {
                 case 'A':
                     Clear();
                     stupidity += 5;
                     selfishness -= 1;
                     okaybeep();
-                    Write("You give him a fish"); fishWait();
+                    Write("You give him a fish"); FishWait();
                     Write("The aforementioned fish was");
-                    
                     Thread.Sleep(1200); Suspense2SFX();
                     Write(" \u001b[1mYOURSELF\u001b[0m");
-                    fishWait(); Thread.Sleep(1200);
-
-                    Write("After he catches you, he suddenly remembers that he is actually a vegan, so he releases you"); fishWait();
-
-
+                    FishWait();
+                    Write("After he catches you, he suddenly remembers that he is actually a vegan, so he releases you"); FishWait();
                     break;
                 case 'B':
                     Clear();
                     bravery += 5;
                     stupidity -= 5;
                     goodbeep();
-                    Write("You teach him to fish"); fishWait();
+                    Write("You teach him to fish"); FishWait();
                     WriteLine("To achieve this, you obviously perform a calculated jump onto his boat, precisely right into his ear");
-                    Write("And then vibrate in morse code the instructions of how to fish"); fishWait();
-                    Write("He is now armed with the instructions of how to fish"); fishWait();
-                    Write("The information won't be useful to him, as he suddenly remembers that he is actually a vegan"); fishWait();
+                    Write("And then vibrate in morse code the instructions of how to fish"); FishWait();
+                    Write("He is now armed with the instructions of how to fish"); FishWait();
+                    Write("The information won't be useful to him, as he suddenly remembers that he is actually a vegan"); FishWait();
                     break;
-
                 default:
                     selfishness -= 2;
                     bravery += 2;
                     Clear();
                     okaybeep();
                     WriteLine("You give him TO the fishes");
-                    Write("You latch onto his hook and pull him into the water"); fishWait();
-                    Write("He falls into the water"); fishWait();
-                    Write("His body is seen by a fish school, shooting towards him their eyes widen in ravenous hunger"); fishWait();
-                    Write("The fish devour him, leaving only the bones"); fishWait();
+                    Write("You latch onto his hook and pull him into the water"); FishWait();
+                    Write("He falls into the water"); FishWait();
+                    Write("His body is seen by a fish school, shooting towards him their eyes widen in ravenous hunger"); FishWait();
+                    Write("The fish devour him, leaving only the bones"); FishWait();
                     break;
-                
-            }
 
+            }
             return;
-
-            }
-        public static void fishScene2()
+        }
+        public static void FishScene2()
         {
             bool goneNorth = false;
             bool loopDecision = true;
             //WriteLine($" selfishness {selfishness}");
             WriteLine("");
             Write("You venture out into the open ocean in search of finding \nyour school, some food, or your fish Uncle \u001b[1mVishnu\u001b[0m");
-            fishWait();
+            FishWait();
             while (loopDecision == true)
             {
-
                 WriteLine("Towards the \u001b[1meast\u001b[0m, you can smell some danger");
                 WriteLine("Towards the \u001b[1mwest\u001b[0m, you see some glimmers off into the distance");
                 WriteLine("Towards the \u001b[1mnorth\u001b[0m, there is a dark area");
@@ -200,12 +182,10 @@ namespace CodeCode
                         bravery += 5;
                         Clear();
                         okaybeep();
-                        Write("You smell some danger"); fishWait();
-
-                        Write("It smells very dangerous"); fishWait();
+                        Write("You smell some danger"); FishWait();
+                        Write("It smells very dangerous"); FishWait();
                         WriteLine("But danger is your middle name"); Thread.Sleep(800);
-                        Write("You swim towards the smell"); fishWait();
-
+                        Write("You swim towards the smell"); FishWait();
                         WriteLine("You see a damselfish getting chased by a dangerous eel");
                         WriteLine("What do you do?");
                         switch (menu(
@@ -221,7 +201,7 @@ namespace CodeCode
                                 stupidity -= 4;
                                 selfishness += 3;
                                 okaybeep();
-                                Write("You mind your own business and swim away"); fishWait();
+                                Write("You mind your own business and swim away"); FishWait();
                                 loopDecision = false;
                                 break;
                             case 'B':
@@ -230,18 +210,16 @@ namespace CodeCode
                                 selfishness -= 5;
                                 okaybeep();
                                 Write("You attempt to save the damselfish by going in between the eel and the damselfish, distracting the eel");
-                                fishWait();
+                                FishWait();
                                 if (deathRoll(50) == true)
                                 {
-                                    Write("The eel devoured up you and the damselfish"); fishWait();
-                                    Write("You died a fishful life"); fishWait();
-
+                                    Write("The eel devoured up you and the damselfish"); FishWait();
+                                    Write("You died a fishful life"); FishWait();
                                     return;
                                 }
                                 Write("You successfully distract the eel away from the damselfish and escape");
-                                fishWait();
-                                Write("You and the damselfish live happily ever after"); fishWait();
-
+                                FishWait();
+                                Write("You and the damselfish live happily ever after"); FishWait();
                                 return;
                             case 'C':
                                 Clear();
@@ -249,30 +227,27 @@ namespace CodeCode
                                 selfishness -= 4;
                                 okaybeep();
                                 Write("You attempt to save the damselfish by letting it swim behind you in your slipstream, distracting the eel");
-                                fishWait();
+                                FishWait();
                                 if (deathRoll(50) == true)
                                 {
-                                    Write("The eel devoured up you and the damselfish"); fishWait();
-                                    Write("You died a fishful life"); fishWait();
-
+                                    Write("The eel devoured up you and the damselfish"); FishWait();
+                                    Write("You died a fishful life"); FishWait();
                                     return;
                                 }
                                 Write("You successfully distract the eel away from the damselfish and escape");
-                                fishWait();
-                                Write("You and the damselfish live happily ever after"); fishWait();
+                                FishWait();
+                                Write("You and the damselfish live happily ever after"); FishWait();
                                 return;
-
                             default:
                                 Clear();
                                 badbeep();
                                 selfishness += 10;
-                                Write("You attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish"); fishWait();
+                                Write("You attempt to save the damselfish by throwing a nearby baby fish between the eel and the damselfish"); FishWait();
                                 Write("You successfully distract the eel away from the damselfish and escape");
-                                fishWait();
-                                Write("You and the damselfish live happily ever after"); fishWait();
+                                FishWait();
+                                Write("You and the damselfish live happily ever after"); FishWait();
                                 return;
                         }
-
                         break;
                     case 'B':
                         Clear();
@@ -280,7 +255,6 @@ namespace CodeCode
                         okaybeep();
                         loopDecision = false;
                         // This one will just bring you below down to the next question (the uncle Vishnu one)
-
                         break;
                     case 'C':
                         Clear();
@@ -298,12 +272,12 @@ namespace CodeCode
                             case 'A':
                                 Clear();
                                 stupidity += 3;
-                                Write("It was the mouth of a shark"); fishWait();
-                                Write("The shark munches you up"); fishWait();
+                                Write("It was the mouth of a shark"); FishWait();
+                                Write("The shark munches you up"); FishWait();
                                 return;
                             default:
                                 Clear();
-                                Write("You swim back"); fishWait();
+                                Write("You swim back"); FishWait();
                                 // loopDecisions stays true and the directions decision loops
                                 break;
                         }
@@ -311,40 +285,31 @@ namespace CodeCode
                     default:
                         // This should never get triggered
                         break;
-
-
                 }
-
             }
             WriteLine("You found your school of fish! They weren't too far.");
             Write("You swim with your school for a while");
-            fishWait();
-
+            FishWait();
             Write("\nYour fish uncle named Vishnu, who tended to you in the past, is struggling with dementia and forgets which school of fish to belong to");
-            fishWait();
+            FishWait();
             Write("The school you are swimming in is going towards some nutritious food");
-            fishWait();
+            FishWait();
             WriteLine("After him being missing from the school for a few days you see him swimming with a dangerous rival school of fish and they haven’t noticed him yet.");
             Write("It's about to be spawning season, and you need to be nutritionally healthy to carry on a strong bloodline");
-            fishWait();
-
-
+            FishWait();
             switch (menu("Keep going with your school to feed",
                 "Swim up to Vishnu and guide him back to your school of fish",
                 "Blend in with the rival school and wait until you and Vishnu are alone to save him (you might not come back to your school and be stranded)",
                 "", 3))
-                {
+            {
                 case 'A':
                     Clear();
                     bravery -= 5;
                     stupidity -= 4;
                     selfishness += 2;
                     okaybeep();
-
                     Write("You keep going with your school to feed"); fishWait(200);
                     Write("You never see Vishnu again"); fishWait(200);
-                    
-
                     break;
                 case 'B':
                     Clear();
@@ -355,15 +320,13 @@ namespace CodeCode
                     Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
                     Write("The rival school attacks and they kill Vishnu in cold blood"); fishWait();
                     WriteLine("RIP Vishnu, fly high\n");
-
                     WriteLine(@"|╲__.-.");
                     WriteLine(@"|    x <  ");
                     WriteLine(@"|╱‾‾`'`");
                     Write("\nYou go back to swimming with your school"); fishWait();
-                    
+
 
                     break;
-
                 default:
                     Clear();
                     bravery += 7;
@@ -374,14 +337,11 @@ namespace CodeCode
                     Write("You guide him back to the school, but you swam too far away and can’t find it"); fishWait();
                     WriteLine("You are now stranded");
                     Write("Vishnu dies of starvation, but you stay alive"); fishWait();
-                    
                     break;
-                }
-
+            }
             Write("Your getting old and the end of your days are approaching"); fishWait();
             Write("You get scooped up in some cast nets from a large fishing boat"); fishWait();
             Write("They give no mercy and grind you up into a can"); fishWait();
-
             WriteLine(@"   _..----------...  ");
             WriteLine(@".-~                ~-.");
             WriteLine(@"|.                  .|");
@@ -391,14 +351,7 @@ namespace CodeCode
             WriteLine(@" ""-..____________..-"" ");
             WriteLine("Press enter...");
             ReadLine();
-
-
-
-
-
-
             return;
-
         }
     }
 }
