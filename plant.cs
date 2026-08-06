@@ -41,19 +41,21 @@ namespace CodeCode
         public static void plantScene1()
         {
             Clear();
-            ForegroundColor = ConsoleColor.Red;
+          
             Write("You are reincarnated as a"); wait(700);
+            ForegroundColor = ConsoleColor.DarkGreen;
             WriteLine("     PLANT");
+            ResetColor();
             Write("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); wait();
             Write("IT IS NOW THE TIME TO DECIDE YOUR DESTINY"); wait();
             Write("You're just chilling in the garden"); wait(700);
+            ForegroundColor = ConsoleColor.Red;
             Write("When a bee tries to extract pollen from you (which is a bad thing for you)"); wait(700);
             switch (menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. I don't think its very wise to let it happen", "KILL THE BEE INSTEAD, Are you a killer? psychopath? hell nah bro", "FIGHT BACK, Be a hero here the dragons are coming after bees ", "NONE OF THESE, Sybau I know you wont click it"))
             {
                 case 'A':
                     badbeep();
-                    Clear();
-                    ForegroundColor = ConsoleColor.Red;
+                    Clear();                   
                     Write("Why you so stupid bro, you gave up for nothing"); wait();
                     plint += 0;
                     stupidity += 8;
@@ -61,8 +63,7 @@ namespace CodeCode
                     break;
                 case 'B':
                     Play(@"sfx/Suspensesfx.wav");
-                    Clear();
-                    ForegroundColor = ConsoleColor.Red;
+                    Clear();                  
                     Write("Gawd DAMN you a killer?????? an innocent bee bro she was innocent bee"); wait();
                     plint -= 3;
                     selfishness += 8;
@@ -70,8 +71,7 @@ namespace CodeCode
                     break;
                 case 'c':
                     Play(@"sfx/epicsfx.wav");
-                    Clear();
-                    ForegroundColor = ConsoleColor.Red;
+                    Clear();                   
                     Write("Oh yeah that was a wise move but you're just plant bro, the bee queen is laughing at you"); wait();
                     plint += 3;
                     selfishness += 9;
@@ -79,8 +79,7 @@ namespace CodeCode
                     break;
                 case 'D':
                     goodbeep();
-                    Clear();
-                    ForegroundColor = ConsoleColor.Red;
+                    Clear();                  
                     Write("Okay yeah do nothing? why in the world did you choose this?"); wait();
                     plint += 3;
                     selfishness += 8;
@@ -88,12 +87,12 @@ namespace CodeCode
                     break;
             }
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             WriteLine("Oh myyyyyyyyyyy Gawdddddddddddd what you just did..........?");
             WriteLine(" ");
             WriteLine("IDKKKKKK you shouldn't have done that (i don't really care what u did bro -_-)");
             WriteLine(" ");
             Write("Hang tight dude"); wait(700);
+            ForegroundColor = ConsoleColor.Red;
             Write("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait(700);
             Write("We never know btw, LETSSSSSS GOOO"); wait();
             Write("A human is trying to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President"); wait(); 
@@ -138,13 +137,15 @@ namespace CodeCode
                     plint += 10;
                     break;
             }
+            ResetColor();
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             Write("DOG AND HIS POOP, even i don't know why this is part of the game. Try harder and don't be stupid now"); wait();
             Write("Okay calm down now, I know what you are thinking. its not that tuff bro but here we are"); wait();
             Write("A dog is attempting to poop on you, so try your best bro                      Ikr this is an absurd idea"); wait();
+            ForegroundColor = ConsoleColor.Red;
             Write("Yeah Yeah, IK but it is a real thing, dogs do poop on plants. It's my bad if you haven't seen one doing this"); wait();
             Write("What do you do?"); wait();
+            ResetColor();
             switch (menu("LET HIM DO IT, i know you let it happen i know ", "KILL HIM, you killer? please don't do it bro", "DO NOTHING, this doesn't mean doing nothing it does mean actually doing nothing ", "SMILE AT HIM, smiles can change the world, keep smiling bro you are in the presence of great MR.沃恩·马尔金"))
             {
 
@@ -192,14 +193,15 @@ namespace CodeCode
                     plint += 3;
                     break;
             }
+            ResetColor();
             Clear();
-            ForegroundColor = ConsoleColor.Red;
             HellYeah();
             Write("Man that dog sure has no manners"); wait();
             WriteLine(" ");
             Write("You have made really absurd choices till now but here we are again"); wait();
             Write("GAME OF WINDS, we all know wind is a really strong force? is it visible? nah, right? try standing on the top of a mountain and answer this you fool."); wait();
             WriteLine(" ");
+            ForegroundColor = ConsoleColor.Red;
             Write("Okay calm down I didn't mean that, but yeah I did. Wind is such a strong force that even the plants are scared of it."); wait();
             WriteLine(" ");
             Write("As we see MR.. 沃恩·马尔金's sunflower crying now, let him cry but at least choose something appropriate now, will you? please "); wait();
@@ -263,16 +265,22 @@ namespace CodeCode
         }
        public static void  PlantTotal()
         {
-            globalScore += plint - stupidity - selfishness;
+            //globalScore += plint - stupidity - selfishness;
             Clear();
+            ForegroundColor = ConsoleColor.Red;
             Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
             WriteLine(" ");
             Suspense2SFX();
+            ResetColor();
+            ForegroundColor = ConsoleColor.DarkRed;
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
             WriteLine(" ");
+            ResetColor  ();
+            ForegroundColor = ConsoleColor.Green;
             Write("SO YOUR PLANTNESS BEING ONE IS " + plint); wait();
             WriteLine(" ");
             Suspense2SFX();
+            ResetColor  ();
             WriteLine("PLEASE PRESS ENTER TO CONTINUE");
             ReadLine();
         }
