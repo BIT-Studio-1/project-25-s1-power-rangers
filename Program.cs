@@ -29,7 +29,6 @@ namespace CodeCode
         static ConsoleKey key;
 
         public static int globalScore = 0;
-        public static int globalScore = 1;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
