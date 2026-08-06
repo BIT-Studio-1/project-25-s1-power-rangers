@@ -64,6 +64,7 @@ namespace CodeCode
             bool goneMountains = false;
 
             while (keepGoing == false) {
+                Clear();
                 WriteLine("You're in the mountains");
                 WriteLine("To the \u001b[1meast\u001b[0m, you hear a river");
                 WriteLine("To the \u001b[1mwest\u001b[0m, you see the Fortnite battle bus");
@@ -91,7 +92,7 @@ namespace CodeCode
                                 }
                                 else
                                 {
-                                    Write("Try exploring around more to find it"); wait();
+                                    Write("Try exploring around more to find it"); wait(); pressEnter(); ReadLine();
                                 }
                                     break;
                             default:
@@ -108,6 +109,7 @@ namespace CodeCode
                                 leaveBus = false;
                                 do
                                 {
+                                    Clear();
                                     WriteLine("There's a homeless guy in the battle bus");
                                     Write("He is homeless and he is also a guy"); wait();
 
@@ -120,12 +122,12 @@ namespace CodeCode
                                             Clear();
                                             Write("You make a paper-scissors-rock gesture and he nods very, very enthusiastically"); wait();
                                             Write("He starts frowning when he realises that you mean you want to play paper-scissors-rock"); wait();
-                                            Write("Homeless guy: 'Well okay then'"); pressEnter(); Thread.Sleep(1000); ReadLine(); WriteLine();
+                                            Write("Homeless guy: 'Well okay then'"); pressEnter(); Thread.Sleep(1000); ReadLine();
                                             if (PSRgame() == true)
                                             {
                                                 won = true;
                                                 dictionaryRead = true;
-                                                Write("Your reward for winning is my fine english "); ForegroundColor = ConsoleColor.Green; Write("dictionary"); ResetColor(); wait();
+                                                Write("Your reward for winning is my fine "); ForegroundColor = ConsoleColor.Green; Write("English dictionary"); ResetColor(); wait();
 
                                                 Write("You read the entire"); ForegroundColor = ConsoleColor.Green; Write(" dictionary "); ResetColor(); Write("in one sitting"); wait(); WriteLine();
                                                 Console.WriteLine("      __...--~~~~~-._   _.-~~~~~--...__");
@@ -138,27 +140,28 @@ namespace CodeCode
                                                 Console.Write("                             ^   the "); ForegroundColor = ConsoleColor.Green; Write("dictionary"); ResetColor(); pressEnter();
                                                 ReadLine();
                                                 Clear();
-                                                for (int i = 0; i < 200; i++)
-                                                {
-                                                    Write("the whole "); ForegroundColor = ConsoleColor.Green; Write("dictionary "); ResetColor(); Thread.Sleep(1);
-                                                }
-                                                Clear();
+                                                    for (int i = 0; i < 170; i++)
+                                                    {
+                                                        Write("the whole "); ForegroundColor = ConsoleColor.Green; Write("dictionary "); ResetColor(); Thread.Sleep(1);
+                                                    }
+                                                    Clear();
                                             }
                                             else
                                             {
-                                                Write("Homeless Guy: 'You're the hairiest person I've every met'"); Thread.Sleep(1000); WriteLine();
+                                                Clear();
+                                                Write("Homeless Guy: 'You're the hairiest person I've every met'\n"); pressEnter(); ReadLine();
                                             }
                                             break;
                                         case 'B':
                                             Clear();
                                             SuspenseSFX();
-                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1200); WriteLine();
+                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); pressEnter(); ReadLine();
                                             break;
                                         case 'C':
                                             Clear();
                                             SuspenseSFX();
-                                            Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh '"); Thread.Sleep(1300); WriteLine();
-                                            WriteLine("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'"); Thread.Sleep(1400);
+                                            Write("Sasquatch: 'Yo mama Gaughrou goj herjub, jue paugh'\n"); Thread.Sleep(1300);
+                                            Write("Homeless guy: 'AAAAAAAAAAAAAGHH HELP!!!'\n"); pressEnter(); ReadLine();
                                             break;
                                         default:
                                             Clear();
@@ -196,13 +199,13 @@ namespace CodeCode
                                             peacefulness += 7;
                                             goodbeep();
                                             Write("Mountain climber: 'If you wanna get a job, might wanna learn English first'"); wait();
-                                            Write("You nod wisely despite not knowing what he said"); wait();
+                                            Write("You nod wisely despite not knowing what he said"); wait(); pressEnter(); ReadLine();
                                             break;
                                         default:
                                             charisma -= 1;
                                             goodbeep();
                                             Write("He gives you half an apricot meusli bar"); wait();
-                                            Write("It tastes like stubbing your toe\n"); wait();
+                                            Write("It tastes like stubbing your toe"); wait(); pressEnter(); ReadLine();
                                             break;
                                     }
                                     break;
@@ -213,7 +216,7 @@ namespace CodeCode
                                     okaybeep();
                                     Write("You steal his burger and begin running"); wait();
                                     Write("The mountain climber turns out to be surprisingly athletic"); wait();
-                                    Write("You barely escape"); wait();
+                                    Write("You barely escape"); wait(); pressEnter(); ReadLine();
                                     break;
                             }
                         }
@@ -224,9 +227,9 @@ namespace CodeCode
                             CursorVisible = true; ReadLine(); 
                         }
                             break;
+                    }
                 }
             }
-        }
         public static void sasquatchScene2()
         {
             Write("You make it to Corporate America City"); wait();
