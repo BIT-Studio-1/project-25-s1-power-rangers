@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Globalization;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -40,10 +42,10 @@ namespace CodeCode
         {
             Clear();
             ForegroundColor = ConsoleColor.Red;
-            Write("You are reincarnated as a"); Write("."); Thread.Sleep(800); Write("."); Thread.Sleep(700); Write("."); Thread.Sleep(700); Write(".");
+            Write("You are reincarnated as a"); wait(700);
             WriteLine("     PLANT");
             Write("YOURE A SUNFLOWER IN THE VALLEYS OF DUNEDIN IN MR. 沃恩·马尔金'S GARDEN. I HAVE SPENT MOST OF MY LIFE LISTENING TO HIM ABOUT MAKING SQL DATABASES."); wait();
-            WriteLine("IT IS NOW THE TIME TO DECIDE YOUR DESTINY: "); Thread.Sleep(1000);
+            Write("IT IS NOW THE TIME TO DECIDE YOUR DESTINY"); wait();
             Write("You're just chilling in the garden"); wait(700);
             Write("When a bee tries to extract pollen from you (which is a bad thing for you)"); wait(700);
             switch (menu("LET BEE EXTRACT HONEY, oh yeah she gonna steal it from you. i don't think its very wise to let it happen", "KILL THE BEE INSTEAD, are you a killer? psychopath? hell nah bro", "FIGHT BACK, be a hero here the dragons are coming after bees ", "NONE OF THESE, sybau i know you wont click it"))
@@ -52,7 +54,7 @@ namespace CodeCode
                     badbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Why you so stupid bro, you gave up for nothing :( "); Thread.Sleep(2000);
+                    Write("Why you so stupid bro, you gave up for nothing"); wait();
                     plint += 0;
                     stupidity += 8;
                     selfishness -= 3;
@@ -61,8 +63,8 @@ namespace CodeCode
                     Play(@"sfx/Suspensesfx.wav");
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Gawd DAMN you a killer?????? an innocent bee bro she was innocent bee "); Thread.Sleep(2000);
-                    plint += 10;
+                    Write("Gawd DAMN you a killer?????? an innocent bee bro she was innocent bee"); wait();
+                    plint -= 3;
                     selfishness += 8;
                     stupidity += 6;
                     break;
@@ -70,7 +72,7 @@ namespace CodeCode
                     Play(@"sfx/epicsfx.wav");
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Oh yeah that was a wise move but you're just plant bro, the bee queen is laughing at you"); Thread.Sleep(2000);
+                    Write("Oh yeah that was a wise move but you're just plant bro, the bee queen is laughing at you"); wait();
                     plint += 3;
                     selfishness += 9;
                     stupidity += 3;
@@ -79,9 +81,8 @@ namespace CodeCode
                     goodbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Okay yeah do nothing? why in the world did you choose this?"); Thread.Sleep(2000);
+                    Write("Okay yeah do nothing? why in the world did you choose this?"); wait();
                     plint += 3;
-                    plint += 0;
                     selfishness += 8;
                     stupidity += 4;
                     break;
@@ -94,8 +95,8 @@ namespace CodeCode
             WriteLine(" ");
             Write("Hang tight dude"); wait(700);
             Write("USA VS VENEZUELA OIL EXTRACTION, we all know about hostilities that was done by USA just for the oil of Venezuela. maybe oil maybe just the love of game"); wait(700);
-            Write("We never know btw, LETSSSSSS GOOO "); Thread.Sleep(1000); WriteLine();
-            Write("A human is trying to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President "); Thread.Sleep(1000); WriteLine();
+            Write("We never know btw, LETSSSSSS GOOO"); wait();
+            Write("A human is trying to extract oil from you same as USA tried to extract oil from the Venezuela by capturing its President"); wait(); 
 
             switch (menu("KILL THE EXTRACTOR, what i mean by that is literal killing. Isn't it bad enough? haha ", "LET IT HAPPEN, shut up what you gonna do? huh what?", "SUICIDE, ummm yeah nah maybe but killing yourself is not gonna be a really good option bro", "NONE OF THESE, choose nothing and feel shameful i know you wont choose this, will you? c'mon now "))
             {
@@ -103,17 +104,17 @@ namespace CodeCode
                     badbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Yeah you're a killer bro, i get it but  it wasn't even valid here"); Thread.Sleep(3000);
+                    Write("Yeah you're a killer bro, i get it but  it wasn't even valid here"); wait();
                     selfishness += 9;
                     stupidity += 10;
-                    plint += 4;
+                    plint -= 2;
                     break;
 
                 case 'B':
                     Play(@"sfx/Dramasfx.wav");
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Giving up is never a good option, have you ever watched JOHN CENA in WWE?"); Thread.Sleep(4000);
+                    Write("Giving up is never a good option, have you ever watched JOHN CENA in WWE?"); wait();
                     selfishness += 2;
                     stupidity += 10;
                     plint += 8;
@@ -122,16 +123,16 @@ namespace CodeCode
                     badbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("C'mon bro you shouldn't have done this you're a plant, you cannot kill yourself by your own hahaha"); Thread.Sleep(3000);
+                    Write("C'mon bro you shouldn't have done this you're a plant, you cannot kill yourself by your own hahaha"); wait();
                     selfishness += 0;
                     stupidity += 10;
-                    plint += 0;
+                    plint -= 1;
                     break;
                 case 'D':
                     goodbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Eat five star and do nothing type shi, but you must do something if this happens in real life"); Thread.Sleep(3000);
+                    Write("Eat five star and do nothing type shi, but you must do something if this happens in real life"); wait();
                     selfishness += 7;
                     stupidity += 5;
                     plint += 10;
@@ -139,9 +140,9 @@ namespace CodeCode
             }
             Clear();
             ForegroundColor = ConsoleColor.Red;
-            WriteLine("DOG AND HIS POOP, even i don't know why this is part of the game. Try harder and don't be stupid now"); Thread.Sleep(2000);
+            Write("DOG AND HIS POOP, even i don't know why this is part of the game. Try harder and don't be stupid now"); wait();
             Write("Okay calm down now, I know what you are thinking. its not that tuff bro but here we are"); wait();
-            Write("A dog is attempting to poop on you, so try your best bro                      Ikr this is an absurd idea :( "); Thread.Sleep(700); WriteLine();
+            Write("A dog is attempting to poop on you, so try your best bro                      Ikr this is an absurd idea"); wait();
             Write("Yeah Yeah, IK but it is a real thing, dogs do poop on plants. It's my bad if you haven't seen one doing this"); wait();
             Write("What do you do?"); wait();
             switch (menu("LET HIM DO IT, i know you let it happen i know ", "KILL HIM, you killer? please don't do it bro", "DO NOTHING, this doesn't mean doing nothing it does mean actually doing nothing ", "SMILE AT HIM, smiles can change the world, keep smiling bro you are in the presence of great MR.沃恩·马尔金"))
@@ -152,7 +153,7 @@ namespace CodeCode
                     Clear();
                     EpicSFX();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("Did you let it happen are you crazy? i think so okay whatever now GO CLEAAANNNNNNN YOURRRSELFFFFFF........"); Thread.Sleep(3000);
+                    Write("Did you let it happen are you crazy? i think so okay whatever now GO CLEAAANNNNNNN YOURRRSELFFFFFF"); wait();
                     selfishness -= 5;
                     stupidity += 12;
                     plint += 2;
@@ -163,10 +164,10 @@ namespace CodeCode
                     Clear();
                     Suspense2SFX();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("You attempted to kill him, but you are just a mere fool plant, so it didn't amount to anything."); Thread.Sleep(2000);
+                    Write("You attempted to kill him, but you are just a mere fool plant, so it didn't amount to anything."); wait();
                     selfishness += 1;
-                    stupidity += 4;
-                    plint += 8;
+                    stupidity += 10;
+                    plint -= 8;
                     break;
 
                 case 'C':
@@ -177,14 +178,14 @@ namespace CodeCode
                     Write("You did nothing means you let that happen, GOOOO AND CLEANNNN YOURSELFFFFFF"); wait(900);
                     selfishness -= 5;
                     stupidity += 10;
-                    plint += 4;
+                    plint -= 3;
                     break;
                 case 'D':
                     badbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
                     DramaSFX();
-                    WriteLine("Yeah that was smart move but he still pooped on you"); Thread.Sleep(2000);
+                    Write("Yeah that was smart move but he still pooped on you"); wait();
                     Write("LMAOOOOOOOOOO"); wait(1000);
                     selfishness -= 3;
                     stupidity += 12;
@@ -196,8 +197,8 @@ namespace CodeCode
             HellYeah();
             Write("Man that dog sure has no manners"); wait();
             WriteLine(" ");
-            WriteLine("You have made really absurd choices till now but here we are again "); Thread.Sleep(2000);
-            WriteLine("GAME OF WINDS, we all know wind is a really strong force? is it visible? nah, right? try standing on the top of a mountain and answer this you fool."); Thread.Sleep(2000);
+            Write("You have made really absurd choices till now but here we are again"); wait();
+            Write("GAME OF WINDS, we all know wind is a really strong force? is it visible? nah, right? try standing on the top of a mountain and answer this you fool."); wait();
             WriteLine(" ");
             Write("Okay calm down I didn't mean that, but yeah I did. Wind is such a strong force that even the plants are scared of it."); wait();
             WriteLine(" ");
@@ -214,10 +215,10 @@ namespace CodeCode
                     ForegroundColor = ConsoleColor.Red;
                     Write("What????????????"); wait();
                     Write(" ");
-                    WriteLine("c'mon bud you're just a plant, FIGHTING BACK? with what?"); Thread.Sleep(2000);
+                    Write("C'mon bud you're just a plant, FIGHTING BACK? with what?"); wait();
                     selfishness += 1;
                     stupidity += 12;
-                    plint += 2;
+                    plint -= 2;
                     break;
                 case 'B':
                     Unnerving2SFX();
@@ -230,7 +231,7 @@ namespace CodeCode
                     goodbeep();
                     Write("WIND: ts wasn't me bro "); wait();
                     selfishness += 5;
-                    stupidity += 4;
+                    stupidity -= 4;
                     plint += 8;
                     break;
                 case 'C':
@@ -239,8 +240,8 @@ namespace CodeCode
                     Clear();
                     eagleSFX();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("I knew you little plant would do that"); Thread.Sleep(2000);
-                    selfishness += 3;
+                    Write("I knew you little plant would do that"); wait();
+                    selfishness -= 3;
                     stupidity += 12;
                     plint += 4;
                     break;
@@ -248,10 +249,10 @@ namespace CodeCode
                     badbeep();
                     Clear();
                     ForegroundColor = ConsoleColor.Red;
-                    WriteLine("As i have said before, i don't know Chinese either "); Thread.Sleep(4000);
+                    Write("As i have said before, i don't know Chinese either "); wait();
                     selfishness += 2;
                     stupidity += 12;
-                    plint += 3;
+                    plint -= 3;
                     break;
             }
             ForegroundColor = ConsoleColor.Red;
@@ -262,10 +263,14 @@ namespace CodeCode
         }
        public static void  PlantTotal()
         {
+            globalScore += plint - stupidity - selfishness;
+            Clear();
             Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
             WriteLine(" ");
             Suspense2SFX();
             Write("SO YOUR SELFISHNESS BEING A PLANT IS " + selfishness); wait();
+            WriteLine(" ");
+            Write("SO YOUR PLANTNESS BEING ONE IS " + plint); wait();
             WriteLine(" ");
             Suspense2SFX();
             WriteLine("PLEASE PRESS ENTER TO CONTINUE");
