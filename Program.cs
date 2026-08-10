@@ -217,7 +217,7 @@ namespace CodeCode
                     WormLife();
                     if (Worm.fishGateway == true)
                     {
-                        fishLife();
+                        FishLife();
                         if (Fish.Selfishness >= 25)
                         {
                             dolphinlife();
@@ -237,7 +237,7 @@ namespace CodeCode
 
                     else
                     {
-                        if (worm.Dirt_consumed >= 20)
+                        if (Worm.Dirt_consumed >= 20)
                         {
                             sasquatchLife();
                         }
@@ -386,29 +386,30 @@ namespace CodeCode
                 nd = "[Not Discovered]";
             }
             WriteLine(nd);
+            WriteLine("\u001b[1mTree of Life:\u001b[0m");
 
             //Starfish.starfishDiscovered = false;
             string thing =
             $@"
-Amoeba
-    └── Plant
-    ├── Fish
-    |   ├── {LD(starfishDiscovered, "Starfish")}
-    |   ├── Dolphin
-    |   |   ├── Shark
-    |       |   └── [Not Discovered]
-    |       └── [Not Discovered]
-    |           └── [Not Discovered]
-    └── {LD(wormDiscovered, "Worm")}
-        ├── Bird
-        |   ├── [Scrapped]
-        |   └── [Scrapped]
-        └── Snake
-            ├── [Not Discovered]
-            └── [Not Discovered]
+{LD(true, "Amoeba")}
+    └── {LD(true, "Plant")}
+        ├── {LD(true, "Fish")}
+        |   ├── {LD(starfishDiscovered, "Starfish")}
+        |   ├── {LD(true, "Dolphin")}
+        |   └── {LD(false, "Human")}
+        └── {LD(wormDiscovered, "Worm")}
+            ├── {LD(false, "Bird")}
+            └── {LD(false, "Sasquatch")}
             ";
 
             WriteLine(thing);
+            CursorVisible = false;
+            Thread.Sleep(2500);
+            Write("(Press Enter)");
+            ReadLine();
+            Clear();
+
+            CursorVisible = true;
 
         }
         // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 

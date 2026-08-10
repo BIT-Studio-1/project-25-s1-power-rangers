@@ -15,7 +15,7 @@ using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
-using static CodeCode.worm;
+using static CodeCode.Worm;
 using System.ComponentModel.Design;
 using static CodeCode.Program;
 
