@@ -33,18 +33,13 @@ namespace CodeCode
         }
         public static void WormLife()
         {
-<<<<<<< HEAD
-            wormDiscovered = true;
-            wormscene();
-            wormtotal();
-=======
-            length = 8
+
+            length = 8;
             fishGateway = false;
             dirt_consumed = 0;
             wiggles = 0;
             WormScene1();
             WormTotal();
->>>>>>> main
             return;
         }
         private static void Wait()

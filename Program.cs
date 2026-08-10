@@ -259,7 +259,7 @@ namespace CodeCode
                 }
                 else
                 {
-                    fishLife();
+                    FishLife();
                     if (Fish.Selfishness >= 23)
                     {
                         dolphinlife();
@@ -308,10 +308,8 @@ namespace CodeCode
 
 
 
-            // add more questions
-            Write("Ameba life is so slow that life turns into death and Amoeba dies     (press enter)"); ReadLine();
-            return;
-        }
+        // add more questions
+
         
 
         public static void debug()
@@ -344,7 +342,7 @@ namespace CodeCode
                             dolphinlife();
                             break;
                         case 5:
-                            fishLife();
+                            FishLife();
                             break;
                         case 4:
                             WormLife();
@@ -353,7 +351,7 @@ namespace CodeCode
                             plantLife();
                             break;
                         case 2:
-                            amebaScene1();
+                            AmoebaLife();
                             break;
 
                         case 15:
@@ -379,17 +377,17 @@ namespace CodeCode
             bool showNotDiscovered = false;
             string nd = "";
 
-        }
-        
-            
-                
+
+
+
+
             if (showNotDiscovered == true)
             {
                 nd = "[Not Discovered]";
             }
             WriteLine(nd);
 
-            Starfish.starfishDiscovered = false;
+            //Starfish.starfishDiscovered = false;
             string thing =
             $@"
 Amoeba
@@ -414,7 +412,7 @@ Amoeba
 
         }
         // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
-        public static string LD(bool b, string name) { 
+        public static string LD(bool b, string name) {
             if (b == true) {
                 return new string($"\u001b[32m{name}\u001b[0m");
             }
@@ -422,7 +420,7 @@ Amoeba
         }
 
 
-
+    
 
     }
 }
