@@ -16,6 +16,7 @@ namespace CodeCode
         private static int AbusePoint = 0;
         private static int OkayEnough = 0;
         private static int WereAllInThisTogether = 0;
+        public static bool dolphinDiscovered = false;
         public static int AbusePoint1
         {
             get { return AbusePoint; }
@@ -32,6 +33,7 @@ namespace CodeCode
         }
         public static void dolphinlife()
         {
+            dolphinDiscovered = true;
             CursorVisible = false;
             dolphinlife1();
             dolphinlife2();

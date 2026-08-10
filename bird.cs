@@ -15,6 +15,7 @@ namespace CodeCode
         private static int variable = 20;
         private static int flyish = 20;
         private static int berd = 20;
+        public static bool birdDiscovered = false;
 
         public static int Variable
         {
@@ -32,6 +33,7 @@ namespace CodeCode
         }
         public static void birdLife()
         {
+            birdDiscovered = true;
             variable = 20;
             flyish = 20;
             berd = 20;

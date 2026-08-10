@@ -18,6 +18,7 @@ namespace CodeCode
         private static int selfishness = 20;
         private static int stupidity = 20;
         private static int bravery = 20;
+        public static bool fishDiscovered = false;
         public static int Selfishness
         {
             get { return selfishness; }
@@ -53,6 +54,7 @@ namespace CodeCode
         }
         public static void FishLife()
         {
+            fishDiscovered = true;
             selfishness = 20;
             stupidity = 20;
             bravery = 20;

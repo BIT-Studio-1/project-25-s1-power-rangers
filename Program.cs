@@ -391,14 +391,14 @@ namespace CodeCode
             //Starfish.starfishDiscovered = false;
             string thing =
             $@"
-{LD(true, "Amoeba")}
-    └── {LD(true, "Plant")}
-        ├── {LD(true, "Fish")}
+{LD(amoebaDiscovered, "Amoeba")}
+    └── {LD(plantDiscovered, "Plant")}
+        ├── {LD(fishDiscovered, "Fish")}
         |   ├── {LD(starfishDiscovered, "Starfish")}
-        |   ├── {LD(true, "Dolphin")}
-        |   └── {LD(false, "Human")}
+        |   ├── {LD(dolphinDiscovered, "Dolphin")}
+        |   └── {LD(humanDiscovered, "Human")}
         └── {LD(wormDiscovered, "Worm")}
-            ├── {LD(false, "Bird")}
+            ├── {LD(birdDiscovered, "Bird")}
             └── {LD(false, "Sasquatch")}
             ";
 

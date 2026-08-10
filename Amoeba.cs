@@ -23,8 +23,11 @@ namespace CodeCode
 {
     internal class Amoeba
     {
+        public static bool amoebaDiscovered = false;
+
         public static void AmoebaLife()
         {
+            amoebaDiscovered = true;
             AmoebaScene1();
         }
         static void AmoebaScene1()

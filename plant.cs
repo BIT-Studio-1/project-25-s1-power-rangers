@@ -16,6 +16,7 @@ namespace CodeCode
         private static int selfishness = 20;
         private static int stupidity = 20;
         private static int plint = 20;
+        public static bool plantDiscovered = false;
 
         public static int Selfishness
         {
@@ -286,6 +287,7 @@ namespace CodeCode
         }
         public static void plantLife()
         {
+            plantDiscovered = true;
             plint = 20;
             selfishness = 20;
             stupidity = 20;

@@ -33,7 +33,7 @@ namespace CodeCode
         }
         public static void WormLife()
         {
-
+            wormDiscovered = true;
             length = 8;
             fishGateway = false;
             dirt_consumed = 0;

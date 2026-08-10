@@ -18,6 +18,7 @@ namespace CodeCode
         private static int Meow = 0;
         private static string name;
 
+        public static bool humanDiscovered = false;
         public static int SitOnCouch1
         {
             get { return SitOnCouch; }
@@ -36,6 +37,7 @@ namespace CodeCode
 
         public static void HumanLife()
         {
+            humanDiscovered = true;
             CursorVisible = false;
             HumanLife1();
             HumanLife2();
