@@ -369,7 +369,9 @@ namespace CodeCode
                         case 2:
                             amebaScene1();
                             break;
-
+                        case 15:
+                            ShowTree();
+                            break;
                         default:
                             go = 1;
                             break;
@@ -396,6 +398,7 @@ namespace CodeCode
             }
             WriteLine(nd);
 
+            Starfish.starfishDiscovered = false;
             string thing =
             $@"
 Amoeba
@@ -415,6 +418,8 @@ Amoeba
             ├── [Not Discovered]
             └── [Not Discovered]
             ";
+
+            WriteLine(thing);
 
         }
         // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
