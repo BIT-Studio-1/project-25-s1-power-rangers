@@ -69,7 +69,7 @@ namespace CodeCode
         {
             CursorVisible = false;
             Clear();
-            Write("You are a homo sapien sapien"); ReadLine();
+            Write("You are a homo sapien sapien."); ReadLine();
             Write("A human who loves to sit on a couch\n"); ReadLine();
             Write("Would you like to name the human?\n"); 
             CursorVisible = true; ForegroundColor = ConsoleColor.Green;

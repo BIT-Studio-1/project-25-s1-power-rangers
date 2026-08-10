@@ -17,7 +17,8 @@ using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
-using static CodeCode.worm;
+using static CodeCode.Worm;
+using static CodeCode.Amoeba;
 using System.ComponentModel.Design;
 
 namespace CodeCode
@@ -27,7 +28,7 @@ namespace CodeCode
 
         static ConsoleKey key;
 
-        static int globalScore = 0;
+        public static int globalScore = 0;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -209,12 +210,12 @@ namespace CodeCode
             TitleScreen();
             if (GameTitle.start1 == 1)
             {
-                amebaScene1();
+                AmoebaLife();
                 plantLife();
                 if (plant.Stupidity >= 48)
                 {
-                    wormlife();
-                    if (worm.fishGateway == true)
+                    WormLife();
+                    if (Worm.fishGateway == true)
                     {
                         fishLife();
                         if (Fish.Selfishness >= 25)
@@ -242,6 +243,14 @@ namespace CodeCode
                         }
                         else
                         {
+                            if (Worm.Dirt_consumed >= 20)
+                            {
+                                sasquatchLife();
+                            }
+                            else
+                            {
+                                birdLife();
+                            }
                             birdLife();
                         }
                     }
@@ -298,35 +307,12 @@ namespace CodeCode
         }
 
 
-        static void amebaScene1()
-        {
-            int selfishness = 50;
-            int stupidity = 50;
-            int bravery = 0;
-            Clear();
-            WriteLine("You've spawned in as an Amoeba");
-            WriteLine("This is the beginning");
-            WriteLine("You have no eyes to see, no nose to smell, no tongue to taste");
-            WriteLine("Senses are very minimal");
-            WriteLine("Life as an Amoeba is very 'Slide about'");
-
-            switch (menu("Try to see", "try to smell", "Try to taste", "Slide about", 4))
-            {
-                case 'A': stupidity += 10; badbeep(); break;
-                case 'B': stupidity += 10; badbeep(); break;
-                case 'C': stupidity += 10; badbeep(); break;
-                case 'D': stupidity -= 10; goodbeep(); break;
-            }
-
-            Clear();
-            WriteLine("Amoeba life is slow");
-            WriteLine("Amoeba");
-
 
             // add more questions
-            Write("Ameba life is so slow that life turns into death and Ameoba dies     (press enter)"); ReadLine();
+            Write("Ameba life is so slow that life turns into death and Amoeba dies     (press enter)"); ReadLine();
             return;
         }
+        
 
         public static void debug()
         {
@@ -361,7 +347,7 @@ namespace CodeCode
                             fishLife();
                             break;
                         case 4:
-                            wormlife();
+                            WormLife();
                             break;
                         case 3:
                             plantLife();
@@ -369,6 +355,7 @@ namespace CodeCode
                         case 2:
                             amebaScene1();
                             break;
+
                         case 15:
                             ShowTree();
                             break;
@@ -392,6 +379,10 @@ namespace CodeCode
             bool showNotDiscovered = false;
             string nd = "";
 
+        }
+        
+            
+                
             if (showNotDiscovered == true)
             {
                 nd = "[Not Discovered]";
@@ -429,6 +420,8 @@ Amoeba
             }
             return new string($"\u001b[31m{name}\u001b[0m");
         }
+
+
 
 
     }
