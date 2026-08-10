@@ -436,6 +436,7 @@ namespace CodeCode
         }
         public static void sasquatchTotal()
         {
+            globalScore += peacefulness + charisma;
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Sasquatch Life"); Thread.Sleep(300);
             WriteLine($"How peaceful you were: {peacefulness}" +
