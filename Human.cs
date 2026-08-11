@@ -223,13 +223,21 @@ namespace CodeCode
         {
             CursorVisible = false;
 
+
+
+            
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine($"{name}'s Life"); Thread.Sleep(300);  Clear(); WriteLine($"Hughs's Life"); Thread.Sleep(300);
             WriteLine($"How couch you were: {SitOnCouch}" +
                 $"\nHow Okay of a human you were: {Sure}" +
                 $"\nHow happy your cat was: {Meow}"); ResetColor(); Write("\npress enter");
             SitOnCouch = SitOnCouch - Sure;
-
+            // global score algo:
+            if (SitOnCouch > 10) // This is so the global score doesn't get incremented by 17052105 if you chose case C on the last question
+            {
+                SitOnCouch = 10;
+            }
+            globalScore += 2 * (SitOnCouch + Sure + Meow);
             /*
             if (SitOnCouch <= 0)
             {
@@ -244,7 +252,6 @@ namespace CodeCode
                 {
                 }
             } 
-            
             */
             ReadLine();
             Clear();

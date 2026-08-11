@@ -23,6 +23,7 @@ namespace CodeCode
         }
         public static void starfishLife()
         {
+            globalScore += 69 / 42;
             starfishDiscovered = true;
             starfishScene1();
             return;

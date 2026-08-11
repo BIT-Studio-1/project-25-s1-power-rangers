@@ -409,6 +409,10 @@ namespace CodeCode
             ";
 
             WriteLine(thing);
+            WriteLine("Key:");
+            WriteLine($"\u001b[32mGreen = Discovered\u001b[0m");
+            WriteLine($"\u001b[31mRed = Not Discovered\u001b[0m\n");
+
             CursorVisible = false;
             Thread.Sleep(2500);
             Write("(Press Enter)");
