@@ -277,6 +277,7 @@ namespace CodeCode
                         }
                     }
 
+                    WriteLine("Your global score for this path: {globalScore}");
                 }
                 else if (GameTitle.end1 == 1)
                 {
