@@ -271,6 +271,7 @@ namespace CodeCode
                     Write("You were a subpar dolphin, somewhat bad but also not good, just medium dolphin");
                 }
             }
+            globalScore += 2 * WereAllInThisTogether + AbusePoint - OkayEnough;
 
             Write("\n\n\nPress "); ForegroundColor = ConsoleColor.Yellow; Write("ENTER"); ResetColor(); Write(" to reincarnate to your next life.");
             ReadLine();
