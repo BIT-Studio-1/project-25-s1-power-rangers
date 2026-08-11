@@ -16,6 +16,7 @@ namespace CodeCode
         private static int peacefulness = 25;
         private static int human = 20;
         private static int charisma = 20;
+        public static bool sasquatchDiscovered = false;
         public static int Peacefulness
         {
             get { return peacefulness; }
@@ -30,6 +31,10 @@ namespace CodeCode
         }
         public static void sasquatchLife()
         {
+            peacefulness = 20;
+            human = 20;
+            charisma = 20;
+            sasquatchDiscovered = true;
             Clear();
             sasquatchScene1();
             sasquatchScene2();

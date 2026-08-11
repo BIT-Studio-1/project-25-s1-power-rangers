@@ -399,7 +399,7 @@ namespace CodeCode
         |   └── {LD(humanDiscovered, "Human")}
         └── {LD(wormDiscovered, "Worm")}
             ├── {LD(birdDiscovered, "Bird")}
-            └── {LD(false, "Sasquatch")}
+            └── {LD(sasquatchDiscovered, "Sasquatch")}
             ";
 
             WriteLine(thing);

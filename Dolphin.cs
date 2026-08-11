@@ -33,6 +33,9 @@ namespace CodeCode
         }
         public static void dolphinlife()
         {
+            AbusePoint = 0;
+            OkayEnough = 0;
+            WereAllInThisTogether = 0;
             dolphinDiscovered = true;
             CursorVisible = false;
             dolphinlife1();

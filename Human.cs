@@ -37,6 +37,9 @@ namespace CodeCode
 
         public static void HumanLife()
         {
+            SitOnCouch = 0;
+            Sure = 0;
+            Meow = 0;
             humanDiscovered = true;
             CursorVisible = false;
             HumanLife1();
