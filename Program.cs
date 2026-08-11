@@ -206,41 +206,38 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            debug();
-            TitleScreen();
-            if (GameTitle.start1 == 1)
+            //debug();
+            bool loop = true;
+            while (loop)
             {
-                AmoebaLife();
-                plantLife();
-                if (plant.Stupidity >= 48)
+                TitleScreen();
+                if (GameTitle.start1 == 1)
                 {
-                    WormLife();
-                    if (Worm.fishGateway == true)
+                    AmoebaLife();
+                    plantLife();
+                    if (plant.Stupidity >= 48)
                     {
-                        FishLife();
-                        if (Fish.Selfishness >= 25)
+                        WormLife();
+                        if (Worm.fishGateway == true)
                         {
-                            dolphinlife();
-                            if (dolphin.AbusePoint1 >= 15)
+                            FishLife();
+                            if (Fish.Selfishness >= 25)
                             {
-                                WriteLine();
-                                //Write("go next life\n");
+                                dolphinlife();
+                                if (dolphin.AbusePoint1 >= 15)
+                                {
+                                    WriteLine();
+                                    //Write("go next life\n");
+                                }
+                            }
+                            else
+                            {
+                                starfishLife();
                             }
                         }
-                        else
-                        {
-                            starfishLife();
-                        }
-                    }
 
 
 
-                    else
-                    {
-                        if (Worm.Dirt_consumed >= 20)
-                        {
-                            sasquatchLife();
-                        }
                         else
                         {
                             if (Worm.Dirt_consumed >= 20)
@@ -249,41 +246,50 @@ namespace CodeCode
                             }
                             else
                             {
+                                if (Worm.Dirt_consumed >= 20)
+                                {
+                                    sasquatchLife();
+                                }
+                                else
+                                {
+                                    birdLife();
+                                }
                                 birdLife();
                             }
-                            birdLife();
                         }
-                    }
 
 
-                }
-                else
-                {
-                    FishLife();
-                    if (Fish.Selfishness >= 23)
-                    {
-                        dolphinlife();
-                    }
-                    else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
-                    {
-                        starfishLife();
                     }
                     else
                     {
-                        HumanLife();
+                        FishLife();
+                        if (Fish.Selfishness >= 23)
+                        {
+                            dolphinlife();
+                        }
+                        else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
+                        {
+                            starfishLife();
+                        }
+                        else
+                        {
+                            HumanLife();
+                        }
                     }
+
                 }
-
+                else if (GameTitle.end1 == 1)
+                {
+                    loop = false;
+                    return; }
             }
-            else if (GameTitle.end1 == 1)
-            { return; }
 
-
-
+            /*
             WriteLine("You've completed one of the pathways down the tree of reincarnation");
             WriteLine("To keep playing the other lives, Restart the program");
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
+            */
         }
 
         static void room1() // test room

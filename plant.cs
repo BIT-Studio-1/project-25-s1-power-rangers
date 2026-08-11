@@ -42,7 +42,7 @@ namespace CodeCode
         public static void plantScene1()
         {
             Clear();
-          
+            
             Write("You are reincarnated as a"); wait(700);
             ForegroundColor = ConsoleColor.DarkGreen;
             WriteLine("     PLANT");

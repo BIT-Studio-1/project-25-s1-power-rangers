@@ -36,7 +36,8 @@ namespace CodeCode
         public static void TitleScreen()
         {
             CursorVisible = false;
-
+            start = 0; // resets start, this is required
+            end = 0; // resets end, this is required
             Clear();
             while (start == 0 && end == 0)
             {
