@@ -290,6 +290,7 @@ namespace CodeCode
                     berd += 0;
                     break;
             }
+            Write("(press enter)"); ReadLine();
             Clear();
             BirdTotal();
         }

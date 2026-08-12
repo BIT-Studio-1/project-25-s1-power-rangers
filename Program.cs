@@ -29,7 +29,7 @@ namespace CodeCode
         static ConsoleKey key;
 
         public static int globalScore = 0;
-        public static int globalHighscore = 0;
+        public static int? globalHighscore = null;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -222,18 +222,17 @@ namespace CodeCode
                         if (Worm.fishGateway == true)
                         {
                             FishLife();
-                            if (Fish.Selfishness >= 25)
+                            if (Fish.Selfishness >= 23)
                             {
                                 dolphinlife();
-                                if (dolphin.AbusePoint1 >= 15)
-                                {
-                                    WriteLine();
-                                    //Write("go next life\n");
-                                }
+                            }
+                            else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
+                            {
+                                starfishLife();
                             }
                             else
                             {
-                                starfishLife();
+                                HumanLife();
                             }
                         }
 
@@ -286,7 +285,7 @@ namespace CodeCode
             Console.ReadLine(); // stops program exiting
             */
         }
-
+        /*
         static void room1() // test room
         {
             Clear();
@@ -298,6 +297,8 @@ namespace CodeCode
 
             return;
         }
+        */
+        /*
         static void room2()
         { // also test room
             Clear();
@@ -306,20 +307,28 @@ namespace CodeCode
 
             return;
         }
+        */
         public static void resetGame() {
-            WriteLine($"Your global score for this path is: \u001b[34;1m{globalScore}\u001b[0m (press enter)");
+            ForegroundColor = ConsoleColor.Yellow;
+            Write($"\nYour global score for this path is: \u001b[34;1m{globalScore}\u001b[0m");
+            ResetColor();
+            Write(" (press enter)");
+            ResetColor();
             ReadLine();
-            if (globalScore > globalHighscore)
+            if (globalHighscore == null || globalScore > globalHighscore)
             {
                 ForegroundColor = ConsoleColor.Yellow;
-                WriteLine($"You have attained a new highscore of \u001b[34;1m{globalScore}\u001b[0m");
+                globalHighscore = globalScore;
+                Write($"\nYou have attained a new highscore of \u001b[34;1m{globalHighscore}\u001b[0m");
                 ResetColor();
-                Write("(press enter)"); ReadLine();
+                Write(" (press enter)"); ReadLine();
             }
-            WriteLine("Checkout the tree of which lives have been discovered on the main menu");
-            Write("(press enter)"); ReadLine();
+            ForegroundColor = ConsoleColor.Yellow;
+            Write("\nCheck out the tree of which lives have been discovered in the main menu");
+            ResetColor();
+            Write(" (press enter)"); ReadLine();
         }
-
+        
         
 
         public static void debug()
@@ -387,22 +396,15 @@ namespace CodeCode
             /*
             bool showNotDiscovered = false;
             string nd = "";
-
-
-
-
-            
             if (showNotDiscovered == true)
             {
                 nd = "[Not Discovered]";
             }
             WriteLine(nd);
-            
             Starfish.starfishDiscovered = false;
             */
+            CursorVisible = false;
             WriteLine("\u001b[1mTree of Life:\u001b[0m");
-
-            
             string tree =
             $@"
 {LD(amoebaDiscovered, "Amoeba")}
@@ -415,18 +417,24 @@ namespace CodeCode
             ├── {LD(birdDiscovered, "Bird")}
             └── {LD(sasquatchDiscovered, "Sasquatch")}
             ";
-
             WriteLine(tree);
-            WriteLine("Key:");
+            if (globalHighscore == null)
+            {
+                WriteLine("Highscore: \u001b[34;1mnone\u001b[0m");
+            }
+            else { 
+                WriteLine($"Highscore: \u001b[34;1m{globalHighscore}\u001b[0m");
+            }
+            Thread.Sleep(750);
+            WriteLine("\nKey:");
             WriteLine($"\u001b[32mGreen = Discovered\u001b[0m");
             WriteLine($"\u001b[31mRed = Not Discovered\u001b[0m\n");
 
-            CursorVisible = false;
-            Thread.Sleep(2500);
+            
+            Thread.Sleep(1500);
             Write("(Press Enter)");
             ReadLine();
             Clear();
-
             CursorVisible = true;
 
         }
