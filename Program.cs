@@ -29,6 +29,7 @@ namespace CodeCode
         static ConsoleKey key;
 
         public static int globalScore = 0;
+        public static int globalHighscore = 0;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -246,14 +247,6 @@ namespace CodeCode
                             }
                             else
                             {
-                                if (Worm.Dirt_consumed >= 20)
-                                {
-                                    sasquatchLife();
-                                }
-                                else
-                                {
-                                    birdLife();
-                                }
                                 birdLife();
                             }
                         }
@@ -277,7 +270,8 @@ namespace CodeCode
                         }
                     }
 
-                    WriteLine("Your global score for this path: {globalScore}");
+                    resetGame();
+                    
                 }
                 else if (GameTitle.end1 == 1)
                 {
@@ -312,10 +306,19 @@ namespace CodeCode
 
             return;
         }
-
-
-
-        // add more questions
+        public static void resetGame() {
+            WriteLine($"Your global score for this path is: \u001b[34;1m{globalScore}\u001b[0m (press enter)");
+            ReadLine();
+            if (globalScore > globalHighscore)
+            {
+                ForegroundColor = ConsoleColor.Yellow;
+                WriteLine($"You have attained a new highscore of \u001b[34;1m{globalScore}\u001b[0m");
+                ResetColor();
+                Write("(press enter)"); ReadLine();
+            }
+            WriteLine("Checkout the tree of which lives have been discovered on the main menu");
+            Write("(press enter)"); ReadLine();
+        }
 
         
 
@@ -326,7 +329,7 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n: 15. ShowTree");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))
@@ -381,22 +384,26 @@ namespace CodeCode
         }
         public static void ShowTree()
         {
+            /*
             bool showNotDiscovered = false;
             string nd = "";
 
 
 
 
-
+            
             if (showNotDiscovered == true)
             {
                 nd = "[Not Discovered]";
             }
             WriteLine(nd);
+            
+            Starfish.starfishDiscovered = false;
+            */
             WriteLine("\u001b[1mTree of Life:\u001b[0m");
 
-            //Starfish.starfishDiscovered = false;
-            string thing =
+            
+            string tree =
             $@"
 {LD(amoebaDiscovered, "Amoeba")}
     └── {LD(plantDiscovered, "Plant")}
@@ -409,7 +416,7 @@ namespace CodeCode
             └── {LD(sasquatchDiscovered, "Sasquatch")}
             ";
 
-            WriteLine(thing);
+            WriteLine(tree);
             WriteLine("Key:");
             WriteLine($"\u001b[32mGreen = Discovered\u001b[0m");
             WriteLine($"\u001b[31mRed = Not Discovered\u001b[0m\n");
@@ -426,8 +433,10 @@ namespace CodeCode
         // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
         public static string LD(bool b, string name) {
             if (b == true) {
+                // Prints the name of the life in red
                 return new string($"\u001b[32m{name}\u001b[0m");
             }
+            // Prints the name of the life in green
             return new string($"\u001b[31m{name}\u001b[0m");
         }
 

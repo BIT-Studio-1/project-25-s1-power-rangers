@@ -62,7 +62,7 @@ namespace CodeCode
                 Write("\r\n ▀███▀  ██▀██ ██   ██ ██▄▄▄\r\n\n"); Thread.Sleep(20);
                 CursorVisible = true;
                 ResetColor();
-                switch (menu("Start", "Credits", "Show Tree", "Exit", 3))
+                switch (menu("Start", "Credits", "Show Tree", "Exit"))
                 {
                     case 'A':
                         CursorVisible = false;
