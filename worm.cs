@@ -316,6 +316,8 @@ namespace CodeCode
                 Write("Suddenly a bird swoops down and plucks you off of the ground! In one foul bite, you're gone...");
                 Thread.Sleep(2000);
             }
+            Clear();
+            Write("rip worm (press enter)"); ReadLine();
             return;
         }
         public static void WormTotal()
