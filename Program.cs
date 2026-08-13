@@ -207,7 +207,7 @@ namespace CodeCode
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            //debug();
+            debug();
             bool loop = true;
             while (loop)
             {
@@ -338,7 +338,7 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n: 15. ShowTree");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n15. ShowTree\n: ");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))

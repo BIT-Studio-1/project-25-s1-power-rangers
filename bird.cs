@@ -296,7 +296,7 @@ namespace CodeCode
         }
         public static void BirdTotal()
         {
-            globalScore = berd + variable - flyish;
+            globalScore = 2 * berd - variable - flyish;
             ForegroundColor = ConsoleColor.Blue;
             Write("Your Stupidity is " + variable); wait();
             WriteLine(" ");

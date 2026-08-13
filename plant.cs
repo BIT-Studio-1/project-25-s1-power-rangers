@@ -264,9 +264,9 @@ namespace CodeCode
             Console.ResetColor();
             return;
         }
-       public static void  PlantTotal()
+       public static void PlantTotal()
         {
-            //globalScore += plint - stupidity - selfishness;
+            globalScore += plint - stupidity - selfishness;
             Clear();
             ForegroundColor = ConsoleColor.Red;
             Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
@@ -282,7 +282,7 @@ namespace CodeCode
             WriteLine(" ");
             Suspense2SFX();
             ResetColor  ();
-            WriteLine("PLEASE PRESS ENTER TO CONTINUE");
+            Write("PLEASE PRESS ENTER TO CONTINUE");
             ReadLine();
         }
         public static void plantLife()
@@ -292,6 +292,7 @@ namespace CodeCode
             selfishness = 20;
             stupidity = 20;
             plantScene1();
+            PlantTotal();
             return;
         }
     }

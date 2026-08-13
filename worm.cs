@@ -189,7 +189,7 @@ namespace CodeCode
                     Write("I HUNGER FOR WORM BLOOD!!!! replies your opponent.");
                     Thread.Sleep(1000);
                     Write("What will you say?");
-                    switch (menu("A sob story", "Insult him", "Sneak attack", ""))
+                    switch (menu("A sob story", "Insult him", "Sneak attack", "", 3))
                     {
                         case 'A':
                             Write("You give the worm a sob story about how when you were younger, a bird swooped down and ate your worm parents\n and that you've been alone ever since...");
@@ -263,7 +263,7 @@ namespace CodeCode
                 case 'A':
                     dirt_consumed+=1;
                     Write("That wasn't much, you sure you don't want more?");
-                    switch (menu("A little more couldn't hurt...", "No, I'm okay", "", ""))
+                    switch (menu("A little more couldn't hurt...", "No, I'm okay", "", "", 2))
                     {
                         case 'A':
                             Write("You eat a little more dirt");
