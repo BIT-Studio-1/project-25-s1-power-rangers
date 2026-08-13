@@ -326,6 +326,7 @@ namespace CodeCode
             ForegroundColor = ConsoleColor.Yellow;
             Write("\nCheck out the tree of which lives have been discovered in the main menu");
             ResetColor();
+            globalScore = 0; // Resetting global score so it doesn't infinitely go up
             Write(" (press enter)"); ReadLine();
         }
         
