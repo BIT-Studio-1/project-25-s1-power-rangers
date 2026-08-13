@@ -18,6 +18,7 @@ namespace CodeCode
         private static int selfishness = 20;
         private static int stupidity = 20;
         private static int bravery = 20;
+        public static bool fishDiscovered = false;
         public static int Selfishness
         {
             get { return selfishness; }
@@ -41,7 +42,7 @@ namespace CodeCode
         }
         public static void FishTotal()
         {
-            globalScore += bravery * 2 - stupidity - selfishness
+            globalScore += bravery * 2 - stupidity - selfishness;
             ForegroundColor = ConsoleColor.Green; Clear();
             WriteLine("Fish Life"); Thread.Sleep(300);
             WriteLine($"How selfish you were: {selfishness}" +
@@ -53,6 +54,7 @@ namespace CodeCode
         }
         public static void FishLife()
         {
+            fishDiscovered = true;
             selfishness = 20;
             stupidity = 20;
             bravery = 20;
@@ -109,7 +111,7 @@ namespace CodeCode
                     selfishness += 2;
                     Clear();
                     Write("You break the laws of physics and burn the food underwater");
-                    fishWait();
+                    FishWait();
                     WriteLine($"Serelipanilla: \u001b[1m'dude wtf'\x1b[0m    (short for what the fish)");
                     break;
             }
@@ -265,7 +267,7 @@ namespace CodeCode
                         }
                         goneNorth = true;
                         Write("You swim into the darkness");
-                        fishWait();
+                        FishWait();
                         WriteLine("You see what you believe to be is a large opening");
                         switch (menu("Go in", "Go back", "", "", 2))
                         {
@@ -308,8 +310,8 @@ namespace CodeCode
                     stupidity -= 4;
                     selfishness += 2;
                     okaybeep();
-                    Write("You keep going with your school to feed"); fishWait(200);
-                    Write("You never see Vishnu again"); fishWait(200);
+                    Write("You keep going with your school to feed"); FishWait(200);
+                    Write("You never see Vishnu again"); FishWait(200);
                     break;
                 case 'B':
                     Clear();
@@ -317,13 +319,13 @@ namespace CodeCode
                     stupidity += 4;
                     selfishness -= 1;
                     okaybeep();
-                    Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); fishWait();
-                    Write("The rival school attacks and they kill Vishnu in cold blood"); fishWait();
+                    Write("You swim up to Vishnu and attempt to guide him back to your school of fish"); FishWait();
+                    Write("The rival school attacks and they kill Vishnu in cold blood"); FishWait();
                     WriteLine("RIP Vishnu, fly high\n");
                     WriteLine(@"|╲__.-.");
                     WriteLine(@"|    x <  ");
                     WriteLine(@"|╱‾‾`'`");
-                    Write("\nYou go back to swimming with your school"); fishWait();
+                    Write("\nYou go back to swimming with your school"); FishWait();
 
 
                     break;
@@ -332,16 +334,16 @@ namespace CodeCode
                     bravery += 7;
                     selfishness -= 6;
                     goodbeep();
-                    Write("You blend in with the rival school and wait until you’re alone with Vishnu"); fishWait(200);
-                    Write("You explain to him that he’s swimming with the wrong school and that we need to come back"); fishWait();
-                    Write("You guide him back to the school, but you swam too far away and can’t find it"); fishWait();
+                    Write("You blend in with the rival school and wait until you’re alone with Vishnu"); FishWait(200);
+                    Write("You explain to him that he’s swimming with the wrong school and that we need to come back"); FishWait();
+                    Write("You guide him back to the school, but you swam too far away and can’t find it"); FishWait();
                     WriteLine("You are now stranded");
-                    Write("Vishnu dies of starvation, but you stay alive"); fishWait();
+                    Write("Vishnu dies of starvation, but you stay alive"); FishWait();
                     break;
             }
-            Write("Your getting old and the end of your days are approaching"); fishWait();
-            Write("You get scooped up in some cast nets from a large fishing boat"); fishWait();
-            Write("They give no mercy and grind you up into a can"); fishWait();
+            Write("Your getting old and the end of your days are approaching"); FishWait();
+            Write("You get scooped up in some cast nets from a large fishing boat"); FishWait();
+            Write("They give no mercy and grind you up into a can"); FishWait();
             WriteLine(@"   _..----------...  ");
             WriteLine(@".-~                ~-.");
             WriteLine(@"|.                  .|");

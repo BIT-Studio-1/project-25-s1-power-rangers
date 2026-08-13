@@ -15,7 +15,7 @@ using static CodeCode.plant;
 using static CodeCode.bird;
 using static CodeCode.Human;
 using static CodeCode.Sasquatch;
-using static CodeCode.worm;
+using static CodeCode.Worm;
 using System.ComponentModel.Design;
 using static CodeCode.Program;
 
@@ -23,8 +23,11 @@ namespace CodeCode
 {
     internal class Amoeba
     {
+        public static bool amoebaDiscovered = false;
+
         public static void AmoebaLife()
         {
+            amoebaDiscovered = true;
             AmoebaScene1();
         }
         static void AmoebaScene1()

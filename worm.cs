@@ -17,6 +17,8 @@ namespace CodeCode
         private static int length = 8;
         private static int dirt_consumed = 0;
         private static int wiggles = 0;
+
+        public static bool wormDiscovered = false;
         public static int Length
         {
             get { return length; }
@@ -31,7 +33,8 @@ namespace CodeCode
         }
         public static void WormLife()
         {
-            length = 8
+            wormDiscovered = true;
+            length = 8;
             fishGateway = false;
             dirt_consumed = 0;
             wiggles = 0;
@@ -186,7 +189,7 @@ namespace CodeCode
                     Write("I HUNGER FOR WORM BLOOD!!!! replies your opponent.");
                     Thread.Sleep(1000);
                     Write("What will you say?");
-                    switch (menu("A sob story", "Insult him", "Sneak attack", ""))
+                    switch (menu("A sob story", "Insult him", "Sneak attack", "", 3))
                     {
                         case 'A':
                             Write("You give the worm a sob story about how when you were younger, a bird swooped down and ate your worm parents\n and that you've been alone ever since...");
@@ -260,7 +263,7 @@ namespace CodeCode
                 case 'A':
                     dirt_consumed+=1;
                     Write("That wasn't much, you sure you don't want more?");
-                    switch (menu("A little more couldn't hurt...", "No, I'm okay", "", ""))
+                    switch (menu("A little more couldn't hurt...", "No, I'm okay", "", "", 2))
                     {
                         case 'A':
                             Write("You eat a little more dirt");
@@ -313,6 +316,8 @@ namespace CodeCode
                 Write("Suddenly a bird swoops down and plucks you off of the ground! In one foul bite, you're gone...");
                 Thread.Sleep(2000);
             }
+            Clear();
+            Write("rip worm (press enter)"); ReadLine();
             return;
         }
         public static void WormTotal()

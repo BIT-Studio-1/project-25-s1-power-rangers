@@ -36,11 +36,13 @@ namespace CodeCode
         public static void TitleScreen()
         {
             CursorVisible = false;
-
+            start = 0; // resets start, this is required
+            end = 0; // resets end, this is required
             Clear();
             while (start == 0 && end == 0)
             {
                 ForegroundColor = ConsoleColor.Red;
+                CursorVisible = false;
 
                 Write(":::::::..  .,::::::  ::::::.    :::.  .,-:::::   :::.    :::::::..   "); Thread.Sleep(50);
                 Write("\r\n;;;;``;;;; ;;;;''''  ;;;`;;;;,  `;;;,;;;'````'   ;;`;;   ;;;;``;;;;  "); Thread.Sleep(50);
@@ -58,8 +60,9 @@ namespace CodeCode
                 Write("\r\n\r\n ▄████   ▄▄▄  ▄▄   ▄▄ ▄▄▄▄▄ "); Thread.Sleep(20);
                 Write("\r\n██  ▄▄▄ ██▀██ ██▀▄▀██ ██▄▄  "); Thread.Sleep(20);
                 Write("\r\n ▀███▀  ██▀██ ██   ██ ██▄▄▄\r\n\n"); Thread.Sleep(20);
+                CursorVisible = true;
                 ResetColor();
-                switch (menu("Start", "Credits", "Exit", "", 3))
+                switch (menu("Start", "Credits", "Show Tree", "Exit"))
                 {
                     case 'A':
                         CursorVisible = false;
@@ -98,6 +101,11 @@ namespace CodeCode
                         Clear();
                         break;
                     case 'C':
+                        CursorVisible = false;
+                        Clear();
+                        ShowTree();
+                        break;
+                    case 'D':
                         CursorVisible = false;
                         Clear();
                         end = 1;

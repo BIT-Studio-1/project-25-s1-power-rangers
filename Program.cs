@@ -29,6 +29,7 @@ namespace CodeCode
         static ConsoleKey key;
 
         public static int globalScore = 0;
+        public static int? globalHighscore = null;
         static int option = 1;
         public static bool D1 = false;
         public static bool D2 = false;
@@ -207,40 +208,36 @@ namespace CodeCode
         {
             Console.OutputEncoding = Encoding.UTF8;
             debug();
-            TitleScreen();
-            if (GameTitle.start1 == 1)
+            bool loop = true;
+            while (loop)
             {
-                AmoebaLife();
-                plantLife();
-                if (plant.Stupidity >= 48)
+                TitleScreen();
+                if (GameTitle.start1 == 1)
                 {
-                    WormLife();
-                    if (Worm.fishGateway == true)
+                    AmoebaLife();
+                    plantLife();
+                    if (plant.Stupidity >= 48)
                     {
-                        fishLife();
-                        if (Fish.Selfishness >= 25)
+                        WormLife();
+                        if (Worm.fishGateway == true)
                         {
-                            dolphinlife();
-                            if (dolphin.AbusePoint1 >= 15)
+                            FishLife();
+                            if (Fish.Selfishness >= 23)
                             {
-                                WriteLine();
-                                //Write("go next life\n");
+                                dolphinlife();
+                            }
+                            else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
+                            {
+                                starfishLife();
+                            }
+                            else
+                            {
+                                HumanLife();
                             }
                         }
-                        else
-                        {
-                            starfishLife();
-                        }
-                    }
 
 
 
-                    else
-                    {
-                        if (worm.Dirt_consumed >= 20)
-                        {
-                            sasquatchLife();
-                        }
                         else
                         {
                             if (Worm.Dirt_consumed >= 20)
@@ -251,41 +248,44 @@ namespace CodeCode
                             {
                                 birdLife();
                             }
-                            birdLife();
                         }
-                    }
 
 
-                }
-                else
-                {
-                    fishLife();
-                    if (Fish.Selfishness >= 23)
-                    {
-                        dolphinlife();
-                    }
-                    else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
-                    {
-                        starfishLife();
                     }
                     else
                     {
-                        HumanLife();
+                        FishLife();
+                        if (Fish.Selfishness >= 23)
+                        {
+                            dolphinlife();
+                        }
+                        else if (Fish.Stupidity >= 26 && Fish.Bravery <= 15)
+                        {
+                            starfishLife();
+                        }
+                        else
+                        {
+                            HumanLife();
+                        }
                     }
+
+                    resetGame();
+                    
                 }
-
+                else if (GameTitle.end1 == 1)
+                {
+                    loop = false;
+                    return; }
             }
-            else if (GameTitle.end1 == 1)
-            { return; }
 
-
-
+            /*
             WriteLine("You've completed one of the pathways down the tree of reincarnation");
             WriteLine("To keep playing the other lives, Restart the program");
             Console.Write("Press enter to close program");
             Console.ReadLine(); // stops program exiting
+            */
         }
-
+        /*
         static void room1() // test room
         {
             Clear();
@@ -297,6 +297,8 @@ namespace CodeCode
 
             return;
         }
+        */
+        /*
         static void room2()
         { // also test room
             Clear();
@@ -305,13 +307,29 @@ namespace CodeCode
 
             return;
         }
-
-
-
-            // add more questions
-            Write("Ameba life is so slow that life turns into death and Amoeba dies     (press enter)"); ReadLine();
-            return;
+        */
+        public static void resetGame() {
+            ForegroundColor = ConsoleColor.Yellow;
+            Write($"\nYour global score for this path is: \u001b[34;1m{globalScore}\u001b[0m");
+            ResetColor();
+            Write(" (press enter)");
+            ResetColor();
+            ReadLine();
+            if (globalHighscore == null || globalScore > globalHighscore)
+            {
+                ForegroundColor = ConsoleColor.Yellow;
+                globalHighscore = globalScore;
+                Write($"\nYou have attained a new highscore of \u001b[34;1m{globalHighscore}\u001b[0m");
+                ResetColor();
+                Write(" (press enter)"); ReadLine();
+            }
+            ForegroundColor = ConsoleColor.Yellow;
+            Write("\nCheck out the tree of which lives have been discovered in the main menu");
+            ResetColor();
+            globalScore = 0; // Resetting global score so it doesn't infinitely go up
+            Write(" (press enter)"); ReadLine();
         }
+        
         
 
         public static void debug()
@@ -321,7 +339,7 @@ namespace CodeCode
 
             while (go == 0)
             {
-                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n: ");
+                Write("1. Proceed normally\n2. Amoeba\n3. Plant\n4. Worm\n5. Fish\n6. Dolphin\n7. Starfish\n8. Bird\n9. Human\n10. Sasquatch\n15. ShowTree\n: ");
                 temp = ReadLine();
                 // Handles invalid input
                 if (int.TryParse(temp, out debug))
@@ -344,7 +362,7 @@ namespace CodeCode
                             dolphinlife();
                             break;
                         case 5:
-                            fishLife();
+                            FishLife();
                             break;
                         case 4:
                             WormLife();
@@ -353,15 +371,19 @@ namespace CodeCode
                             plantLife();
                             break;
                         case 2:
-                            amebaScene1();
+                            AmoebaLife();
                             break;
 
+                        case 15:
+                            ShowTree();
+                            break;
                         default:
                             go = 1;
                             break;
                     }
                 }
-                else {
+                else
+                {
                     Clear();
                     WriteLine("Invalid input, please enter a single digit number");
                 }
@@ -369,14 +391,68 @@ namespace CodeCode
 
             }
 
+        }
+        public static void ShowTree()
+        {
+            /*
+            bool showNotDiscovered = false;
+            string nd = "";
+            if (showNotDiscovered == true)
+            {
+                nd = "[Not Discovered]";
+            }
+            WriteLine(nd);
+            Starfish.starfishDiscovered = false;
+            */
+            CursorVisible = false;
+            WriteLine("\u001b[1mTree of Life:\u001b[0m");
+            string tree =
+            $@"
+{LD(amoebaDiscovered, "Amoeba")}
+    └── {LD(plantDiscovered, "Plant")}
+        ├── {LD(fishDiscovered, "Fish")}
+        |   ├── {LD(starfishDiscovered, "Starfish")}
+        |   ├── {LD(dolphinDiscovered, "Dolphin")}
+        |   └── {LD(humanDiscovered, "Human")}
+        └── {LD(wormDiscovered, "Worm")}
+            ├── {LD(birdDiscovered, "Bird")}
+            └── {LD(sasquatchDiscovered, "Sasquatch")}
+            ";
+            WriteLine(tree);
+            if (globalHighscore == null)
+            {
+                WriteLine("Highscore: \u001b[34;1mnone\u001b[0m");
+            }
+            else { 
+                WriteLine($"Highscore: \u001b[34;1m{globalHighscore}\u001b[0m");
+            }
+            Thread.Sleep(750);
+            WriteLine("\nKey:");
+            WriteLine($"\u001b[32mGreen = Discovered\u001b[0m");
+            WriteLine($"\u001b[31mRed = Not Discovered\u001b[0m\n");
+
+            
+            Thread.Sleep(1500);
+            Write("(Press Enter)");
+            ReadLine();
+            Clear();
+            CursorVisible = true;
 
         }
-        
-            
-                
+        // Stands for 'Life Discovered' takes in the life discovered bool, if true returns the name of the life 
+        public static string LD(bool b, string name) {
+            if (b == true) {
+                // Prints the name of the life in red
+                return new string($"\u001b[32m{name}\u001b[0m");
+            }
+            // Prints the name of the life in green
+            return new string($"\u001b[31m{name}\u001b[0m");
+        }
 
 
-
+    
 
     }
 }
+
+

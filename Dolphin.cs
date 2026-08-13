@@ -16,6 +16,7 @@ namespace CodeCode
         private static int AbusePoint = 0;
         private static int OkayEnough = 0;
         private static int WereAllInThisTogether = 0;
+        public static bool dolphinDiscovered = false;
         public static int AbusePoint1
         {
             get { return AbusePoint; }
@@ -32,6 +33,10 @@ namespace CodeCode
         }
         public static void dolphinlife()
         {
+            AbusePoint = 0;
+            OkayEnough = 0;
+            WereAllInThisTogether = 0;
+            dolphinDiscovered = true;
             CursorVisible = false;
             dolphinlife1();
             dolphinlife2();
@@ -266,6 +271,7 @@ namespace CodeCode
                     Write("You were a subpar dolphin, somewhat bad but also not good, just medium dolphin");
                 }
             }
+            globalScore += 2 * WereAllInThisTogether + AbusePoint - OkayEnough;
 
             Write("\n\n\nPress "); ForegroundColor = ConsoleColor.Yellow; Write("ENTER"); ResetColor(); Write(" to reincarnate to your next life.");
             ReadLine();

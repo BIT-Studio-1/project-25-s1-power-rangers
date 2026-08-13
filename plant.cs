@@ -16,6 +16,7 @@ namespace CodeCode
         private static int selfishness = 20;
         private static int stupidity = 20;
         private static int plint = 20;
+        public static bool plantDiscovered = false;
 
         public static int Selfishness
         {
@@ -41,7 +42,7 @@ namespace CodeCode
         public static void plantScene1()
         {
             Clear();
-          
+            
             Write("You are reincarnated as a"); wait(700);
             ForegroundColor = ConsoleColor.DarkGreen;
             WriteLine("     PLANT");
@@ -263,9 +264,9 @@ namespace CodeCode
             Console.ResetColor();
             return;
         }
-       public static void  PlantTotal()
+       public static void PlantTotal()
         {
-            //globalScore += plint - stupidity - selfishness;
+            globalScore += plint - stupidity - selfishness;
             Clear();
             ForegroundColor = ConsoleColor.Red;
             Write("SO YOUR STUPIDNESS BEING A PLANT IS " + stupidity); wait();
@@ -281,15 +282,17 @@ namespace CodeCode
             WriteLine(" ");
             Suspense2SFX();
             ResetColor  ();
-            WriteLine("PLEASE PRESS ENTER TO CONTINUE");
+            Write("PLEASE PRESS ENTER TO CONTINUE");
             ReadLine();
         }
         public static void plantLife()
         {
+            plantDiscovered = true;
             plint = 20;
             selfishness = 20;
             stupidity = 20;
             plantScene1();
+            PlantTotal();
             return;
         }
     }

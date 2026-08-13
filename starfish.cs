@@ -11,6 +11,7 @@ namespace CodeCode
 {
     internal class Starfish
     {
+        public static bool starfishDiscovered = false;
         public static void starfishScene1()
         {
             WriteLine("You've been reincarnated as a starfish");
@@ -22,6 +23,8 @@ namespace CodeCode
         }
         public static void starfishLife()
         {
+            globalScore += 69 / 42;
+            starfishDiscovered = true;
             starfishScene1();
             return;
         }
